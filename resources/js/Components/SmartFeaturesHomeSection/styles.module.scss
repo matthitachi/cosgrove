@@ -1,0 +1,44 @@
+.SmartFeaturesHomeSection {
+    margin-top: 120px;
+    padding-top: 120px;
+    position: relative;
+    overflow: hidden;
+
+    .topCurve {
+        background-color: #000;
+    }
+
+    .featuredCtx {
+        position: relative;
+
+        h4 {
+            font-size: 30px;
+        }
+
+    }
+    .smartFeaturesCtx{
+        border-bottom: 1px solid rgba(#fff, 0.3);
+        margin-top: 40px;
+    }
+
+    .featuresQuote{
+        padding: 65px 0;
+        text-align: center;
+        h4{
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+        h2{
+            color: #FBBD00;
+            text-align: center;
+            font-family: Betterlett, serif;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+    }
+
+}
+

@@ -1,0 +1,90 @@
+.records{
+        margin-bottom: 50px;
+        .recordRow{
+
+        }
+        .recordItem{
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+
+            img{
+                width: 47px;
+                height: 47px;
+                margin-right: 15px;
+            }
+            h3{
+                color: #FBBD00;
+                text-align: justify;
+                font-family: Nexa Bold, serif;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin: 0;
+            }
+            .title{
+                color: #000;
+                text-align: justify;
+                font-family: Nexa Bold, serif;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+
+
+
+
+@media screen and (max-width: 1600px) {
+
+}
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+
+}
+
+@media screen and (max-width: 992px) {
+    .records{
+        .recordItem{
+            h3{
+                font-size: 25px;
+            }
+            .title{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .records{
+        margin-top: 50px
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+
+    .records{
+        .recordItem{
+            h3{
+                font-size: 27px;
+            }
+            .title{
+                font-size: 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.gallery {
+    min-height: 30vh;
+    transition: all 0.5s ease;
+    .tagsCtx{
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        .tagBg{
+            background: #000;
+            padding: 5px;
+            display: flex;
+            border-radius: 36px;
+            .tag{
+                padding: 1px 25px;
+                margin-right: 15px;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 36px;
+                border: 2px solid transparent;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &.active{
+                    background: #FBBD00;
+                    color: #000
+                }
+                &:hover{
+                    border: 2px solid #FBBD00;
+                }
+            }
+        }
+
+    }
+
+    .display{
+        animation: w100 .5s ease-out;
+        display: block;
+    }
+    .hide{
+        animation: w200 .5s ease-out;
+        display: none;
+    }
+
+    @keyframes w100 {
+         0% {
+             transform: scale(0);
+             opacity: 0;
+             display: block;
+         }
+
+         50% {
+             transform: scale(0.6);
+             opacity: 0.5;
+         }
+
+         100% {
+             transform: scale(1);
+             opacity: 1;
+             visibility: hidden;
+         }
+     }
+
+    @keyframes w200 {
+         0% {
+             transform: scale(1);
+             opacity: 1;
+         }
+
+         50% {
+             transform: scale(0.5);
+             opacity: 0.5;
+         }
+
+         100% {
+             transform: scale(0);
+             opacity: 0;
+             display: none;
+         }
+     }
+
+}
+
+@media screen and (max-width: 1600px) {
+
+}
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+
+@media screen and (max-width: 575px) {
+
+}

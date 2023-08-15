@@ -1,0 +1,92 @@
+.contact {
+    img {
+        width: 47px;
+        height: 47px;
+        margin-bottom: 30px;
+    }
+
+    h5 {
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+    p {
+        padding-right: 120px;
+        margin-bottom: 30px;
+    }
+
+    button {
+        border-radius: 10px;
+        padding: 8px 30px;
+        min-width: 215px;
+        text-align: center;
+        font-family: Inter, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border: none;
+
+        &.yellow {
+            background: #FBBD00;
+            color: #000;
+        }
+
+        &.dark {
+            background: #000;
+            color: #FFF;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    .contact {
+        p {
+            padding-right: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .contact {
+        p {
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .contact {
+        button {
+            min-width: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 575px) {
+
+    .contact {
+        h5 {
+            font-size: 13px;
+        }
+
+        button {
+            font-size: 10px;
+        }
+    }
+}

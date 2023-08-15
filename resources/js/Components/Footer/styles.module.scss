@@ -1,0 +1,130 @@
+.footer {
+    padding : 100px 80px 40px;
+    background: #FBBD00;
+    ul{
+        list-style: none;
+        padding: 0;
+        margin-bottom: 60px;
+
+    }
+    h5{
+        font-size: 20px;
+    }
+    .footerInTouch{
+        padding-right: 40px;
+        .formItem{
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background: rgba(#FFF, 0.3);
+            border: none;
+            padding: 10px;
+        }
+        button{
+            border-radius: 10px;
+            background: #000;
+            color: #FFF;
+            font-family: Inter, serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            padding: 6px 30px;
+            border: none;
+        }
+
+    }
+    .footerContactUs{
+        padding: 0 60px;
+
+    }
+
+
+    .footerBottom {
+        margin-top: 100px;
+        .footerSocials {
+            display: flex;
+
+            .socialItem {
+                width: 25px;
+                height: 25px;
+                margin-right: 20px;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+        .footerCopyRight{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        hr {
+            height: 2px;
+            background: #000;
+            margin: 30px 0;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1600px) {
+
+}
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+
+}
+
+@media screen and (max-width: 992px) {
+    .footer {
+        padding: 100px 25px 40px;
+        .footerContactUs{
+            padding: 0 30px;
+        }
+        .footerInTouch{
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 100px 35px 40px;
+        .footerContactUs{
+            padding: 0;
+        }
+        .footerInTouch{
+            margin-bottom: 50px;
+        }
+        .footerBottom {
+            .footerSocials {
+                justify-content: center;
+            }
+            .footerCopyRight{
+                justify-content: center;
+            }
+            .developed{
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+
+
+}

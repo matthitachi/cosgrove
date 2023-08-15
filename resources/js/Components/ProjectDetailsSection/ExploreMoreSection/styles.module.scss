@@ -1,0 +1,110 @@
+.exploreMoreSection {
+    padding: 100px 0;
+
+}
+
+
+
+@media screen and (max-width: 1600px) {
+
+    .topSection{
+        .infoHomeInfo{
+            .contact{
+                p{
+                    padding-right: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .topSection{
+        .infoHomeInfo{
+            padding: 0 100px;
+            .contact{
+                p{
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .topSection{
+        .infoHomeInfo{
+            padding: 0 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .topSection{
+        .infoHomeInfo{
+            padding: 0 50px;
+            .contact{
+                button{
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .topSection{
+        .infoHomeCol{
+            height: 600px;
+            .infoHomeBG{
+                width: 90%;
+                height: 100%;
+                left: 5%;
+                //&:after{
+                //    left: calc(5% + 3px);
+                //}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 575px) {
+
+    .topSection{
+        .infoHomeInfo{
+            padding: 20px 20px;
+            h2{
+                font-size: 25px;
+            }
+            p{
+                font-size: 12px;
+            }
+            .records{
+                .recordItem{
+
+                    margin-bottom: 30px;
+                    h3{
+                        font-size: 27px;
+                    }
+                    .title{
+                        font-size: 13px;
+                    }
+                }
+            }
+            .contact{
+                h5{
+                    font-size: 13px;
+                }
+                button{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

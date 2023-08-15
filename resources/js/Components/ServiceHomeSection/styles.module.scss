@@ -1,0 +1,44 @@
+.offerHomeSection {
+    .serviceList {
+        list-style: none;
+        padding: 0;
+        min-height: 580px;
+        .serviceItem{
+            border-radius: 10px;
+            background: #F5F6FA;
+            display: flex;
+            padding: 20px 35px;
+            margin-bottom: 25px;
+            align-items: center;
+            cursor: pointer;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+            img{
+                width: 48px;
+                height: 48px;
+                margin-right: 35px;
+            }
+            h4{
+                margin: 0;
+                font-size: 20px;
+            }
+            p{
+                display: none;
+            }
+
+            &:hover{
+                background: #FBBD00;
+                h4{
+                    margin-bottom: 20px;
+                }
+                p{
+                    display: block;
+                }
+
+            }
+
+        }
+    }
+}

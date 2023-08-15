@@ -1,0 +1,45 @@
+.welcomeSection {
+    text-align: center;
+    padding: 20px 500px;
+}
+
+@media screen and (max-width: 1600px) {
+
+}
+
+@media screen and (max-width: 1400px) {
+    .welcomeSection{
+        padding: 20px 450px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .welcomeSection{
+        padding: 20px 340px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .welcomeSection{
+        padding: 20px 260px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .welcomeSection{
+        padding: 20px 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .welcomeSection{
+        padding: 20px 120px;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .welcomeSection{
+        padding: 20px 25px;
+    }
+}

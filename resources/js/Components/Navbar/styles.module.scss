@@ -1,0 +1,54 @@
+.navBar {
+    padding: 25px 0 !important;
+    margin: 0 100px !important;
+    border-bottom: 1px solid #ffffff;
+    .navButton{
+        border-radius: 10px;
+        border: 1px solid #FFF;
+        background: transparent;
+        color: #FFF;
+        font-family: Inter, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding: 5px 15px;
+    }
+}
+
+.navContainer {
+    display: flex;
+
+    .navCollapse {
+        flex-grow: unset !important;
+    }
+
+    .navBrandImg {
+        width: auto;
+        height: 25px;
+    }
+
+    .Nav {
+        padding: 0;
+        --bs-nav-link-padding-y: 5px;
+        align-items: center;
+    }
+
+
+    .navLink {
+        margin-right: 50px;
+        color: rgba(#FFF, 0.6);
+        font-family: Inter, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        &:hover {
+            color: #FBBD00;
+        }
+    }
+
+
+}
+
