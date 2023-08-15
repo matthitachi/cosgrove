@@ -1,8 +1,8 @@
 import * as React from "react";
-import NavBar from "../../Components/Navbar/navbar";
-import HeaderItem from "../../Components/HeaderItem/index";
-import SmartCommunitiesSection from "../../Components/ProjectSection/SmartCommunitiesSection/index";
-import Footer from "../../Components/Footer/index";
+import NavBar from "../../Components/Elements/Navbar/navbar";
+import HeaderItem from "../../Components/Elements/HeaderItem/index";
+import SmartCommunitiesSection from "../../Components/ProjectPage/SmartCommunitiesSection/index";
+import Footer from "../../Components/Elements/Footer/index";
 
 
 export default function () {

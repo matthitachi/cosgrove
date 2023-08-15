@@ -2,11 +2,11 @@ import {Accordion, Button, Col, Container, Nav, Navbar, NavDropdown} from "react
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
-import FeaturesItem from "../FeaturesItem"
+import FeaturesItem from "../../Elements/FeaturesItem"
 // @ts-ignore
 import {ReactComponent as Camera} from "/public/assets/svg/cctv-camera.svg"
 
-import Slider from "../Slider/index";
+import Slider from "../../Elements/Slider";
 export default function () {
     const settings = {
         dots: true,

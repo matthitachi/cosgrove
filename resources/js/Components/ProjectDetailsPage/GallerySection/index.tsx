@@ -2,7 +2,7 @@ import {Col, Container, Row} from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
-import Gallery, {galleryImageProp} from "../../Gallery/index"
+import Gallery, {galleryImageProp} from "../../Elements/Gallery/index"
 
 export default function () {
     const baseImgPath = '/assets/images/gallery/';
@@ -13,11 +13,12 @@ export default function () {
         { image : baseImgPath+'CGV13.png', tag:[]},
         { image : baseImgPath+'CGV18.png', tag:['oak', 'pine']},
         { image : baseImgPath+'CGV19.png', tag:['oak']},
-        { image : baseImgPath+'CGV24.png', tag:[]},
+        { image : baseImgPath+'CGV24.png', tag:['babus']},
     ];
     const tags = [
         'oak',
-        'pine'
+        'pine',
+        'babus'
     ];
     return (
       <section className={styles.gallerySection}>

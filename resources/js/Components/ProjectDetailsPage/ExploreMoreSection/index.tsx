@@ -2,7 +2,7 @@ import {Col, Container, Row} from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
-import ProjectItem from "../../ProjectItem/index"
+import ProjectItem from "../../Elements/ProjectItem/index"
 
 export default function () {
 

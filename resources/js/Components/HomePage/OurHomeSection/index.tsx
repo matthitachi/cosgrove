@@ -11,7 +11,7 @@ import {ReactComponent as ArrowNext} from "/public/assets/svg/next.svg";
 // @ts-ignore
 import {ReactComponent as ArrowPrevious} from "/public/assets/svg/prev.svg";
 // import Slider from "react-slick";
-import Slider from "../Slider/index"
+import Slider from "../../Elements/Slider"
 import {useState} from "react";
 
 export default function () {

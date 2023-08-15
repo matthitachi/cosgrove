@@ -1,9 +1,9 @@
 import * as React from "react";
-import NavBar from "../../Components/Navbar/navbar";
-import HeaderItem from "../../Components/HeaderItem/index";
+import NavBar from "../../Components/Elements/Navbar/navbar";
+import HeaderItem from "../../Components/Elements/HeaderItem/index";
 import OverviewSection from "../../Components/AboutPage/OverviewSection/index";
 import TeamSection from "../../Components/AboutPage/TeamSection/index";
-import Footer from "../../Components/Footer/index";
+import Footer from "../../Components/Elements/Footer/index";
 
 
 export default function () {
