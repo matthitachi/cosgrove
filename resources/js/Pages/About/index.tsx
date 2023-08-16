@@ -4,11 +4,13 @@ import HeaderItem from "../../Components/HeaderItem/index";
 import OverviewSection from "../../Components/AboutPage/OverviewSection/index";
 import TeamSection from "../../Components/AboutPage/TeamSection/index";
 import Footer from "../../Components/Footer/index";
+import Navy from "../../../Navbar-2/navbar-2";
 
 export default function () {
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
+            <Navy />
             <HeaderItem
                 height={70}
                 bgImage={"/assets/images/bg/bg-about.png"}
