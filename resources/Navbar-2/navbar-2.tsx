@@ -59,8 +59,9 @@ export default function () {
                         <Nav.Link href="#link" className={styles.navLink}>
                             About
                         </Nav.Link>
+
                         <Nav.Link href="#link" className={styles.navLink}>
-                            Out homes
+                            Our homes
                         </Nav.Link>
                         <Nav.Link href="#link" className={styles.navLink}>
                             Projects

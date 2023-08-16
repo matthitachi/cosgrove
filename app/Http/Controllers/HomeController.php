@@ -24,4 +24,8 @@ class HomeController extends Controller
     {
         return Inertia::render('About/index');
     }
+    public function projectTypes()
+    {
+        return Inertia::render('ProjectTypes/index');
+    }
 }
