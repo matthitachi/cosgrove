@@ -47,6 +47,8 @@
             font-weight: 400;
             line-height: 28px;
             margin-bottom: 25px;
+            width: 100%;
+            max-width: 44.9375rem;
         }
 
         button.text {
@@ -84,6 +86,22 @@
                 border: none;
                 padding: 10px;
             }
+
+            select {
+                width: 100%;
+                max-width: 507px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.3);
+                border: none;
+                padding: 10px;
+
+                option {
+                    color: #1b1b1b;
+                    opacity: 0.6;
+                }
+            }
+
             button {
                 border-radius: 10px;
                 background: #000;
