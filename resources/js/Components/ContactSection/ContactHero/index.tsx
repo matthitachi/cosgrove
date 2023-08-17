@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import styles from "./styles.module.scss";
 import * as React from "react";
 // @ts-ignore
+import { ReactComponent as Select } from "/public/assets/svg/select.svg";
 
 export default function () {
     return (
@@ -25,18 +26,18 @@ export default function () {
                             available.
                         </p>
 
-                        <form className={styles.footerInTouch}>
-                            <select className={styles.formItem}>
-                                <option
-                                    value=""
-                                    style={{ color: "#1B1B1B", opacity: "0.6" }}
-                                >
+                        <form className={styles.contactInTouch}>
+                            <select>
+                                <option disabled selected hidden>
                                     Select an Option
                                 </option>
                                 <option value="option1">Option 1</option>
                                 <option value="option2">Option 2</option>
                                 <option value="option3">Option 3</option>
                             </select>
+                            <div>
+                                <Select />
+                            </div>
                             <input
                                 placeholder={"Name"}
                                 className={styles.formItem}

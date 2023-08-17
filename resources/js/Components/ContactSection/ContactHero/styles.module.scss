@@ -13,7 +13,7 @@
             height: 100%;
             position: relative;
             &:after {
-                content: " ";
+                content: "";
                 width: 10px;
                 height: 50%;
                 background: #fbbd00;
@@ -33,6 +33,19 @@
             font-weight: 600;
             line-height: normal;
             margin-bottom: 25px;
+        }
+
+        .infoHomeExpert {
+            padding: 0 150px;
+            h5 {
+                color: #fbbd00;
+                font-family: Inter, serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                // margin-bottom: 25px;
+            }
         }
 
         .m65 {
@@ -64,8 +77,9 @@
             margin-bottom: 100px;
         }
 
-        .footerInTouch {
+        .contactInTouch {
             padding-right: 40px;
+            position: relative;
             .formItem {
                 width: 100%;
                 max-width: 507px;
@@ -74,6 +88,15 @@
                 background: rgba(0, 0, 0, 0.3);
                 border: none;
                 padding: 10px;
+            }
+
+            div {
+                padding: 10px;
+                border-left: 1px solid #696969;
+                opacity: 0.3;
+                position: absolute;
+                top: 0;
+                right: 19rem;
             }
 
             textarea {
@@ -89,16 +112,18 @@
 
             select {
                 width: 100%;
+                position: relative;
+                z-index: 500;
                 max-width: 507px;
                 margin-bottom: 15px;
                 border-radius: 5px;
                 background: rgba(0, 0, 0, 0.3);
                 border: none;
                 padding: 10px;
-
-                option {
+                appearance: none; // remove default styling
+                option:disabled {
                     color: #1b1b1b;
-                    opacity: 0.6;
+                    opacity: 0.1;
                 }
             }
 
