@@ -17,4 +17,4 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/projects', [App\Http\Controllers\HomeController::class, 'projects']);
 Route::get('/project-details', [App\Http\Controllers\HomeController::class, 'projectDetails']);
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
-Route::get('/project-types', [App\Http\Controllers\HomeController::class, 'projectTypes']);
+Route::get('/project-homes', [App\Http\Controllers\HomeController::class, 'projectHome']);
