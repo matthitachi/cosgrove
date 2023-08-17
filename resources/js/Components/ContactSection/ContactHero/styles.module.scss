@@ -5,8 +5,9 @@
         position: relative;
         overflow: hidden;
         margin-bottom: 10px;
+        height: 30.5rem;
         .infoHomeBG {
-            background: url("/assets/images/acacia.png");
+            background: url("/assets/images/contactHero.png");
             background-size: cover;
             width: 100%;
             height: 100%;
@@ -61,76 +62,40 @@
             margin-bottom: 100px;
         }
 
-        .records {
-            margin-bottom: 50px;
-            margin-top: 50px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            .recordItem {
-                display: flex;
-                align-items: center;
-                margin-right: 30px;
-
-                img {
-                    width: 47px;
-                    height: 47px;
-                    margin-right: 15px;
-                }
-                h3 {
-                    color: #fbbd00;
-                    text-align: justify;
-                    font-family: Nexa Bold, serif;
-                    font-size: 40px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    margin: 0;
-                }
-                .title {
-                    color: #000;
-                    text-align: justify;
-                    font-family: Nexa Bold, serif;
-                    font-size: 17px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                }
-            }
-        }
-        .contact {
-            margin-bottom: 85px;
-            img {
-                width: 47px;
-                height: 47px;
-                margin-bottom: 30px;
-            }
-            h5 {
-                color: #000;
+        .footerInTouch {
+            padding-right: 40px;
+            .formItem {
+                width: 100%;
+                max-width: 507px;
                 margin-bottom: 15px;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.3);
+                border: none;
+                padding: 10px;
             }
-            p {
-                padding-right: 120px;
+
+            textarea {
+                width: 100%;
+                height: 7.0625rem;
+                max-width: 507px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.3);
+                border: none;
+                padding: 10px;
             }
             button {
                 border-radius: 10px;
-                padding: 8px 30px;
-                min-width: 215px;
-                text-align: center;
+                background: #000;
+                color: #fff;
                 font-family: Inter, serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+                padding: 6px 30px;
                 border: none;
-                &.yellow {
-                    background: #fbbd00;
-                    color: #000;
-                }
-                &.dark {
-                    background: #000;
-                    color: #fff;
-                }
+                display: block;
             }
         }
     }
@@ -208,6 +173,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .footerInTouch {
+        margin-bottom: 50px;
+    }
     .records {
         justify-content: center;
         gap: 2rem;

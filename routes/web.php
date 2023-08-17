@@ -18,3 +18,4 @@ Route::get('/projects', [App\Http\Controllers\HomeController::class, 'projects']
 Route::get('/project-details', [App\Http\Controllers\HomeController::class, 'projectDetails']);
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
 Route::get('/project-homes', [App\Http\Controllers\HomeController::class, 'projectHome']);
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);

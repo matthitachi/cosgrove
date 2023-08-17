@@ -16,7 +16,6 @@ export default function () {
             <HouseTypes headerContent="Projects with this House Type" />
             <GallerySection headerContent="The house up close" />
             <Explore />
-
             <Footer />
         </div>
     );

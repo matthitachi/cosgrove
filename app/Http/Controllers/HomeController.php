@@ -28,4 +28,8 @@ class HomeController extends Controller
     {
         return Inertia::render('ProjectHome/index');
     }
+    public function contact()
+    {
+        return Inertia::render('Contact/index');
+    }
 }
