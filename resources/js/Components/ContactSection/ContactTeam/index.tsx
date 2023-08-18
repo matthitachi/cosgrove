@@ -49,45 +49,51 @@ export default function () {
 
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
-                                            <Chioma />
+                                            <img
+                                                src="/assets/images/teams/ray.png"
+                                                alt=""
+                                            />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Chioma Ugwu</h4>
+                                            <h4>Raymond Ricketts</h4>
                                             <h5>
-                                                Director, Business Development
+                                                Chief Information Technology
+                                                Officer
                                             </h5>
                                             <p>
-                                                chioma.ugwu@cosgroveafrica.com
+                                                raymond.rick@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
 
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
-                                            <Chioma />
+                                            <img
+                                                src="/assets/images/teams/ibrahim.png"
+                                                alt=""
+                                            />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Chioma Ugwu</h4>
-                                            <h5>
-                                                Director, Business Development
-                                            </h5>
+                                            <h4>Imam Ibrahim</h4>
+                                            <h5>Head, Procurement</h5>
                                             <p>
-                                                chioma.ugwu@cosgroveafrica.com
+                                                imam.ibrahim@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
 
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
-                                            <Chioma />
+                                            <img
+                                                src="/assets/images/teams/ochua.png"
+                                                alt=""
+                                            />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Chioma Ugwu</h4>
-                                            <h5>
-                                                Director, Business Development
-                                            </h5>
+                                            <h4>Ochua Umoru</h4>
+                                            <h5>Head, Marketing</h5>
                                             <p>
-                                                chioma.ugwu@cosgroveafrica.com
+                                                ochua.umoru@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
@@ -99,13 +105,49 @@ export default function () {
                                 <ul>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
-                                            <Chioma />
+                                            <img
+                                                src="/assets/images/teams/sakana.png"
+                                                alt=""
+                                            />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Chioma Ugwu</h4>
+                                            <h4>Sakana D. Philip</h4>
                                             <h5>
-                                                Director, Business Development
+                                                Director, Corporate
+                                                Communications & Branding
                                             </h5>
+                                            <p>
+                                                sakana.dikko@cosgroveafrica.com
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li className={styles.personContainer}>
+                                        <div style={{ marginRight: "1rem" }}>
+                                            <img
+                                                src="/assets/images/teams/tosin.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div style={{ paddingTop: "1rem" }}>
+                                            <h4>Tosin Afolabi</h4>
+                                            <h5>Head of PMO</h5>
+                                            <p>
+                                                afolabi.tosin@cosgroveafrica.com
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <li className={styles.personContainer}>
+                                        <div style={{ marginRight: "1rem" }}>
+                                            <img
+                                                src="/assets/images/teams/fatima.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div style={{ paddingTop: "1rem" }}>
+                                            <h4>Fatima Mbaka</h4>
+                                            <h5>Head, Customer Service</h5>
                                             <p>
                                                 chioma.ugwu@cosgroveafrica.com
                                             </p>
@@ -114,45 +156,16 @@ export default function () {
 
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
-                                            <Chioma />
+                                            <img
+                                                src="/assets/images/teams/nafisa.png"
+                                                alt=""
+                                            />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Chioma Ugwu</h4>
-                                            <h5>
-                                                Director, Business Development
-                                            </h5>
+                                            <h4>Nafisa Aliyu</h4>
+                                            <h5>Head, Digital Marketing</h5>
                                             <p>
-                                                chioma.ugwu@cosgroveafrica.com
-                                            </p>
-                                        </div>
-                                    </li>
-
-                                    <li className={styles.personContainer}>
-                                        <div style={{ marginRight: "1rem" }}>
-                                            <Chioma />
-                                        </div>
-                                        <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Chioma Ugwu</h4>
-                                            <h5>
-                                                Director, Business Development
-                                            </h5>
-                                            <p>
-                                                chioma.ugwu@cosgroveafrica.com
-                                            </p>
-                                        </div>
-                                    </li>
-
-                                    <li className={styles.personContainer}>
-                                        <div style={{ marginRight: "1rem" }}>
-                                            <Chioma />
-                                        </div>
-                                        <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Chioma Ugwu</h4>
-                                            <h5>
-                                                Director, Business Development
-                                            </h5>
-                                            <p>
-                                                chioma.ugwu@cosgroveafrica.com
+                                                nafisa.aliyu@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
