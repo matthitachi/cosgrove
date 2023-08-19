@@ -6,7 +6,7 @@ import * as React from "react";
 import closeSvg from "/public/assets/svg/close.svg";
 // @ts-ignore
 import searchSvg from "/public/assets/svg/search.svg";
-import Buttons from "../DynamicButtons";
+import HouseTypes from "../../ProjectDetailsSection/HouseTypes";
 
 export default function () {
     const [activeButtonIndex, setActiveButtonIndex] = React.useState(0);
@@ -40,8 +40,8 @@ export default function () {
                     />
                 </form>
             </div>
-            <Container className={styles.searchContent}>
-                <Row>
+            <Container>
+                <Row className={styles.searchContent}>
                     <Col sm={12} className={styles.searchResult}>
                         <div>
                             <h4>Showing results for “4 Bedroom”</h4>
@@ -66,6 +66,13 @@ export default function () {
                         </div>
                     </Col>
                 </Row>
+                <div className={styles.searchHouse}>
+                    <HouseTypes headerContent="Projects (6 results)" />
+                </div>
+
+                <div className={styles.searchHouse}>
+                    <HouseTypes headerContent="House Types (4 results)" />
+                </div>
             </Container>
         </section>
     );
