@@ -119,6 +119,37 @@
         background: white;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
+    .searchBrochure {
+        padding: 3rem 0;
+        background: white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        div {
+            margin: 1rem 0;
+        }
+        h4 {
+            color: #000;
+            font-family: Inter;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        a {
+            color: #696969;
+            font-family: Inter;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration-line: underline;
+        }
+
+        button {
+            border: none;
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
