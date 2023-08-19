@@ -1,0 +1,101 @@
+import { Col, Container, Row } from "react-bootstrap";
+// @ts-ignore
+import styles from "./styles.module.scss";
+import * as React from "react";
+// @ts-ignore
+
+export default function () {
+    return (
+        <section className={styles.mainBrochure}>
+            <Container>
+                <h5>Brochures</h5>
+                <Row style={{ marginTop: "1rem" }}>
+                    <Col className={styles.brochureContainer}>
+                        {/* ITEM 1 */}
+                        <div>
+                            <div
+                                className={styles.brochureItem}
+                                style={{
+                                    background:
+                                        'url("/assets/images/bg/cos.png")',
+                                }}
+                            >
+                                <button>
+                                    <img
+                                        src="/assets/images/bg/Logotype.png"
+                                        alt="pdf logo"
+                                    />
+                                    <span>PDF</span>
+                                </button>
+                            </div>
+                            <h4>General Cosgrove Brochure</h4>
+                            <p>PDF</p>
+                        </div>
+
+                        {/* ITEM 2 */}
+                        <div>
+                            <div
+                                className={styles.brochureItem}
+                                style={{
+                                    background:
+                                        'url("/assets/images/bg/fourteen.png")',
+                                }}
+                            >
+                                <button>
+                                    <img
+                                        src="/assets/images/bg/Logotype.png"
+                                        alt="pdf logo"
+                                    />
+                                    <span>PDF</span>
+                                </button>
+                            </div>
+                            <h4>Fourteen by Cosgrove</h4>
+                            <p>PDF</p>
+                        </div>
+
+                        {/* ITEM 3 */}
+                        <div>
+                            <div
+                                className={styles.brochureItem}
+                                style={{
+                                    background:
+                                        'url("/assets/images/bg/nouveau.png")',
+                                }}
+                            >
+                                <button>
+                                    <img
+                                        src="/assets/images/bg/Logotype.png"
+                                        alt="pdf logo"
+                                    />
+                                    <span>PDF</span>
+                                </button>
+                            </div>
+                            <h4>Nouveau by Cosgrove</h4>
+                            <p>PDF</p>
+                        </div>
+                        {/* ITEM 4  */}
+                        <div>
+                            <div
+                                className={styles.brochureItem}
+                                style={{
+                                    background:
+                                        'url("/assets/images/bg/chateaux.png")',
+                                }}
+                            >
+                                <button>
+                                    <img
+                                        src="/assets/images/bg/Logotype.png"
+                                        alt="pdf logo"
+                                    />
+                                    <span>PDF</span>
+                                </button>
+                            </div>
+                            <h4>The Chateaux by Cosgrove</h4>
+                            <p>PDF</p>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    );
+}

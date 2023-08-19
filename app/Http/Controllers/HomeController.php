@@ -12,6 +12,10 @@ class HomeController extends Controller
     {
         return Inertia::render('Home/index');
     }
+    public function homeSearch()
+    {
+        return Inertia::render('HomeSearch/index');
+    }
     public function projects()
     {
         return Inertia::render('Projects/index');
@@ -24,9 +28,17 @@ class HomeController extends Controller
     {
         return Inertia::render('About/index');
     }
+    public function projectType()
+    {
+        return Inertia::render('ProjectType/index');
+    }
     public function projectHome()
     {
-        return Inertia::render('ProjectHome/index');
+        return Inertia::render('ProjectHomes/index');
+    }
+    public function projectBrochure()
+    {
+        return Inertia::render('ProjectBrochure/index');
     }
     public function contact()
     {

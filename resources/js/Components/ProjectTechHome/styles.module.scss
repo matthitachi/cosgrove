@@ -1,0 +1,52 @@
+.contentTop {
+    margin-top: 100px;
+    .topParagraph {
+        display: flex;
+        align-items: end;
+        padding-bottom: 0.5rem;
+        p {
+            color: #585858;
+            text-align: justify;
+            font-family: Inter;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.75rem;
+        }
+    }
+    .secondParagraph {
+        margin-top: 1rem;
+        p {
+            color: #585858;
+            text-align: justify;
+            font-family: Inter;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+}
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+}
+@media screen and (max-width: 450px) {
+}
