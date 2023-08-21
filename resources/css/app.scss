@@ -313,6 +313,7 @@ button.text {
     justify-content: space-between;
     gap: 1rem;
     padding: 0 2rem;
+
     &.show {
         animation: slideInFromTop 0.5s ease-in-out;
         display: flex;
@@ -357,5 +358,54 @@ button.text {
     to {
         transform: translateY(-200%);
         opacity: 0;
+    }
+}
+
+// Mobile Header Styles
+
+.offcanvas {
+    background: #121212;
+    .offcanvas-header {
+        svg {
+            background-color: white !important;
+            color: white !important;
+        }
+        button {
+            color: #fff !important;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .dropdown-menu {
+        flex-direction: column;
+        padding-left: 0 !important;
+        width: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .offcanvas {
+        background: #121212;
+
+        .offcanvas-header {
+            btn-close {
+                --bs-btn-close-color: white;
+            }
+        }
+
+        a {
+            color: rgba(#fff, 0.6);
+            font-family: Inter;
+            text-decoration: none;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 2rem 0;
+            width: 230.689px;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+        }
     }
 }

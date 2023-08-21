@@ -7,22 +7,38 @@ import closeSvg from "/public/assets/svg/close.svg";
 // @ts-ignore
 import searchSvg from "/public/assets/svg/search.svg";
 // @ts-ignore
-import Download from "/public/assets/svg/download.svg";
+import Download from "/public/assets/images/icons/downloadnew.png";
 import HouseTypes from "../../ProjectDetailsSection/HouseTypes";
 
 export default function () {
     const [activeButtonIndex, setActiveButtonIndex] = React.useState(0);
     const buttonLabels = [
-        "Show All",
-        "Projects",
-        "House Types",
-        "Brochures",
-        "Blog",
-        "Press",
+        {
+            name: "Show All",
+        },
+        {
+            name: "Projects",
+        },
+        {
+            name: "House Types",
+        },
+        {
+            name: "Brochures",
+        },
+        {
+            name: " Blog ",
+        },
+        {
+            name: "Press",
+        },
     ];
 
     const handleButtonClick = (index) => {
         setActiveButtonIndex(index);
+    };
+
+    const back = {
+        background: "#FBBD00",
     };
 
     return (
@@ -56,13 +72,11 @@ export default function () {
                                 <button
                                     key={index}
                                     className={`${styles.dynamicButton} ${
-                                        activeButtonIndex === index
-                                            ? "active"
-                                            : ""
+                                        index === 0 ? `${back}` : ""
                                     }`}
                                     onClick={() => handleButtonClick(index)}
                                 >
-                                    {label}
+                                    {label.name}
                                 </button>
                             ))}
                         </div>
@@ -81,13 +95,22 @@ export default function () {
                         <h4>Brochures (3 results)</h4>
                         <div>
                             <a href="">Cosgrove 2020 Brochure.pdf</a>
+                            <span>
+                                <img src={Download} alt="" />
+                            </span>
                         </div>
 
                         <div>
                             <a href="">Tetra By Cosgrove Brochure.pdf</a>
+                            <span>
+                                <img src={Download} alt="" />
+                            </span>
                         </div>
                         <div>
                             <a href="">Cosgrove Smart Estate Wuye</a>
+                            <span>
+                                <img src={Download} alt="" />
+                            </span>
                         </div>
                     </Col>
                 </Row>
@@ -102,6 +125,31 @@ export default function () {
                                 Cosgrove Completes 4 Bedroom apartment complex
                                 in Asokoro - ThisDay
                             </a>
+                            <span>
+                                <img src={Download} alt="" />
+                            </span>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className={styles.searchPagination}>
+                        <div></div>
+                        <div>
+                            <div>
+                                <button
+                                    className={styles.pageBut}
+                                    style={{ background: "#FBBD00" }}
+                                >
+                                    1
+                                </button>
+                                <button className={styles.pageBut}>2</button>
+                                <button className={styles.pageBut}>3</button>
+                                <button className={styles.pageBut}>4</button>
+                                <button className={styles.pageBut}>5</button>
+                            </div>
+                            <button className={styles.nxt}>
+                                Previous | Next
+                            </button>
                         </div>
                     </Col>
                 </Row>
