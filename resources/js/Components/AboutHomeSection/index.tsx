@@ -71,11 +71,21 @@ export default function () {
                                         />
                                         <div>
                                             <h3>
-                                                <VisibilitySensor>
-                                                    <CountUp
-                                                        end={450}
-                                                        duration={5}
-                                                    />
+                                                <VisibilitySensor
+                                                    partialVisibility
+                                                >
+                                                    {({ isVisible }) => (
+                                                        <CountUp
+                                                            end={450}
+                                                            duration={5}
+                                                            // @ts-ignore
+                                                            start={
+                                                                isVisible
+                                                                    ? 0
+                                                                    : null
+                                                            }
+                                                        />
+                                                    )}
                                                 </VisibilitySensor>
                                                 +
                                             </h3>
@@ -94,7 +104,22 @@ export default function () {
                                         />
                                         <div>
                                             <h3>
-                                                <CountUp end={8} duration={5} />
+                                                <VisibilitySensor
+                                                    partialVisibility
+                                                >
+                                                    {({ isVisible }) => (
+                                                        <CountUp
+                                                            end={8}
+                                                            duration={5}
+                                                            // @ts-ignore
+                                                            start={
+                                                                isVisible
+                                                                    ? 0
+                                                                    : null
+                                                            }
+                                                        />
+                                                    )}
+                                                </VisibilitySensor>
                                             </h3>
                                             <div className={styles.title}>
                                                 Projects
@@ -113,10 +138,22 @@ export default function () {
                                         />
                                         <div>
                                             <h3>
-                                                <CountUp
-                                                    end={30}
-                                                    duration={5}
-                                                />
+                                                <VisibilitySensor
+                                                    partialVisibility
+                                                >
+                                                    {({ isVisible }) => (
+                                                        <CountUp
+                                                            end={30}
+                                                            duration={5}
+                                                            // @ts-ignore
+                                                            start={
+                                                                isVisible
+                                                                    ? 0
+                                                                    : null
+                                                            }
+                                                        />
+                                                    )}
+                                                </VisibilitySensor>
                                                 +
                                             </h3>
                                             <div className={styles.title}>
@@ -134,10 +171,23 @@ export default function () {
                                         />
                                         <div>
                                             <h3>
-                                                <CountUp
-                                                    end={800}
-                                                    duration={5}
-                                                />{" "}
+                                                <VisibilitySensor
+                                                    partialVisibility
+                                                >
+                                                    {({ isVisible }) => (
+                                                        // @ts-ignore
+                                                        <CountUp
+                                                            end={800}
+                                                            duration={5}
+                                                            // @ts-ignore
+                                                            start={
+                                                                isVisible
+                                                                    ? 0
+                                                                    : null
+                                                            }
+                                                        />
+                                                    )}
+                                                </VisibilitySensor>
                                                 +
                                             </h3>
                                             <div className={styles.title}>
