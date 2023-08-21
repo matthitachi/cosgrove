@@ -1,6 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import * as React from "react";
 // @ts-ignore
 import closeSvg from "/public/assets/svg/close.svg";
@@ -11,6 +13,9 @@ import Download from "/public/assets/images/icons/downloadnew.png";
 import HouseTypes from "../../ProjectDetailsSection/HouseTypes";
 
 export default function () {
+    React.useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, []);
     const [activeButtonIndex, setActiveButtonIndex] = React.useState(0);
     const buttonLabels = [
         {
@@ -59,7 +64,7 @@ export default function () {
                 </form>
             </div>
             <Container>
-                <Row className={styles.searchContent}>
+                <Row className={styles.searchContent} data-aos="fade-up">
                     <Col sm={12} className={styles.searchResult}>
                         <div>
                             <h4>Showing results for “4 Bedroom”</h4>
@@ -132,7 +137,10 @@ export default function () {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className={styles.searchPagination}>
+                    <Col
+                        className={styles.searchPagination}
+                        data-aos="fade-left"
+                    >
                         <div></div>
                         <div>
                             <div>

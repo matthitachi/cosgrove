@@ -15,8 +15,14 @@ export default function ({ headerContent }: HouseTypesProps) {
             <Container>
                 <h5 className={`subHeaderDark`}>{headerContent}</h5>
 
-                <Row>
-                    <Col xs={6} md={4} lg={3} className={styles.houseTypesItem}>
+                <Row data-aos="fade-up">
+                    <Col
+                        xs={6}
+                        md={4}
+                        lg={3}
+                        className={styles.houseTypesItem}
+                        data-aos="fade-up"
+                    >
                         <div className={styles.imgCtx}>
                             <img src={"/assets/images/house-types/image.png"} />
                         </div>

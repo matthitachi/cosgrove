@@ -1,6 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import * as React from "react";
 // @ts-ignore
 import { ReactComponent as ArrowRight2Svg } from "/public/assets/svg/arrow-right-2.svg";
@@ -10,16 +12,22 @@ import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
 import { ReactComponent as MapPinSvg } from "/public/assets/svg/map-pin.svg";
 
 export default function () {
+    React.useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, []);
+
     return (
         <section className={styles.teamSection}>
             <Container>
-                <h4 className={"subHeader"}>The Core Team</h4>
-                <h2 className={"headerDark  mb-4"}>
-                    Meet the Minds Behind Cosgrove
-                </h2>
+                <div className={styles.teamHead} data-aos="fade-up">
+                    <h4 className={"subHeader"}>The Core Team</h4>
+                    <h2 className={"headerDark  mb-4"}>
+                        Meet the Minds Behind Cosgrove
+                    </h2>
+                </div>
 
-                <Row className={styles.teamItem}>
-                    <Col sm={12} md={4} lg={3}>
+                <Row className={styles.teamItem} data-aos="fade-up">
+                    <Col sm={12} md={5} lg={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
@@ -28,7 +36,7 @@ export default function () {
                             }}
                         ></div>
                     </Col>
-                    <Col sm={12} md={8} lg={9} className={styles.teamInfo}>
+                    <Col sm={12} md={7} lg={9} className={styles.teamInfo}>
                         <h4 className={"subHeader mb-4"}>
                             Chairman/Chief Executive Officer
                         </h4>
@@ -75,7 +83,7 @@ export default function () {
                 </Row>
 
                 {/* Second Item  */}
-                <Row className={styles.teamItem}>
+                <Row className={styles.teamItem} data-aos="fade-up">
                     <Col sm={12} md={4} lg={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
@@ -136,7 +144,7 @@ export default function () {
                 </Row>
 
                 {/* THIRD ITEM  */}
-                <Row className={styles.teamItem}>
+                <Row className={styles.teamItem} data-aos="fade-up">
                     <Col sm={12} md={4} lg={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
@@ -210,7 +218,7 @@ export default function () {
                 </Row>
 
                 {/* FOURTH ITEM  */}
-                <Row className={styles.teamItem}>
+                <Row className={styles.teamItem} data-aos="fade-up">
                     <Col sm={12} md={4} lg={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
@@ -262,7 +270,7 @@ export default function () {
                 </Row>
 
                 {/* FIFTH ITEM  */}
-                <Row className={styles.teamItem}>
+                <Row className={styles.teamItem} data-aos="fade-up">
                     <Col sm={12} md={4} lg={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}

@@ -221,13 +221,13 @@ button.text {
 
 .sidedContainer {
     .info {
-        padding: 0 150px;
+        padding-right: 150px;
     }
 }
 @media screen and (max-width: 1400px) {
     .sidedContainer {
         .info {
-            padding: 0 100px;
+            padding-right: 100px;
         }
     }
 }
@@ -241,7 +241,7 @@ button.text {
     }
     .sidedContainer {
         .info {
-            padding: 0 50px;
+            padding-right: 50px;
         }
     }
 }
@@ -264,6 +264,10 @@ button.text {
     }
     .curvedBottom {
         border-radius: 0 0 50% 50%/70px;
+    }
+
+    .subHeader {
+        margin-top: 2rem;
     }
 }
 
@@ -407,5 +411,12 @@ button.text {
             width: 230.689px;
             border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
         }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ._sliderNext_vveve_1,
+    ._sliderPrevious_vveve_1 {
+        width: 60px;
     }
 }

@@ -23,7 +23,7 @@
         }
     }
     .infoHomeInfo {
-        padding: 0 150px;
+        padding-right: 100px;
         h5 {
             color: #fbbd00;
             font-family: Inter, serif;
@@ -65,12 +65,11 @@
             margin-bottom: 50px;
             margin-top: 50px;
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            gap: 3rem;
             .recordItem {
                 display: flex;
                 align-items: center;
-                margin-right: 30px;
+                margin: 0 1rem;
 
                 img {
                     width: 47px;
@@ -160,7 +159,7 @@
 @media screen and (max-width: 1400px) {
     .topSection {
         .infoHomeInfo {
-            padding: 0 100px;
+            padding-right: 100px;
             .contact {
                 p {
                     padding-right: 0;
@@ -173,7 +172,7 @@
 @media screen and (max-width: 1200px) {
     .topSection {
         .infoHomeInfo {
-            padding: 0 50px;
+            padding-right: 0 50px;
         }
     }
 }
@@ -181,7 +180,7 @@
 @media screen and (max-width: 1024px) {
     .topSection {
         .infoHomeInfo {
-            padding: 0 50px;
+            padding-right: 50px;
             .contact {
                 button {
                     min-width: 150px;

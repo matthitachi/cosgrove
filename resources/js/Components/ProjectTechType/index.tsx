@@ -9,6 +9,8 @@ import {
 } from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import * as React from "react";
 // @ts-ignore
 import { ReactComponent as ArrowRight2Svg } from "/public/assets/svg/arrow-right-2.svg";
@@ -23,6 +25,10 @@ import Slider from "../Slider/index";
 import { useState } from "react";
 
 export default function () {
+    React.useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, []);
+
     const SliderNext = (props) => {
         return <ArrowNext {...props} className={styles.sliderNext} />;
     };
@@ -85,6 +91,7 @@ export default function () {
 
     return (
         <section
+            data-aos="fade-up"
             className={`${styles.ourHomeSection} mt-5`}
             style={{ marginBottom: "10rem" }}
         >
