@@ -1,25 +1,39 @@
-import {Button, Col, Container, Nav, Navbar, NavDropdown, Row} from "react-bootstrap";
+import {
+    Button,
+    Col,
+    Container,
+    Nav,
+    Navbar,
+    NavDropdown,
+    Row,
+} from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 // @ts-ignore
-import {ReactComponent as ArrowRight2Svg} from "/public/assets/svg/arrow-right-2.svg";
+import { ReactComponent as ArrowRight2Svg } from "/public/assets/svg/arrow-right-2.svg";
 // @ts-ignore
-import {ReactComponent as ArrowRightSvg} from "/public/assets/svg/arrow-right.svg";
+import { ReactComponent as ArrowRightSvg } from "/public/assets/svg/arrow-right.svg";
 // @ts-ignore
-import {ReactComponent as ArrowNext} from "/public/assets/svg/next.svg";
+import { ReactComponent as ArrowNext } from "/public/assets/svg/next.svg";
 // @ts-ignore
-import {ReactComponent as ArrowPrevious} from "/public/assets/svg/prev.svg";
+import { ReactComponent as ArrowPrevious } from "/public/assets/svg/prev.svg";
 // import Slider from "react-slick";
-import Slider from "../Slider/index"
-import {useState} from "react";
+import Slider from "../Slider/index";
+import { useState } from "react";
 
 export default function () {
+    React.useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, []);
+
     const SliderNext = (props) => {
-        return (<ArrowNext {...props} className={styles.sliderNext}/>);
+        return <ArrowNext {...props} className={styles.sliderNext} />;
     };
     const SliderPrevious = (props) => {
-        return (<ArrowPrevious {...props} className={styles.sliderPrevious}/>);
+        return <ArrowPrevious {...props} className={styles.sliderPrevious} />;
     };
     const settings = {
         dots: true,
@@ -36,8 +50,8 @@ export default function () {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
-                }
+                    dots: true,
+                },
             },
             {
                 breakpoint: 1024,
@@ -45,8 +59,8 @@ export default function () {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
-                }
+                    dots: true,
+                },
             },
             {
                 breakpoint: 992,
@@ -54,73 +68,77 @@ export default function () {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: true,
-                    dots: true
-                }
+                    dots: true,
+                },
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 1
-                }
+                    initialSlide: 1,
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }
-        ]
+                    slidesToScroll: 2,
+                },
+            },
+        ],
     };
-
 
     return (
         <section className={`${styles.ourHomeSection} mt-150`}>
             <Container>
-                <h4 className={`subHeader mb-25`}>Our Homes</h4>
+                <h4 data-aos="fade-right" className={`subHeader mb-25`}>
+                    Our Homes
+                </h4>
                 <Row className={styles.ourHomeIntro}>
-                    <Col md={6} className={styles.ourHomeIntroHeader}>
-                        <h2 className={`headerDark`}>
-                            Tech-Embedded
-                        </h2>
-                        <h2 className={`headerDark`}>
-                            Buildings
-                        </h2>
+                    <Col
+                        data-aos="fade-right"
+                        md={6}
+                        className={styles.ourHomeIntroHeader}
+                    >
+                        <h2 className={`headerDark`}>Tech-Embedded</h2>
+                        <h2 className={`headerDark`}>Buildings</h2>
                     </Col>
-                    <Col md={6}>
+                    <Col data-aos="fade-left" md={6}>
                         <p className={`textPrimary`}>
-                            Our projects are not just buildings; they're the embodiment of forward-thinking design and
-                            cutting-edge technology, seamlessly integrated to create next-generation smart homes.
-                            Each home is a testament to our commitment to quality, our passion for innovation, and our
-                            dedication to crafting spaces that go beyond the ordinary.
+                            Our projects are not just buildings; they're the
+                            embodiment of forward-thinking design and
+                            cutting-edge technology, seamlessly integrated to
+                            create next-generation smart homes. Each home is a
+                            testament to our commitment to quality, our passion
+                            for innovation, and our dedication to crafting
+                            spaces that go beyond the ordinary.
                         </p>
-                        <button className={'text'}>
-                            Learn More <ArrowRightSvg/>
+                        <button className={"text"}>
+                            Learn More <ArrowRightSvg />
                         </button>
                     </Col>
                 </Row>
 
-                <div className={styles.sliderCtx}>
-
-                    <Slider settings={settings} childrenItems={[
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>,
-                        <HomesItem/>
-                    ]}/>
-
+                <div className={styles.sliderCtx} data-aos="fade-up">
+                    <Slider
+                        settings={settings}
+                        childrenItems={[
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                            <HomesItem />,
+                        ]}
+                    />
                 </div>
             </Container>
-
         </section>
     );
 }
@@ -135,23 +153,40 @@ const HomesItem = () => {
         setIsHover(false);
     };
     const style = {
-        background: `${(isHover) ? 'linear-gradient(0deg, rgba(251, 189, 0, 0.80) 0%, rgba(251, 189, 0, 0.80) 100%)'
-            : 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%)'},
-             url('/assets/images/homes/carousel/home.png')`
+        background: `${
+            isHover
+                ? "linear-gradient(0deg, rgba(251, 189, 0, 0.80) 0%, rgba(251, 189, 0, 0.80) 100%)"
+                : "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%)"
+        },
+             url('/assets/images/homes/carousel/home.png')`,
     };
     return (
-        <div className={styles.homesCarouselItem} style={style} onMouseEnter={handleMouseEnter}
-             onMouseLeave={handleMouseLeave}>
+        <div
+            className={styles.homesCarouselItem}
+            style={style}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
             <div className={styles.info}>
-                <h3 className={`${isHover ? 'headerDark' : 'headerWhite'}`}>Oak</h3>
-                <div className={`${isHover ? 'textDark' : 'textWhite'} ${styles.description}`}>
+                <h3 className={`${isHover ? "headerDark" : "headerWhite"}`}>
+                    Oak
+                </h3>
+                <div
+                    className={`${isHover ? "textDark" : "textWhite"} ${
+                        styles.description
+                    }`}
+                >
                     5 Bedroom
-                    <br/>
+                    <br />
                     Fully detached Duplex
                 </div>
-                <a href={''} className={`${isHover ? 'textDark' : 'textWhite'}`}>View Project <ArrowRightSvg/></a>
+                <a
+                    href={""}
+                    className={`${isHover ? "textDark" : "textWhite"}`}
+                >
+                    View Project <ArrowRightSvg />
+                </a>
             </div>
-
         </div>
     );
 };
