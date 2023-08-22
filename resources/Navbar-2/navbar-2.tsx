@@ -20,6 +20,11 @@ export default function () {
     const [isHomesHovered, setIsHomesHovered] = useState(false);
     const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
     const [showOffcanvas, setShowOffcanvas] = useState(false);
+    // @ts-ignore
+    const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(
+        null
+    );
+
     const navBarRef = useRef<HTMLElement | null>(null);
 
     const handleCloseOffcanvas = () => {
@@ -48,6 +53,26 @@ export default function () {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    const handleMouseEnterHomes = () => {
+        clearTimeout(hoverTimeout!);
+        setHoverTimeout(setTimeout(() => setIsHomesHovered(true), 200));
+    };
+
+    const handleMouseLeaveHomes = () => {
+        clearTimeout(hoverTimeout!);
+        setHoverTimeout(setTimeout(() => setIsHomesHovered(false), 200));
+    };
+
+    const handleMouseEnterProjects = () => {
+        clearTimeout(hoverTimeout!);
+        setHoverTimeout(setTimeout(() => setIsProjectsHovered(true), 400));
+    };
+
+    const handleMouseLeaveProjects = () => {
+        clearTimeout(hoverTimeout!);
+        setHoverTimeout(setTimeout(() => setIsProjectsHovered(false), 400));
+    };
 
     const mobButtonStyles = {
         borderRadius: "10px",
@@ -100,8 +125,9 @@ export default function () {
                             title="Our homes"
                             id="homes-dropdown"
                             show={isHomesHovered}
-                            onMouseEnter={() => setIsHomesHovered(true)}
-                            onMouseLeave={() => setIsHomesHovered(false)}
+                            onMouseEnter={handleMouseEnterHomes}
+                            onMouseLeave={handleMouseLeaveHomes}
+                            onClick={(e) => e.preventDefault()}
                             className={`${styles.navLink}`}
                         >
                             <div>
@@ -145,8 +171,9 @@ export default function () {
                             title="Projects"
                             id="projects-dropdown"
                             show={isProjectsHovered}
-                            onMouseEnter={() => setIsProjectsHovered(true)}
-                            onMouseLeave={() => setIsProjectsHovered(false)}
+                            onMouseEnter={handleMouseEnterProjects}
+                            onMouseLeave={handleMouseLeaveProjects}
+                            onClick={(e) => e.preventDefault()}
                             className={styles.navLink}
                         >
                             <div>
@@ -308,3 +335,5 @@ export default function () {
         </Navbar>
     );
 }
+
+// check is code for me and  help me very why there's a glitch when i hover on the dropdown

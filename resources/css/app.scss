@@ -317,7 +317,6 @@ button.text {
     justify-content: space-between;
     gap: 1rem;
     padding: 0 2rem;
-
     &.show {
         animation: slideInFromTop 0.5s ease-in-out 0.4s forwards;
         display: flex;
