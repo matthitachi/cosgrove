@@ -29,7 +29,11 @@
     }
 
     &:hover {
-        background: #FBBD00;
+        background: #fbbd00;
+
+        h4 {
+            color: #000 !important;
+        }
 
         p {
             opacity: 1;
@@ -40,8 +44,4 @@
             stroke: #000;
         }
     }
-
 }
-
-
-

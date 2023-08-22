@@ -1,0 +1,71 @@
+.navBar {
+    width: 100%;
+    padding: 25px 0 !important;
+    // margin: 0 100px !important;
+
+    background-color: transparent; // Initial background color
+    transition: background-color 0.5s; // Smooth transition effect
+
+    &.scrolled {
+        background-color: rgba(0, 0, 0, 0.8); // Background color when scrolled
+    }
+    .navButton {
+        border-radius: 10px;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        font-family: Inter, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding: 5px 15px;
+    }
+}
+
+.navContainer {
+    display: flex;
+
+    .navCollapse {
+        flex-grow: unset !important;
+    }
+
+    .navBrandImg {
+        width: auto;
+        height: 25px;
+    }
+
+    .Nav {
+        padding: 0;
+        --bs-nav-link-padding-y: 5px;
+        align-items: center;
+    }
+
+    .navLink {
+        margin-right: 50px;
+        color: rgba(#fff, 0.6) !important;
+        font-family: Inter, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        &:hover {
+            color: #fbbd00;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navBar {
+        .navButton {
+            display: none;
+        }
+    }
+
+    .navContainer {
+        .navy {
+            display: none;
+        }
+    }
+}

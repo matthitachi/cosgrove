@@ -1,33 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @font-face {
-    font-family: 'Nexa Bold';
-    src: url('/Fonts/NexaBold/Nexa Bold.otf') format('opentype');
+    font-family: "Nexa Bold";
+    src: url("/Fonts/NexaBold/Nexa Bold.otf") format("opentype");
 }
 @font-face {
-    font-family: 'Nexa Light';
-    src: url('/Fonts/NexaBold/Nexa Light.otf') format('opentype');
+    font-family: "Nexa Light";
+    src: url("/Fonts/NexaBold/Nexa Light.otf") format("opentype");
 }
 @font-face {
-    font-family: 'Betterlett';
-    src: url('/Fonts/Betterlett/betterlett.ttf') format('truetype');
+    font-family: "Betterlett";
+    src: url("/Fonts/Betterlett/betterlett.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'Betterlett Swash';
-    src: url('/Fonts/Betterlett/betterlett-swash.ttf') format('truetype');
+    font-family: "Betterlett Swash";
+    src: url("/Fonts/Betterlett/betterlett-swash.ttf") format("truetype");
 }
 
-
-
-$primaryColor: #FBBD00;
+$primaryColor: #fbbd00;
 section .paddedVertical {
     padding: 0 100px;
 }
 
-.headerDark, .headerWhite {
-    font-family: 'Nexa Bold', serif;
+.headerDark,
+.headerWhite {
+    font-family: "Nexa Bold", serif;
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
@@ -42,27 +41,30 @@ section .paddedVertical {
     color: #fff;
 }
 
-.subHeader, .subHeaderDark, .subHeaderSmall {
-    color: #FBBD00;
+.subHeader,
+.subHeaderDark,
+.subHeaderSmall {
+    color: #fbbd00;
     font-family: Inter, serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
-.subHeaderDark{
+.subHeaderDark {
     color: #000;
     font-weight: 700;
     margin-bottom: 50px;
 }
-.subHeaderSmall{
+.subHeaderSmall {
     font-size: 16px;
-    &.dark{
+    &.dark {
         color: #000;
     }
 }
 
-.textPrimary, .textWhite {
+.textPrimary,
+.textWhite {
     font-family: Inter, serif;
     font-size: 14px;
     font-style: normal;
@@ -80,12 +82,14 @@ section .paddedVertical {
 .textDark {
     color: #000;
 }
-p.textDark, p.textPrimary, p.textWhite, {
+p.textDark,
+p.textPrimary,
+p.textWhite {
     font-size: 16px;
 }
 
-button.text{
-    color: #FBBD00;
+button.text {
+    color: #fbbd00;
     text-align: justify;
     font-family: Inter, serif;
     font-size: 18px;
@@ -97,21 +101,22 @@ button.text{
     margin-bottom: 100px;
 }
 
-.imageContainerEffect, .sidedContainerBG{
+.imageContainerEffect,
+.sidedContainerBG {
     min-height: 260px;
     background-size: cover !important;
     position: relative;
-    &:after{
-        content: ' ';
+    &:after {
+        content: " ";
         width: 10px;
         height: 50%;
-        background: #FBBD00;
+        background: #fbbd00;
         position: absolute;
         bottom: 0;
         left: -10px;
     }
 }
-.sidedContainerBG{
+.sidedContainerBG {
     width: 100%;
     height: 100%;
     min-height: 450px;
@@ -120,14 +125,15 @@ button.text{
 .slick-dots {
     bottom: -60px;
 }
-.slick-dots li button:before{
+.slick-dots li button:before {
     font-size: 8px;
 }
 .slick-dots li.slick-active button:before {
-    opacity: .75;
-    color: #FBBD00;
+    opacity: 0.75;
+    color: #fbbd00;
 }
-.curvedTop, .curvedBottom{
+.curvedTop,
+.curvedBottom {
     width: 104%;
     height: 100%;
     position: absolute;
@@ -139,110 +145,108 @@ button.text{
     overflow: hidden;
     background-size: cover !important;
 }
-.curvedTop{
+.curvedTop {
     border-radius: 50%/150px 150px 0 0;
 }
-.curvedBottom{
-    border-radius: 0 0 50% 50%/150px
+.curvedBottom {
+    border-radius: 0 0 50% 50%/150px;
 }
 
-    //Margins
-.m-25{
+//Margins
+.m-25 {
     margin: 25px;
 }
-.mb-25{
+.mb-25 {
     margin-bottom: 25px;
 }
-.mr-25{
+.mr-25 {
     margin-right: 25px;
 }
-.ml-25{
+.ml-25 {
     margin-left: 25px;
 }
-.mt-25{
+.mt-25 {
     margin-top: 25px;
 }
-.m-65{
+.m-65 {
     margin: 65px;
 }
-.mb-65{
+.mb-65 {
     margin-bottom: 65px;
 }
-.mr-65{
+.mr-65 {
     margin-right: 65px;
 }
-.ml-65{
+.ml-65 {
     margin-left: 65px;
 }
-.mt-65{
+.mt-65 {
     margin-top: 65px;
 }
-.m-85{
+.m-85 {
     margin: 85px;
 }
-.mb-85{
+.mb-85 {
     margin-bottom: 85px;
 }
-.mr-85{
+.mr-85 {
     margin-right: 85px;
 }
-.ml-85{
+.ml-85 {
     margin-left: 85px;
 }
-.mt-85{
+.mt-85 {
     margin-top: 85px;
 }
-.m-150{
+.m-150 {
     margin: 150px;
 }
-.mb-150{
+.mb-150 {
     margin-bottom: 150px;
 }
-.mr-150{
+.mr-150 {
     margin-right: 150px;
 }
-.ml-150{
+.ml-150 {
     margin-left: 150px;
 }
-.mt-150{
+.mt-150 {
     margin-top: 150px;
 }
 
-.slick-slide{
+.slick-slide {
     //margin-left:  12px;
     //margin-right:  12px;
 }
 
-.sidedContainer{
-    .info{
-        padding: 0 150px;
+.sidedContainer {
+    .info {
+        padding-right: 150px;
     }
 }
 @media screen and (max-width: 1400px) {
-    .sidedContainer{
-        .info{
-            padding: 0 100px;
+    .sidedContainer {
+        .info {
+            padding-right: 100px;
         }
     }
 }
 
 @media screen and (max-width: 1200px) {
-    .curvedTop{
+    .curvedTop {
         border-radius: 50%/100px 100px 0 0;
     }
-    .curvedBottom{
-        border-radius: 0 0 50% 50%/100px
+    .curvedBottom {
+        border-radius: 0 0 50% 50%/100px;
     }
-    .sidedContainer{
-        .info{
-            padding: 0 50px;
+    .sidedContainer {
+        .info {
+            padding-right: 50px;
         }
     }
 }
 
 @media screen and (max-width: 1024px) {
-
-
 }
 
 @media screen and (max-width: 992px) {
@@ -255,32 +259,186 @@ button.text{
     section .paddedVertical {
         padding: 0 15px;
     }
-    .curvedTop{
+    .curvedTop {
         border-radius: 50%/70px 70px 0 0;
     }
-    .curvedBottom{
-        border-radius: 0 0 50% 50%/70px
+    .curvedBottom {
+        border-radius: 0 0 50% 50%/70px;
+    }
+
+    .subHeader {
+        margin-top: 2rem;
     }
 }
 
-
 @media screen and (max-width: 575px) {
-    .headerDark, .headerWhite{
+    .headerDark,
+    .headerWhite {
         font-size: 25px;
     }
-    p.textDark, p.textPrimary, p.textWhite, {
+    p.textDark,
+    p.textPrimary,
+    p.textWhite {
         font-size: 12px;
     }
-    .curvedTop{
+    .curvedTop {
         border-radius: 50%/50px 50px 0 0;
     }
-    .curvedBottom{
-        border-radius: 0 0 50% 50%/50px
+    .curvedBottom {
+        border-radius: 0 0 50% 50%/50px;
     }
-    .sidedContainer{
-        .info{
+    .sidedContainer {
+        .info {
             padding: 20px 20px;
         }
     }
 }
 
+.nav-link {
+    color: rgba(#fff, 0.6) !important;
+    font-family: Inter, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    &:hover {
+        color: #fbbd00 !important;
+    }
+}
+
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    width: 36.875rem;
+    background: #121212;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 2rem;
+    &.show {
+        animation: slideInFromTop 0.3s ease-in-out 0.4s forwards;
+        display: flex;
+        justify-content: space-between;
+    }
+    &:not(.show) {
+        animation: slideOutToTop 0.3s ease forwards;
+    }
+    .dropdown-item {
+        color: rgba(#fff, 0.6);
+        font-family: Inter;
+        font-size: 15.029px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 1rem 0;
+        width: 230.689px;
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+        &:hover {
+            color: #fbbd00;
+            background-color: transparent;
+        }
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToTop {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+// Mobile Header Styles
+
+.offcanvas {
+    background: #121212;
+    .offcanvas-header {
+        svg {
+            background-color: white !important;
+            color: white !important;
+        }
+        button {
+            color: #fff !important;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .dropdown-menu {
+        flex-direction: column;
+        padding-left: 0 !important;
+        width: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .offcanvas {
+        background: #121212;
+
+        .offcanvas-header {
+            btn-close {
+                --bs-btn-close-color: white;
+            }
+        }
+
+        a {
+            color: rgba(#fff, 0.6);
+            font-family: Inter;
+            text-decoration: none;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 2rem 0;
+            width: 230.689px;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ._sliderNext_vveve_1,
+    ._sliderPrevious_vveve_1 {
+        width: 50px;
+    }
+
+    ._sliderNext_vveve_1 {
+        right: -21px;
+    }
+
+    ._sliderPrevious_vveve_1 {
+        left: -20px;
+    }
+}
+
+// Remove the Dropdown animation
+@media (max-width: 992px) {
+    .dropdown-menu {
+        animation: none; // Remove animation for mobile screens
+        &.show {
+            animation: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        &:not(.show) {
+            display: none;
+        }
+    }
+}

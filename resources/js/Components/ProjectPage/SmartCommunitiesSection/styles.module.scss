@@ -2,8 +2,8 @@
     margin-top: 50px;
     z-index: 2;
     position: relative;
-    h4{
-        color: #FBBD00;
+    h4 {
+        color: #fbbd00;
         font-family: Inter, serif;
         font-size: 20px;
         font-style: normal;
@@ -11,8 +11,8 @@
         line-height: normal;
         margin-bottom: 25px;
     }
-    .projectIntro{
-        h2{
+    .projectIntro {
+        h2 {
             color: #000;
             font-family: Nexa Bold, serif;
             font-size: 50px;
@@ -21,7 +21,7 @@
             line-height: normal;
             margin-bottom: 20px;
         }
-        p{
+        p {
             color: #585858;
             text-align: justify;
             font-family: Inter, serif;
@@ -31,25 +31,25 @@
             line-height: 28px;
         }
     }
-    .projectItem{
+    .projectItem {
         width: 100%;
         height: 550px;
         border-radius: 10px;
         background-size: cover !important;
         position: relative;
         overflow: hidden;
-        .projectsInner{
+        .projectsInner {
             padding: 60px;
             width: 100%;
             height: 100%;
             position: absolute;
             bottom: -50%;
             background: transparent;
-            -webkit-transition: all .5s ease;
-            -moz-transition: all .5s ease;
-            -o-transition: all .5s ease;
-            transition: all .5s ease;
-            h2{
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            h2 {
                 margin-top: 85px;
                 color: #fff;
                 font-family: Nexa Bold, serif;
@@ -58,11 +58,11 @@
                 font-weight: 700;
                 line-height: normal;
             }
-            svg{
+            svg {
                 stroke: #fff;
             }
             .location {
-                color: #FFF;
+                color: #fff;
                 font-family: Inter, serif;
                 font-size: 20px;
                 font-style: normal;
@@ -71,11 +71,11 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 30px;
-                svg{
+                svg {
                     margin-right: 5px;
                 }
             }
-            p{
+            p {
                 width: 50%;
                 color: #000;
                 font-family: Inter, serif;
@@ -85,7 +85,7 @@
                 line-height: 28px;
                 display: none;
             }
-            a{
+            a {
                 position: absolute;
                 right: 30px;
                 bottom: calc(30px + 50%);
@@ -99,66 +99,62 @@
                 display: flex;
                 align-items: center;
 
-                -webkit-transition: all .5s ease;
-                -moz-transition: all .5s ease;
-                -o-transition: all .5s ease;
-                transition: all .5s ease;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
             }
         }
-        &:hover{
-            .projectsInner{
-                background: rgba(251, 189, 0, 0.80);
+        &:hover {
+            .projectsInner {
+                background: rgba(251, 189, 0, 0.8);
                 bottom: 0;
-                h2, .location {
+                h2,
+                .location {
                     color: #000;
                 }
-                p{
+                p {
                     display: block;
                 }
-                svg{
+                svg {
                     stroke: #000;
                 }
-                .location{
-
+                .location {
                 }
-                a{
+                a {
                     color: #000;
                     bottom: 30px;
                 }
             }
         }
     }
-    .seeAll{
+    .seeAll {
         margin-top: 50px;
     }
-    .featuresCtx{
+    .featuresCtx {
         margin-bottom: 100px;
     }
-
 }
 
-
 @media screen and (max-width: 1600px) {
-
 }
 
 @media screen and (max-width: 1400px) {
-
 }
 
 @media screen and (max-width: 1200px) {
     .projectHomeSection {
-        .projectItem{
-            .projectsInner{
-                h2{
+        .projectItem {
+            .projectsInner {
+                h2 {
                     font-size: 40px;
                 }
-                .location{
+                .location {
                     font-size: 16px;
                 }
-                a{
+                a {
                     font-size: 16px;
-                    svg{
+                    svg {
                         width: 20px;
                         height: 20px;
                     }
@@ -169,43 +165,41 @@
 }
 
 @media screen and (max-width: 1024px) {
-
-
 }
 
 @media screen and (max-width: 992px) {
     .projectHomeSection {
-        .projectItem{
+        .projectItem {
             height: 350px;
-            .projectsInner{
+            .projectsInner {
                 padding: 60px 30px;
                 bottom: -30%;
-                h2{
+                h2 {
                     font-size: 30px;
                 }
-                p{
+                p {
                     width: 75%;
                     font-size: 11px;
                 }
-                .location{
+                .location {
                     font-size: 14px;
-                    svg{
+                    svg {
                         width: 20px;
                         height: 20px;
                     }
                 }
-                a{
+                a {
                     bottom: calc(30px + 30%);
                     font-size: 13px;
-                    svg{
+                    svg {
                         width: 17px;
                         height: 17px;
                     }
                 }
             }
-            &:hover{
-                .projectsInner{
-                    h2{
+            &:hover {
+                .projectsInner {
+                    h2 {
                         margin-top: 40px;
                     }
                 }
@@ -216,24 +210,23 @@
 
 @media screen and (max-width: 767px) {
     .projectHomeSection {
-        .projectIntro{
-            .projectIntroHeader{
+        .projectIntro {
+            .projectIntroHeader {
                 display: flex;
-                h2{
+                h2 {
                     margin-right: 20px;
                 }
             }
         }
-        .projectItem{
-            .projectsInner{
-                h2{
+        .projectItem {
+            .projectsInner {
+                h2 {
                     font-size: 25px;
                 }
-
             }
-            &:hover{
-                .projectsInner{
-                    h2{
+            &:hover {
+                .projectsInner {
+                    h2 {
                         margin-top: 30px;
                     }
                 }
@@ -242,78 +235,68 @@
     }
 }
 
-
 @media screen and (max-width: 575px) {
     .projectHomeSection {
-        margin-top: -300px;
-        .projectIntro{
-            .projectIntroHeader{
-
-                h2{
-                   font-size: 25px;
+        margin-top: 100px;
+        .projectIntro {
+            .projectIntroHeader {
+                h2 {
+                    font-size: 25px;
                     margin-right: 15px;
                 }
             }
 
-            p{
+            p {
                 font-size: 12px;
             }
         }
-        .projectItem{
+        .projectItem {
             height: 270px;
-            .projectsInner{
+            .projectsInner {
                 padding: 30px 30px;
                 bottom: -25%;
-                h2{
+                h2 {
                     font-size: 20px;
                 }
-                p{
+                p {
                     width: 800%;
                     font-size: 8px;
-
                 }
 
-                a{
+                a {
                     bottom: calc(30px + 25%);
-
                 }
             }
-
         }
     }
-
 }
 @media screen and (max-width: 450px) {
     .projectHomeSection {
-
-        .projectItem{
+        .projectItem {
             height: 270px;
-            .projectsInner{
+            .projectsInner {
                 padding: 30px 15px;
                 bottom: -25%;
-                h2{
+                h2 {
                     font-size: 20px;
                 }
-                p{
+                p {
                     width: 100%;
                     font-size: 8px;
                     line-height: 20px;
                 }
-                .location{
+                .location {
                     font-size: 12px;
-                    svg{
+                    svg {
                         width: 15px;
                         height: 15px;
                     }
                     margin-bottom: 15px;
                 }
-                a{
+                a {
                     bottom: calc(30px + 25%);
-
                 }
             }
-
         }
     }
-
 }

@@ -7,20 +7,18 @@ import GallerySection from "../../Components/ProjectDetailsPage/GallerySection/i
 import ExploreMoreSection from "../../Components/ProjectDetailsPage/ExploreMoreSection/index";
 import Footer from "../../Components/Elements/Footer/index";
 
-
 export default function () {
-    return (<div>
-        <NavBar/>
-        <HeaderItem height={50} bgImage={'/assets/images/bg/bg1.png'}/>
-        <TopSection/>
-        <HouseTypes/>
-        <GallerySection/>
-        <ExploreMoreSection/>
-        <Footer/>
-
+    return (
         <div>
+            <NavBar />
+            <HeaderItem height={50} bgImage={"/assets/images/bg/bg1.png"} />
+            <TopSection />
+            <HouseTypes headerContent="House Types" />
+            <GallerySection headerContent="Sights from the Project" />
+            <ExploreMoreSection />
+            <Footer />
 
+            <div></div>
         </div>
-    </div>);
+    );
 }
-

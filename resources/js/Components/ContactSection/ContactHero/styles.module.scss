@@ -1,0 +1,259 @@
+.topSection {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    .infoHomeCol {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 10px;
+        height: 30.5rem;
+        .infoHomeBG {
+            background: url("/assets/images/contactHero.png");
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            &:after {
+                content: "";
+                width: 10px;
+                height: 50%;
+                background: #fbbd00;
+                position: absolute;
+                bottom: 0;
+                left: -10px;
+            }
+        }
+    }
+    .infoHomeInfo {
+        padding: 0 150px;
+        h5 {
+            color: #fbbd00;
+            font-family: Inter, serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 25px;
+        }
+
+        .infoHomeExpert {
+            padding: 0 150px;
+            h5 {
+                color: #fbbd00;
+                font-family: Inter, serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                // margin-bottom: 25px;
+            }
+        }
+
+        .m65 {
+            margin-bottom: 65px;
+        }
+        p {
+            color: #585858;
+            text-align: justify;
+            font-family: Inter, serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 44.9375rem;
+        }
+
+        button.text {
+            color: #fbbd00;
+            text-align: justify;
+            font-family: Inter, serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            border: none;
+            background: transparent;
+            margin-bottom: 100px;
+        }
+
+        .contactInTouch {
+            padding-right: 40px;
+            position: relative;
+            .formItem {
+                width: 100%;
+                max-width: 507px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.3);
+                border: none;
+                padding: 10px;
+            }
+
+            div {
+                padding: 10px;
+                border-left: 1px solid #696969;
+                opacity: 0.3;
+                position: absolute;
+                top: 0;
+                right: 19rem;
+            }
+
+            textarea {
+                width: 100%;
+                height: 7.0625rem;
+                max-width: 507px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.3);
+                border: none;
+                padding: 10px;
+            }
+
+            select {
+                width: 100%;
+                position: relative;
+                z-index: 500;
+                max-width: 507px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                background: rgba(0, 0, 0, 0.3);
+                border: none;
+                padding: 10px;
+                appearance: none; // remove default styling
+                option:disabled {
+                    color: #1b1b1b;
+                    opacity: 0.1;
+                }
+            }
+
+            button {
+                border-radius: 10px;
+                background: #000;
+                color: #fff;
+                font-family: Inter, serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                padding: 6px 30px;
+                border: none;
+                display: block;
+            }
+        }
+    }
+    .estateFeatures {
+        .eFeatureItem {
+            text-align: center;
+            svg {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .topSection {
+        .infoHomeInfo {
+            .contact {
+                p {
+                    padding-right: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .topSection {
+        .infoHomeInfo {
+            padding: 0 100px;
+            .contact {
+                p {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .topSection {
+        .infoHomeInfo {
+            padding: 0 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .topSection {
+        .infoHomeInfo {
+            padding: 0 50px;
+            .contact {
+                button {
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .topSection {
+        .infoHomeCol {
+            height: 600px;
+            .infoHomeBG {
+                width: 90%;
+                height: 100%;
+                left: 5%;
+                //&:after{
+                //    left: calc(5% + 3px);
+                //}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footerInTouch {
+        margin-bottom: 50px;
+    }
+    .records {
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .topSection {
+        .infoHomeInfo {
+            padding: 20px 20px;
+            h2 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 12px;
+            }
+            .records {
+                .recordItem {
+                    margin-bottom: 30px;
+                    h3 {
+                        font-size: 27px;
+                    }
+                    .title {
+                        font-size: 13px;
+                    }
+                }
+            }
+            .contact {
+                h5 {
+                    font-size: 13px;
+                }
+                button {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
