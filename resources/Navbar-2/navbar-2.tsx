@@ -66,12 +66,12 @@ export default function () {
 
     const handleMouseEnterProjects = () => {
         clearTimeout(hoverTimeout!);
-        setHoverTimeout(setTimeout(() => setIsProjectsHovered(true), 400));
+        setHoverTimeout(setTimeout(() => setIsProjectsHovered(true), 200));
     };
 
     const handleMouseLeaveProjects = () => {
         clearTimeout(hoverTimeout!);
-        setHoverTimeout(setTimeout(() => setIsProjectsHovered(false), 400));
+        setHoverTimeout(setTimeout(() => setIsProjectsHovered(false), 200));
     };
 
     const mobButtonStyles = {
