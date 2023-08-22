@@ -195,11 +195,15 @@
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 600px) {
     .searchBar {
         form {
-            margin-right: 0;
+            margin-right: 0 !important;
             margin-left: 16px;
         }
+    }
+
+    .searchPagination {
+        margin-right: 10px;
     }
 }

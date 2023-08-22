@@ -318,7 +318,7 @@ button.text {
     gap: 1rem;
     padding: 0 2rem;
     &.show {
-        animation: slideInFromTop 0.5s ease-in-out 0.4s forwards;
+        animation: slideInFromTop 0.3s ease-in-out 0.4s forwards;
         display: flex;
         justify-content: space-between;
     }
@@ -344,7 +344,7 @@ button.text {
 
 @keyframes slideInFromTop {
     from {
-        transform: translateY(-200%);
+        transform: translateY(-100%);
         opacity: 0;
     }
     to {
@@ -359,7 +359,7 @@ button.text {
         opacity: 1;
     }
     to {
-        transform: translateY(-200%);
+        transform: translateY(-100%);
         opacity: 0;
     }
 }
@@ -425,5 +425,20 @@ button.text {
 
     ._sliderPrevious_vveve_1 {
         left: -20px;
+    }
+}
+
+// Remove the Dropdown animation
+@media (max-width: 992px) {
+    .dropdown-menu {
+        animation: none; // Remove animation for mobile screens
+        &.show {
+            animation: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        &:not(.show) {
+            display: none;
+        }
     }
 }
