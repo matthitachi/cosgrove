@@ -319,7 +319,7 @@ button.text {
     padding: 0 2rem;
 
     &.show {
-        animation: slideInFromTop 0.5s ease-in-out;
+        animation: slideInFromTop 0.5s ease-in-out 0.4s forwards;
         display: flex;
         justify-content: space-between;
     }
@@ -417,6 +417,14 @@ button.text {
 @media screen and (max-width: 600px) {
     ._sliderNext_vveve_1,
     ._sliderPrevious_vveve_1 {
-        width: 60px;
+        width: 50px;
+    }
+
+    ._sliderNext_vveve_1 {
+        right: -21px;
+    }
+
+    ._sliderPrevious_vveve_1 {
+        left: -20px;
     }
 }

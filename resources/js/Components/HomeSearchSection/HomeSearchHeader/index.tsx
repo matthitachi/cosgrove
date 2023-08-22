@@ -96,7 +96,7 @@ export default function () {
                 </div>
 
                 <Row className={styles.searchBrochure}>
-                    <Col>
+                    <Col data-aos="fade-right">
                         <h4>Brochures (3 results)</h4>
                         <div>
                             <a href="">Cosgrove 2020 Brochure.pdf</a>
@@ -123,7 +123,7 @@ export default function () {
                     className={styles.searchBrochure}
                     style={{ marginBottom: "2rem", padding: "1rem 0" }}
                 >
-                    <Col>
+                    <Col data-aos="fade-right">
                         Press (1 result)
                         <div>
                             <a href="">
