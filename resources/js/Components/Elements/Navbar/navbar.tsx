@@ -58,7 +58,7 @@ export default function ({isDark = false}:navbarProp) {
         <Navbar expand="lg" fixed={"top"} className={styles.navBar} ref={navBarRef}
                 style={{
                     backgroundColor: `${(isDark)? `rgba(0,0,0)` :`rgba(0, 0, 0, ${scrollOpacity})`}`,
-                    margin: `${(isDark)? '0' :`0 ${100 * (1- scrollOpacity)}px`}`,
+                    margin: `${(isDark || window.innerWidth < 500)? '0' :`0 ${100 * (1- scrollOpacity)}px`}`,
                     borderBottom: `${(isDark)?'none' :`1px solid rgba(255,255,255, ${1 - scrollOpacity})`}`
                 }}
         >

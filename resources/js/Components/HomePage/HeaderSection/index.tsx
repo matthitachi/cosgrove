@@ -50,7 +50,7 @@ export default function () {
                 <video style={{
                     opacity: ratio
                 }}
-                    poster="/assets/videos/bg/hero-video.mp4"
+                    poster="/assets/images/bg/cosgrove-hero.jpg"
                     playsInline
                     autoPlay
                     muted
