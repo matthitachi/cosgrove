@@ -327,7 +327,7 @@ export default function () {
                                     className={styles.navLink}
                                     style={{
                                         position: "relative",
-                                        zIndex: 1000,
+                                        zIndex: "1000",
                                     }}
                                 >
                                     Contact

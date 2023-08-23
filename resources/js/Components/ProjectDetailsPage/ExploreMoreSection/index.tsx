@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
-import ProjectItem from "../../ProjectItem/index";
+import ProjectItem from "../../Elements/ProjectItem/index";
 
 export default function () {
     return (

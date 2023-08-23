@@ -12,10 +12,10 @@ import { ReactComponent as ArrowRight2Svg } from "/public/assets/svg/arrow-right
 import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
 // @ts-ignore
 import { ReactComponent as MapPinSvg } from "/public/assets/svg/map-pin.svg";
-import FeaturesItem from "../../FeaturesItem";
-import Slider from "../../Slider";
-import RecordList, { RecordItemProp } from "../../RecordList";
-import SupportList, { SupportItemProp } from "../../SupportList";
+import FeaturesItem from "../../Elements/FeaturesItem";
+import Slider from "../../Elements/Slider";
+import RecordList, { RecordItemProp } from "../../Elements/RecordList";
+import SupportList, { SupportItemProp } from "../../Elements/SupportList";
 
 export default function () {
     React.useEffect(() => {

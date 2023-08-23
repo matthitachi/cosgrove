@@ -1,9 +1,9 @@
 import * as React from "react";
 import Navy from "../../../Navbar-2/navbar-2";
-import HeaderItem from "../../Components/HeaderItem/index";
+import HeaderItem from "../../Components/Elements/HeaderItem/index";
 import ProjectTechHome from "../../Components/ProjectTechHome";
 import ProjectTechType from "../../Components/ProjectTechType";
-import Footer from "../../Components/Footer";
+import Footer from "../../Components/Elements/Footer";
 
 export default function () {
     return (

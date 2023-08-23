@@ -10,7 +10,7 @@ import closeSvg from "/public/assets/svg/close.svg";
 import searchSvg from "/public/assets/svg/search.svg";
 // @ts-ignore
 import Download from "/public/assets/images/icons/downloadnew.png";
-import HouseTypes from "../../ProjectDetailsSection/HouseTypes";
+import HouseTypes from "../../ProjectDetailsPage/HouseTypes";
 
 export default function () {
     React.useEffect(() => {

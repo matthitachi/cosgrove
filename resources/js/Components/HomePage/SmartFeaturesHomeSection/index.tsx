@@ -12,11 +12,11 @@ import styles from "./styles.module.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
-import FeaturesItem from "../FeaturesItem";
+import FeaturesItem from "../../Elements/FeaturesItem";
 // @ts-ignore
 import { ReactComponent as Camera } from "/public/assets/svg/cctv-camera.svg";
 
-import Slider from "../Slider/index";
+import Slider from "../../Elements/Slider/index";
 export default function () {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });

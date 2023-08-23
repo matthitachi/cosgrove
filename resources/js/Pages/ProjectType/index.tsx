@@ -1,12 +1,11 @@
 import * as React from "react";
 import Navy from "../../../Navbar-2/navbar-2";
-import HeaderItem from "../../Components/HeaderItem/index";
+import HeaderItem from "../../Components/Elements/HeaderItem/index";
 import ProjectHomeTop from "../../ProjectHomeTop/index";
-import HouseTypes from "../../Components/ProjectDetailsSection/HouseTypes/index";
-import GallerySection from "../../Components/ProjectDetailsSection/GallerySection/index";
+import HouseTypes from "../../Components/ProjectDetailsPage/HouseTypes/index";
+import GallerySection from "../../Components/ProjectDetailsPage/GallerySection/index";
 import Explore from "../../Components/ExploreProject";
-import NavbarTest from "../../../Navbar-2/navbar-test";
-import Footer from "../../Components/Footer";
+import Footer from "../../Components/Elements/Footer";
 
 export default function () {
     return (
