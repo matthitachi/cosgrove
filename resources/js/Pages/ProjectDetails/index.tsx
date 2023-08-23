@@ -1,11 +1,11 @@
 import * as React from "react";
-import NavBar from "../../Components/Navbar/navbar";
-import HeaderItem from "../../Components/HeaderItem/index";
-import TopSection from "../../Components/ProjectDetailsSection/TopSection/index";
-import HouseTypes from "../../Components/ProjectDetailsSection/HouseTypes/index";
-import GallerySection from "../../Components/ProjectDetailsSection/GallerySection/index";
-import ExploreMoreSection from "../../Components/ProjectDetailsSection/ExploreMoreSection/index";
-import Footer from "../../Components/Footer/index";
+import NavBar from "../../Components/Elements/Navbar/navbar";
+import HeaderItem from "../../Components/Elements/HeaderItem/index";
+import TopSection from "../../Components/ProjectDetailsPage/TopSection/index";
+import HouseTypes from "../../Components/ProjectDetailsPage/HouseTypes/index";
+import GallerySection from "../../Components/ProjectDetailsPage/GallerySection/index";
+import ExploreMoreSection from "../../Components/ProjectDetailsPage/ExploreMoreSection/index";
+import Footer from "../../Components/Elements/Footer/index";
 
 export default function () {
     return (
