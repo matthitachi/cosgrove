@@ -1,23 +1,37 @@
 import { Col, Container, Row } from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import * as React from "react";
 // @ts-ignore
 import { ReactComponent as Select } from "/public/assets/svg/select.svg";
 
 export default function () {
+    React.useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, []);
     return (
         <section className={styles.topSection}>
-            <Container fluid>
+            <Container>
                 <Row>
-                    <Col sm={12} className={styles.infoHomeInfo}>
+                    <Col
+                        sm={12}
+                        className={styles.infoHomeInfo}
+                        data-aos="fade-right"
+                    >
                         <h5>Booking a Tour</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
                             See it with your eyes.
                         </h2>
                     </Col>
 
-                    <Col md={12} lg={7} className={styles.infoHomeInfo}>
+                    <Col
+                        md={12}
+                        lg={7}
+                        className={styles.infoHomeInfo}
+                        data-aos="fade-right"
+                    >
                         <p className={`textPrimary`}>
                             Visit a Cosgrove home and experience opulence merged
                             with modern technology first-hand. Fill in the
@@ -58,7 +72,12 @@ export default function () {
                             <button>Submit</button>
                         </form>
                     </Col>
-                    <Col md={12} lg={5} className={styles.infoHomeCol}>
+                    <Col
+                        md={12}
+                        lg={5}
+                        className={styles.infoHomeCol}
+                        data-aos="fade-left"
+                    >
                         <div className={styles.infoHomeBG}></div>
                     </Col>
                 </Row>

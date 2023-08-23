@@ -4,10 +4,12 @@
         position: relative;
         overflow: hidden;
         margin-bottom: 10px;
-        height: 580px;
+        // height: 580px;
         .infoContactBg {
             background: url("/assets/images/contactTeam.png");
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             width: 100%;
             height: 100%;
             position: relative;
@@ -24,7 +26,6 @@
     }
 
     .infoContactInfo {
-        padding: 0 150px;
         margin-bottom: 2rem;
         h5 {
             color: #fbbd00;
@@ -38,7 +39,7 @@
     }
 
     .teams {
-        padding: 0 150px;
+        padding-left: 100px;
         p {
             color: #585858;
             color: #585858;
@@ -59,7 +60,7 @@
             margin-top: 3rem;
 
             .secondItem {
-                margin-left: 5rem;
+                margin-left: 3rem;
             }
             ul {
                 display: flex;
@@ -108,9 +109,6 @@
         .infoContactCol {
             height: auto;
         }
-        .infoContactInfo {
-            padding: 0 100px;
-        }
 
         .teams {
             padding: 0 10px 0 80px;
@@ -125,9 +123,6 @@
 
 @media screen and (max-width: 1024px) {
     .mainSection {
-        .infoContactInfo {
-            padding: 0 50px;
-        }
         .teams {
             padding: 0 50px;
         }
@@ -166,8 +161,6 @@
 @media screen and (max-width: 575px) {
     .mainSection {
         .infoContactInfo {
-            padding: 20px 20px;
-            margin-left: 20px;
             h2 {
                 font-size: 25px;
             }

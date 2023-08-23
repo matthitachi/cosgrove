@@ -24,7 +24,7 @@
         }
     }
     .infoHomeInfo {
-        padding: 0 150px;
+        padding-right: 100px;
         h5 {
             color: #fbbd00;
             font-family: Inter, serif;
@@ -168,7 +168,7 @@
 @media screen and (max-width: 1400px) {
     .topSection {
         .infoHomeInfo {
-            padding: 0 100px;
+            padding-right: 100px;
             .contact {
                 p {
                     padding-right: 0;
@@ -181,7 +181,7 @@
 @media screen and (max-width: 1200px) {
     .topSection {
         .infoHomeInfo {
-            padding: 0 50px;
+            padding-right: 50px;
         }
     }
 }
@@ -189,7 +189,7 @@
 @media screen and (max-width: 1024px) {
     .topSection {
         .infoHomeInfo {
-            padding: 0 50px;
+            padding-right: 50px;
             .contact {
                 button {
                     min-width: 150px;

@@ -1,26 +1,45 @@
 import { Col, Container, Row } from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import * as React from "react";
 // @ts-ignore
 import { ReactComponent as Chioma } from "/public/assets/svg/chioma.svg";
 
 export default function () {
+    React.useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, []);
     return (
         <section className={styles.mainSection}>
-            <Container fluid>
+            <Container>
                 <Row>
-                    <Col sm={12} className={styles.infoContactInfo}>
+                    <Col
+                        sm={12}
+                        className={styles.infoContactInfo}
+                        data-aos="fade-right"
+                    >
                         <h5>Contact Us</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
                             Speak to an expert from the team.
                         </h2>
                     </Col>
-                    <Col md={12} lg={4} className={styles.infoContactCol}>
+                    <Col
+                        md={12}
+                        lg={5}
+                        className={styles.infoContactCol}
+                        data-aos="fade-right"
+                    >
                         <div className={styles.infoContactBg}></div>
                     </Col>
 
-                    <Col md={12} lg={8} className={styles.teams}>
+                    <Col
+                        md={12}
+                        lg={7}
+                        className={styles.teams}
+                        data-aos="fade-left"
+                    >
                         <p>
                             Lorem ipsum dolor sit amet consectetur. Amet netus
                             at pulvinar turpis eros leo. Varius nisl viverra sit
