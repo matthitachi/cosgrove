@@ -5,6 +5,7 @@ import ProjectHomeTop from "../../ProjectHomeTop/index";
 import HouseTypes from "../../Components/ProjectDetailsSection/HouseTypes/index";
 import GallerySection from "../../Components/ProjectDetailsSection/GallerySection/index";
 import Explore from "../../Components/ExploreProject";
+import NavbarTest from "../../../Navbar-2/navbar-test";
 import Footer from "../../Components/Footer";
 
 export default function () {

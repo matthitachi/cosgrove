@@ -310,38 +310,6 @@ button.text {
     display: none;
 }
 
-.dropdown-menu {
-    width: 36.875rem;
-    background: #121212;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0 2rem;
-    &.show {
-        animation: slideInFromTop 0.3s ease-in-out 0.4s forwards;
-        display: flex;
-        justify-content: space-between;
-    }
-    &:not(.show) {
-        animation: slideOutToTop 0.3s ease forwards;
-    }
-    .dropdown-item {
-        color: rgba(#fff, 0.6);
-        font-family: Inter;
-        font-size: 15.029px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        padding: 1rem 0;
-        width: 230.689px;
-        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
-        &:hover {
-            color: #fbbd00;
-            background-color: transparent;
-        }
-    }
-}
-
 @keyframes slideInFromTop {
     from {
         transform: translateY(-100%);
@@ -363,6 +331,70 @@ button.text {
         opacity: 0;
     }
 }
+
+.dropdown-menu {
+    width: 36.875rem;
+    background: #121212;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 2rem;
+
+    &.show {
+        // animation: slideInFromTop 0.3s ease-in-out 0.4s forwards;
+        display: flex;
+        justify-content: space-between;
+    }
+    &:not(.show) {
+        // animation: slideOutToTop 0.1s ease forwards;
+        display: none;
+    }
+    .dropdown-item {
+        color: rgba(#fff, 0.6);
+        font-family: Inter;
+        font-size: 15.029px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 1rem 0;
+        width: 230.689px;
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+        &:hover {
+            color: #fbbd00;
+            background-color: transparent;
+        }
+    }
+}
+
+// Second styles
+
+// .dropdown-menu {
+//     /* Your existing styles */
+//     width: 36.875rem;
+//     background: #121212;
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 1rem;
+//     padding: 0 2rem;
+
+//     /* Override default styles */
+//     display: none !important; /* Hide by default */
+// }
+
+// .dropdown:hover .dropdown-menu {
+//     /* Show on hover */
+//     display: flex !important;
+// }
+
+// .dropdown-menu.show {
+//     /* Your existing styles */
+//     animation: slideInFromTop 0.3s ease-in-out 0.4s forwards;
+// }
+
+// .dropdown-menu:not(.show) {
+//     /* Your existing styles */
+//     animation: slideOutToTop 0.3s ease forwards;
+// }
 
 // Mobile Header Styles
 

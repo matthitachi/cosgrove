@@ -72,9 +72,6 @@ export default function () {
                         <NavDropdown
                             title="Our homes"
                             id="homes-dropdown"
-                            show={isHomesHovered}
-                            onMouseEnter={() => setIsHomesHovered(true)}
-                            onMouseLeave={() => setIsHomesHovered(false)}
                             className={`${styles.navLink}`}
                         >
                             <div>

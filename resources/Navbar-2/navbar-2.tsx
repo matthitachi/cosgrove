@@ -57,21 +57,25 @@ export default function () {
     const handleMouseEnterHomes = () => {
         clearTimeout(hoverTimeout!);
         setHoverTimeout(setTimeout(() => setIsHomesHovered(true), 200));
+        console.log("homes Hovered");
     };
 
     const handleMouseLeaveHomes = () => {
         clearTimeout(hoverTimeout!);
-        setHoverTimeout(setTimeout(() => setIsHomesHovered(false), 200));
+        setHoverTimeout(setTimeout(() => setIsHomesHovered(false), 2));
+        console.log("homes not Hovered");
     };
 
     const handleMouseEnterProjects = () => {
         clearTimeout(hoverTimeout!);
         setHoverTimeout(setTimeout(() => setIsProjectsHovered(true), 200));
+        console.log("projects Hovered");
     };
 
     const handleMouseLeaveProjects = () => {
         clearTimeout(hoverTimeout!);
         setHoverTimeout(setTimeout(() => setIsProjectsHovered(false), 200));
+        console.log("projects not Hovered");
     };
 
     const mobButtonStyles = {
@@ -127,7 +131,6 @@ export default function () {
                             show={isHomesHovered}
                             onMouseEnter={handleMouseEnterHomes}
                             onMouseLeave={handleMouseLeaveHomes}
-                            onClick={(e) => e.preventDefault()}
                             className={`${styles.navLink}`}
                         >
                             <div>
@@ -322,6 +325,10 @@ export default function () {
                                 <Nav.Link
                                     href="#link"
                                     className={styles.navLink}
+                                    style={{
+                                        position: "relative",
+                                        zIndex: 1000,
+                                    }}
                                 >
                                     Contact
                                 </Nav.Link>
@@ -335,5 +342,3 @@ export default function () {
         </Navbar>
     );
 }
-
-// check is code for me and  help me very why there's a glitch when i hover on the dropdown
