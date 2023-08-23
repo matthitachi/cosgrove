@@ -17,7 +17,7 @@ export default function () {
                         </h2>
                     </Col>
                     <Col md={12} lg={4} className={styles.infoContactCol}>
-                        <div className={styles.infoContactBg}></div>
+                        <div className={styles.infoContactBg}/>
                     </Col>
 
                     <Col md={12} lg={8} className={styles.teams}>

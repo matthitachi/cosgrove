@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 interface headerItemProp {
     height: number;
     bgImage: string;
+    isDark?: false;
 }
 export default function ({ height, bgImage }: headerItemProp) {
     const getResponsiveCurveValue = (width) => {
@@ -20,16 +21,18 @@ export default function ({ height, bgImage }: headerItemProp) {
         else return 150;
     };
     const curveValue = getResponsiveCurveValue(window.innerWidth);
-    const [responsiveCurveValue, setResponsiveCurveValue] =
-        useState(curveValue);
+    const [responsiveCurveValue, setResponsiveCurveValue] = useState(curveValue);
+    const [ratio, setRatio] = useState(1);
     const listenScrollEvent = () => {
         const screenHeight = window.innerHeight;
         const screenRatio = 100 / height;
         const bgHeight = screenHeight / screenRatio;
+        const ratio = (1 - window.scrollY / bgHeight);
         if (window.scrollY <= bgHeight) {
             setResponsiveCurveValue(
                 curveValue * (1 - window.scrollY / bgHeight)
             );
+            setRatio(ratio);
         }
     };
     useEffect(() => {
@@ -43,7 +46,7 @@ export default function ({ height, bgImage }: headerItemProp) {
             <div
                 className={`curvedBottom ${styles.headerBgItem}`}
                 style={{
-                    background: 'url("' + bgImage + '")',
+                    background: `linear-gradient(180deg, rgba(0, 0, 0, ${1 - ratio}) 0%, rgba(0, 0, 0, ${1 - ratio}) 100% ),url("  ${bgImage} ")`,
                     borderRadius: `0 0 50% 50%/${responsiveCurveValue}px`,
                 }}
             ></div>

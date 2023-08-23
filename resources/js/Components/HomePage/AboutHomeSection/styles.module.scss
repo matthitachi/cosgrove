@@ -25,33 +25,13 @@
     .infoHomeInfo{
         padding: 100px 150px;
         h5{
-            color: #FBBD00;
-            font-family: Inter, serif;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
             margin-bottom: 25px;
         }
-        h2{
-            color: #000;
-            font-family: Nexa Bold, serif;
-            font-size: 50px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
+
         .m65{
             margin-bottom: 65px;
         }
         p{
-            color: #585858;
-            text-align: justify;
-            font-family: Inter, serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 28px;
             margin-bottom: 25px;
         }
 
@@ -68,75 +48,6 @@
             margin-bottom: 100px;
         }
 
-        .records{
-            margin-bottom: 100px;
-            .recordRow{
-                margin-bottom: 60px;
-            }
-            .recordItem{
-                display: flex;
-                align-items: center;
-
-                img{
-                    width: 47px;
-                    height: 47px;
-                    margin-right: 15px;
-                }
-                h3{
-                    color: #FBBD00;
-                    text-align: justify;
-                    font-family: Nexa Bold, serif;
-                    font-size: 40px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    margin: 0;
-                }
-                .title{
-                    color: #000;
-                    text-align: justify;
-                    font-family: Nexa Bold, serif;
-                    font-size: 17px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                }
-            }
-        }
-        .contact{
-            img{
-                width: 47px;
-                height: 47px;
-                margin-bottom: 30px;
-            }
-            h5{
-                color: #000;
-                margin-bottom: 40px;
-            }
-            p{
-                padding-right: 120px;
-            }
-            button{
-                border-radius: 10px;
-                padding: 8px 30px;
-                min-width: 215px;
-                text-align: center;
-                font-family: Inter, serif;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-                border: none;
-                &.yellow{
-                    background: #FBBD00;
-                    color: #000;
-                }
-                &.dark{
-                    background: #000;
-                    color: #FFF;
-                }
-            }
-        }
     }
 }
 

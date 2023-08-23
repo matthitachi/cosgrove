@@ -3,32 +3,15 @@
     z-index: 2;
     position: relative;
     h4 {
-        color: #fbbd00;
-        font-family: Inter, serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
         margin-bottom: 25px;
     }
     .projectIntro {
         h2 {
-            color: #000;
-            font-family: Nexa Bold, serif;
-            font-size: 50px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
+
             margin-bottom: 20px;
         }
         p {
-            color: #585858;
-            text-align: justify;
-            font-family: Inter, serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 28px;
+
         }
     }
     .projectItem {
@@ -139,7 +122,15 @@
 @media screen and (max-width: 1600px) {
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
+    .projectHomeSection {
+        .projectIntro{
+            h2 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 1200px) {

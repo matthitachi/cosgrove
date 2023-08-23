@@ -15,13 +15,15 @@ interface sliderProps {
 }
 
 export default function ({settings, childrenItems}:sliderProps) {
-    const SliderNext = (props) => {
+    const SliderNext = ({ currentSlide, slideCount, ...props }) => {
         return (<ArrowNext {...props} className={styles.sliderNext}/>);
     };
-    const SliderPrevious = (props) => {
+    const SliderPrevious = ({ currentSlide, slideCount, ...props }) => {
         return (<ArrowPrevious {...props} className={styles.sliderPrevious}/>);
     };
+    // @ts-ignore
     settings['prevArrow'] = <SliderPrevious/>;
+    // @ts-ignore
     settings['nextArrow'] = <SliderNext/>;
 
     return (

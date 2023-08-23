@@ -21,20 +21,21 @@ import { ReactComponent as ArrowNext } from "/public/assets/svg/next.svg";
 // @ts-ignore
 import { ReactComponent as ArrowPrevious } from "/public/assets/svg/prev.svg";
 // import Slider from "react-slick";
-import Slider from "../Slider/index";
+import Slider from "../Elements/Slider/index";
 import { useState } from "react";
+import HomeItem, {HomesItemProp} from "../Elements/HomeItem";
 
 export default function () {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
 
-    const SliderNext = (props) => {
-        return <ArrowNext {...props} className={styles.sliderNext} />;
-    };
-    const SliderPrevious = (props) => {
-        return <ArrowPrevious {...props} className={styles.sliderPrevious} />;
-    };
+    // const SliderNext = (props) => {
+    //     return <ArrowNext {...props} className={styles.sliderNext} />;
+    // };
+    // const SliderPrevious = (props) => {
+    //     return <ArrowPrevious {...props} className={styles.sliderPrevious} />;
+    // };
     const settings = {
         dots: true,
         infinite: false,
@@ -88,7 +89,55 @@ export default function () {
             },
         ],
     };
-
+    const homeList: HomesItemProp[] = [
+        {
+            img: '/assets/images/homes/carousel/home.png',
+            name: 'Oak',
+            desc: '5 Bedroom',
+            others: 'Fully detached Duplex',
+            link: '',
+        },
+        {
+            img: '/assets/images/homes/carousel/maple.png',
+            name: 'Maple',
+            desc: '3 Bedroom Luxury',
+            others: 'Apartments',
+            link: '',
+        },
+        {
+            img: '/assets/images/homes/carousel/villa.png',
+            name: 'Villa',
+            desc: '7 Bedroom Gated Villa',
+            others: 'With 1 Bed BQ',
+            link: '',
+        },
+        {
+            img: '/assets/images/homes/carousel/home.png',
+            name: 'Oak',
+            desc: '5 Bedroom',
+            others: 'Fully detached Duplex',
+            link: '',
+        },
+        {
+            img: '/assets/images/homes/carousel/maple.png',
+            name: 'Maple',
+            desc: '3 Bedroom Luxury',
+            others: 'Apartments',
+            link: '',
+        },
+        {
+            img: '/assets/images/homes/carousel/villa.png',
+            name: 'Villa',
+            desc: '7 Bedroom Gated Villa',
+            others: 'With 1 Bed BQ',
+            link: '',
+        },
+    ];
+    const homeListItems = [];
+    homeList.forEach((item, index) =>{
+        homeListItems.push(<HomeItem name={item.name} img={item.img} desc={item.desc} link={item.link}
+                                      others={item.others} key={index}/>);
+    });
     return (
         <section
             data-aos="fade-up"
@@ -107,19 +156,7 @@ export default function () {
                 <div className={styles.sliderCtx}>
                     <Slider
                         settings={settings}
-                        childrenItems={[
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                        ]}
+                        childrenItems={homeListItems}
                     />
                 </div>
             </Container>

@@ -22,7 +22,7 @@ export default function () {
                         className={styles.infoHomeInfo}
                         data-aos="fade-right"
                     >
-                        <h5>House Type</h5>
+                        <h5 className={'subHeader'}>House Type</h5>
                         <h2 className={`headerDark ${styles.m65}`}>Acacia</h2>
                     </Col>
 

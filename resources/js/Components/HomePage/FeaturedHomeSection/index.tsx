@@ -19,6 +19,45 @@ export default function () {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
+
+    interface FeaturedListItemProp{
+        date: string;
+        title: string;
+    }
+    function FeaturedListItem({date, title}:FeaturedListItemProp) {
+        return (
+            <li className={styles.featuredListItem}>
+                <div className={styles.info}>
+                    <div className={`textPrimary ${styles.listDate}`}>{date}</div>
+                    <div className={`textPrimary ${styles.listTitle}`}>
+                        {title}
+                    </div>
+                </div>
+                <ArrowRight />
+            </li>
+        );
+    }
+
+    const featuredList : FeaturedListItemProp[] = [
+
+        {
+            date: '12|07|23',
+            title: 'Cosgrove boosts housing market with Abuja estate project - The Guardian'
+        },
+        {
+            date: '12|07|23',
+            title: 'Relief as firm donates accommodation to Abuja displaced orphans - The Nation'
+        },
+        {
+            date: '12|07|23',
+            title: 'Cosgrove gets NITP, COREN, commendations for CSR - This Day'
+        },
+        {
+            date: '12|07|23',
+            title: 'AI in home security - The Business Year'
+        },
+    ];
+
     return (
         <section className={styles.FeaturedHomeSection} data-aos="fade-up">
             <div className={`curvedTop ${styles.topCurve}`} />
@@ -27,56 +66,10 @@ export default function () {
                 <h2 className={`headerDark`}>What People Are Saying</h2>
 
                 <ul className={styles.featuredList}>
-                    <li className={styles.featuredListItem}>
-                        <div className={styles.info}>
-                            <div className={styles.listDate}>12|07|23</div>
-                            <div className={styles.listTitle}>
-                                Cosgrove boosts housing market with Abuja estate
-                                project - The Guardian
-                            </div>
-                        </div>
-                        <ArrowRight />
-                    </li>
-                    <li className={styles.featuredListItem}>
-                        <div className={styles.info}>
-                            <div className={styles.listDate}>12|07|23</div>
-                            <div className={styles.listTitle}>
-                                Cosgrove boosts housing market with Abuja estate
-                                project - The Guardian
-                            </div>
-                        </div>
-                        <ArrowRight />
-                    </li>
-                    <li className={styles.featuredListItem}>
-                        <div className={styles.info}>
-                            <div className={styles.listDate}>12|07|23</div>
-                            <div className={styles.listTitle}>
-                                Cosgrove boosts housing market with Abuja estate
-                                project - The Guardian
-                            </div>
-                        </div>
-                        <ArrowRight />
-                    </li>
-                    <li className={styles.featuredListItem}>
-                        <div className={styles.info}>
-                            <div className={styles.listDate}>12|07|23</div>
-                            <div className={styles.listTitle}>
-                                Cosgrove boosts housing market with Abuja estate
-                                project - The Guardian
-                            </div>
-                        </div>
-                        <ArrowRight />
-                    </li>
-                    <li className={styles.featuredListItem}>
-                        <div className={styles.info}>
-                            <div className={styles.listDate}>12|07|23</div>
-                            <div className={styles.listTitle}>
-                                Cosgrove boosts housing market with Abuja estate
-                                project - The Guardian
-                            </div>
-                        </div>
-                        <ArrowRight />
-                    </li>
+                    {
+                        featuredList.map((item, key) =>
+                            <FeaturedListItem date={item.date} title={item.title} key={key}/>)
+                    }
                 </ul>
             </Container>
         </section>

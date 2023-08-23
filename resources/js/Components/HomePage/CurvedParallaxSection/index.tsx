@@ -20,11 +20,11 @@ export default function () {
                     className={styles.parallaxElement}
                     contentClassName={styles.parallaxContent}
                 >
-                    <h2>
+                    <h2 className='headerWhite'>
                         The <b>Industry Leader</b> in Smart Home Innovation in
                         Africa
                     </h2>
-                    <div>-The Sunday Times</div>
+                    <div className={'subHeader'}>-The Sunday Times</div>
                 </Parallax>
             </div>
         </section>

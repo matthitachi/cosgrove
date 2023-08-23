@@ -1,10 +1,10 @@
 .teamSection {
-    margin-top: 50px;
+    margin-top: 100px;
     .teamItem {
         margin: 70px 0;
         .teamImg {
             right: -10px;
-            // background-position: center !important;
+             background-position: center !important;
             background-size: cover !important;
             width: 100%;
             height: 100%;
@@ -33,13 +33,28 @@
     .teamHead {
         margin-left: 1rem;
     }
+    .teamSection {
+
+        .teamItem {
+            .teamImg {
+                min-height: 890px;
+            }
+            .teamInfo {
+                padding-left: 0;
+                h4{
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 767px) {
     .teamItem {
         margin-right: 20px !important;
         .teamImg {
-            min-height: 400px !important;
+            min-height: 640px !important;
         }
     }
 
@@ -51,4 +66,10 @@
 @media screen and (max-width: 575px) {
 }
 @media screen and (max-width: 450px) {
+    .teamItem {
+        margin-right: 20px !important;
+        .teamImg {
+            min-height: 510px !important;
+        }
+    }
 }

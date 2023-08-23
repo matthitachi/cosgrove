@@ -13,19 +13,19 @@ export default function () {
     return (<div className={styles.projectItem}
                  style={{background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), url("/assets/images/projects/wuye.png")'}}>
         <div className={styles.projectsInner}>
-            <h2>Cosgrove Smart Estate, Guzape</h2>
+            <h2 className={'headerWhite'}>Cosgrove Smart Estate, Guzape</h2>
             <div className={styles.location}>
                 {/*<img  className={styles.mapPinSvg} src={mapPinSvg} alt="Your SVG" />*/}
                 <MapPinSvg/>
                 <b>Mabushi</b>
             </div>
 
-            <p>
+            <p className={'textDark'}>
                 Lorem ipsum dolor sit amet consetur. Turpis mollis viverra sollicitud esque dictumst et orci.
                 Lorem ipsum dolor sit amet consetur. Turpis mollis viverra sollicitud esque dictumst et orci.
                 Lorem ipsum dolor sit amet consetur. Turpis mollis viverra sollicitud esque dictumst et orci.
             </p>
-            <a href={''}>View Project <ArrowRight2Svg/></a>
+            <a href={'/project-details'}>View Project <ArrowRight2Svg/></a>
 
         </div>
 

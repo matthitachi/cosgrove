@@ -14,6 +14,8 @@ import VisibilitySensor from "react-visibility-sensor";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
+import RecordList from "../../Elements/RecordList"
+import SupportList from "../../Elements/SupportList"
 // @ts-ignore
 import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
 
@@ -26,19 +28,16 @@ export default function () {
             <Container fluid>
                 <Row>
                     <Col sm={12} md={6} className={styles.infoHomeCol}>
-                        <div
-                            className={styles.infoHomeBG}
-                            data-aos="fade-right"
-                        ></div>
+                        <div className={styles.infoHomeBG} data-aos="fade-right"/>
                     </Col>
 
                     <Col sm={12} md={6} className={styles.infoHomeInfo}>
-                        <h5 data-aos="fade-left">About Us</h5>
-                        <h2 data-aos="fade-left" className={styles.m65}>
+                        <h5 className={'subHeaderSmall'} data-aos="fade-left">About Us</h5>
+                        <h2 data-aos="fade-left" className={`headerDark ${styles.m65}`}>
                             We are Building the Future <br /> of African Real
                             Estate
                         </h2>
-                        <p data-aos="fade-left">
+                        <p className='textPrimary' data-aos="fade-left">
                             At Cosgrove Africa, we don't just develop properties
                             – we envision the future. As leaders in the real
                             estate industry in Africa, we masterfully shape
@@ -51,7 +50,7 @@ export default function () {
                             as eco-conscious as they are exquisite. Here, we
                             design the extraordinary. Here, we set the standard.
                         </p>
-                        <button data-aos="fade-left" className={styles.text}>
+                        <button data-aos="fade-left" className='text'>
                             Learn More{" "}
                             <img
                                 className={styles.arrowRightSvg}
@@ -60,177 +59,51 @@ export default function () {
                             />
                         </button>
 
-                        <div className={styles.records} data-aos="fade-left">
-                            <Row className={styles.recordRow}>
-                                <Col sxs={6}>
-                                    <div className={styles.recordItem}>
-                                        <img
-                                            src={
-                                                "/assets/images/icons/homes.png"
-                                            }
-                                        />
-                                        <div>
-                                            <h3>
-                                                <VisibilitySensor
-                                                    partialVisibility
-                                                >
-                                                    {({ isVisible }) => (
-                                                        <CountUp
-                                                            end={450}
-                                                            duration={5}
-                                                            // @ts-ignore
-                                                            start={
-                                                                isVisible
-                                                                    ? 0
-                                                                    : null
-                                                            }
-                                                        />
-                                                    )}
-                                                </VisibilitySensor>
-                                                +
-                                            </h3>
-                                            <div className={styles.title}>
-                                                Homes Built
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Col>
-                                <Col xs={6}>
-                                    <div className={styles.recordItem}>
-                                        <img
-                                            src={
-                                                "/assets/images/icons/projects.png"
-                                            }
-                                        />
-                                        <div>
-                                            <h3>
-                                                <VisibilitySensor
-                                                    partialVisibility
-                                                >
-                                                    {({ isVisible }) => (
-                                                        <CountUp
-                                                            end={8}
-                                                            duration={5}
-                                                            // @ts-ignore
-                                                            start={
-                                                                isVisible
-                                                                    ? 0
-                                                                    : null
-                                                            }
-                                                        />
-                                                    )}
-                                                </VisibilitySensor>
-                                            </h3>
-                                            <div className={styles.title}>
-                                                Projects
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row className={styles.recordRow}>
-                                <Col xs={6}>
-                                    <div className={styles.recordItem}>
-                                        <img
-                                            src={
-                                                "/assets/images/icons/awards.png"
-                                            }
-                                        />
-                                        <div>
-                                            <h3>
-                                                <VisibilitySensor
-                                                    partialVisibility
-                                                >
-                                                    {({ isVisible }) => (
-                                                        <CountUp
-                                                            end={30}
-                                                            duration={5}
-                                                            // @ts-ignore
-                                                            start={
-                                                                isVisible
-                                                                    ? 0
-                                                                    : null
-                                                            }
-                                                        />
-                                                    )}
-                                                </VisibilitySensor>
-                                                +
-                                            </h3>
-                                            <div className={styles.title}>
-                                                Awards
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Col>
-                                <Col xs={6}>
-                                    <div className={styles.recordItem}>
-                                        <img
-                                            src={
-                                                "/assets/images/icons/clients.png"
-                                            }
-                                        />
-                                        <div>
-                                            <h3>
-                                                <VisibilitySensor
-                                                    partialVisibility
-                                                >
-                                                    {({ isVisible }) => (
-                                                        // @ts-ignore
-                                                        <CountUp
-                                                            end={800}
-                                                            duration={5}
-                                                            // @ts-ignore
-                                                            start={
-                                                                isVisible
-                                                                    ? 0
-                                                                    : null
-                                                            }
-                                                        />
-                                                    )}
-                                                </VisibilitySensor>
-                                                +
-                                            </h3>
-                                            <div className={styles.title}>
-                                                Global clients
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </div>
+                        <RecordList recordList={ [
+                        {
+                            image: "/assets/images/icons/homes.png",
+                            title: "Homes Built",
+                            count: "450+",
+                        },
+                        {
+                            image: "/assets/images/icons/projects.png",
+                            title: "Projects",
+                            count: "8",
+                        },
+                        {
+                            image: "/assets/images/icons/awards.png",
+                            title: "Awards",
+                            count: "30+",
+                        },
+                        {
+                            image: "/assets/images/icons/clients.png",
+                            title: "Global Clients",
+                            count: "800+",
+                        },
+                            ]}/>
 
-                        <div className={styles.contact} data-aos="fade-left">
-                            <Row>
-                                <Col xs={6}>
-                                    <img
-                                        src={"/assets/images/icons/support.png"}
-                                    />
-                                    <h5>Talk To Us</h5>
-                                    <p>
-                                        Lorem Ipsum Dolor Sit amet impo rum
-                                        emetsum{" "}
-                                    </p>
-                                    <button className={styles.yellow}>
-                                        Let’s Talk
-                                    </button>
-                                </Col>
-                                <Col xs={6}>
-                                    <img
-                                        src={
-                                            "/assets/images/icons/brochure.png"
-                                        }
-                                    />
-                                    <h5>Project Brochures</h5>
-                                    <p>
-                                        Lorem Ipsum Dolor Sit amet impo rum
-                                        emetsum{" "}
-                                    </p>
-                                    <button className={styles.dark}>
-                                        Download Brochures
-                                    </button>
-                                </Col>
-                            </Row>
-                        </div>
+
+                            <SupportList supportList={[
+                                {
+                                    title: "Talk To Us",
+                                    description: "Lorem Ipsum Dolor Sit amet impo rum emetsum",
+                                    image: "/assets/images/icons/support.png",
+                                    buttonText: "Let’s Talk",
+                                    buttonAction: () => {
+                                        window.location.href = '/contact';
+                                    },
+                                },
+                                {
+                                    title: "Project Brochures",
+                                    description: "Lorem Ipsum Dolor Sit amet impo rum emetsum ",
+                                    image: "/assets/images/icons/brochure.png",
+                                    buttonText: "Download Brochures",
+                                    buttonBgDark: true,
+                                    buttonAction: () => {
+                                        window.location.href = '/project-brochure';
+                                    },
+                                },
+                            ]}/>
                     </Col>
                 </Row>
             </Container>

@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
-import Gallery, { galleryImageProp } from "../../Gallery/index";
+import Gallery, { galleryImageProp } from "../../Elements/Gallery/index";
 
 interface GalleryHeadProps {
     headerContent: string;

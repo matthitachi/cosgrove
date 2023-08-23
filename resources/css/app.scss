@@ -18,6 +18,9 @@
     font-family: "Betterlett Swash";
     src: url("/Fonts/Betterlett/betterlett-swash.ttf") format("truetype");
 }
+#app{
+    overflow: hidden;
+}
 
 $primaryColor: #fbbd00;
 section .paddedVertical {
@@ -99,6 +102,18 @@ button.text {
     border: none;
     background: transparent;
     margin-bottom: 100px;
+}
+.button{
+    border-radius: 10px;
+    padding: 8px 30px;
+    min-width: 215px;
+    text-align: center;
+    font-family: Inter, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
 }
 
 .imageContainerEffect,
@@ -224,12 +239,26 @@ button.text {
         padding-right: 150px;
     }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
+    .headerDark,
+    .headerWhite {
+        font-size: 35px;
+    }
+    p.textDark,
+    p.textPrimary,
+    p.textWhite {
+        font-size: 13px;
+    }
+    .button{
+        font-size: 13px;
+    }
     .sidedContainer {
         .info {
             padding-right: 100px;
         }
     }
+
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -327,7 +356,7 @@ button.text {
     }
     .dropdown-item {
         color: rgba(#fff, 0.6);
-        font-family: Inter;
+        font-family: Inter, serif;
         font-size: 15.029px;
         font-style: normal;
         font-weight: 400;
@@ -414,16 +443,16 @@ button.text {
 }
 
 @media screen and (max-width: 600px) {
-    ._sliderNext_vveve_1,
-    ._sliderPrevious_vveve_1 {
+    .sliderNext,
+    .sliderPrevious {
         width: 50px;
     }
 
-    ._sliderNext_vveve_1 {
+    .sliderNext {
         right: -21px;
     }
 
-    ._sliderPrevious_vveve_1 {
+    .sliderPrevious {
         left: -20px;
     }
 }

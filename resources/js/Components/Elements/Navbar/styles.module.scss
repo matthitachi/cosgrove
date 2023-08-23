@@ -1,7 +1,6 @@
 .navBar {
     padding: 25px 0 !important;
-    margin: 0 100px !important;
-    border-bottom: 1px solid #ffffff;
+    //margin: 0 100px !important;
     .navButton{
         border-radius: 10px;
         border: 1px solid #FFF;
@@ -25,7 +24,7 @@
 
     .navBrandImg {
         width: auto;
-        height: 25px;
+        height: 45px;
     }
 
     .Nav {
@@ -52,3 +51,59 @@
 
 }
 
+
+.toggleButton{
+    outline: none !important;
+    border: none !important;
+    &:focus{
+        box-shadow: none !important;
+    }
+    span{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+}
+
+@media screen and (max-width: 1600px) {
+
+}
+
+@media screen and (max-width: 1441px) {
+    .navBar {
+        padding: 5px 0 !important;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .navBar {
+        .navButton {
+            display: none;
+        }
+    }
+
+    .navContainer {
+        .navy {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+
+
+}
+
+
+@media screen and (max-width: 575px) {
+
+}

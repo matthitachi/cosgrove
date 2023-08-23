@@ -10,7 +10,7 @@ import Footer from "../../Components/Elements/Footer/index";
 export default function () {
     return (
         <div>
-            <NavBar />
+            <NavBar isDark={true} />
             <HeaderItem height={50} bgImage={"/assets/images/bg/bg1.png"} />
             <TopSection />
             <HouseTypes headerContent="House Types" />

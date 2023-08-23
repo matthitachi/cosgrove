@@ -32,13 +32,17 @@
 
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
     .sliderNext{
         right: -30px;
     }
 
     .sliderPrevious{
         left: -30px;
+    }
+    .sliderNext,
+    .sliderPrevious {
+        fill: white;
     }
 }
 

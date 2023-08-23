@@ -5,13 +5,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
 // @ts-ignore
-import { ReactComponent as ArrowRight2Svg } from "/public/assets/svg/arrow-right-2.svg";
+import {ReactComponent as ArrowRight2Svg} from "/public/assets/svg/arrow-right-2.svg";
 // @ts-ignore
 import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
 // @ts-ignore
 import { ReactComponent as MapPinSvg } from "/public/assets/svg/map-pin.svg";
-import FeaturesItem from "../../FeaturesItem";
-import Slider from "../../Slider";
+import FeaturesItem, {featuresItemProp} from "../../Elements/FeaturesItem";
+import Slider from "../../Elements/Slider";
+import ProjectItem  from "../../Elements/ProjectItem/index";
+
+// @ts-ignore
+import { ReactComponent as Camera } from "/public/assets/svg/cctv-camera.svg";
+// @ts-ignore
+import { ReactComponent as ModernHome } from "/public/assets/svg/smart-home.svg";
+// @ts-ignore
+import { ReactComponent as Luxury } from "/public/assets/svg/modern-house.svg";
 
 export default function () {
     React.useEffect(() => {
@@ -66,21 +74,48 @@ export default function () {
             },
         ],
     };
+    const featureList: featuresItemProp[] = [
+        {
+            icon: <ModernHome  stroke={'rgba(0,0,0,0.4)'}/>,
+            title: 'Fully Automated',
+            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+        },
+        {
+            icon: <Camera stroke={'rgba(0,0,0,0.4)'}/>,
+            title: 'Top-tier Security',
+            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+        },
+        {
+            icon: <Luxury stroke={'rgba(0,0,0,0.4)'}/>,
+            title: 'Unbeatable Luxury',
+            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+        },
+        {
+            icon: <ModernHome stroke={'rgba(0,0,0,0.4)'}/>,
+            title: 'Industry-Leading Construction',
+            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+        },
+        {
+            icon: <Camera stroke={'rgba(0,0,0,0.4)'}/>,
+            title: 'Top-tier Security',
+            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+        },
+    ];
     return (
         <section className={styles.projectHomeSection}>
             <Container>
-                <h4 data-aos="fade-right">Projects</h4>
+                <h4 className={'subHeader'} data-aos="fade-right">Projects</h4>
                 <Row className={styles.projectIntro}>
                     <Col
-                        md={6}
+                        md={4}
                         className={styles.projectIntroHeader}
                         data-aos="fade-right"
                     >
-                        <h2>Smart</h2>
-                        <h2>Communities</h2>
+                        <h2 className={'headerDark'}>Smart</h2>
+                        <h2 className={'headerDark'}>Communities</h2>
                     </Col>
-                    <Col md={6} data-aos="fade-left">
-                        <p>
+                    <Col md={8} data-aos="fade-left">
+                        <p className={'textPrimary'}>
                             Our projects are not just buildings; they're the
                             embodiment of forward-thinking design and
                             cutting-edge technology, seamlessly integrated to
@@ -101,39 +136,10 @@ export default function () {
                     <Slider
                         settings={settings}
                         childrenItems={[
-                            <FeaturesItem
-                                svgColor={"rgba(0,0,0,0.4)"}
-                                color={"#000"}
-                                allBorderRadius={true}
-                            />,
-                            <FeaturesItem
-                                svgColor={"rgba(0,0,0,0.4)"}
-                                color={"#000"}
-                            />,
-                            <FeaturesItem
-                                svgColor={"rgba(0,0,0,0.4)"}
-                                color={"#000"}
-                            />,
-                            <FeaturesItem
-                                svgColor={"rgba(0,0,0,0.4)"}
-                                color={"#000"}
-                            />,
-                            <FeaturesItem
-                                svgColor={"rgba(0,0,0,0.4)"}
-                                color={"#000"}
-                            />,
-                            <FeaturesItem
-                                svgColor={"rgba(0,0,0,0.4)"}
-                                color={"#000"}
-                            />,
-                            <FeaturesItem
-                                svgColor={"rgba(0,0,0,0.4)"}
-                                color={"#000"}
-                            />,
-                            <FeaturesItem
-                                svgColor={"rgba(0,0,0,0.4)"}
-                                color={"#000"}
-                            />,
+                            (featureList.map((item, key) =>
+                                <FeaturesItem title={item.title} color={"#000"}
+                                                                          description={item.description} icon={item.icon} key={key}
+                            />)),
                         ]}
                     />
                 </div>
@@ -176,35 +182,4 @@ export default function () {
     );
 }
 
-const ProjectItem = () => {
-    return (
-        <div
-            data-aos="fade-up"
-            className={styles.projectItem}
-            style={{
-                background:
-                    'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), url("/assets/images/projects/wuye.png")',
-            }}
-        >
-            <div className={styles.projectsInner}>
-                <h2>Cosgrove Smart Estate, Guzape</h2>
-                <div className={styles.location}>
-                    {/*<img  className={styles.mapPinSvg} src={mapPinSvg} alt="Your SVG" />*/}
-                    <MapPinSvg />
-                    <b>Mabushi</b>
-                </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet consetur. Turpis mollis viverra
-                    sollicitud esque dictumst et orci. Lorem ipsum dolor sit
-                    amet consetur. Turpis mollis viverra sollicitud esque
-                    dictumst et orci. Lorem ipsum dolor sit amet consetur.
-                    Turpis mollis viverra sollicitud esque dictumst et orci.
-                </p>
-                <a href={""}>
-                    View Project <ArrowRight2Svg />
-                </a>
-            </div>
-        </div>
-    );
-};

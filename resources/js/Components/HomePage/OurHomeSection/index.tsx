@@ -1,10 +1,6 @@
 import {
-    Button,
     Col,
     Container,
-    Nav,
-    Navbar,
-    NavDropdown,
     Row,
 } from "react-bootstrap";
 // @ts-ignore
@@ -13,27 +9,30 @@ import * as React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // @ts-ignore
-import { ReactComponent as ArrowRight2Svg } from "/public/assets/svg/arrow-right-2.svg";
+import {ReactComponent as ArrowRight2Svg} from "/public/assets/svg/arrow-right-2.svg";
 // @ts-ignore
-import { ReactComponent as ArrowRightSvg } from "/public/assets/svg/arrow-right.svg";
+import {ReactComponent as ArrowRightSvg} from "/public/assets/svg/arrow-right.svg";
 // @ts-ignore
-import { ReactComponent as ArrowNext } from "/public/assets/svg/next.svg";
+import {ReactComponent as ArrowNext} from "/public/assets/svg/next.svg";
 // @ts-ignore
-import { ReactComponent as ArrowPrevious } from "/public/assets/svg/prev.svg";
+import {ReactComponent as ArrowPrevious} from "/public/assets/svg/prev.svg";
 // import Slider from "react-slick";
-import Slider from "../Slider/index";
-import { useState } from "react";
+import Slider from "../../Elements/Slider/index";
+import {useState} from "react";
+import HomeItem, {HomesItemProp} from "../../Elements/HomeItem";
+
+
 
 export default function () {
     React.useEffect(() => {
-        AOS.init({ duration: 2000 });
+        AOS.init({duration: 2000});
     }, []);
 
     const SliderNext = (props) => {
-        return <ArrowNext {...props} className={styles.sliderNext} />;
+        return <ArrowNext {...props} className={styles.sliderNext}/>;
     };
     const SliderPrevious = (props) => {
-        return <ArrowPrevious {...props} className={styles.sliderPrevious} />;
+        return <ArrowPrevious {...props} className={styles.sliderPrevious}/>;
     };
     const settings = {
         dots: true,
@@ -88,7 +87,55 @@ export default function () {
             },
         ],
     };
-
+    const homeList: HomesItemProp[] = [
+        {
+            img: '/assets/images/homes/carousel/home.png',
+            name: 'Oak',
+            desc: '5 Bedroom',
+            others: 'Fully detached Duplex',
+            link: '/project-types',
+        },
+        {
+            img: '/assets/images/homes/carousel/maple.png',
+            name: 'Maple',
+            desc: '3 Bedroom Luxury',
+            others: 'Apartments',
+            link: '/project-types',
+        },
+        {
+            img: '/assets/images/homes/carousel/villa.png',
+            name: 'Villa',
+            desc: '7 Bedroom Gated Villa',
+            others: 'With 1 Bed BQ',
+            link: '/project-types',
+        },
+        {
+            img: '/assets/images/homes/carousel/home.png',
+            name: 'Oak',
+            desc: '5 Bedroom',
+            others: 'Fully detached Duplex',
+            link: '/project-types',
+        },
+        {
+            img: '/assets/images/homes/carousel/maple.png',
+            name: 'Maple',
+            desc: '3 Bedroom Luxury',
+            others: 'Apartments',
+            link: '/project-types',
+        },
+        {
+            img: '/assets/images/homes/carousel/villa.png',
+            name: 'Villa',
+            desc: '7 Bedroom Gated Villa',
+            others: 'With 1 Bed BQ',
+            link: '/project-types',
+        },
+    ];
+    const homeListItems = [];
+    homeList.forEach((item, index) =>{
+        homeListItems.push(<HomeItem name={item.name} img={item.img} desc={item.desc} link={item.link}
+                                      others={item.others} key={index}/>);
+    });
     return (
         <section className={`${styles.ourHomeSection} mt-150`}>
             <Container>
@@ -115,7 +162,7 @@ export default function () {
                             spaces that go beyond the ordinary.
                         </p>
                         <button className={"text"}>
-                            Learn More <ArrowRightSvg />
+                            Learn More <ArrowRightSvg/>
                         </button>
                     </Col>
                 </Row>
@@ -123,19 +170,7 @@ export default function () {
                 <div className={styles.sliderCtx} data-aos="fade-up">
                     <Slider
                         settings={settings}
-                        childrenItems={[
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                            <HomesItem />,
-                        ]}
+                        childrenItems={homeListItems}
                     />
                 </div>
             </Container>
@@ -143,50 +178,3 @@ export default function () {
     );
 }
 
-const HomesItem = () => {
-    const [isHover, setIsHover] = useState(false);
-    const handleMouseEnter = () => {
-        setIsHover(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHover(false);
-    };
-    const style = {
-        background: `${
-            isHover
-                ? "linear-gradient(0deg, rgba(251, 189, 0, 0.80) 0%, rgba(251, 189, 0, 0.80) 100%)"
-                : "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%)"
-        },
-             url('/assets/images/homes/carousel/home.png')`,
-    };
-    return (
-        <div
-            className={styles.homesCarouselItem}
-            style={style}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <div className={styles.info}>
-                <h3 className={`${isHover ? "headerDark" : "headerWhite"}`}>
-                    Oak
-                </h3>
-                <div
-                    className={`${isHover ? "textDark" : "textWhite"} ${
-                        styles.description
-                    }`}
-                >
-                    5 Bedroom
-                    <br />
-                    Fully detached Duplex
-                </div>
-                <a
-                    href={""}
-                    className={`${isHover ? "textDark" : "textWhite"}`}
-                >
-                    View Project <ArrowRightSvg />
-                </a>
-            </div>
-        </div>
-    );
-};

@@ -18,9 +18,9 @@ export const SupportItem = (prop: SupportItemProp) => {
         <div>
             <img src={prop.image} alt={''}/>
             <h5>{prop.title}</h5>
-            <p>{prop.description}</p>
+            <p className={'textDark'}>{prop.description}</p>
             <button onClick={prop.buttonAction}
-                    className={(prop.buttonBgDark == true)?styles.dark: styles.yellow}>{prop.buttonText}</button>
+                    className={`button ${(prop.buttonBgDark == true)?styles.dark: styles.yellow}`}>{prop.buttonText}</button>
         </div>
     );
 };
@@ -32,7 +32,7 @@ interface SupportListProp {
 export default function ({supportList}: SupportListProp) {
     return (
 
-        <div className={styles.contact}>
+        <div className={styles.contact} data-aos="fade-left">
             <Row>
                 {
                     supportList.map((item, index) =>

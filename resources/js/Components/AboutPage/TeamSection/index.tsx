@@ -27,7 +27,7 @@ export default function () {
                 </div>
 
                 <Row className={styles.teamItem} data-aos="fade-up">
-                    <Col sm={12} md={5} lg={3}>
+                    <Col sm={12} lg={5} xl={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
@@ -36,7 +36,7 @@ export default function () {
                             }}
                         ></div>
                     </Col>
-                    <Col sm={12} md={7} lg={9} className={styles.teamInfo}>
+                    <Col sm={12} lg={7} xl={9} className={styles.teamInfo}>
                         <h4 className={"subHeader mb-4"}>
                             Chairman/Chief Executive Officer
                         </h4>
@@ -84,7 +84,7 @@ export default function () {
 
                 {/* Second Item  */}
                 <Row className={styles.teamItem} data-aos="fade-up">
-                    <Col sm={12} md={4} lg={3}>
+                    <Col sm={12} lg={5} xl={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
@@ -93,7 +93,7 @@ export default function () {
                             }}
                         ></div>
                     </Col>
-                    <Col sm={12} md={8} lg={9} className={styles.teamInfo}>
+                    <Col sm={12} lg={7} xl={9} className={styles.teamInfo}>
                         <h4 className={"subHeader mb-4"}>
                             Chief Operating Officer
                         </h4>
@@ -145,7 +145,7 @@ export default function () {
 
                 {/* THIRD ITEM  */}
                 <Row className={styles.teamItem} data-aos="fade-up">
-                    <Col sm={12} md={4} lg={3}>
+                    <Col sm={12} lg={5} xl={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
@@ -154,7 +154,7 @@ export default function () {
                             }}
                         ></div>
                     </Col>
-                    <Col sm={12} md={8} lg={9} className={styles.teamInfo}>
+                    <Col sm={12} lg={7} xl={9} className={styles.teamInfo}>
                         <h4 className={"subHeader mb-4"}>
                             Chief Technical Officer
                         </h4>
@@ -219,7 +219,7 @@ export default function () {
 
                 {/* FOURTH ITEM  */}
                 <Row className={styles.teamItem} data-aos="fade-up">
-                    <Col sm={12} md={4} lg={3}>
+                    <Col sm={12} lg={5} xl={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
@@ -228,7 +228,7 @@ export default function () {
                             }}
                         ></div>
                     </Col>
-                    <Col sm={12} md={8} lg={9} className={styles.teamInfo}>
+                    <Col sm={12} lg={7} xl={9} className={styles.teamInfo}>
                         <h4 className={"subHeader mb-4"}>
                             Chief Infrastructure Officer
                         </h4>
@@ -271,7 +271,7 @@ export default function () {
 
                 {/* FIFTH ITEM  */}
                 <Row className={styles.teamItem} data-aos="fade-up">
-                    <Col sm={12} md={4} lg={3}>
+                    <Col sm={12} lg={5} xl={3}>
                         <div
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
@@ -280,7 +280,7 @@ export default function () {
                             }}
                         ></div>
                     </Col>
-                    <Col sm={12} md={8} lg={9} className={styles.teamInfo}>
+                    <Col sm={12} lg={7} xl={9} className={styles.teamInfo}>
                         <h4 className={"subHeader mb-4"}>Legal Adviser</h4>
                         <h2 className={"headerDark  mb-25"}>
                             Barr. Adeoba Ademoyega

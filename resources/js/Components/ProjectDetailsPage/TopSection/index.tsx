@@ -9,6 +9,13 @@ import * as React from "react";
 // @ts-ignore
 import { ReactComponent as Camera } from "/public/assets/svg/cctv-camera.svg";
 
+// @ts-ignore
+import { ReactComponent as ModernHome } from "/public/assets/svg/smart-home.svg";
+// @ts-ignore
+import { ReactComponent as Luxury } from "/public/assets/svg/modern-house.svg";
+// @ts-ignore
+import { ReactComponent as Park } from "/public/assets/svg/park.svg";
+
 export default function () {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
@@ -23,7 +30,7 @@ export default function () {
                         className={styles.infoHomeInfo}
                         data-aos="fade-right"
                     >
-                        <h5>About Us</h5>
+                        <h5 className={'subHeader'}>About Us</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
                             Cosgrove Smart Estate, Wuye
                         </h2>
@@ -175,7 +182,32 @@ export default function () {
                     <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
                         <Camera />
                         <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
+                            24/7 Security
+                        </h5>
+                    </Col>
+                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
+                        <ModernHome />
+                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
+                            Fully Serviced
+                        </h5>
+                    </Col>
+                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
+                        <Luxury />
+                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
                             Luxurious Homes
+                        </h5>
+                    </Col>
+
+                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
+                        <Camera />
+                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
+                            Luxurious Homes
+                        </h5>
+                    </Col>
+                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
+                        <Park />
+                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
+                            Community Park
                         </h5>
                     </Col>
                     <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
@@ -184,42 +216,7 @@ export default function () {
                             Luxurious Homes
                         </h5>
                     </Col>
-                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
-                        <Camera />
-                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
-                            Luxurious Homes
-                        </h5>
-                    </Col>
-                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
-                        <Camera />
-                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
-                            Luxurious Homes
-                        </h5>
-                    </Col>
-                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
-                        <Camera />
-                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
-                            Luxurious Homes
-                        </h5>
-                    </Col>
-                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
-                        <Camera />
-                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
-                            Luxurious Homes
-                        </h5>
-                    </Col>
-                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
-                        <Camera />
-                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
-                            Luxurious Homes
-                        </h5>
-                    </Col>
-                    <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
-                        <Camera />
-                        <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
-                            Luxurious Homes
-                        </h5>
-                    </Col>
+
                 </Row>
             </Container>
         </section>
