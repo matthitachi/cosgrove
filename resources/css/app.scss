@@ -393,8 +393,8 @@ button.text {
         background: #121212;
 
         .offcanvas-header {
-            btn-close {
-                --bs-btn-close-color: white;
+            .btn-close {
+                --bs-btn-close-color: white !important;
             }
         }
 
@@ -411,6 +411,17 @@ button.text {
             border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
         }
     }
+
+    .collapsed {
+        border: 1px solid #fff !important;
+        .navbar-toggler-icon {
+            width: 2.5em;
+            height: 2.5em;
+        }
+
+        .btn-close {
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -425,6 +436,12 @@ button.text {
 
     ._sliderPrevious_vveve_1 {
         left: -20px;
+    }
+
+    .container {
+        width: 85% !important;
+        padding-right: 30px;
+        margin-left: 20px !important;
     }
 }
 

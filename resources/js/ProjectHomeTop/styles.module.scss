@@ -224,6 +224,8 @@
                 font-size: 12px;
             }
             .records {
+                flex-direction: column;
+                // align-items: center;
                 .recordItem {
                     margin-bottom: 30px;
                     h3 {
