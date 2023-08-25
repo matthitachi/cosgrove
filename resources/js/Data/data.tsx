@@ -48,7 +48,7 @@ export const projects: ProjectItemProp[] = [
         location: 'Mabushi',
         description: ' Constructed with the philosophy of progressivism, Cosgrove Smart Estate Mabushi is an evolution of luxury living in Abuja. Nestled in Mabushi\'s serene environment, this estate boasts 22 state-of-the-art units, blending smart technology with modern design. With proximity to key landmarks and unmatched amenities like 24-hour security, well-maintained gardens, and recreational facilities, it\'s not just a home—it\'s a lifestyle.\n',
         detailsImg: '/assets/images/about-home.png',
-        mainImg: '/assets/images/projects/jpeg.png',
+        mainImg: '/assets/images/projects/neuvou.jpeg',
         distFeature: [
             {
                 image: "/assets/images/icons/homes.png",
