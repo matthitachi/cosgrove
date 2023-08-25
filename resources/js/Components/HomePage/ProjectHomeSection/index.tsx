@@ -9,8 +9,9 @@ import { ReactComponent as ArrowRight2Svg } from "/public/assets/svg/arrow-right
 import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
 // @ts-ignore
 import { ReactComponent as MapPinSvg } from "/public/assets/svg/map-pin.svg";
-
+import {projects} from "../../../Data/data"
 export default function () {
+
     return (
         <section className={styles.projectHomeSection}>
             <Container>
@@ -26,13 +27,11 @@ export default function () {
                     </Col>
                     <Col md={6} data-aos="fade-left">
                         <p className={'textPrimary'}>
-                            Our projects are not just buildings; they're the
-                            embodiment of forward-thinking design and
-                            cutting-edge technology, seamlessly integrated to
-                            create next-generation smart homes. Each home is a
-                            testament to our commitment to quality, our passion
-                            for innovation, and our dedication to crafting
-                            spaces that go beyond the ordinary.
+                            Our projects are not just buildings; they're the embodiment of forward-thinking design and
+                            cutting-edge technology, seamlessly integrated to create next-generation smart homes.
+                            Each home is a testament to our commitment to quality, our passion for innovation, and
+                            our dedication to crafting spaces that go beyond the ordinary.
+
                         </p>
                         <button className={"text"}>
                             Learn More{" "}
@@ -44,10 +43,15 @@ export default function () {
                         </button>
                     </Col>
                 </Row>
-                <ProjectItem />
+                {
+                    projects.map((item, index) => (<ProjectItem {...item} key={index}/>))
+                }
+
 
                 <div className={`text-center ${styles.seeAll}`}>
-                    <button className={"text"}>
+                    <button className={"text"} onClick={()=>{
+                        window.location.href = '/projects';
+                    }}>
                         See all projects{" "}
                         <img
                             className={styles.arrowRightSvg}

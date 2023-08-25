@@ -22,8 +22,12 @@ import { ReactComponent as ArrowPrevious } from "/public/assets/svg/prev.svg";
 import Slider from "../Elements/Slider/index";
 import { useState } from "react";
 import HomeItem, {HomesItemProp} from "../.../../Elements/HomeItem";
+import {houseTypeItemProps} from "../../Data/data";
 
-export default function () {
+interface ExploreProjectProps {
+    homeList: houseTypeItemProps[]
+}
+export default function ({homeList}:ExploreProjectProps) {
     const SliderNext = (props) => {
         return <ArrowNext {...props} className={styles.sliderNext} />;
     };
@@ -84,54 +88,54 @@ export default function () {
         ],
     };
 
-    const homeList: HomesItemProp[] = [
-        {
-            img: '/assets/images/homes/carousel/home.png',
-            name: 'Oak',
-            desc: '5 Bedroom',
-            others: 'Fully detached Duplex',
-            link: '/project-types',
-        },
-        {
-            img: '/assets/images/homes/carousel/maple.png',
-            name: 'Maple',
-            desc: '3 Bedroom Luxury',
-            others: 'Apartments',
-            link: '/project-types',
-        },
-        {
-            img: '/assets/images/homes/carousel/villa.png',
-            name: 'Villa',
-            desc: '7 Bedroom Gated Villa',
-            others: 'With 1 Bed BQ',
-            link: '/project-types',
-        },
-        {
-            img: '/assets/images/homes/carousel/home.png',
-            name: 'Oak',
-            desc: '5 Bedroom',
-            others: 'Fully detached Duplex',
-            link: '/project-types',
-        },
-        {
-            img: '/assets/images/homes/carousel/maple.png',
-            name: 'Maple',
-            desc: '3 Bedroom Luxury',
-            others: 'Apartments',
-            link: '/project-types',
-        },
-        {
-            img: '/assets/images/homes/carousel/villa.png',
-            name: 'Villa',
-            desc: '7 Bedroom Gated Villa',
-            others: 'With 1 Bed BQ',
-            link: '/project-types',
-        },
-    ];
+    // const homeList: HomesItemProp[] = [
+    //     {
+    //         img: '/assets/images/homes/carousel/home.png',
+    //         name: 'Oak',
+    //         desc: '5 Bedroom',
+    //         others: 'Fully detached Duplex',
+    //         link: '/project-types',
+    //     },
+    //     {
+    //         img: '/assets/images/homes/carousel/maple.png',
+    //         name: 'Maple',
+    //         desc: '3 Bedroom Luxury',
+    //         others: 'Apartments',
+    //         link: '/project-types',
+    //     },
+    //     {
+    //         img: '/assets/images/homes/carousel/villa.png',
+    //         name: 'Villa',
+    //         desc: '7 Bedroom Gated Villa',
+    //         others: 'With 1 Bed BQ',
+    //         link: '/project-types',
+    //     },
+    //     {
+    //         img: '/assets/images/homes/carousel/home.png',
+    //         name: 'Oak',
+    //         desc: '5 Bedroom',
+    //         others: 'Fully detached Duplex',
+    //         link: '/project-types',
+    //     },
+    //     {
+    //         img: '/assets/images/homes/carousel/maple.png',
+    //         name: 'Maple',
+    //         desc: '3 Bedroom Luxury',
+    //         others: 'Apartments',
+    //         link: '/project-types',
+    //     },
+    //     {
+    //         img: '/assets/images/homes/carousel/villa.png',
+    //         name: 'Villa',
+    //         desc: '7 Bedroom Gated Villa',
+    //         others: 'With 1 Bed BQ',
+    //         link: '/project-types',
+    //     },
+    // ];
     const homeListItems = [];
     homeList.forEach((item, index) =>{
-        homeListItems.push(<HomeItem name={item.name} img={item.img} desc={item.desc} link={item.link}
-                                      others={item.others} key={index}/>);
+        homeListItems.push(<HomeItem name={item.name} img={item.img} desc={item.desc} link={'/houses/'+item.slug}
+                                       key={index}/>);
     });
 
     return (

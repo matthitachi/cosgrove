@@ -6,19 +6,22 @@ import HouseTypes from "../../Components/ProjectDetailsPage/HouseTypes/index";
 import GallerySection from "../../Components/ProjectDetailsPage/GallerySection/index";
 import ExploreMoreSection from "../../Components/ProjectDetailsPage/ExploreMoreSection/index";
 import Footer from "../../Components/Elements/Footer/index";
+import {projects} from "../../Data/data"
+import Cube from 'react-preloaders';
 
-export default function () {
+export default function ({slug}) {
+    const otherProjects = projects.filter((item) => item.slug != slug);
+    const project = projects.find((item) => item.slug == slug);
     return (
         <div>
+            <Cube color={'#f7f7f7'} background={"#fbbd00"} time={1800}/>
             <NavBar isDark={true} />
-            <HeaderItem height={50} bgImage={"/assets/images/bg/bg1.png"} />
-            <TopSection />
+            <HeaderItem height={50} bgImage={project.mainImg} />
+            <TopSection project={project} />
             <HouseTypes headerContent="House Types" />
             <GallerySection headerContent="Sights from the Project" />
-            <ExploreMoreSection />
+            <ExploreMoreSection otherProjects={otherProjects}/>
             <Footer />
-
-            <div></div>
         </div>
     );
 }

@@ -15,17 +15,20 @@
             }
             h3{
                 color: #FBBD00;
-                text-align: justify;
                 font-family: Nexa Bold, serif;
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
                 margin: 0;
+                span{
+                    &.type2{
+                        font-size: 20px;
+                    }
+                }
             }
             .title{
                 color: #000;
-                text-align: justify;
                 font-family: Nexa Bold, serif;
                 font-size: 17px;
                 font-style: normal;

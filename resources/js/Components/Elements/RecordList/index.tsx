@@ -11,8 +11,9 @@ export interface RecordItemProp {
     image: string;
     title: string;
     count: string;
+    type?: number;
 }
-export const RecordItem = (prop: RecordItemProp) => {
+export const RecordItem = ({type = 1, ...prop}: RecordItemProp) => {
 
     function splitDigitsAndNonDigits(inputString) {
         const match = inputString.match(/(\d+)(\D+)/);
@@ -44,7 +45,7 @@ export const RecordItem = (prop: RecordItemProp) => {
                             }
                         />
                     )}
-                </VisibilitySensor>{nonDigits}
+                </VisibilitySensor><span className={`${styles[`type${type}`]}`}>{nonDigits}</span>
             </h3>
             <div className={styles.title}>{prop.title}</div>
         </div>
@@ -53,10 +54,11 @@ export const RecordItem = (prop: RecordItemProp) => {
 };
 interface RecordListPorp{
     recordList: RecordItemProp[];
-    size?: number
+    size?: number;
+    type?: number;
 }
 
-export default function ({recordList,size = 6}: RecordListPorp) {
+export default function ({recordList,size = 6, type= 1}: RecordListPorp) {
     return (
 
         <div className={styles.records} data-aos="fade-left">
@@ -64,7 +66,7 @@ export default function ({recordList,size = 6}: RecordListPorp) {
                 {
                     recordList.map((item, index) =>
                         (<Col xs={size}>
-                            <RecordItem image={item.image} title={item.title} count={item.count} key={index}/>
+                            <RecordItem image={item.image} title={item.title} count={item.count} type={type} key={index}/>
 
                         </Col>)
                     )

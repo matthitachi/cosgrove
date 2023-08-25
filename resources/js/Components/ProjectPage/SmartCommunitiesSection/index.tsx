@@ -21,6 +21,8 @@ import { ReactComponent as ModernHome } from "/public/assets/svg/smart-home.svg"
 // @ts-ignore
 import { ReactComponent as Luxury } from "/public/assets/svg/modern-house.svg";
 
+import {projects} from "../../../Data/data"
+
 export default function () {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
@@ -165,7 +167,9 @@ export default function () {
                 </p>
 
                 <h3 className={"subHeaderDark mt-5 "}>Projects</h3>
-                <ProjectItem />
+                {
+                    projects.map((item, index) => (<ProjectItem {...item} key={index}/>))
+                }
 
                 <div className={`text-center ${styles.seeAll}`}>
                     <button className={"text"}>

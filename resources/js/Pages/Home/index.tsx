@@ -10,10 +10,12 @@ import OurHomeSection from "../../Components/HomePage/OurHomeSection/index";
 import FeaturedHomeSection from "../../Components/HomePage/FeaturedHomeSection/index";
 import SmartFeaturesHomeSection from "../../Components/HomePage/SmartFeaturesHomeSection/index";
 import Footer from "../../Components/Elements/Footer/index";
+import {Cube} from 'react-preloaders';
 
 
 export default function () {
     return (<div>
+        <Cube color={'#f7f7f7'} background={"#fbbd00"} time={1800}/>
         <NavBar/>
         <HeaderSection/>
         <WelcomeSection/>

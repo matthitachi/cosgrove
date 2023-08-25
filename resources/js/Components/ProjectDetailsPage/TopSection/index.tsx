@@ -15,15 +15,21 @@ import { ReactComponent as ModernHome } from "/public/assets/svg/smart-home.svg"
 import { ReactComponent as Luxury } from "/public/assets/svg/modern-house.svg";
 // @ts-ignore
 import { ReactComponent as Park } from "/public/assets/svg/park.svg";
+import {ProjectItemProp} from "../../Elements/ProjectItem";
+import SupportList from "../../Elements/SupportList";
+import RecordList from "../../Elements/RecordList";
 
-export default function () {
+interface topSectionProp {
+    project: ProjectItemProp
+}
+export default function ({project}:topSectionProp) {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
 
     return (
         <section className={styles.topSection}>
-            <Container>
+            <Container style={{marginBotton: '85px'}}>
                 <Row>
                     <Col
                         sm={12}
@@ -32,7 +38,7 @@ export default function () {
                     >
                         <h5 className={'subHeader'}>About Us</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
-                            Cosgrove Smart Estate, Wuye
+                            {project.name}
                         </h2>
                     </Col>
 
@@ -43,127 +49,33 @@ export default function () {
                         data-aos="fade-right"
                     >
                         <p className={`textPrimary`}>
-                            Our projects are not just buildings; they're the
-                            embodiment of forward-thinking design and
-                            cutting-edge technology, seamlessly integrated to
-                            create next-generation smart homes. Each home is a
-                            testament to our commitment to quality, our passion
-                            for innovation, and our dedication to crafting
-                            spaces that go beyond the ordinary. Our projects are
-                            not just buildings; they're the embodiment of
-                            forward-thinking design and cutting-edge technology,
-                            seamlessly integrated to create next-generation
-                            smart homes. Each home is a testament to our
-                            commitment to quality, our passion for innovation,
-                            and our dedication to crafting spaces that go beyond
-                            the ordinary. Our projects are not just buildings;
-                            they're the embodiment of forward-thinking design
-                            and cutting-edge technology, seamlessly integrated
-                            to create next-generation smart homes. Each home is
-                            a testament to our commitment to quality, our
-                            passion for innovation, and our dedication to
-                            crafting spaces that go beyond the ordinary.
+                            {project.description}
                         </p>
+                        <SupportList supportList={[
+                            {
+                                title: "Talk To Us",
+                                description: "Get started with Cosgrove by speaking to one of our experts.",
+                                image: "/assets/images/icons/support1.png",
+                                buttonText: "Let’s Talk",
+                                buttonAction: () => {
+                                    window.location.href = '/contact';
+                                },
+                            },
+                            {
+                                title: "Project Brochures",
+                                description: "Explore our catalog through our collection of brochures. ",
+                                image: "/assets/images/icons/brochure.png",
+                                buttonText: "Download Brochures",
+                                buttonBgDark: true,
+                                buttonAction: () => {
+                                    window.location.href = '/project-brochure';
+                                },
+                            },
+                        ]}/>
+                        <div style={{padding: '40px'}}/>
+                        <RecordList size={4} type={2} recordList={ project.distFeature}/>
 
-                        <div className={`${styles.contact} `}>
-                            <Row data-aos="fade-right">
-                                <Col xs={6}>
-                                    <img
-                                        src={
-                                            "/assets/images/icons/support1.png"
-                                        }
-                                    />
-                                    <h5>See for yourself</h5>
-                                    <p className={`textPrimary`}>
-                                        Lorem Ipsum Dolor Sit amet impo rum
-                                        emetsum
-                                    </p>
-                                    <button className={styles.yellow}>
-                                        Let’s Talk
-                                    </button>
-                                </Col>
-                                <Col xs={6}>
-                                    <img
-                                        src={
-                                            "/assets/images/icons/brochure.png"
-                                        }
-                                    />
-                                    <h5>Project Brochures</h5>
-                                    <p>
-                                        Lorem Ipsum Dolor Sit amet impo rum
-                                        emetsum
-                                    </p>
-                                    <button className={styles.dark}>
-                                        Download Brochures
-                                    </button>
-                                </Col>
-                            </Row>
-                        </div>
 
-                        <div className={styles.records} data-aos="fade-right">
-                            <div className={styles.recordItem}>
-                                <img src={"/assets/images/icons/homes.png"} />
-                                <div>
-                                    <h3>
-                                        <VisibilitySensor partialVisibility>
-                                            {({ isVisible }) => (
-                                                <CountUp
-                                                    end={450}
-                                                    duration={5}
-                                                    // @ts-ignore
-                                                    start={isVisible ? 0 : null}
-                                                />
-                                            )}
-                                        </VisibilitySensor>
-                                        +
-                                    </h3>
-                                    <div className={styles.title}>
-                                        Homes Built
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className={styles.recordItem}>
-                                <img
-                                    src={"/assets/images/icons/projects.png"}
-                                />
-                                <div>
-                                    <h3>
-                                        <VisibilitySensor partialVisibility>
-                                            {({ isVisible }) => (
-                                                <CountUp
-                                                    end={8}
-                                                    duration={5}
-                                                    // @ts-ignore
-                                                    start={isVisible ? 0 : null}
-                                                />
-                                            )}
-                                        </VisibilitySensor>
-                                    </h3>
-                                    <div className={styles.title}>Projects</div>
-                                </div>
-                            </div>
-
-                            <div className={styles.recordItem}>
-                                <img src={"/assets/images/icons/awards.png"} />
-                                <div>
-                                    <h3>
-                                        <VisibilitySensor partialVisibility>
-                                            {({ isVisible }) => (
-                                                <CountUp
-                                                    end={30}
-                                                    duration={5}
-                                                    // @ts-ignore
-                                                    start={isVisible ? 0 : null}
-                                                />
-                                            )}
-                                        </VisibilitySensor>
-                                        +
-                                    </h3>
-                                    <div className={styles.title}>Awards</div>
-                                </div>
-                            </div>
-                        </div>
                     </Col>
                     <Col
                         md={12}
@@ -171,7 +83,7 @@ export default function () {
                         className={styles.infoHomeCol}
                         data-aos="fade-left"
                     >
-                        <div className={styles.infoHomeBG}></div>
+                        <div className={styles.infoHomeBG} style={{background: `url("${project.detailsImg}")`}}/>
                     </Col>
                 </Row>
             </Container>

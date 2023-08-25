@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
 
 class HomeController extends Controller
@@ -20,17 +21,19 @@ class HomeController extends Controller
     {
         return Inertia::render('Projects/index');
     }
-    public function projectDetails()
+    public function projectDetails($slug = null)
     {
-        return Inertia::render('ProjectDetails/index');
+        $data = ['slug' => $slug];
+        return Inertia::render('ProjectDetails/index', $data);
     }
     public function about()
     {
         return Inertia::render('About/index');
     }
-    public function projectType()
+    public function projectType($slug = null)
     {
-        return Inertia::render('ProjectType/index');
+        $data = ['slug' => $slug];
+        return Inertia::render('ProjectType/index', $data);
     }
     public function projectHome()
     {

@@ -8,24 +8,34 @@ import  { ReactComponent as ArrowRight2Svg} from "/public/assets/svg/arrow-right
 import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
 // @ts-ignore
 import { ReactComponent as MapPinSvg} from "/public/assets/svg/map-pin.svg";
+import {RecordItemProp} from "../RecordList";
 
-export default function () {
+export interface ProjectItemProp {
+    name: string;
+    slug: string;
+    location: string;
+    description: string;
+    mainImg: string;
+    detailsImg: string;
+    distFeature: RecordItemProp[]
+
+}
+
+export default function (props:ProjectItemProp) {
     return (<div className={styles.projectItem}
-                 style={{background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), url("/assets/images/projects/wuye.png")'}}>
+                 style={{background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), url("${props.mainImg}")`}}>
         <div className={styles.projectsInner}>
-            <h2 className={'headerWhite'}>Cosgrove Smart Estate, Guzape</h2>
+            <h2 className={'headerWhite'}>{props.name}</h2>
             <div className={styles.location}>
                 {/*<img  className={styles.mapPinSvg} src={mapPinSvg} alt="Your SVG" />*/}
                 <MapPinSvg/>
-                <b>Mabushi</b>
+                <b>{props.location}</b>
             </div>
 
             <p className={'textDark'}>
-                Lorem ipsum dolor sit amet consetur. Turpis mollis viverra sollicitud esque dictumst et orci.
-                Lorem ipsum dolor sit amet consetur. Turpis mollis viverra sollicitud esque dictumst et orci.
-                Lorem ipsum dolor sit amet consetur. Turpis mollis viverra sollicitud esque dictumst et orci.
+               {props.description.substring(0, 200)} ...
             </p>
-            <a href={'/project-details'}>View Project <ArrowRight2Svg/></a>
+            <a href={`/projects/${props.slug}`}>View Project <ArrowRight2Svg/></a>
 
         </div>
 

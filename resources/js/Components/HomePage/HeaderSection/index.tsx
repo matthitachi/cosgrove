@@ -72,10 +72,10 @@ export default function () {
 
                 <p className={'textWhite'}>
                     {" "}
-                    Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                    Welcome to the future of luxury living, <br/>where innovation meets elegance in the heart of Nigeria.
                     <br />
-                    Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor
-                    Sit Amet
+
+
                 </p>
 
                 <form action={'/search'} method={'get'}>

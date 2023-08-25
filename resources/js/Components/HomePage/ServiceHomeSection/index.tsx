@@ -27,7 +27,7 @@ export default function () {
                     What we offer our clients
                 </h2>
                 <Row>
-                    <Col data-aos="fade-right" md={6} className={`pe-5`}>
+                    <Col data-aos="fade-right" md={6} className={`pe-3 pe-md-5`}>
                         <p
                             data-aos="fade-right"
                             className={`textPrimary  mb-85`}

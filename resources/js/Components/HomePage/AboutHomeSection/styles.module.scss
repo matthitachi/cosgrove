@@ -129,6 +129,23 @@
 @media screen and (max-width: 575px) {
 
     .infoHomeSection{
+        .infoHomeCol {
+            height: 400px;
+            .infoHomeBG{
+                transform: translate(-48%);
+                border-radius: 50%/35px 35px 0 0;
+                &:after{
+                    content: ' ';
+                    width: 7px;
+                    height: 50%;
+                    background: #FBBD00;
+                    position: absolute;
+                    bottom: 0;
+                    right: -7px;
+                }
+            }
+
+        }
         .infoHomeInfo{
             padding: 100px 20px;
             h2{

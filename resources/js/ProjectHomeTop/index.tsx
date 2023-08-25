@@ -6,9 +6,13 @@ import VisibilitySensor from "react-visibility-sensor";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
+import {houseTypeItemProps} from "../Data/data";
 // @ts-ignore
 
-export default function () {
+interface topSection {
+    houseType: houseTypeItemProps
+}
+export default function ({ houseType }:topSection) {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
@@ -23,7 +27,7 @@ export default function () {
                         data-aos="fade-right"
                     >
                         <h5 className={'subHeader'}>House Type</h5>
-                        <h2 className={`headerDark ${styles.m65}`}>Acacia</h2>
+                        <h2 className={`headerDark ${styles.m65}`}>{houseType.name}</h2>
                     </Col>
 
                     <Col
@@ -33,26 +37,7 @@ export default function () {
                         data-aos="fade-right"
                     >
                         <p className={`textPrimary`}>
-                            Our projects are not just buildings; they're the
-                            embodiment of forward-thinking design and
-                            cutting-edge technology, seamlessly integrated to
-                            create next-generation smart homes. Each home is a
-                            testament to our commitment to quality, our passion
-                            for innovation, and our dedication to crafting
-                            spaces that go beyond the ordinary. Our projects are
-                            not just buildings; they're the embodiment of
-                            forward-thinking design and cutting-edge technology,
-                            seamlessly integrated to create next-generation
-                            smart homes. Each home is a testament to our
-                            commitment to quality, our passion for innovation,
-                            and our dedication to crafting spaces that go beyond
-                            the ordinary. Our projects are not just buildings;
-                            they're the embodiment of forward-thinking design
-                            and cutting-edge technology, seamlessly integrated
-                            to create next-generation smart homes. Each home is
-                            a testament to our commitment to quality, our
-                            passion for innovation, and our dedication to
-                            crafting spaces that go beyond the ordinary.
+                            {houseType.moreDesc}
                         </p>
 
                         <div className={styles.records}>
@@ -201,7 +186,7 @@ export default function () {
                         className={styles.infoHomeCol}
                         data-aos="fade-left"
                     >
-                        <div className={styles.infoHomeBG}></div>
+                        <div className={styles.infoHomeBG} style={{background: `url("${houseType.detailsImg}")`}}/>
                     </Col>
                 </Row>
             </Container>

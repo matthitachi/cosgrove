@@ -66,11 +66,13 @@
 
 @media screen and (max-width: 575px) {
     .sliderNext{
-        right: 0;
+        right: -15;
+        height: 50px;
     }
 
     .sliderPrevious{
-        left: 0;
+        left: -15;
+        height: 50px;
     }
 
 }
