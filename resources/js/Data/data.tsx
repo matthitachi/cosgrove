@@ -18,7 +18,7 @@ export const projects: ProjectItemProp[] = [
         location: 'Wuye',
         description: 'How do you redefine intelligent living in Abuja? Cosgrove Smart Estate Wuye sets the benchmark. Spanning 4.32 hectares, the estate boasts 160 units each equipped with the latest smart home tech. Cosgrove Estate Wuye boasts amenities such as AI face recognition cameras, ANRP (Automatic Number Plate Recognition), smart water treatment, a playground, and a clubhouse set within landscaped gardens, and proximity to the Central Business District, Wuse 2 and Maitamaa. Cosgrove Wuye is a testament to unparalleled sophistication.\n',
         detailsImg: '/assets/images/about-home.png',
-        mainImg: '/assets/images/projects/wuye.png',
+        mainImg: '/assets/images/projects/wuye.jpeg',
         distFeature : [
             {
                 image: "/assets/images/icons/homes.png",
@@ -48,7 +48,7 @@ export const projects: ProjectItemProp[] = [
         location: 'Mabushi',
         description: ' Constructed with the philosophy of progressivism, Cosgrove Smart Estate Mabushi is an evolution of luxury living in Abuja. Nestled in Mabushi\'s serene environment, this estate boasts 22 state-of-the-art units, blending smart technology with modern design. With proximity to key landmarks and unmatched amenities like 24-hour security, well-maintained gardens, and recreational facilities, it\'s not just a home—it\'s a lifestyle.\n',
         detailsImg: '/assets/images/about-home.png',
-        mainImg: '/assets/images/projects/neuvou.png',
+        mainImg: '/assets/images/projects/jpeg.png',
         distFeature: [
             {
                 image: "/assets/images/icons/homes.png",
@@ -78,7 +78,7 @@ export const projects: ProjectItemProp[] = [
         location: 'Guzape',
         description: 'Three words describe Cosgrove Smart Estate Guzape: Opulence, Sophistication, and Security. Nestled amidst Guzape\'s lush hills, this estate offers a limited collection of five 7-bedroom villas and one-bedroom maid’s quarters, each with its own swimming pool and private garden. Situated minutes from iconic landmarks like the Transcorp Hilton and ECOWAS Secretariat, these villas elevate modern living. With 24/7 security, power supply, cutting-edge smart amenities, and a tranquil ambiance framed by verdant landscapes, each home is a statement.\n',
         detailsImg: '/assets/images/about-home.png',
-        mainImg: '/assets/images/projects/guzape.png',
+        mainImg: '/assets/images/projects/guzape.jpeg',
         distFeature: [
             {
                 image: "/assets/images/icons/homes.png",
@@ -108,7 +108,7 @@ export const projects: ProjectItemProp[] = [
         location: 'Maitama',
         description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the 14 six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
         detailsImg: '/assets/images/about-home.png',
-        mainImg: '/assets/images/projects/maitama.png',
+        mainImg: '/assets/images/projects/maitama.jpeg',
         distFeature: [
             {
                 image: "/assets/images/icons/homes.png",
@@ -138,7 +138,7 @@ export const projects: ProjectItemProp[] = [
         location: 'Wuye',
         description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the 14 six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
         detailsImg: '/assets/images/about-home.png',
-        mainImg: '/assets/images/projects/tetra.png',
+        mainImg: '/assets/images/projects/tetra.jpeg',
         distFeature: [
             {
                 image: "/assets/images/icons/homes.png",
@@ -177,7 +177,7 @@ export const projects: ProjectItemProp[] = [
         location: 'Maitama',
         description: 'There are spaces that transcend the ordinary, becoming the epitome of artistry and grandeur." The Châteaux by Cosgrove in Abuja is such a realm. Conceived as a blend of tradition and technology, each ultra-luxurious mansion boasts eight-bedrooms, a private garden, and pool. Amenities like a home cinema and gym elevate daily life, fortified by 24/7 security and state-of-the-art surveillance. Located in Wuse, Abuja\'s prime locale, The Châteaux is a compelling symphony of life\'s finest offerings.',
         detailsImg: '/assets/images/about-home.png',
-        mainImg: '/assets/images/projects/chateau.png',
+        mainImg: '/assets/images/projects/chateau.jpeg',
         distFeature: [
             {
                 image: "/assets/images/icons/homes.png",
@@ -207,7 +207,7 @@ export const projects: ProjectItemProp[] = [
         location: 'Wuye',
         description: 'Can a sanctuary also serve as a beacon of modern innovation?" The Fourteen by Cosgrove in Wuye, Abuja, answers this query in bricks, glass, and cutting-edge technology. This gated enclave offers 13 Pine condos and an opulent penthouse, each a haven of smart living. With state-of-the-art amenities like a swimming pool and gym, and fortified by round-the-clock security, it\'s a realm where comfort meets modernity. Proximity to schools, hospitals, and malls makes it not just a home, but the heart of convenience.\n',
         detailsImg: '/assets/images/about-home.png',
-        mainImg: '/assets/images/projects/fourteen.png',
+        mainImg: '/assets/images/projects/fourteen.jpeg',
         distFeature: [
             {
                 image: "/assets/images/icons/homes.png",

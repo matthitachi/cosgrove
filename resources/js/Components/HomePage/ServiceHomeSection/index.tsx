@@ -13,7 +13,30 @@ import * as React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function () {
+
+interface ServiceItemProp {
+    img: string;
+    title: string;
+    desc: string;
+}
+const ServiceItem = (props :ServiceItemProp) => {
+    return (
+        <li className={styles.serviceItem}>
+            <img src={props.img} />
+            <div>
+                <h4 className={`headerDark`}>{props.title}</h4>
+                <p className={`textDark`}>
+                    {props.desc}
+                </p>
+            </div>
+        </li>
+    );
+};
+interface ServiceList {
+    serviceItems: ServiceItemProp[]
+}
+
+export default function ({serviceItems}:ServiceList) {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
@@ -40,10 +63,9 @@ export default function () {
                             dui in libero.
                         </p>
                         <ul className={styles.serviceList}>
-                            <ServiceItem />
-                            <ServiceItem />
-                            <ServiceItem />
-                            <ServiceItem />
+                            {
+                                serviceItems.map((item, index) => <ServiceItem {...item}/>)
+                            }
                         </ul>
                     </Col>
                     <Col
@@ -52,7 +74,7 @@ export default function () {
                         className={`imageContainerEffect`}
                         style={{
                             background:
-                                'url("/assets/images/services/_IGH89041.png")',
+                                'url("/assets/images/services/_IGH89041.jpeg")',
                         }}
                     ></Col>
                 </Row>
@@ -61,18 +83,3 @@ export default function () {
     );
 }
 
-const ServiceItem = () => {
-    return (
-        <li className={styles.serviceItem}>
-            <img src={"/assets/images/services/discussion.png"} />
-            <div>
-                <h4 className={`headerDark`}>Consultation</h4>
-                <p className={`textDark`}>
-                    Our design service creates smart, sustainable homes tailored
-                    to your needs. We anticipate the future, integrating modern
-                    lifestyle features with tomorrow's technology.
-                </p>
-            </div>
-        </li>
-    );
-};
