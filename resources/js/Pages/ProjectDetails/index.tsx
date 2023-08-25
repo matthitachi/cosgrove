@@ -14,7 +14,7 @@ export default function ({slug}) {
     const project = projects.find((item) => item.slug == slug);
     return (
         <div>
-            <Cube color={'#f7f7f7'} background={"#fbbd00"} time={1800}/>
+            {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} time={1800}/>*/}
             <NavBar isDark={true} />
             <HeaderItem height={50} bgImage={project.mainImg} />
             <TopSection project={project} />

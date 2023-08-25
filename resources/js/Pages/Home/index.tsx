@@ -15,7 +15,7 @@ import {Cube} from 'react-preloaders';
 
 export default function () {
     return (<div>
-        <Cube color={'#f7f7f7'} background={"#fbbd00"} time={1800}/>
+        {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} />*/}
         <NavBar/>
         <HeaderSection/>
         <WelcomeSection/>
