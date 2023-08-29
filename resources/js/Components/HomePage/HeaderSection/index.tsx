@@ -83,8 +83,9 @@ export default function () {
                 <form action={'/search'} method={'get'}>
                 <div className={styles.inputContainer}>
                     <input placeholder={"Explore Cosgrove homes"} onChange={(event)=>{
-
+                        setSearch(event.target.value);
                     }}  onKeyDown={(evt) =>{
+                        console.log(search);
                         if (evt.key === 'Enter') {
                             evt.preventDefault();
                             window.location.href = '/search'
