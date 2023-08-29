@@ -35,13 +35,13 @@
     "file": "assets/cctv-camera-2f072bcc.svg",
     "src": "public/assets/svg/cctv-camera.svg"
   },
-  "public/assets/svg/chioma.svg": {
-    "file": "assets/chioma-5d2e608f.svg",
-    "src": "public/assets/svg/chioma.svg"
-  },
   "public/assets/svg/close.svg": {
     "file": "assets/close-e6466619.svg",
     "src": "public/assets/svg/close.svg"
+  },
+  "public/assets/svg/helmet.svg": {
+    "file": "assets/helmet-0d119cc4.svg",
+    "src": "public/assets/svg/helmet.svg"
   },
   "public/assets/svg/home.svg": {
     "file": "assets/home-3ea8c36b.svg",
@@ -75,12 +75,16 @@
     "file": "assets/select-82851113.svg",
     "src": "public/assets/svg/select.svg"
   },
+  "public/assets/svg/service-center.svg": {
+    "file": "assets/service-center-88ef41cc.svg",
+    "src": "public/assets/svg/service-center.svg"
+  },
   "public/assets/svg/smart-home.svg": {
     "file": "assets/smart-home-42f1faa7.svg",
     "src": "public/assets/svg/smart-home.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-3136cfed.css",
+    "file": "assets/app-d9580da6.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -97,9 +101,9 @@
       "assets/slick-12459f22.svg"
     ],
     "css": [
-      "assets/app-3136cfed.css"
+      "assets/app-d9580da6.css"
     ],
-    "file": "assets/app-f36160a9.js",
+    "file": "assets/app-4033b465.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

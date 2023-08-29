@@ -19,6 +19,10 @@ import { ReactComponent as Camera } from "/public/assets/svg/cctv-camera.svg";
 // @ts-ignore
 import { ReactComponent as ModernHome } from "/public/assets/svg/smart-home.svg";
 // @ts-ignore
+import { ReactComponent as Helmet } from "/public/assets/svg/helmet.svg";
+// @ts-ignore
+import { ReactComponent as ServiceCenter } from "/public/assets/svg/service-center.svg";
+// @ts-ignore
 import { ReactComponent as Luxury } from "/public/assets/svg/modern-house.svg";
 
 import {projects} from "../../../Data/data"
@@ -80,27 +84,27 @@ export default function () {
         {
             icon: <ModernHome  stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Fully Automated',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+            description: ''
         },
         {
             icon: <Camera stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Top-tier Security',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+            description: ''
         },
         {
             icon: <Luxury stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Unbeatable Luxury',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+            description: ''
         },
         {
-            icon: <ModernHome stroke={'rgba(0,0,0,0.4)'}/>,
+            icon: <ServiceCenter stroke={'rgba(0,0,0,0.4)'}/>,
+            title: 'Fully Serviced Estates',
+            description: ''
+        },
+        {
+            icon: <Helmet stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Industry-Leading Construction',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
-        },
-        {
-            icon: <Camera stroke={'rgba(0,0,0,0.4)'}/>,
-            title: 'Top-tier Security',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+            description: ''
         },
     ];
     return (

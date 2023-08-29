@@ -32,7 +32,7 @@ export default function ({
                 {`${(title)? title :`Top-tier Security`}`}
             </h4>
             <p className={'textDark'}>
-                {`${(description)? description :`Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.`}`}
+                {`${(description)? description :``}`}
             </p>
         </div>
     );
