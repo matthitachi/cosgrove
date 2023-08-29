@@ -55,12 +55,7 @@ export default function ({serviceItems}:ServiceList) {
                             data-aos="fade-right"
                             className={`textPrimary  mb-85`}
                         >
-                            Lorem ipsum dolor sit amet consectetur. Pulvinar
-                            varius justo interdum erat aliquet nam. Libero vitae
-                            turpis sapien purus sit eget. Vitae faucibus ipsum
-                            quis pellentesque tincidunt varius diam lectus
-                            commodo. Faucibus non proin nam tortor ut imperdiet
-                            dui in libero.
+                            Cosgrove offers an unmatched fusion of opulent real estate, unwavering security, and cutting-edge smart home technology, creating an unparalleled experience for our esteemed clients. Elevate your living with us, where luxury meets innovation in perfect harmony.
                         </p>
                         <ul className={styles.serviceList}>
                             {
