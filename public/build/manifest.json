@@ -39,6 +39,10 @@
     "file": "assets/close-e6466619.svg",
     "src": "public/assets/svg/close.svg"
   },
+  "public/assets/svg/crane.svg": {
+    "file": "assets/crane-db256a02.svg",
+    "src": "public/assets/svg/crane.svg"
+  },
   "public/assets/svg/generator.svg": {
     "file": "assets/generator-8c7b5396.svg",
     "src": "public/assets/svg/generator.svg"
@@ -111,7 +115,7 @@
     "css": [
       "assets/app-0f45eab1.css"
     ],
-    "file": "assets/app-6f513ee2.js",
+    "file": "assets/app-dfd015ca.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

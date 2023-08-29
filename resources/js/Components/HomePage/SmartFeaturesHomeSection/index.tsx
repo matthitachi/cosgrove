@@ -20,6 +20,8 @@ import { ReactComponent as ModernHome } from "/public/assets/svg/smart-home.svg"
 // @ts-ignore
 import { ReactComponent as Luxury } from "/public/assets/svg/modern-house.svg";
 // @ts-ignore
+import { ReactComponent as Crane } from "/public/assets/svg/crane.svg";
+// @ts-ignore
 import { ReactComponent as Park } from "/public/assets/svg/park.svg";
 
 import Slider from "../../Elements/Slider/index";
@@ -99,7 +101,7 @@ export default function () {
             description: 'Elevate living to an art form, where opulence knows no bounds.'
         },
         {
-            icon: <ModernHome stroke={'rgba(102,102,102,1)'}/>,
+            icon: <Crane stroke={'rgba(102,102,102,1)'}/>,
             title: 'Industry-Leading Construction',
             description: 'Crafting dreams with precision, where quality shapes reality.'
         },
