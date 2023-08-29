@@ -42,6 +42,8 @@ export default function () {
     useEffect(() => {
         window.addEventListener("scroll", listenScrollEvent);
     }, []);
+    const [search, setSearch] =
+        useState('');
     return (
         <section className={styles.homeSection} >
             <div className={styles.videoContainer} style={{
@@ -80,7 +82,9 @@ export default function () {
 
                 <form action={'/search'} method={'get'}>
                 <div className={styles.inputContainer}>
-                    <input placeholder={"Explore Cosgrove homes"}  onKeyDown={(evt) =>{
+                    <input placeholder={"Explore Cosgrove homes"} onChange={(event)=>{
+
+                    }}  onKeyDown={(evt) =>{
                         if (evt.key === 'Enter') {
                             evt.preventDefault();
                             window.location.href = '/search'
