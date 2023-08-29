@@ -39,6 +39,10 @@
     "file": "assets/close-e6466619.svg",
     "src": "public/assets/svg/close.svg"
   },
+  "public/assets/svg/generator.svg": {
+    "file": "assets/generator-8c7b5396.svg",
+    "src": "public/assets/svg/generator.svg"
+  },
   "public/assets/svg/helmet.svg": {
     "file": "assets/helmet-0d119cc4.svg",
     "src": "public/assets/svg/helmet.svg"
@@ -46,6 +50,10 @@
   "public/assets/svg/home.svg": {
     "file": "assets/home-3ea8c36b.svg",
     "src": "public/assets/svg/home.svg"
+  },
+  "public/assets/svg/license-plate.svg": {
+    "file": "assets/license-plate-21f41c42.svg",
+    "src": "public/assets/svg/license-plate.svg"
   },
   "public/assets/svg/map-pin.svg": {
     "file": "assets/map-pin-001ed416.svg",
@@ -84,7 +92,7 @@
     "src": "public/assets/svg/smart-home.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-d9580da6.css",
+    "file": "assets/app-0f45eab1.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -101,9 +109,9 @@
       "assets/slick-12459f22.svg"
     ],
     "css": [
-      "assets/app-d9580da6.css"
+      "assets/app-0f45eab1.css"
     ],
-    "file": "assets/app-944116c4.js",
+    "file": "assets/app-8731a14c.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

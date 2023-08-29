@@ -29,11 +29,17 @@ export default function () {
                         <form className={styles.contactInTouch}>
                             <select>
                                 <option disabled selected hidden>
-                                    Select an Option
+                                    Select an Project
                                 </option>
-                                <option value="option1">Option 1</option>
-                                <option value="option2">Option 2</option>
-                                <option value="option3">Option 3</option>
+                                <option value="option1">Cosgrove Smart Estate, Wuye</option>
+                                <option value="option2">Cosgrove Smart Estate, Mabushi</option>
+                                <option value="option3">Cosgrove Smart Estate, Guzape</option>
+                                <option value="option4">Neauvaux by Cosgrove, Maitama</option>
+                                <option value="option5">Tetra by Cosgrove, Wuye</option>
+                                <option value="option6">Cosgrove Smart City, Katampe</option>
+                                <option value="option7">Châteaux by Cosgrove, Wuse 2</option>
+                                <option value="option8">Fourteen by Cosgrove, Wuye</option>
+                                <option value="option9">Cosgrove Smart Estate, Wuse 2'</option>
                             </select>
                             <div>
                                 <Select />

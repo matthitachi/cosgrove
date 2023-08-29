@@ -14,6 +14,10 @@ import { ReactComponent as ModernHome } from "/public/assets/svg/smart-home.svg"
 // @ts-ignore
 import { ReactComponent as Luxury } from "/public/assets/svg/modern-house.svg";
 // @ts-ignore
+import { ReactComponent as Generator } from "/public/assets/svg/generator.svg";
+// @ts-ignore
+import { ReactComponent as LicensePlate } from "/public/assets/svg/license-plate.svg";
+// @ts-ignore
 import { ReactComponent as Park } from "/public/assets/svg/park.svg";
 import {ProjectItemProp} from "../../Elements/ProjectItem";
 import SupportList from "../../Elements/SupportList";
@@ -111,9 +115,9 @@ export default function ({project}:topSectionProp) {
                     </Col>
 
                     <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
-                        <Camera />
+                        <Generator />
                         <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
-                            Luxurious Homes
+                            Uninterrupted Electricity
                         </h5>
                     </Col>
                     <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
@@ -123,9 +127,9 @@ export default function ({project}:topSectionProp) {
                         </h5>
                     </Col>
                     <Col sm={4} xs={6} md={2} className={styles.eFeatureItem}>
-                        <Camera />
+                        <LicensePlate />
                         <h5 className={`subHeaderSmall dark mt-3 mb-4`}>
-                            Luxurious Homes
+                            Numberplate Recognition
                         </h5>
                     </Col>
 

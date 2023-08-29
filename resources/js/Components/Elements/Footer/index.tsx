@@ -77,9 +77,7 @@ export default function () {
                 <Col sm={12} md={4} className={styles.footerInTouch}>
                     <h2 className={`headerDark mb-25`}>Get In Touch</h2>
                     <p className={"textDark mb-25"}>
-                        Vitae faucibus ipsum quis pellentesque tincidunt varius
-                        diam lectus commodo. Faucibus non proin nam tortor ut
-                        imperdiet dui in libero.
+                        Ready to step into the world of Cosgrove excellence? Reach out now to start your extraordinary real estate experience.
                     </p>
                     <form>
                         <input
@@ -111,7 +109,7 @@ export default function () {
                                     +234906 000 1552
                                 </li>
                                 <li className={`textDark mb-1`}>
-                                    +234906 000 1552
+                                    +234906 000 1553
                                 </li>
                             </ul>
                             <h5 className={`headerDark`}>Write Us</h5>
@@ -138,25 +136,25 @@ export default function () {
                     <Row>
                         <Col xs={6}>
                             <ul>
-                                <li className={`textDark mb-4`}> Home</li>
-                                <li className={`textDark mb-4`}>About</li>
-                                <li className={`textDark mb-4`}>Our Homes</li>
-                                <li className={`textDark mb-4`}>Projects</li>
-                                <li className={`textDark mb-4`}>Contact</li>
+                                <li className={`textDark mb-4`}> <a href={'/'}>Home</a></li>
+                                <li className={`textDark mb-4`}><a href={'/about'}>About</a></li>
+                                <li className={`textDark mb-4`}><a href={'/project-homes'}>Our Homes</a></li>
+                                <li className={`textDark mb-4`}><a href={'/projects'}>Projects</a></li>
+                                <li className={`textDark mb-4`}><a href={'/contact'}>Contact</a></li>
                             </ul>
                         </Col>
                         <Col xs={6}>
                             <ul>
-                                <li className={`textDark mb-4`}>Blog</li>
-                                <li className={`textDark mb-4`}>Careers</li>
+                                <li className={`textDark mb-4`}><a href={'/'}>Blog</a></li>
+                                <li className={`textDark mb-4`}><a href={'/'}>Careers</a></li>
                                 <li className={`textDark mb-4`}>
-                                    Agent Registration
+                                    <a href={'/'}>Agent Registration</a>
                                 </li>
                                 <li className={`textDark mb-4`}>
-                                    Term of service
+                                    <a href={'/'}>Term of service</a>
                                 </li>
                                 <li className={`textDark mb-4`}>
-                                    Privacy policy
+                                    <a href={'/'}>Privacy policy</a>
                                 </li>
                             </ul>
                         </Col>

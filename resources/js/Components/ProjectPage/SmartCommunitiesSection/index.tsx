@@ -84,27 +84,27 @@ export default function () {
         {
             icon: <ModernHome  stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Fully Automated',
-            description: ''
+            description: 'Experience life on autopilot, where convenience meets innovation.'
         },
         {
             icon: <Camera stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Top-tier Security',
-            description: ''
+            description: 'Your safety, our excellence - guarding tranquility with mastery.'
         },
         {
             icon: <Luxury stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Unbeatable Luxury',
-            description: ''
+            description: 'Elevate living to an art form, where opulence knows no bounds.'
         },
         {
             icon: <ServiceCenter stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Fully Serviced Estates',
-            description: ''
+            description: 'Seamless living in meticulously serviced estates.'
         },
         {
             icon: <Helmet stroke={'rgba(0,0,0,0.4)'}/>,
             title: 'Industry-Leading Construction',
-            description: ''
+            description: 'Crafting dreams with precision, where quality shapes reality.'
         },
     ];
     return (

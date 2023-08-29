@@ -18,7 +18,7 @@ export default function (prop: ProjectItemProp) {
             className={styles.houseTypesItem}
             data-aos="fade-up"
         >
-            <a href={`/houses/${prop.slug}`}>
+            <a href={`/projects/${prop.slug}`}>
                 <div className={styles.imgCtx}
                      style={{background: `url("${prop.detailsImg}")`}}/>
                 <h5 className={'subHeaderDark'}>{prop.name}</h5>

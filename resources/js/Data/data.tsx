@@ -728,7 +728,7 @@ export const houseTypes: houseTypeItemProps[] = [
     },
     {
         img: '/assets/images/house-types/pine-penthouse/portrait.jpg',
-        name: 'Pine Pent House',
+        name: 'Pine Penthouse',
         desc: '4-Bedroom Luxury penthouse with 1 maid’s room',
         slug: 'pine-pent-house',
         projectSlug: ['fourteen'],

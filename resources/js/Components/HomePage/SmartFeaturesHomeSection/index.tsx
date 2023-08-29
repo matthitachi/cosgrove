@@ -86,22 +86,22 @@ export default function () {
         {
             icon: <ModernHome  stroke={'rgba(102,102,102,1)'}/>,
             title: 'Fully Automated',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+            description: 'Experience life on autopilot, where convenience meets innovation.'
         },
         {
             icon: <Camera stroke={'rgba(102,102,102,1)'}/>,
             title: 'Top-tier Security',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+            description: 'Your safety, our excellence - guarding tranquility with mastery.'
         },
         {
             icon: <Luxury stroke={'rgba(102,102,102,1)'}/>,
             title: 'Unbeatable Luxury',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+            description: 'Elevate living to an art form, where opulence knows no bounds.'
         },
         {
             icon: <ModernHome stroke={'rgba(102,102,102,1)'}/>,
             title: 'Industry-Leading Construction',
-            description: 'Mahiga Imporum Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.'
+            description: 'Crafting dreams with precision, where quality shapes reality.'
         },
     ];
 

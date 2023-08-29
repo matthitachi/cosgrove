@@ -22,11 +22,7 @@ export default function () {
 
                     <Col md={12} lg={8} className={styles.teams}>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur. Amet netus
-                            at pulvinar turpis eros leo. Varius nisl viverra sit
-                            facilisis ipsum facilisi a massa natoque. Porttitor
-                            aliquam massa rhoncus sollicitudin eget integer
-                            gravida nunc. Nam.
+                            When it comes to finding your ideal home, engaging with Cosgrove's expert advisors is your key to making the perfect choice. Our seasoned professionals understand that a home is more than just a space; it's a reflection of your lifestyle and aspirations. With a deep knowledge of our diverse range of properties and an attentive ear to your preferences, they are dedicated to guiding you towards a residence that resonates with you on every level. Let us navigate the journey together, ensuring that your new home aligns seamlessly with your dreams.
                         </p>
 
                         <div className={styles.peopleContainer}>
@@ -97,6 +93,21 @@ export default function () {
                                             <h5>Head, Marketing</h5>
                                             <p>
                                                 ochua.umoru@cosgroveafrica.com
+                                            </p>
+                                        </div>
+                                    </li>
+                                <li className={styles.personContainer}>
+                                        <div style={{ marginRight: "1rem" }}>
+                                            <img
+                                                src="/assets/images/contacts/blesssing.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div style={{ paddingTop: "1rem" }}>
+                                            <h4>Blessing Chinedu-Uzoh</h4>
+                                            <h5>Head, health and safety environment</h5>
+                                            <p>
+                                                blessing.chinedu@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
