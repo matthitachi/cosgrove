@@ -44,6 +44,11 @@ export default function () {
     }, []);
     const [search, setSearch] =
         useState('');
+    const submitSearch = () =>{
+        if(search.length > 0){
+            window.location.href = '/search?s='+search
+        }
+    };
     return (
         <section className={styles.homeSection} >
             <div className={styles.videoContainer} style={{
@@ -85,10 +90,10 @@ export default function () {
                     <input placeholder={"Explore Cosgrove homes"} onChange={(event)=>{
                         setSearch(event.target.value);
                     }}  onKeyDown={(evt) =>{
-                        console.log(search);
+
                         if (evt.key === 'Enter') {
                             evt.preventDefault();
-                            window.location.href = '/search'
+                           submitSearch();
                         }
                     }}/>
                     <img
@@ -100,6 +105,7 @@ export default function () {
                         className={styles.searchSvg}
                         src={searchSvg}
                         alt="Your SVG"
+                        onClick={submitSearch}
 
                     />
                 </div>

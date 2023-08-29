@@ -13,9 +13,11 @@ class HomeController extends Controller
     {
         return Inertia::render('Home/index');
     }
-    public function homeSearch()
+    public function homeSearch(Request $request)
     {
-        return Inertia::render('HomeSearch/index');
+        return Inertia::render('HomeSearch/index', [
+            'search' => $request->s
+        ]);
     }
     public function projects()
     {

@@ -4,12 +4,13 @@ import NavBar from "../../Components/Elements/Navbar/navbar";
 import SearchHeader from "../../Components/HomeSearchSection/HomeSearchHeader";
 import Footer from "../../Components/Elements/Footer";
 import Cube from 'react-preloaders';
-export default function () {
+export default function ({search}) {
+    console.log(search);
     return (
         <div>
             {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} time={1800}/>*/}
             <NavBar isDark={true} />
-            <SearchHeader />
+            <SearchHeader search={search}/>
             <Footer />
         </div>
     );

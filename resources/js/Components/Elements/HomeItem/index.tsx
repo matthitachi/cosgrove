@@ -31,7 +31,7 @@ export default function({img, name, desc, others,link}: HomesItemProp) {
         ${
             isHover
                 ? "linear-gradient(0deg, rgba(251, 189, 0, 0.80) 0%, rgba(251, 189, 0, 0.80) 100%)"
-                : "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%)"
+                : "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.5) 100%)"
         },
              url(${img})`,
     };

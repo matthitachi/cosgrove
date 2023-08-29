@@ -1,0 +1,75 @@
+.brochureContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .brochureItem {
+        width: 15.625rem;
+        height: 18.75rem;
+        border-radius: 0.625rem;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        padding: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        button {
+            display: flex;
+            align-items: center;
+            height: 1.5rem;
+            width: 3.75rem;
+            background: #fbbd00;
+            border-radius: 0.3125rem;
+            border: none;
+
+            img {
+                width: 1rem;
+                margin-right: 3px;
+            }
+
+            span {
+                color: #fff;
+                text-align: center;
+                font-family: Inter;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+
+    h4 {
+        color: #000;
+        font-family: Inter;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 15px;
+    }
+
+    p {
+        color: #696969;
+        font-family: Inter;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .brochureContainer {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+}

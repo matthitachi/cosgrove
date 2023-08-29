@@ -2,7 +2,7 @@
     .searchBar {
         width: 100%;
         background-color: #121212;
-        height: 8rem;
+        height: 11rem;
         padding-bottom: 10px;
         display: flex;
         justify-content: center;
@@ -23,7 +23,7 @@
                 padding-left: 4rem;
                 color: white;
                 &::placeholder {
-                    color: #fff;
+                    color: rgba(#fff, 0.4);
                     font-family: Inter;
                     font-size: 1.125rem;
                     font-style: normal;
@@ -38,6 +38,7 @@
                 position: absolute;
                 top: 11px;
                 right: 16px;
+                cursor: pointer;
             }
 
             .searchSvg {
@@ -195,6 +196,13 @@
     }
 }
 
+@media screen and (max-width: 1440px) {
+    .searchHeader{
+        .searchBar {
+            height: 8rem;
+        }
+    }
+}
 @media screen and (max-width: 600px) {
     .searchBar {
         form {

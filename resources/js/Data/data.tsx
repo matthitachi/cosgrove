@@ -1,5 +1,6 @@
 import {ProjectItemProp} from "../Components/Elements/ProjectItem";
 import {RecordItemProp} from "../Components/Elements/RecordList";
+import * as React from "react";
 
 export interface houseTypeItemProps {
     img: string;
@@ -930,5 +931,44 @@ export const houseTypes: houseTypeItemProps[] = [
                 count: "3",
             },
         ],
+    },
+];
+
+export interface brochuresItemProp {
+    link: string;
+    image: string;
+    name: string;
+    fileType: string;
+    fileTypeIcon: string;
+}
+
+export const brochures : brochuresItemProp[] = [
+    {
+        name:'General Cosgrove Brochure',
+        image: '/assets/images/bg/cos.png',
+       link: '/assets/brochures/general-brochure.pdf',
+       fileType: 'PDF',
+       fileTypeIcon:'/assets/images/bg/Logotype.png'
+    },
+    {
+        name:'Fourteen by Cosgrove',
+        image: '/assets/images/bg/fourteen.png',
+       link: '/assets/brochures/fourteen-by-cosgrove.pdf',
+       fileType: 'PDF',
+       fileTypeIcon:'/assets/images/bg/Logotype.png'
+    },
+    {
+        name:'Nouveau by Cosgrove',
+        image: '/assets/images/bg/nouveau.png',
+       link: '/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf',
+       fileType: 'PDF',
+       fileTypeIcon:'/assets/images/bg/Logotype.png'
+    },
+    {
+        name:'The Chateaux by Cosgrove',
+        image: '/assets/images/bg/chateaux.png',
+       link: '/assets/brochures/the-chateaux-by-cosgrove.pdf',
+       fileType: 'PDF',
+       fileTypeIcon:'/assets/images/bg/Logotype.png'
     },
 ];
