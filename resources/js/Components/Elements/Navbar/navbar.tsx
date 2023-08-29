@@ -16,8 +16,7 @@ export default function ({isDark = false}:navbarProp) {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
     const navBarRef = useRef<HTMLElement | null>(null);
     const handleCloseOffcanvas = () => {
-        setShowOffcanvas(!showOffcanvas); // Function to close the offcanvas
-        console.log("iS IT closed!");
+        setShowOffcanvas(!showOffcanvas);
     };
     useEffect(() => {
         const handleScroll = () => {
@@ -112,14 +111,14 @@ export default function ({isDark = false}:navbarProp) {
                             <Nav className={`me-auto ${styles.mobileLinks}`}>
                                 <Nav.Link
                                     onClick={handleCloseOffcanvas}
-                                    href="#link"
+                                    href="/"
                                     className={styles.mobileNav}
                                 >
                                     Home
                                 </Nav.Link>
 
                                 <Nav.Link
-                                    href="#link"
+                                    href="/about"
                                     className={styles.navLink}
                                     onClick={handleCloseOffcanvas}
                                 >
@@ -200,7 +199,7 @@ export default function ({isDark = false}:navbarProp) {
                                     </NavDropdown.Item>
                                 </NavDropdown>
                                 <Nav.Link
-                                    href="#link"
+                                    href="/contact"
                                     className={styles.navLink}
                                 >
                                     Contact
