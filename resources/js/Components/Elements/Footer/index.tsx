@@ -177,7 +177,7 @@ export default function () {
 
                 <div className={styles.footerCopyRight}>
                     <div className={"textDark text-center text-md-start"}>
-                        ©2023 Cosgrove Real Estate Limited. All rights reserved.
+                        ©2023 Cosgrove Investment Limited. All rights reserved.
                     </div>
                     <div
                         className={`textDark text-center text-md-end ${styles.developed}`}

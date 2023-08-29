@@ -84,7 +84,7 @@ export default function ({isDark = false}:navbarProp) {
                             About
                         </Nav.Link>
                         <Nav.Link href="/project-homes" className={styles.navLink}>
-                            Our homes
+                            Our Homes
                         </Nav.Link>
                         <Nav.Link href="/projects" className={styles.navLink}>
                             Projects
@@ -126,7 +126,7 @@ export default function ({isDark = false}:navbarProp) {
                                 </Nav.Link>
                                 {/* First Dropdown  */}
                                 <NavDropdown
-                                    title="Our homes"
+                                    title="Our Homes"
                                     id="homes-dropdown"
                                     className={`${styles.navLink}`}
                                 >

@@ -69,7 +69,7 @@ export default function ({serviceItems}:ServiceList) {
                         className={`imageContainerEffect`}
                         style={{
                             background:
-                                'url("/assets/images/services/_IGH89041.jpeg")',
+                                'url("/assets/images/services/H8904.jpg")',
                         }}
                     ></Col>
                 </Row>

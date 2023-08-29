@@ -62,8 +62,8 @@ export default function () {
         <section className={styles.FeaturedHomeSection} data-aos="fade-up">
             <div className={`curvedTop ${styles.topCurve}`} />
             <Container className={styles.featuredCtx}>
-                <h4 className={`subHeader mb-25`}>Our Homes</h4>
-                <h2 className={`headerDark`}>What People Are Saying</h2>
+                <h4 className={`subHeader mb-25`}>Press</h4>
+                <h2 className={`headerDark`}>Featured</h2>
 
                 <ul className={styles.featuredList}>
                     {
