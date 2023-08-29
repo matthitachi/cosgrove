@@ -16,6 +16,7 @@ export default function () {
             <HeaderItem
                 height={70}
                 bgImage={"/assets/images/bg/team.jpg"}
+                position={'unset'}
             />
             <OverviewSection />
             <TeamSection />

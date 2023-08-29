@@ -49,7 +49,7 @@ export default function ({ height, bgImage, position= 'unset' }: headerItemProp)
                 style={{
                     backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, ${1 - ratio}) 0%, rgba(0, 0, 0, ${1 - ratio}) 100% ),url("  ${bgImage} ")`,
                     borderRadius: `0 0 50% 50%/${responsiveCurveValue}px`,
-                    backgroundPosition: 'center'
+                    backgroundPosition: `${position}`
                 }}
             />
         </section>
