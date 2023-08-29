@@ -3,7 +3,7 @@ import Navy from "../../../Navbar-2/navbar-2";
 
 import NavBar from "../../Components/Elements/Navbar/navbar";
 import HeaderItem from "../../Components/Elements/HeaderItem/index";
-import ProjectHomeTop from "../../ProjectHomeTop/index";
+import ProjectHomeTop from "../../Components/ProjectHomeTop/index";
 import HouseTypes from "../../Components/ProjectDetailsPage/HouseTypes/index";
 import OtherProjectTypes from "../../Components/ProjectDetailsPage/OtherProjectTypes/index";
 import GallerySection from "../../Components/ProjectDetailsPage/GallerySection/index";
@@ -23,7 +23,7 @@ export default function ({slug}) {
             <HeaderItem height={50} bgImage={houseType.headerImg} />
             <ProjectHomeTop houseType={houseType}/>
             <OtherProjectTypes headerContent="Projects with this House Type" projects={projectsWithHouseType} />
-            <GallerySection headerContent="The house up close" />
+            <GallerySection basePath={houseType.galleryBasePath} gallery={houseType.gallery} headerContent="The house up close" />
             <Explore homeList={otherHouseTypes} />
             <Footer />
         </div>

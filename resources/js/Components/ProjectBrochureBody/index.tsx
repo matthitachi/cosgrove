@@ -12,6 +12,7 @@ export default function () {
                 <Row style={{ marginTop: "1rem" }}>
                     <Col className={styles.brochureContainer}>
                         {/* ITEM 1 */}
+                        <a href={'/assets/brochures/general-brochure.pdf'}>
                         <div>
                             <div
                                 className={styles.brochureItem}
@@ -31,8 +32,10 @@ export default function () {
                             <h4>General Cosgrove Brochure</h4>
                             <p>PDF</p>
                         </div>
+                        </a>
 
                         {/* ITEM 2 */}
+                        <a href={'/assets/brochures/fourteen-by-cosgrove.pdf'}>
                         <div>
                             <div
                                 className={styles.brochureItem}
@@ -52,8 +55,10 @@ export default function () {
                             <h4>Fourteen by Cosgrove</h4>
                             <p>PDF</p>
                         </div>
+                        </a>
 
                         {/* ITEM 3 */}
+                        <a href={'/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf'}>
                         <div>
                             <div
                                 className={styles.brochureItem}
@@ -73,7 +78,9 @@ export default function () {
                             <h4>Nouveau by Cosgrove</h4>
                             <p>PDF</p>
                         </div>
+                        </a>
                         {/* ITEM 4  */}
+                        <a href={'/assets/brochures/the-chateaux-by-cosgrove.pdf'}>
                         <div>
                             <div
                                 className={styles.brochureItem}
@@ -93,6 +100,7 @@ export default function () {
                             <h4>The Chateaux by Cosgrove</h4>
                             <p>PDF</p>
                         </div>
+                        </a>
                     </Col>
                 </Row>
             </Container>

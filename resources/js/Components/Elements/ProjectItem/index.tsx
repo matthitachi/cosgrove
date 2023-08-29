@@ -17,7 +17,10 @@ export interface ProjectItemProp {
     description: string;
     mainImg: string;
     detailsImg: string;
-    distFeature: RecordItemProp[]
+    distFeature: RecordItemProp[],
+    galleryBasePath: string;
+    gallery: string[];
+    showInHome?: boolean
 
 }
 

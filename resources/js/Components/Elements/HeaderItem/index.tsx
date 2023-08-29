@@ -12,8 +12,9 @@ interface headerItemProp {
     height: number;
     bgImage: string;
     isDark?: false;
+    position?: string;
 }
-export default function ({ height, bgImage }: headerItemProp) {
+export default function ({ height, bgImage, position= 'unset' }: headerItemProp) {
     const getResponsiveCurveValue = (width) => {
         if (width < 575) return 50;
         else if (width < 767) return 70;
@@ -46,10 +47,11 @@ export default function ({ height, bgImage }: headerItemProp) {
             <div
                 className={`curvedBottom ${styles.headerBgItem}`}
                 style={{
-                    background: `linear-gradient(180deg, rgba(0, 0, 0, ${1 - ratio}) 0%, rgba(0, 0, 0, ${1 - ratio}) 100% ),url("  ${bgImage} ")`,
+                    backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, ${1 - ratio}) 0%, rgba(0, 0, 0, ${1 - ratio}) 100% ),url("  ${bgImage} ")`,
                     borderRadius: `0 0 50% 50%/${responsiveCurveValue}px`,
+                    backgroundPosition: 'center'
                 }}
-            ></div>
+            />
         </section>
     );
 }

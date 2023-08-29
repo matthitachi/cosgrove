@@ -12,6 +12,7 @@ import { ReactComponent as MapPinSvg } from "/public/assets/svg/map-pin.svg";
 import {projects} from "../../../Data/data"
 export default function () {
 
+    const projectToDisplay = projects.filter((item) => item.showInHome == true);
     return (
         <section className={styles.projectHomeSection}>
             <Container>
@@ -44,7 +45,7 @@ export default function () {
                     </Col>
                 </Row>
                 {
-                    projects.map((item, index) => (<ProjectItem {...item} key={index}/>))
+                    projectToDisplay.map((item, index) => (<ProjectItem {...item} key={index}/>))
                 }
 
 

@@ -32,7 +32,7 @@ export default function () {
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
                                 background:
-                                    'url("/assets/images/teams/umar.png")',
+                                    'url("/assets/images/teams/umar.jpg")',
                             }}
                         ></div>
                     </Col>
@@ -89,7 +89,7 @@ export default function () {
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
                                 background:
-                                    'url("/assets/images/teams/elizabeth.png")',
+                                    'url("/assets/images/teams/elizabeth.jpg")',
                             }}
                         ></div>
                     </Col>
@@ -150,7 +150,7 @@ export default function () {
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
                                 background:
-                                    'url("/assets/images/teams/kalli.png")',
+                                    'url("/assets/images/teams/kalli.jpg")',
                             }}
                         ></div>
                     </Col>
@@ -224,7 +224,7 @@ export default function () {
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
                                 background:
-                                    'url("/assets/images/teams/madhur.png")',
+                                    'url("/assets/images/teams/madhur.jpg")',
                             }}
                         ></div>
                     </Col>
@@ -276,7 +276,7 @@ export default function () {
                             className={`imageContainerEffect ${styles.teamImg}`}
                             style={{
                                 background:
-                                    'url("/assets/images/teams/adeoba.png")',
+                                    'url("/assets/images/teams/adeoba.jpg")',
                             }}
                         ></div>
                     </Col>

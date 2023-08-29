@@ -34,7 +34,10 @@ export default function () {
                                 <ul>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
-                                            <Chioma />
+                                            <img
+                                                src="/assets/images/contacts/chioma.jpg"
+                                                alt=""
+                                            />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
                                             <h4>Chioma Ugwu</h4>
@@ -50,7 +53,7 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/teams/ray.png"
+                                                src="/assets/images/contacts/raymond.jpg"
                                                 alt=""
                                             />
                                         </div>
@@ -106,7 +109,7 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/teams/sakana.png"
+                                                src="/assets/images/contacts/sakana.jpg"
                                                 alt=""
                                             />
                                         </div>
@@ -125,7 +128,7 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/teams/tosin.png"
+                                                src="/assets/images/contacts/generic.jpg"
                                                 alt=""
                                             />
                                         </div>
@@ -141,7 +144,7 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/teams/fatima.png"
+                                                src="/assets/images/contacts/fatima.jpg"
                                                 alt=""
                                             />
                                         </div>
@@ -157,7 +160,7 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/teams/nafisa.png"
+                                                src="/assets/images/contacts/nafisa.jpg"
                                                 alt=""
                                             />
                                         </div>

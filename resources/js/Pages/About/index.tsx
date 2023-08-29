@@ -15,7 +15,7 @@ export default function () {
             <NavBar isDark={true} />
             <HeaderItem
                 height={70}
-                bgImage={"/assets/images/bg/bg-about.png"}
+                bgImage={"/assets/images/bg/team.jpg"}
             />
             <OverviewSection />
             <TeamSection />

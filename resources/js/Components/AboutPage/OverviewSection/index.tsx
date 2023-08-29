@@ -97,14 +97,14 @@ export default function () {
     const supportList: SupportItemProp[] = [
         {
             title: "Talk To Us",
-            description: "Lorem Ipsum Dolor Sit amet impo rum emetsum",
+            description: "Get started with Cosgrove by speaking to one of our experts.",
             image: "/assets/images/icons/support.png",
             buttonText: "Let’s Talk",
             buttonAction: () => {},
         },
         {
             title: "Project Brochures",
-            description: "Lorem Ipsum Dolor Sit amet impo rum emetsum ",
+            description: "Explore our catalog through our collection of brochures.",
             image: "/assets/images/icons/brochure.png",
             buttonText: "Download Brochures",
             buttonBgDark: true,

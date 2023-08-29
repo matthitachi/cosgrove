@@ -5,27 +5,39 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
 import Gallery, { galleryImageProp } from "../../Elements/Gallery/index";
+import {useState} from "react";
 
 interface GalleryHeadProps {
     headerContent: string;
+    basePath: string;
+    gallery: string[];
 }
 
-export default function ({ headerContent }: GalleryHeadProps) {
+export default function ({ headerContent,basePath='/assets/images/gallery/',  gallery = [] }: GalleryHeadProps) {
+    const [fileNames, setFileNames] = useState([]);
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
 
-    const baseImgPath = "/assets/images/gallery/";
-    const images: galleryImageProp[] = [
-        { image: baseImgPath + "CGV7.png", tag: ["oak"] },
-        { image: baseImgPath + "CGV11.png", tag: ["oak", "pine"] },
-        { image: baseImgPath + "CGV12.png", tag: ["oak"] },
-        { image: baseImgPath + "CGV13.png", tag: [] },
-        { image: baseImgPath + "CGV18.png", tag: ["oak", "pine"] },
-        { image: baseImgPath + "CGV19.png", tag: ["oak"] },
-        { image: baseImgPath + "CGV24.png", tag: [] },
-    ];
-    const tags = ["oak", "pine"];
+    const images: galleryImageProp[] = [];
+    let tags = [];
+
+    gallery.forEach((item, index) =>{
+        const splitExtension = item.split('.');
+        const splitItem = splitExtension[0].split('_');
+        let newImg: galleryImageProp = {image:'', tag: []};
+        newImg['image'] = basePath + item;
+        if(splitItem.length > 1){
+            splitItem.splice(0, 1);
+            newImg['tag'] = splitItem;
+            const mergedSet = new Set([...tags, ...splitItem]);
+            tags = Array.from(mergedSet);
+        }else{
+            newImg['image'] = basePath + item;
+            newImg['tag'] = [];
+        }
+        images.push(newImg)
+    });
     return (
         <section className={styles.gallerySection} data-aos="fade-up">
             <Container>

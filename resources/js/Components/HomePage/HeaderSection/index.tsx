@@ -58,7 +58,7 @@ export default function () {
 
                 >
                     <source
-                        src="/assets/videos/bg/hero-video.mp4"
+                        src={(window.innerWidth < 575)?`/assets/videos/bg/hero-video-mobile.mp4`:`/assets/videos/bg/hero-video.mp4`}
                         type="video/mp4"
                     />
                 </video>
