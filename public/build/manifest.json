@@ -19,6 +19,66 @@
     "file": "assets/slick-26726bac.woff",
     "src": "node_modules/slick-carousel/slick/fonts/slick.woff"
   },
+  "public/assets/images/features/automatic-numberplate-recognition.svg": {
+    "file": "assets/automatic-numberplate-recognition-70ce0556.svg",
+    "src": "public/assets/images/features/automatic-numberplate-recognition.svg"
+  },
+  "public/assets/images/features/central-security-control.svg": {
+    "file": "assets/central-security-control-43abdcc2.svg",
+    "src": "public/assets/images/features/central-security-control.svg"
+  },
+  "public/assets/images/features/commercial-hub.svg": {
+    "file": "assets/commercial-hub-94294f6d.svg",
+    "src": "public/assets/images/features/commercial-hub.svg"
+  },
+  "public/assets/images/features/facial-recognition.svg": {
+    "file": "assets/facial-recognition-f1da3a4e.svg",
+    "src": "public/assets/images/features/facial-recognition.svg"
+  },
+  "public/assets/images/features/facility-management-services.svg": {
+    "file": "assets/facility-management-services-92355f27.svg",
+    "src": "public/assets/images/features/facility-management-services.svg"
+  },
+  "public/assets/images/features/fiber-to-the-home.svg": {
+    "file": "assets/fiber-to-the-home-a7c702e7.svg",
+    "src": "public/assets/images/features/fiber-to-the-home.svg"
+  },
+  "public/assets/images/features/full-fiber-optics-cabling.svg": {
+    "file": "assets/full-fiber-optics-cabling-995980ab.svg",
+    "src": "public/assets/images/features/full-fiber-optics-cabling.svg"
+  },
+  "public/assets/images/features/motion-sensors.svg": {
+    "file": "assets/motion-sensors-7484ada5.svg",
+    "src": "public/assets/images/features/motion-sensors.svg"
+  },
+  "public/assets/images/features/pedestrian-biometric-access-control.svg": {
+    "file": "assets/pedestrian-biometric-access-control-5f971b46.svg",
+    "src": "public/assets/images/features/pedestrian-biometric-access-control.svg"
+  },
+  "public/assets/images/features/playground-and-greenery.svg": {
+    "file": "assets/playground-and-greenery-3f19e593.svg",
+    "src": "public/assets/images/features/playground-and-greenery.svg"
+  },
+  "public/assets/images/features/security-alarm.svg": {
+    "file": "assets/security-alarm-6af615bf.svg",
+    "src": "public/assets/images/features/security-alarm.svg"
+  },
+  "public/assets/images/features/smart-street-lights.svg": {
+    "file": "assets/smart-street-lights-d45f1f66.svg",
+    "src": "public/assets/images/features/smart-street-lights.svg"
+  },
+  "public/assets/images/features/swimming-pool-and-gym.svg": {
+    "file": "assets/swimming-pool-and-gym-a53db5de.svg",
+    "src": "public/assets/images/features/swimming-pool-and-gym.svg"
+  },
+  "public/assets/images/features/uninterrupted-power-supply.svg": {
+    "file": "assets/uninterrupted-power-supply-684eb52b.svg",
+    "src": "public/assets/images/features/uninterrupted-power-supply.svg"
+  },
+  "public/assets/images/features/uninterrupted-treated-water-supply.svg": {
+    "file": "assets/uninterrupted-treated-water-supply-459f05bb.svg",
+    "src": "public/assets/images/features/uninterrupted-treated-water-supply.svg"
+  },
   "public/assets/images/icons/downloadnew.png": {
     "file": "assets/downloadnew-98b9f0ff.png",
     "src": "public/assets/images/icons/downloadnew.png"
@@ -43,10 +103,6 @@
     "file": "assets/crane-db256a02.svg",
     "src": "public/assets/svg/crane.svg"
   },
-  "public/assets/svg/generator.svg": {
-    "file": "assets/generator-8c7b5396.svg",
-    "src": "public/assets/svg/generator.svg"
-  },
   "public/assets/svg/helmet.svg": {
     "file": "assets/helmet-0d119cc4.svg",
     "src": "public/assets/svg/helmet.svg"
@@ -54,10 +110,6 @@
   "public/assets/svg/home.svg": {
     "file": "assets/home-3ea8c36b.svg",
     "src": "public/assets/svg/home.svg"
-  },
-  "public/assets/svg/license-plate.svg": {
-    "file": "assets/license-plate-21f41c42.svg",
-    "src": "public/assets/svg/license-plate.svg"
   },
   "public/assets/svg/map-pin.svg": {
     "file": "assets/map-pin-001ed416.svg",
@@ -71,10 +123,6 @@
     "file": "assets/next-2dd152bf.svg",
     "src": "public/assets/svg/next.svg"
   },
-  "public/assets/svg/park.svg": {
-    "file": "assets/park-8e77c43f.svg",
-    "src": "public/assets/svg/park.svg"
-  },
   "public/assets/svg/prev.svg": {
     "file": "assets/prev-32ec695e.svg",
     "src": "public/assets/svg/prev.svg"
@@ -82,10 +130,6 @@
   "public/assets/svg/search.svg": {
     "file": "assets/search-210b165c.svg",
     "src": "public/assets/svg/search.svg"
-  },
-  "public/assets/svg/select.svg": {
-    "file": "assets/select-82851113.svg",
-    "src": "public/assets/svg/select.svg"
   },
   "public/assets/svg/service-center.svg": {
     "file": "assets/service-center-88ef41cc.svg",
@@ -96,7 +140,7 @@
     "src": "public/assets/svg/smart-home.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-392a134a.css",
+    "file": "assets/app-0854c97c.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -113,9 +157,9 @@
       "assets/slick-12459f22.svg"
     ],
     "css": [
-      "assets/app-392a134a.css"
+      "assets/app-0854c97c.css"
     ],
-    "file": "assets/app-0df5ce48.js",
+    "file": "assets/app-245ae6a6.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
