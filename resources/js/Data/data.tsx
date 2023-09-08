@@ -2,6 +2,39 @@ import {ProjectItemProp} from "../Components/Elements/ProjectItem";
 import {RecordItemProp} from "../Components/Elements/RecordList";
 import * as React from "react";
 
+// @ts-ignore
+import { ReactComponent as AutomaticNumberPlaceRecognition } from "/public/assets/images/features/automatic-numberplate-recognition.svg";
+
+// @ts-ignore
+import { ReactComponent as CentralSecurityControl } from "/public/assets/images/features/central-security-control.svg";
+// @ts-ignore
+import { ReactComponent as CommercialHub } from "/public/assets/images/features/commercial-hub.svg";
+// @ts-ignore
+import { ReactComponent as FacialRecognition } from "/public/assets/images/features/facial-recognition.svg";
+// @ts-ignore
+import { ReactComponent as FacilityManagementDervices } from "/public/assets/images/features/facility-management-services.svg";
+// @ts-ignore
+import { ReactComponent as FiberToTheHome } from "/public/assets/images/features/fiber-to-the-home.svg";
+// @ts-ignore
+import { ReactComponent as FullFiberOpticsCabling } from "/public/assets/images/features/full-fiber-optics-cabling.svg";
+// @ts-ignore
+import { ReactComponent as MotionSensors } from "/public/assets/images/features/motion-sensors.svg";
+// @ts-ignore
+import { ReactComponent as PedestrianBiometricAccessControl } from "/public/assets/images/features/pedestrian-biometric-access-control.svg";
+// @ts-ignore
+import { ReactComponent as PlaygroundAndGreenery } from "/public/assets/images/features/playground-and-greenery.svg";
+// @ts-ignore
+import { ReactComponent as SecurityAlarm } from "/public/assets/images/features/security-alarm.svg";
+// @ts-ignore
+import { ReactComponent as SmartStreetLights } from "/public/assets/images/features/smart-street-lights.svg";
+// @ts-ignore
+import { ReactComponent as SwimmingPoolAndGym } from "/public/assets/images/features/swimming-pool-and-gym.svg";
+// @ts-ignore
+import { ReactComponent as UninterruptedPowerSupply } from "/public/assets/images/features/uninterrupted-power-supply.svg";
+// @ts-ignore
+import { ReactComponent as UninterruptedTreatedWaterSupply } from "/public/assets/images/features/uninterrupted-treated-water-supply.svg";
+
+
 export interface houseTypeItemProps {
     img: string;
     name: string;
@@ -15,8 +48,158 @@ export interface houseTypeItemProps {
     gallery: string[],
     specs: RecordItemProp[]
 }
+export const estateFeatures = [
 
+    {
+        img: <CentralSecurityControl/>,
+        title: 'Central Security Control:',
+        subText: 'Centralized security monitoring hub for the entire estate.',
+    },
+    {
+        img: <AutomaticNumberPlaceRecognition/>,
+        title: 'Automatic Numberplate Recognition',
+        subText: 'Instant license plate scanning for enhanced security.',
+    },
+
+    {
+        img: <PedestrianBiometricAccessControl/>,
+        title: 'Pedestrian Biometric Access Control',
+        subText: 'Advanced entry system using unique biometric data.',
+    },
+    {
+        img: <FacialRecognition/>,
+        title: 'Facial Recognition',
+        subText: 'Cutting-edge tech for precise identity verification through facial features.',
+    },
+    {
+        img: <MotionSensors/>,
+        title: 'Motion Sensors',
+        subText: 'Security devices detecting movement for added safety.',
+    },
+    {
+        img: <SecurityAlarm/>,
+        title: 'Security Alarm',
+        subText: 'Alerts for potential security breaches or emergencies.',
+    },
+    {
+        img: <FiberToTheHome/>,
+        title: 'Fiber-To-The-Home (FTTH)',
+        subText: 'Ultra-fast internet directly to residences through fiber optics.',
+    },
+    {
+        img: <FullFiberOpticsCabling/>,
+        title: 'Full Fiber-Optics Cabling Infrastructure',
+        subText: 'High-speed data network for seamless connectivity.',
+    },
+    {
+        img: <SmartStreetLights/>,
+        title: 'Smart Street Lights',
+        subText: 'Energy-efficient, sensor-equipped lighting for optimized illumination.',
+    },
+    {
+        img: <SwimmingPoolAndGym/>,
+        title: 'Swimming Pool & Gym',
+        subText: 'On-site amenities for fitness and leisure.',
+    },
+    {
+        img: <UninterruptedTreatedWaterSupply/>,
+        title: 'Uninterrupted Treated Water Supply',
+        subText: 'Reliable, purified water supply without interruptions.',
+    },
+    {
+        img: <PlaygroundAndGreenery/>,
+        title: 'Playground and Greenery',
+        subText: 'Recreational areas with play facilities and lush landscaping.',
+    },
+    {
+        img: <FacilityManagementDervices/>,
+        title: 'Facility Management Services',
+        subText: 'Expert oversight and maintenance for seamless operations.',
+    },
+    {
+        img: <UninterruptedPowerSupply/>,
+        title: 'Uninterrupted Power Supply',
+        subText: 'Continuous electricity provision with backup systems',
+    },
+    {
+        img: <CommercialHub/>,
+        title: 'Commercial Hub',
+        subText: 'Vibrant center with shops and businesses for convenience.',
+    },
+]
 export const projects: ProjectItemProp[] = [
+
+    {
+        name: 'Nouveaux by Cosgrove, Maitama',
+        slug: 'cosgrove_smart_estate_maitama',
+        location: 'Maitama',
+        description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the 14 six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
+        detailsImg: '/assets/images/projects/maitama/portrait.jpg',
+        mainImg: '/assets/images/projects/maitama/landscape.jpg',
+        distFeature: [
+            {
+                image: "/assets/images/icons/homes.png",
+                title: "To Wuse",
+                count: "8 mins",
+            },
+            {
+                image: "/assets/images/icons/projects.png",
+                title: "To  Silverbird Galleria",
+                count: "10 mins",
+            },
+            {
+                image: "/assets/images/icons/awards.png",
+                title: "To Airport",
+                count: "28 mins",
+            },
+            {
+                image: "/assets/images/icons/clients.png",
+                title: "To Diplomatic Drive",
+                count: "7 mins",
+            },
+        ],
+        galleryBasePath: '/assets/images/projects/maitama/gallery/',
+        gallery: [
+            '01_exterior.jpg',
+            '02_exterior.jpg',
+            '03_exterior.jpg',
+            '04_exterior.jpg',
+            '05_exterior.jpg',
+            '06_exterior.jpg',
+            '07_exterior.jpg',
+            '08_exterior.jpg',
+            '09_exterior.jpg',
+            '10_exterior.jpg',
+            '11_exterior.jpg',
+            '12_exterior.jpg',
+            '13_exterior.jpg',
+            '14_exterior.jpg',
+            '15_exterior.jpg',
+            '16_exterior.jpg',
+            '17_exterior.jpg',
+            '18_exterior.jpg',
+            '20_exterior.jpg',
+        ],
+        showInHome: true,
+        estateFeatures: [
+           estateFeatures[0],
+           estateFeatures[1],
+           estateFeatures[2],
+           estateFeatures[3],
+           estateFeatures[4],
+           estateFeatures[5],
+           estateFeatures[6],
+           estateFeatures[7],
+           estateFeatures[8],
+           estateFeatures[9],
+           estateFeatures[10],
+           estateFeatures[11],
+           estateFeatures[12],
+           estateFeatures[12],
+           estateFeatures[14],
+
+        ]
+    },
     {
         name: 'Cosgrove Smart Estate, Wuye',
         slug: 'cosgrove_smart_estate_wuye',
@@ -138,7 +321,25 @@ export const projects: ProjectItemProp[] = [
             'CGV25_exterior.jpg',
             'CGV26_exterior.jpg',
         ],
-        showInHome: true
+        showInHome: true,
+        estateFeatures: [
+            estateFeatures[0],
+            estateFeatures[1],
+            estateFeatures[2],
+            estateFeatures[3],
+            estateFeatures[4],
+            estateFeatures[5],
+            estateFeatures[6],
+            estateFeatures[7],
+            estateFeatures[8],
+            estateFeatures[9],
+            estateFeatures[10],
+            estateFeatures[11],
+            estateFeatures[12],
+            estateFeatures[12],
+            estateFeatures[14],
+
+        ]
     },
     {
         name: 'Cosgrove Smart Estate, Mabushi',
@@ -176,7 +377,25 @@ export const projects: ProjectItemProp[] = [
             'mabushi3_exterior.jpg',
             'mabushi4_exterior.jpg'
         ],
-        showInHome: true
+        showInHome: true,
+        estateFeatures: [
+            estateFeatures[0],
+            estateFeatures[1],
+            estateFeatures[2],
+            estateFeatures[3],
+            estateFeatures[4],
+            estateFeatures[5],
+            estateFeatures[6],
+            estateFeatures[7],
+            estateFeatures[8],
+            estateFeatures[9],
+            estateFeatures[10],
+            estateFeatures[11],
+            estateFeatures[12],
+            estateFeatures[12],
+            estateFeatures[14],
+
+        ]
     },
     {
         name: 'Cosgrove Smart Estate, Guzape',
@@ -217,59 +436,24 @@ export const projects: ProjectItemProp[] = [
             'GZP6_exterior.jpg',
             'GZP7_exterior.jpg'
         ],
-        showInHome: true
-    },
-    {
-        name: 'Neauvaux by Cosgrove, Maitama',
-        slug: 'cosgrove_smart_estate_maitama',
-        location: 'Maitama',
-        description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the 14 six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
-        detailsImg: '/assets/images/projects/maitama/portrait.jpg',
-        mainImg: '/assets/images/projects/maitama/landscape.jpg',
-        distFeature: [
-            {
-                image: "/assets/images/icons/homes.png",
-                title: "To Wuse",
-                count: "8 mins",
-            },
-            {
-                image: "/assets/images/icons/projects.png",
-                title: "To  Silverbird Galleria",
-                count: "10 mins",
-            },
-            {
-                image: "/assets/images/icons/awards.png",
-                title: "To Airport",
-                count: "28 mins",
-            },
-            {
-                image: "/assets/images/icons/clients.png",
-                title: "To Diplomatic Drive",
-                count: "7 mins",
-            },
-        ],
-        galleryBasePath: '/assets/images/projects/maitama/gallery/',
-        gallery: [
-            '01_exterior.jpg',
-            '02_exterior.jpg',
-            '03_exterior.jpg',
-            '04_exterior.jpg',
-            '05_exterior.jpg',
-            '06_exterior.jpg',
-            '07_exterior.jpg',
-            '08_exterior.jpg',
-            '09_exterior.jpg',
-            '10_exterior.jpg',
-            '11_exterior.jpg',
-            '12_exterior.jpg',
-            '13_exterior.jpg',
-            '14_exterior.jpg',
-            '15_exterior.jpg',
-            '16_exterior.jpg',
-            '17_exterior.jpg',
-            '18_exterior.jpg',
-            '20_exterior.jpg',
-        ]
+    estateFeatures: [
+    estateFeatures[0],
+    estateFeatures[1],
+    estateFeatures[2],
+    estateFeatures[3],
+    estateFeatures[4],
+    estateFeatures[5],
+    estateFeatures[6],
+    estateFeatures[7],
+    estateFeatures[8],
+    estateFeatures[9],
+    estateFeatures[10],
+    estateFeatures[11],
+    estateFeatures[12],
+    estateFeatures[12],
+    estateFeatures[14],
+
+]
     },
     {
         name: 'Tetra by Cosgrove, Wuye',
@@ -309,6 +493,24 @@ export const projects: ProjectItemProp[] = [
             'afternoon4_exterior.jpg',
             'night2_exterior.jpg',
             'night3_exterior.jpg'
+        ],
+        estateFeatures: [
+            estateFeatures[0],
+            estateFeatures[1],
+            estateFeatures[2],
+            estateFeatures[3],
+            estateFeatures[4],
+            estateFeatures[5],
+            estateFeatures[6],
+            estateFeatures[7],
+            estateFeatures[8],
+            estateFeatures[9],
+            estateFeatures[10],
+            estateFeatures[11],
+            estateFeatures[12],
+            estateFeatures[12],
+            estateFeatures[14],
+
         ]
     },
     {
@@ -329,12 +531,30 @@ export const projects: ProjectItemProp[] = [
             'new-Photo-scaled_exterior.jpg',
             'r2p-2048x1152_exterior.jpg',
             'r3-2048x1319_exterior.jpg'
+        ],
+        estateFeatures: [
+            estateFeatures[0],
+            estateFeatures[1],
+            estateFeatures[2],
+            estateFeatures[3],
+            estateFeatures[4],
+            estateFeatures[5],
+            estateFeatures[6],
+            estateFeatures[7],
+            estateFeatures[8],
+            estateFeatures[9],
+            estateFeatures[10],
+            estateFeatures[11],
+            estateFeatures[12],
+            estateFeatures[12],
+            estateFeatures[14],
+
         ]
     },
     {
-        name: 'Châteaux by Cosgrove, Wuse 2',
+        name: 'The Châteaux by Cosgrove, Wuse 2',
         slug: 'the_chateaux',
-        location: 'Maitama',
+        location: 'Wuse 2',
         description: 'There are spaces that transcend the ordinary, becoming the epitome of artistry and grandeur." The Châteaux by Cosgrove in Abuja is such a realm. Conceived as a blend of tradition and technology, each ultra-luxurious mansion boasts eight-bedrooms, a private garden, and pool. Amenities like a home cinema and gym elevate daily life, fortified by 24/7 security and state-of-the-art surveillance. Located in Wuse, Abuja\'s prime locale, The Châteaux is a compelling symphony of life\'s finest offerings.',
         detailsImg: '/assets/images/projects/chateaux/portrait.jpg',
         mainImg: '/assets/images/projects/chateaux/landscape.jpg',
@@ -374,7 +594,25 @@ export const projects: ProjectItemProp[] = [
             '16_exterior.jpg',
             '17_exterior.jpg',
         ],
-        showInHome: true
+        showInHome: true,
+        estateFeatures: [
+            estateFeatures[0],
+            estateFeatures[1],
+            estateFeatures[2],
+            estateFeatures[3],
+            estateFeatures[4],
+            estateFeatures[5],
+            estateFeatures[6],
+            estateFeatures[7],
+            estateFeatures[8],
+            estateFeatures[9],
+            estateFeatures[10],
+            estateFeatures[11],
+            estateFeatures[12],
+            estateFeatures[12],
+            estateFeatures[14],
+
+        ]
     },
     {
         name: 'Fourteen by Cosgrove, Wuye',
@@ -413,6 +651,24 @@ export const projects: ProjectItemProp[] = [
             'evening-view_exterior.jpg',
             'pent-flow-view_exterior.jpg',
             'site-plan-2_exterior.jpg'
+        ],
+        estateFeatures: [
+            estateFeatures[0],
+            estateFeatures[1],
+            estateFeatures[2],
+            estateFeatures[3],
+            estateFeatures[4],
+            estateFeatures[5],
+            estateFeatures[6],
+            estateFeatures[7],
+            estateFeatures[8],
+            estateFeatures[9],
+            estateFeatures[10],
+            estateFeatures[11],
+            estateFeatures[12],
+            estateFeatures[12],
+            estateFeatures[14],
+
         ]
     },
     {
@@ -427,6 +683,24 @@ export const projects: ProjectItemProp[] = [
         gallery: [
             'scarlet-oak_exterior.jpg',
             'scarlet-oak2_exterior.jpg'
+        ],
+        estateFeatures: [
+            estateFeatures[0],
+            estateFeatures[1],
+            estateFeatures[2],
+            estateFeatures[3],
+            estateFeatures[4],
+            estateFeatures[5],
+            estateFeatures[6],
+            estateFeatures[7],
+            estateFeatures[8],
+            estateFeatures[9],
+            estateFeatures[10],
+            estateFeatures[11],
+            estateFeatures[12],
+            estateFeatures[12],
+            estateFeatures[14],
+
         ]
     },
 ];
@@ -437,7 +711,7 @@ export const houseTypes: houseTypeItemProps[] = [
         name: 'Acacia',
         slug: 'acacia',
         projectSlug: ['cosgrove_smart_estate_mabushi', 'cosgrove_smart_estate_wuye', 'cosgrove_Smart_city_katampe'],
-        desc: ' 4 Bedroom Terrace Duplex with 1 Maid’s room',
+        desc: ' 4 Bedroom Terrace',
         headerImg: '/assets/images/house-types/acacia/landscape.jpg',
         detailsImg: '/assets/images/acacia.png',
         moreDesc: 'Acacia by Cosgrove is a 4-bedroom terrace duplex designed for the discerning homeowner. Each unit boasts an energy-efficient design that harmonizes with its surroundings, ensuring you live lightly on the earth while enjoying all the comforts of modern living. With four well-appointed bathrooms and an additional guest toilet, Acacia offers ample space for both privacy and hospitality.\n',
@@ -486,11 +760,11 @@ export const houseTypes: houseTypeItemProps[] = [
     {
         img: '/assets/images/house-types/oak/portrait.jpg',
         name: 'Oak',
-        desc: '5-Bedroom fully detached duplex with 1 maid’s room',
+        desc: '5-Bedroom Fully Detached Duplex',
         slug: 'oak',
         projectSlug: ['cosgrove_smart_estate_mabushi', 'cosgrove_smart_estate_wuye', 'cosgrove_Smart_city_katampe'],
         headerImg: '/assets/images/house-types/oak/landscape.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: ' "Where Majesty Meets Mindfulness,” Oak by Cosgrove is a 5-bedroom detached duplex that redefines the intersection of grandeur and sustainability. Crafted with an energy-efficient design, this architectural masterpiece offers five luxurious bathrooms and an additional guest toilet, ensuring that every square inch resonates with both opulence and responsibility.\n',
         galleryBasePath: '/assets/images/house-types/oak/gallery/',
         gallery: [
@@ -535,11 +809,11 @@ export const houseTypes: houseTypeItemProps[] = [
     {
         img: '/assets/images/house-types/oakville/portrait.jpg',
         name: 'Oakville',
-        desc: '5-Bedroom fully detached duplex with 1 maid’s room',
+        desc: '5-Bedroom Semi-Detached Duplex',
         slug: 'oak',
         projectSlug: ['cosgrove_Smart_city_katampe'],
         headerImg: '//assets/images/house-types/oakville/portrait.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: 'Behold the new standard of smart living! Oakville by Cosgrove in Katampe, Abuja, is a 5-bedroom fully detached duplex that sets the bar for residential excellence. This iconic smart home boasts three distinct living areas, five en-suite bedrooms complete with walk-in closets, and a spacious kitchen. Additional luxuries include a multi-purpose area, a maid\'s room, and parking for up to five cars. Step into the future with state-of-the-art smart home features like fiber-to-the-home (FTTH), high-tech security with biometric access, and optional central air conditioning. Oakville by Cosgrove is more than a home; it\'s a technological marvel meticulously crafted for tomorrow\'s lifestyle.\n',
         galleryBasePath: '/assets/images/house-types/oakville/gallery/',
         gallery: [
@@ -583,11 +857,11 @@ export const houseTypes: houseTypeItemProps[] = [
     {
         img: '/assets/images/house-types/scarlet-oak/portrait.jpg',
         name: 'Scarlet Oak',
-        desc: '5-Bedroom fully detached duplex with 1 maid’s room',
+        desc: '5-Bedroom Townhouse',
         slug: 'oak',
         projectSlug: ['cosgrove_smart_estate_wuse_2'],
         headerImg: '/assets/images/house-types/scarlet-oak/landscape.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: 'A fine blend of technology and architectural brilliance defines Scarlet Oak by Cosgrove. Nestled in the serene neighborhood of Wuse 2, Abuja, this 5-bedroom townhouse is a tribute to the scarlet oak tree, known for its stunning fall foliage. Each residence features a master bedroom, four additional spacious bedrooms, all en-suite, and high-quality bathrooms. The design extends to an exquisite courtyard and two inviting living areas, complete with a maid\'s room for added convenience.',
         galleryBasePath: '/assets/images/house-types/scarlet-oak/gallery/',
         gallery: [
@@ -631,11 +905,11 @@ export const houseTypes: houseTypeItemProps[] = [
     {
         img: '/assets/images/house-types/maple/portrait.jpg',
         name: 'Maple',
-        desc: '3-Bedroom apartment with 1 maid’s room',
+        desc: '3-Bedroom Apartment',
         slug: 'maple',
         projectSlug: ['cosgrove_smart_estate_wuye', 'cosgrove_Smart_city_katampe'],
         headerImg: '/assets/images/house-types/maple/landscape.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: ' “In Every Room, A Universe of Possibilities,” Maple by Cosgrove is a 3-bedroom apartment that transcends conventional design. Each unit unfurls into spacious living rooms and bedrooms, accompanied by three lavish bathrooms and a guest toilet. It\'s a sanctuary meticulously crafted for those who desire room to breathe, both literally and metaphorically.\n',
         galleryBasePath: '/assets/images/house-types/maple/gallery/',
         gallery: [
@@ -680,11 +954,11 @@ export const houseTypes: houseTypeItemProps[] = [
     {
         img: '/assets/images/house-types/pine/portrait.jpg',
         name: 'Pine',
-        desc: '3 bedroom condominiums with 1 maid’s room',
+        desc: '3-Bedroom Condominium',
         slug: 'pine',
         projectSlug: ['fourteen'],
         headerImg: '/assets/images/house-types/pine/landscape.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: ' Step into a world where sophistication is expected and smart living is assured." Pine by Cosgrove, part of the illustrious Fourteen complex in Wuye, Abuja, provides an elevated living experience with spacious rooms and Cosgrove\'s standard smart home features. Choose between the spacious 3-bedroom Pine Condominiums and the opulent 4-bedroom Pine Penthouse, both of which are designed to appeal to discerning tastes. Every residence includes two-car parking and an elevator, setting a new standard for modern, smart living.',
         galleryBasePath: '/assets/images/house-types/pine/gallery/',
         gallery: [
@@ -729,11 +1003,11 @@ export const houseTypes: houseTypeItemProps[] = [
     {
         img: '/assets/images/house-types/pine-penthouse/portrait.jpg',
         name: 'Pine Penthouse',
-        desc: '4-Bedroom Luxury penthouse with 1 maid’s room',
+        desc: '4-Bedroom Luxury Penthouse',
         slug: 'pine-pent-house',
         projectSlug: ['fourteen'],
         headerImg: '/assets/images/house-types/pine-penthouse/landscape.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: 'Step into a world where sophistication is expected and smart living is assured." Pine by Cosgrove, part of the illustrious Fourteen complex in Wuye, Abuja, provides an elevated living experience with spacious rooms and Cosgrove\'s standard smart home features. Choose between the spacious 3-bedroom Pine Condominiums and the opulent 4-bedroom Pine Penthouse, both of which are designed to appeal to discerning tastes. Every residence includes two-car parking and an elevator, setting a new standard for modern, smart living.',
         galleryBasePath: '/assets/images/house-types/pine-penthouse/gallery/',
         gallery: [
@@ -778,12 +1052,12 @@ export const houseTypes: houseTypeItemProps[] = [
     },
     {
         img: '/assets/images/house-types/the-chateau/portrait.jpg',
-        name: 'Château',
-        desc: '8 Bedroom Luxury mansion',
+        name: 'The Château',
+        desc: '8-Bedroom Luxury Mansio',
         slug: 'chateau',
         projectSlug: ['the_chateaux'],
         headerImg: '/assets/images/house-types/the-chateau/landscape.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: ' "An Ode to Opulence in Every Corner," the Château by Cosgrove is an 8-bedroom mansion with eight resplendent bathrooms, this palatial residence is a testament to the seamless marriage of traditional grandeur and modern technology. Beyond the bedrooms, the mansion unfolds into a series of luxurious amenities, including a home cinema and a gym, each designed to enrich resident’s daily experience.',
         galleryBasePath: '/assets/images/house-types/the-chateau/gallery/',
         gallery: [
@@ -834,7 +1108,7 @@ export const houseTypes: houseTypeItemProps[] = [
         slug: 'olive',
         projectSlug: ['tetra'],
         headerImg: '/assets/images/house-types/olive/landscape.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: 'A home is the cornerstone in the tapestry of life, where family, innovation, and luxury are intricately woven together. Olive by Cosgrove in Tetra Smart Estate, Wuye, Abuja, is a modern take on the classic family home. This 5-bedroom fully detached home is a work of art in contemporary design, with two living areas and a palatial kitchen. The pent floor\'s multipurpose area can be converted into a home cinema, gym, or study. An optional lift makes it easy to move between floors, and the 5-car parking space adds to the convenience. Smart technology is seamlessly integrated throughout the home, enhancing the living experience in every room.',
         galleryBasePath: '/assets/images/house-types/olive/gallery/',
         gallery: [
@@ -881,11 +1155,11 @@ export const houseTypes: houseTypeItemProps[] = [
     {
         img: '/assets/images/house-types/villa/portrait.jpg',
         name: 'Villa',
-        desc: '7-Bedroom Luxury penthouse with 1 maid’s room',
+        desc: '7-Bedroom Gated Villa',
         slug: 'pent-house',
         projectSlug: ['cosgrove_smart_estate_guzape', 'cosgrove_Smart_city_katampe'],
         headerImg: '/assets/images/house-types/villa/landscape.jpg',
-        detailsImg: '/assets/images/acacia.png',
+        detailsImg: '',
         moreDesc: '"Every Inch a Masterpiece," the Villa by Cosgrove is a 7-bedroom haven where expansive spaces serve as a canvas for an artful life. With seven meticulously designed bathrooms and three grand living rooms, this residence is a seamless blend of elevated luxury and cutting-edge technology where each space is crafted for a higher level of living and every feature is a tribute to a lifestyle of discerning sophistication.',
         galleryBasePath: '/assets/images/house-types/villa/gallery/',
         gallery: [

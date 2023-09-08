@@ -30,7 +30,7 @@ export default function () {
                         <p className={'textPrimary'}>
                             Our projects are not just buildings; they're the embodiment of forward-thinking design and
                             cutting-edge technology, seamlessly integrated to create next-generation smart homes.
-                            Each home is a testament to our commitment to quality, our passion for innovation, and
+                            Each home is a testament of our commitment to quality, our passion for innovation, and
                             our dedication to crafting spaces that go beyond the ordinary.
 
                         </p>

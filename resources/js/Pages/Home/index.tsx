@@ -11,11 +11,18 @@ import FeaturedHomeSection from "../../Components/HomePage/FeaturedHomeSection/i
 import SmartFeaturesHomeSection from "../../Components/HomePage/SmartFeaturesHomeSection/index";
 import Footer from "../../Components/Elements/Footer/index";
 import {Cube} from 'react-preloaders';
+import {useEffect, useState} from "react";
 
 
 export default function () {
+    const [loading, setLoading] = useState<boolean>(true);
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false);
+        }, 1000)
+    }, []);
     return (<div>
-        {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} />*/}
+        {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
         <NavBar/>
         <HeaderSection/>
         <WelcomeSection/>
@@ -41,7 +48,12 @@ export default function () {
             {
                 img: '/assets/images/services/project.png',
                 title: 'Project Management',
-                desc: '"We manage your projects from start to finish. Our approach ensures quality, timeliness, and sustainability at every stage of the process.'
+                desc: 'We manage your projects from start to finish. Our approach ensures quality, timeliness, and sustainability at every stage of the process.'
+            },
+            {
+                img: '/assets/images/services/investment.png',
+                title: 'Smart Investment',
+                desc: 'Investing in a Cosgrove home promises not just a residence, but a secure and lucrative asset, ensuring a robust return on your investment.'
             },
 
         ]}/>
@@ -49,10 +61,6 @@ export default function () {
         <FeaturedHomeSection/>
         <SmartFeaturesHomeSection/>
         <Footer/>
-
-        <div>
-
-        </div>
     </div>);
 }
 

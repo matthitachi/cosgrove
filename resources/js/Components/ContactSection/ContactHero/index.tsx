@@ -21,9 +21,8 @@ export default function () {
                         <p className={`textPrimary`}>
                             Visit a Cosgrove home and experience opulence merged
                             with modern technology first-hand. Fill in the
-                            comprehensive form below and one of our agents will
-                            be in touch with details once a slot becomes
-                            available.
+                             form below and one of our team members will
+                            be in touch.
                         </p>
 
                         <form className={styles.contactInTouch}>
@@ -34,16 +33,16 @@ export default function () {
                                 <option value="option1">Cosgrove Smart Estate, Wuye</option>
                                 <option value="option2">Cosgrove Smart Estate, Mabushi</option>
                                 <option value="option3">Cosgrove Smart Estate, Guzape</option>
-                                <option value="option4">Neauvaux by Cosgrove, Maitama</option>
+                                <option value="option4">Nouveaux by Cosgrove, Maitama</option>
                                 <option value="option5">Tetra by Cosgrove, Wuye</option>
                                 <option value="option6">Cosgrove Smart City, Katampe</option>
                                 <option value="option7">Châteaux by Cosgrove, Wuse 2</option>
                                 <option value="option8">Fourteen by Cosgrove, Wuye</option>
-                                <option value="option9">Cosgrove Smart Estate, Wuse 2'</option>
+                                <option value="option9">Cosgrove Smart Estate, Wuse 2</option>
                             </select>
-                            <div>
-                                <Select />
-                            </div>
+                            {/*<div>*/}
+                            {/*    <Select />*/}
+                            {/*</div>*/}
                             <input
                                 placeholder={"Name"}
                                 className={styles.formItem}

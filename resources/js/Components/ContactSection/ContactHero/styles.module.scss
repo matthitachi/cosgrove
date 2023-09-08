@@ -96,7 +96,7 @@
                 opacity: 0.3;
                 position: absolute;
                 top: 0;
-                right: 19rem;
+                right: 10%;
             }
 
             textarea {
@@ -114,13 +114,15 @@
                 width: 100%;
                 position: relative;
                 z-index: 500;
-                max-width: 507px;
+                //max-width: 507px;
                 margin-bottom: 15px;
                 border-radius: 5px;
                 background: rgba(0, 0, 0, 0.1);
                 border: none;
                 padding: 10px;
-                appearance: none; // remove default styling
+                //appearance: none; // remove default styling
+                //-webkit-appearance: none;
+                //-moz-appearance: none;
                 option:disabled {
                     color: #1b1b1b;
                     opacity: 0.1;

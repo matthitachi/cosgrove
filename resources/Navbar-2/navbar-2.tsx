@@ -13,6 +13,7 @@ import styles from "./styles.module.scss";
 import closeSvg from "/public/assets/svg/close.svg";
 import * as React from "react";
 import { useState, useEffect, useRef } from "react";
+import {Link} from "@inertiajs/inertia-react";
 
 export default function () {
     const [scrollOpacity, setScrollOpacity] = useState(0);
@@ -55,6 +56,9 @@ export default function () {
     }, []);
 
     const handleMouseEnterHomes = () => {
+        if(isProjectsHovered){
+            setIsProjectsHovered(false);
+        }
         clearTimeout(hoverTimeout!);
         setHoverTimeout(setTimeout(() => setIsHomesHovered(true), 200));
     };
@@ -66,6 +70,9 @@ export default function () {
 
     const handleMouseEnterProjects = () => {
         clearTimeout(hoverTimeout!);
+        if(isHomesHovered){
+            setIsHomesHovered(false)
+        }
         setHoverTimeout(setTimeout(() => setIsProjectsHovered(true), 200));
     };
 
@@ -131,9 +138,9 @@ export default function () {
                             className={`${styles.navLink}`}
                         >
                             <div>
-                                <NavDropdown.Item href="#home">
+                                <Link href="#home">
                                     Château
-                                </NavDropdown.Item>
+                                </Link>
                                 <NavDropdown.Item href="#home">
                                     Villa
                                 </NavDropdown.Item>

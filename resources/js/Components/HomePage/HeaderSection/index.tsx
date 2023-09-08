@@ -79,7 +79,7 @@ export default function () {
 
                 <p className={'textWhite'}>
                     {" "}
-                    Welcome to the future of luxury living, <br/>where innovation meets elegance in the heart of Nigeria.
+                    Step into a realm of unparalleled grandeur, <br/>where the future of luxury is elegantly crafted today
                     <br />
 
 

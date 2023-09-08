@@ -14,7 +14,7 @@ export default function () {
         <section className={styles.parallaxSection} data-aos="fade-up">
             <div className={styles.parallaxCtx}>
                 <Parallax
-                    bgImage={"assets/images/parallax.jpeg"}
+                    bgImage={"assets/images/DJI_0540.JPG"}
                     bgImageAlt="the cat"
                     strength={200}
                     className={styles.parallaxElement}

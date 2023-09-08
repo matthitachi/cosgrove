@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import {estateFeatures} from "../../../Data/data";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import AOS from "aos";
@@ -117,18 +118,19 @@ export default function () {
                         className={styles.projectIntroHeader}
                         data-aos="fade-right"
                     >
-                        <h2 className={'headerDark'}>Smart</h2>
-                        <h2 className={'headerDark'}>Communities</h2>
+                        <h2 className={'headerDark'}>The Cosgrove </h2>
+                        <h2 className={'headerDark'}>Collection</h2>
                     </Col>
                     <Col md={8} data-aos="fade-left">
                         <p className={'textPrimary'}>
-                            Our projects are not just buildings; they're the
-                            embodiment of forward-thinking design and
-                            cutting-edge technology, seamlessly integrated to
-                            create next-generation smart homes. Each home is a
-                            testament to our commitment to quality, our passion
-                            for innovation, and our dedication to crafting
-                            spaces that go beyond the ordinary.
+                            Our projects are not just buildings; they're the embodiment of forward-thinking
+                            design and cutting-edge technology, seamlessly integrated to create next-generation
+                            smart homes. Each home is a testament to our commitment to quality, our passion for
+                            innovation, and our dedication to crafting spaces that go beyond the ordinary. With
+                            meticulous attention to detail, we elevate every aspect of modern living, ensuring that
+                            each residence is not just a house, but a home that enriches your life and stands as a
+                            symbol of timeless elegance.
+
                         </p>
                         {/*<button className={'text'}>*/}
                         {/*    Learn More <img  className={styles.arrowRightSvg} src={arrowRightSvg} alt="Your SVG" />*/}
@@ -142,9 +144,9 @@ export default function () {
                     <Slider
                         settings={settings}
                         childrenItems={[
-                            (featureList.map((item, key) =>
+                            (estateFeatures.map((item, key) =>
                                 <FeaturesItem title={item.title} color={"#000"}
-                                                                          description={item.description} icon={item.icon} key={key}
+                                                                          description={item.subText} icon={item.img} key={key}
                             />)),
                         ]}
                     />

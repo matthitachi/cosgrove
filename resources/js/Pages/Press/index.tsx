@@ -10,31 +10,28 @@ import GallerySection from "../../Components/ProjectDetailsPage/GallerySection/i
 import Explore from "../../Components/ExploreProject";
 import Footer from "../../Components/Elements/Footer";
 import {projects, houseTypes} from "../../Data/data";
+import {Container} from "react-bootstrap";
+import FeaturedHomeSection from "../../Components/HomePage/FeaturedHomeSection";
 import {useState} from "react";
 import {useEffect} from "react";
 import {Cube} from 'react-preloaders';
 
-export default function ({slug}) {
+export default function () {
+
     const [loading, setLoading] = useState<boolean>(true);
     useEffect(()=>{
         setTimeout(()=>{
             setLoading(false);
         }, 1000)
     }, []);
-    const otherHouseTypes = houseTypes.filter((item) => item.slug != slug);
-    const houseType = houseTypes.find((item) => item.slug == slug);
-    const projectsWithHouseType = projects.filter((item) =>
-        houseType.projectSlug.includes(item.slug));
     return (
         <div>
             {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
             <NavBar isDark={true} />
-            <HeaderItem height={50} bgImage={houseType.headerImg} />
-            <ProjectHomeTop houseType={houseType}/>
-            <OtherProjectTypes headerContent="Projects with this House Type" projects={projectsWithHouseType} />
-            <GallerySection basePath={houseType.galleryBasePath} gallery={houseType.gallery} headerContent="The house up close" />
-            <Explore homeList={otherHouseTypes} />
-            <Footer />
+            <HeaderItem height={50} bgImage={'/assets/images/bg/bgContact.png'} />
+
+            <FeaturedHomeSection full={false}/>
+            <Footer/>
         </div>
     );
 }

@@ -9,15 +9,23 @@ import Footer from "../../Components/Elements/Footer/index";
 import {projects} from "../../Data/data"
 import {houseTypes} from "../../Data/data"
 import Cube from 'react-preloaders';
+import {useState} from "react";
+import {useEffect} from "react";
 
 export default function ({slug}) {
+    const [loading, setLoading] = useState<boolean>(true);
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false);
+        }, 1000)
+    }, []);
     const otherProjects = projects.filter((item) => item.slug != slug);
     const project = projects.find((item) => item.slug == slug);
     const availableHouses = houseTypes.filter(item => item.projectSlug.includes(project.slug));
 
     return (
         <div>
-            {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} time={1800}/>*/}
+            {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
             <NavBar isDark={true} />
             <HeaderItem height={50} bgImage={project.mainImg} position={'center'} />
             <TopSection project={project} />

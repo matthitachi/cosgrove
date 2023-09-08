@@ -7,6 +7,7 @@ import {
     Navbar,
     NavDropdown,
 } from "react-bootstrap";
+import {estateFeatures} from "../../../Data/data";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import AOS from "aos";
@@ -119,16 +120,15 @@ export default function () {
                     <Slider
                         settings={settings}
                         childrenItems={[
-                            (featureList.map((item, key) => <FeaturesItem title={item.title}
-                            description={item.description} icon={item.icon} key={key}
+                            (estateFeatures.map((item, key) => <FeaturesItem title={item.title}
+                            description={item.subText} icon={item.img} key={key}
                             />))
                         ]}
                     />
                 </div>
                 <div className={styles.featuresQuote}>
                     <h4 className={`headerWhite`}>
-                        “We will never stop delivering the highest quality
-                        real-estate.”
+                        “We will never stop delivering the highest quality.”
                     </h4>
                     <h2>-The Cosgrove Team.</h2>
                 </div>

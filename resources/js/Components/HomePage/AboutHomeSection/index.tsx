@@ -34,11 +34,11 @@ export default function () {
                     <Col sm={12} md={6} className={styles.infoHomeInfo}>
                         <h5 className={'subHeaderSmall'} data-aos="fade-left">About Us</h5>
                         <h2 data-aos="fade-left" className={`headerDark ${styles.m65}`}>
-                            We are Building the Future <br /> of African Real
+                            We are Building the Future <br /> of Africa's Real
                             Estate
                         </h2>
                         <p className='textPrimary' data-aos="fade-left">
-                            At Cosgrove Africa, we don't just develop properties
+                            At Cosgrove Investment Limited, we don't just develop properties
                             – we envision the future. As leaders in the real
                             estate industry in Africa, we masterfully shape
                             residential and commercial spaces that marry
@@ -63,12 +63,12 @@ export default function () {
                         {
                             image: "/assets/images/icons/homes.png",
                             title: "Homes Built",
-                            count: "450+",
+                            count: "1000+",
                         },
                         {
                             image: "/assets/images/icons/projects.png",
                             title: "Projects",
-                            count: "8",
+                            count: "10+",
                         },
                         {
                             image: "/assets/images/icons/awards.png",
@@ -78,7 +78,7 @@ export default function () {
                         {
                             image: "/assets/images/icons/clients.png",
                             title: "Global Clients",
-                            count: "800+",
+                            count: "1000+",
                         },
                             ]}/>
 

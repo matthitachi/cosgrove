@@ -91,7 +91,7 @@ p.textWhite {
     font-size: 16px;
 }
 
-button.text {
+button.text, a.text {
     color: #fbbd00;
     text-align: justify;
     font-family: Inter, serif;
@@ -102,6 +102,7 @@ button.text {
     border: none;
     background: transparent;
     margin-bottom: 100px;
+    text-decoration: none;
 }
 .button{
     border-radius: 10px;
@@ -340,21 +341,34 @@ button.text {
 }
 
 .dropdown-menu {
-    width: 36.875rem;
+    //width: 36.875rem;
     background: #121212;
     display: flex;
+    left: 50% !important;
+    top: calc(100% + -330px) !important;
+    transform: translateX(-50%);
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0 2rem;
+    transition: all ease-in-out 0.4s;
+    z-index: 1000 !important;
+    .row{
+        min-width: 600px;
+    }
     &.show {
-        animation: slideInFromTop 0.3s ease-in-out 0.4s forwards;
+
+        top: calc(120%) !important;
+        //animation: slideInFromTop 0.3s ease-in-out 0.4s forwards;
         display: flex;
         justify-content: space-between;
     }
     &:not(.show) {
         animation: slideOutToTop 0.3s ease forwards;
+        z-index: 0 !important;
+        //display: none;
     }
-    .dropdown-item {
+    .dropdown-item, a {
+        display: block;
         color: rgba(#fff, 0.6);
         font-family: Inter, serif;
         font-size: 15.029px;
@@ -362,7 +376,8 @@ button.text {
         font-weight: 400;
         line-height: normal;
         padding: 1rem 0;
-        width: 230.689px;
+        //width: 230.689px;
+        text-decoration: none;
         border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
         &:hover {
             color: #fbbd00;
@@ -384,12 +399,10 @@ button.text {
 
 @keyframes slideOutToTop {
     from {
-        transform: translateY(0);
-        opacity: 1;
+       display: none;
     }
     to {
-        transform: translateY(-100%);
-        opacity: 0;
+      display: flex;
     }
 }
 
@@ -469,5 +482,6 @@ button.text {
         &:not(.show) {
             display: none;
         }
+        transform: none;
     }
 }

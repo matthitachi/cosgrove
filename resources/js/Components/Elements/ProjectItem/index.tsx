@@ -17,15 +17,15 @@ export interface ProjectItemProp {
     description: string;
     mainImg: string;
     detailsImg: string;
-    distFeature: RecordItemProp[],
+    distFeature: RecordItemProp[];
     galleryBasePath: string;
     gallery: string[];
-    showInHome?: boolean
-
+    showInHome?: boolean;
+    estateFeatures?: object[];
 }
 
 export default function (props:ProjectItemProp) {
-    return (<div className={styles.projectItem}
+    return (<div className={styles.projectItem} data-aos="fade-right"
                  style={{background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%), url("${props.mainImg}")`}}>
         <div className={styles.projectsInner}>
             <h2 className={'headerWhite'}>{props.name}</h2>

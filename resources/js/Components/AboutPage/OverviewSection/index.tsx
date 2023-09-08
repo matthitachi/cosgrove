@@ -76,12 +76,12 @@ export default function () {
         {
             image: "/assets/images/icons/homes.png",
             title: "Homes Built",
-            count: "450+",
+            count: "1000+",
         },
         {
             image: "/assets/images/icons/projects.png",
             title: "Projects",
-            count: "8",
+            count: "10+",
         },
         {
             image: "/assets/images/icons/awards.png",
@@ -91,7 +91,7 @@ export default function () {
         {
             image: "/assets/images/icons/clients.png",
             title: "Global Clients",
-            count: "800+",
+            count: "1000+",
         },
     ];
     const supportList: SupportItemProp[] = [
@@ -123,20 +123,23 @@ export default function () {
                         <p
                             className={`textPrimary mb-4 ${styles.topParagraph}`}
                         >
-                            Born in 2017, Cosgrove Africa emerged with a bold
+                            Born in 2017, Cosgrove emerged with a bold
                             vision, rewriting the rules of real estate. We dared
                             to weave technology into our residential and
-                            commercial properties, creating Africa's first smart
+                            commercial properties, creating Nigeria's first smart
                             estate.
                         </p>
                     </Col>
                     <Col sm={12} data-aos="fade-up">
                         <p className={`textPrimary mb-4`}>
-                            Our portfolio? A curated collection for the
+                            Our <b>portfolio</b> is a curated collection for the
                             discerning investor, high-value properties designed
                             to appreciate over time. Strategically positioned in
                             Abuja, Nigeria, our influence resonates beyond
-                            Africa. Our mission? Simple. We're not just
+                            Africa.
+                        </p>
+                        <p  className={`textPrimary mb-4`}>
+                            Our <b>mission</b> is Simple. We're not just
                             developing real estate in Africa, we're taking
                             African real estate global. With our innovative
                             developments, we're crafting a sustainable future,
@@ -153,6 +156,15 @@ export default function () {
                             each of our projects, creating environments that are
                             as eco-conscious as they are exquisite. Here, we
                             design the extraordinary. Here, we set the standard.
+                        </p>
+                        <h4
+                            className={`subHeaderDark`}
+                            style={{ marginBottom: "20px" }}
+                        >
+                            Who we are
+                        </h4>
+                        <p  className={`textPrimary mb-4`}>
+                            At the forefront of disruption in the real estate industry, Cosgrove Investment Limited is shaping new lifestyles with a focus on the integration of revolutionary technology into residential and commercial real estate using sustainable methods. Cosgrove’s leadership team is composed of the industry’s highly experienced leaders with a passion for unswerving excellence. As we continue to grow our vision of becoming the leading real estate developer in Africa, the guarantee of integrity, professionalism and reliability remains equal to the best obtainable anywhere in the world.
                         </p>
                     </Col>
                 </Row>
@@ -181,10 +193,10 @@ export default function () {
                                 Hard Work meets Creativity
                             </h2>
                             <p className={"textPrimary mt-5"}>
-                                At the heart of Cosgrove Africa is a group of
-                                trailblazers, led by our CEO, Umar Abdullahi.
-                                With his two-decade long journey in real estate
-                                and finance, Umar has seen industries evolve,
+                                At the heart of Cosgrove Investment Limited is a group of
+                                trailblazers, led by our CEO, Umar Abdullahi OFR.
+                                With his over two-decade long journey in real estate
+                                and finance, he has seen industries evolve,
                                 embracing game-changing technologies to keep
                                 Cosgrove at the forefront​.  Our team is a
                                 powerhouse of growth, with a combined experience
@@ -226,7 +238,7 @@ export default function () {
                     <p className={`textPrimary`}>
                         We are also the proud recipients of the prestigious
                         'Leadership in Smart Housing 2021' award from the
-                        Nigerian Institute of Town Planners. At Cosgrove Africa,
+                        Nigerian Institute of Town Planners. At Cosgrove Investment Limited,
                         we continue to set the standard.
                     </p>
                 </div>

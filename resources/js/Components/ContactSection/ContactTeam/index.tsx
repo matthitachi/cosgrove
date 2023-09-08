@@ -16,18 +16,21 @@ export default function () {
                             Speak to an expert from the team.
                         </h2>
                     </Col>
-                    <Col md={12} lg={4} className={styles.infoContactCol}>
-                        <div className={styles.infoContactBg}/>
-                    </Col>
+                    {/*<Col md={12} lg={4} className={styles.infoContactCol}>*/}
+                    {/*    <div className={styles.infoContactBg}/>*/}
+                    {/*</Col>*/}
 
-                    <Col md={12} lg={8} className={styles.teams}>
+                    <Col md={12} className={styles.teams} >
                         <p>
                             When it comes to finding your ideal home, engaging with Cosgrove's expert advisors is your key to making the perfect choice. Our seasoned professionals understand that a home is more than just a space; it's a reflection of your lifestyle and aspirations. With a deep knowledge of our diverse range of properties and an attentive ear to your preferences, they are dedicated to guiding you towards a residence that resonates with you on every level. Let us navigate the journey together, ensuring that your new home aligns seamlessly with your dreams.
                         </p>
+                    {/*</Col>*/}
+                    {/*<Col md={12} className={styles.teams}>*/}
+
 
                         <div className={styles.peopleContainer}>
-                            <div>
-                                <ul>
+                            <Row>
+                                <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
@@ -45,7 +48,8 @@ export default function () {
                                             </p>
                                         </div>
                                     </li>
-
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
@@ -64,7 +68,8 @@ export default function () {
                                             </p>
                                         </div>
                                     </li>
-
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
@@ -80,7 +85,8 @@ export default function () {
                                             </p>
                                         </div>
                                     </li>
-
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
@@ -96,7 +102,9 @@ export default function () {
                                             </p>
                                         </div>
                                     </li>
-                                <li className={styles.personContainer}>
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
+                                    <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
                                                 src="/assets/images/contacts/blesssing.jpg"
@@ -107,16 +115,12 @@ export default function () {
                                             <h4>Blessing Chinedu-Uzoh</h4>
                                             <h5>Head, health and safety environment</h5>
                                             <p>
-                                                blessing.chinedu@cosgroveafrica.com
+                                                chinedu.uzoh@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
-                                </ul>
-                            </div>
-
-                            {/* Second Row Item  */}
-                            <div className={styles.secondItem}>
-                                <ul>
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
@@ -135,7 +139,8 @@ export default function () {
                                             </p>
                                         </div>
                                     </li>
-
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
@@ -145,13 +150,14 @@ export default function () {
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
                                             <h4>Tosin Afolabi</h4>
-                                            <h5>Head of PMO</h5>
+                                            <h5>Head of Project Monitoring Office</h5>
                                             <p>
                                                 afolabi.tosin@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
-
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
@@ -163,11 +169,12 @@ export default function () {
                                             <h4>Fatima Mbaka</h4>
                                             <h5>Head, Customer Service</h5>
                                             <p>
-                                                chioma.ugwu@cosgroveafrica.com
+                                                fatima.mbaka@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
-
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
@@ -183,8 +190,14 @@ export default function () {
                                             </p>
                                         </div>
                                     </li>
-                                </ul>
-                            </div>
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
+
+                                </Col>
+                                <Col xs={12} sm={6} lg={4}>
+
+                                </Col>
+                            </Row>
                         </div>
                     </Col>
                 </Row>

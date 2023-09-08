@@ -10,6 +10,7 @@ import {
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
+import {Link} from "@inertiajs/inertia-react";
 
 export default function () {
     interface SocialItemProp {
@@ -31,43 +32,43 @@ export default function () {
         {
             name: "WhatsApp",
             image: socialBasePath + "whatsapp.png",
-            link: "",
+            link: "https://wa.me/+2349060001552",
             alt: "",
         },
         {
             name: "FaceBook",
             image: socialBasePath + "facebook.png",
-            link: "",
+            link: "https://web.facebook.com/cosgroveafrica",
             alt: "",
         },
         {
             name: "Instagram",
             image: socialBasePath + "instagram.png",
-            link: "",
+            link: "https://www.instagram.com/cosgroveafrica ",
             alt: "",
         },
         {
             name: "Twitter",
-            image: socialBasePath + "twitter.png",
-            link: "",
+            image: socialBasePath + "x.png",
+            link: "https://twitter.com/cosgroveafrica",
             alt: "",
         },
         {
             name: "Threads",
             image: socialBasePath + "thread.png",
-            link: "",
+            link: "https://www.threads.net/@cosgroveafrica",
             alt: "",
         },
         {
             name: "Youtube",
             image: socialBasePath + "youtube.png",
-            link: "",
+            link: "https://www.youtube.com/@CosgroveAfrica",
             alt: "",
         },
         {
             name: "LinkedIn",
             image: socialBasePath + "linkedin.png",
-            link: "",
+            link: "https://www.linkedin.com/company/cosgroveafrica",
             alt: "",
         },
     ];
@@ -106,16 +107,16 @@ export default function () {
                             <h5 className={`headerDark`}>Call Us</h5>
                             <ul>
                                 <li className={`textDark mb-1`}>
-                                    +234906 000 1552
+                                    <a href={'tel:+2349060001552'}>+234906 000 1552</a>
                                 </li>
                                 <li className={`textDark mb-1`}>
-                                    +234906 000 1553
+                                    <a href={'tel:+2349060001553'}>+234906 000 1553</a>
                                 </li>
                             </ul>
                             <h5 className={`headerDark`}>Write Us</h5>
                             <ul>
                                 <li className={`textDark`}>
-                                    info@cosgroveafrica.com
+                                    <a href={'mail:info@cosgroveafrica.com'}>info@cosgroveafrica.com</a>
                                 </li>
                             </ul>
                         </Col>
@@ -123,9 +124,9 @@ export default function () {
                             <h5 className={`headerDark`}>Visit Us</h5>
                             <ul>
                                 <li className={`textDark`}>
-                                    4th Floor, Mukhtar El Yakub Building
+                                    <a href={'https://goo.gl/maps/TPhMKJvJRiVSMSRD9'}>4th Floor, Mukhtar El Yakub Building
                                     Zakariyya Maimalari Street, Central Business
-                                    District Abuja. FCT 900211 Nigeria
+                                        District Abuja. FCT 900211 Nigeria</a>
                                 </li>
                             </ul>
                         </Col>
@@ -136,25 +137,25 @@ export default function () {
                     <Row>
                         <Col xs={6}>
                             <ul>
-                                <li className={`textDark mb-4`}> <a href={'/'}>Home</a></li>
-                                <li className={`textDark mb-4`}><a href={'/about'}>About</a></li>
-                                <li className={`textDark mb-4`}><a href={'/project-homes'}>Our Homes</a></li>
-                                <li className={`textDark mb-4`}><a href={'/projects'}>Projects</a></li>
-                                <li className={`textDark mb-4`}><a href={'/contact'}>Contact</a></li>
+                                <li className={`textDark mb-4`}> <Link href={'/'}>Home</Link></li>
+                                <li className={`textDark mb-4`}><Link href={'/about'}>About</Link></li>
+                                <li className={`textDark mb-4`}><Link href={'/project-homes'}>Our Homes</Link></li>
+                                <li className={`textDark mb-4`}><Link href={'/projects'}>Projects</Link></li>
+                                <li className={`textDark mb-4`}><Link href={'/contact'}>Contact</Link></li>
                             </ul>
                         </Col>
                         <Col xs={6}>
                             <ul>
-                                <li className={`textDark mb-4`}><a href={'/'}>Blog</a></li>
-                                <li className={`textDark mb-4`}><a href={'/'}>Careers</a></li>
+                                <li className={`textDark mb-4`}><Link href={'/'}>Blog</Link></li>
+                                <li className={`textDark mb-4`}><Link href={'/'}>Careers</Link></li>
                                 <li className={`textDark mb-4`}>
-                                    <a href={'/'}>Agent Registration</a>
+                                    <Link href={'/'}>Agent Registration</Link>
                                 </li>
                                 <li className={`textDark mb-4`}>
-                                    <a href={'/'}>Term of service</a>
+                                    <Link href={'/'}>Term of service</Link>
                                 </li>
                                 <li className={`textDark mb-4`}>
-                                    <a href={'/'}>Privacy policy</a>
+                                    <Link href={'/'}>Privacy policy</Link>
                                 </li>
                             </ul>
                         </Col>

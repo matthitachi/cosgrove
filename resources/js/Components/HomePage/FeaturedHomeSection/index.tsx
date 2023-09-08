@@ -13,9 +13,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
 // @ts-ignore
-import { ReactComponent as ArrowRight } from "/public/assets/svg/arrow-right-2.svg";
+import arrowRightSvg, { ReactComponent as ArrowRight } from "/public/assets/svg/arrow-right-2.svg";
 
-export default function () {
+// @ts-ignore
+import arrowRightSvgR from "/public/assets/svg/arrow-right.svg";
+import {Link} from "@inertiajs/react";
+interface listProp{
+    full?: boolean
+}
+export default function ({full = true}: listProp) {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
@@ -28,7 +34,7 @@ export default function () {
         return (
             <li className={styles.featuredListItem}>
                 <div className={styles.info}>
-                    <div className={`textPrimary ${styles.listDate}`}>{date}</div>
+                    {/*<div className={`textPrimary ${styles.listDate}`}>{date}</div>*/}
                     <div className={`textPrimary ${styles.listTitle}`}>
                         {title}
                     </div>
@@ -71,7 +77,19 @@ export default function () {
                             <FeaturedListItem date={item.date} title={item.title} key={key}/>)
                     }
                 </ul>
+
+                {full && <div className={`text-center ${styles.seeAll} mb-3`} >
+                    <Link className={"text"} href={ '/press'}>
+                        See all
+                        <img
+                            className={styles.arrowRightSvg}
+                            src={arrowRightSvgR}
+                            alt="Your SVG"
+                        />
+                    </Link>
+                </div>}
             </Container>
+
         </section>
     );
 }

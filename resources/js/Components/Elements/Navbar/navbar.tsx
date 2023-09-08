@@ -1,20 +1,29 @@
-import {Button, Container, Nav, Navbar, NavDropdown, Offcanvas} from "react-bootstrap";
+import {Button, Col, Container, Nav, Navbar, NavDropdown, Offcanvas, Row} from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
 import {useState} from "react";
 import {useEffect} from "react";
 import {useRef} from "react";
+import {Link} from "@inertiajs/inertia-react";
+import {router} from '@inertiajs/react'
+import {projects, houseTypes} from "../../../Data/data";
 
 interface navbarProp {
-    isDark? : boolean;
+    isDark?: boolean;
 }
 
-export default function ({isDark = false}:navbarProp) {
+export default function ({isDark = false}: navbarProp) {
     const [scrollOpacity, setScrollOpacity] = useState(0);
     const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
     const [showOffcanvas, setShowOffcanvas] = useState(false);
     const navBarRef = useRef<HTMLElement | null>(null);
+    const [isProjectsHovered, setIsProjectsHovered] = useState(false);
+    const [isHomesHovered, setIsHomesHovered] = useState(false);
+    // @ts-ignore
+    const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(
+        null
+    );
     const handleCloseOffcanvas = () => {
         setShowOffcanvas(!showOffcanvas);
     };
@@ -51,14 +60,40 @@ export default function ({isDark = false}:navbarProp) {
         lineHeight: "normal",
         padding: "5px 15px",
         marginTop: "1.5rem",
+        textDecoration: "none"
+    };
+    const handleMouseEnterHomes = () => {
+        if (isProjectsHovered) {
+            setIsProjectsHovered(false);
+        }
+        clearTimeout(hoverTimeout!);
+        setHoverTimeout(setTimeout(() => setIsHomesHovered(true), 200));
+    };
+
+    const handleMouseLeaveHomes = () => {
+        clearTimeout(hoverTimeout!);
+        setHoverTimeout(setTimeout(() => setIsHomesHovered(false), 200));
+    };
+
+    const handleMouseEnterProjects = () => {
+        clearTimeout(hoverTimeout!);
+        if (isHomesHovered) {
+            setIsHomesHovered(false)
+        }
+        setHoverTimeout(setTimeout(() => setIsProjectsHovered(true), 200));
+    };
+
+    const handleMouseLeaveProjects = () => {
+        clearTimeout(hoverTimeout!);
+        setHoverTimeout(setTimeout(() => setIsProjectsHovered(false), 200));
     };
 
     return (
         <Navbar expand="lg" fixed={"top"} className={styles.navBar} ref={navBarRef}
                 style={{
-                    backgroundColor: `${(isDark)? `rgba(0,0,0)` :`rgba(0, 0, 0, ${scrollOpacity})`}`,
-                    margin: `${(isDark || window.innerWidth < 500)? ((window.innerWidth < 500)?`0 ${4 * (1- scrollOpacity)}px`:'0') :`0 ${100 * (1- scrollOpacity)}px`}`,
-                    borderBottom: `${(isDark)?'none' :`1px solid rgba(255,255,255, ${1 - scrollOpacity})`}`
+                    backgroundColor: `${(isDark) ? `rgba(0, 0, 0)` : `rgba(0, 0, 0, ${scrollOpacity})`}`,
+                    margin: `${(isDark || window.innerWidth < 500) ? ((window.innerWidth < 500) ? `0 ${4 * (1 - scrollOpacity)}px` : '0') : `0 ${100 * (1 - scrollOpacity)}px`}`,
+                    borderBottom: `${(isDark) ? 'none' : `1px solid rgba(255,255,255, ${1 - scrollOpacity})`}`
                 }}
         >
             <Container className={styles.navContainer}>
@@ -77,21 +112,77 @@ export default function ({isDark = false}:navbarProp) {
                     role={"parent"}
                 >
                     <Nav className={`me-auto ${styles.Nav}  ${styles.navy}`}>
-                        <Nav.Link href="/" className={styles.navLink}>
+                        <Link href="/" className={styles.navLink}>
                             Home
-                        </Nav.Link>
-                        <Nav.Link href="/about" className={styles.navLink}>
+                        </Link>
+                        <Link href="/about" className={styles.navLink}>
                             About
-                        </Nav.Link>
-                        <Nav.Link href="/project-homes" className={styles.navLink}>
-                            Our Homes
-                        </Nav.Link>
-                        <Nav.Link href="/projects" className={styles.navLink}>
-                            Projects
-                        </Nav.Link>
-                        <Nav.Link href="/contact" className={styles.navLink}>
+                        </Link>
+
+                        <NavDropdown
+                            title="Our Homes"
+                            id="homes-dropdown"
+                            show={isHomesHovered}
+                            onMouseEnter={handleMouseEnterHomes}
+                            onMouseLeave={handleMouseLeaveHomes}
+                            onClick={(e) => {
+                                if(e.target.id == 'homes-dropdown') {
+                                    router.get('/project-homes')
+                                }
+                            }}
+                            className={`${styles.navLink}`}
+                        >
+                            <Row>
+                                {
+                                    houseTypes.map((item, index) =>
+
+                                        (
+                                            <Col xs={6} key={index}>
+                                                <Link href={'/houses/' + item.slug}>
+                                                    {item.name}
+                                                </Link>
+                                            </Col>
+                                        ))
+
+                                }
+                            </Row>
+
+                        </NavDropdown>
+
+                        <NavDropdown
+                            title="Projects"
+                            id="projects-dropdown"
+                            show={isProjectsHovered}
+                            onMouseEnter={handleMouseEnterProjects}
+                            onMouseLeave={handleMouseLeaveProjects}
+                            // onClick={(e) => router.visit('/projects')}
+                            onClick={(e) => {
+                                if(e.target.id == 'projects-dropdown') {
+                                    router.visit('/projects')
+                                }
+                            }}
+
+                            className={styles.navLink}
+                        >
+                            <Row>
+                                {
+                                    projects.map((item, index) =>
+
+                                        (
+                                            <Col xs={6} key={index}>
+                                                <Link href={'/projects/' + item.slug}>
+                                                    {item.name}
+                                                </Link>
+                                            </Col>
+                                        ))
+
+                                }
+                            </Row>
+                        </NavDropdown>
+
+                        <Link href="/contact" className={styles.navLink}>
                             Contact
-                        </Nav.Link>
+                        </Link>
                     </Nav>
                     <Offcanvas
                         show={isOffcanvasOpen}
@@ -102,9 +193,8 @@ export default function ({isDark = false}:navbarProp) {
                         <Offcanvas.Header
                             closeButton
                             className={`text-light ${styles.canvasClose}`}
-                            style={{ color: "white" }}
+                            style={{color: "white"}}
                         >
-                            <Offcanvas.Title></Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             {/* Your Offcanvas content goes here */}
@@ -205,11 +295,11 @@ export default function ({isDark = false}:navbarProp) {
                                     Contact
                                 </Nav.Link>
                             </Nav>
-                            <button style={mobButtonStyles}>Book a Tour</button>
+                            <Link style={mobButtonStyles} href={'/contact'}>Book a Tour</Link>
                         </Offcanvas.Body>
                     </Offcanvas>
                 </Navbar.Collapse>
-                <button className={styles.navButton}>Book a Tour</button>
+                <Link className={styles.navButton} href={'/contact'}>Book a Tour</Link>
             </Container>
         </Navbar>
     );
