@@ -10,6 +10,7 @@ import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
 // @ts-ignore
 import { ReactComponent as MapPinSvg } from "/public/assets/svg/map-pin.svg";
 import {projects} from "../../../Data/data"
+import {Link} from "@inertiajs/inertia-react";
 export default function () {
 
     const projectToDisplay = projects.filter((item) => item.showInHome == true);
@@ -34,14 +35,14 @@ export default function () {
                             our dedication to crafting spaces that go beyond the ordinary.
 
                         </p>
-                        <button className={"text"}>
+                        <Link href={'/projects'} className={"text"}>
                             Learn More{" "}
                             <img
                                 className={styles.arrowRightSvg}
                                 src={arrowRightSvg}
                                 alt="Your SVG"
                             />
-                        </button>
+                        </Link>
                     </Col>
                 </Row>
                 {
@@ -50,16 +51,14 @@ export default function () {
 
 
                 <div className={`text-center ${styles.seeAll}`}>
-                    <button className={"text"} onClick={()=>{
-                        window.location.href = '/projects';
-                    }}>
+                    <Link href={'/projects'} className={"text"} >
                         See all projects{" "}
                         <img
                             className={styles.arrowRightSvg}
                             src={arrowRightSvg}
                             alt="Your SVG"
                         />
-                    </button>
+                    </Link>
                 </div>
             </Container>
         </section>

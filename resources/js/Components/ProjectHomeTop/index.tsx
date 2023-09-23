@@ -43,7 +43,7 @@ export default function ({ houseType }:topSection) {
 
                         <div className="pt-5 pb-5">
 
-                            <RecordList type={2} size={4} recordList={houseType.specs}/>
+                            <RecordList type={2} size={6} sizeMd={4}  sizeLg={4} recordList={houseType.specs}/>
                         </div>
                     </Col>
                     <Col

@@ -53,9 +53,8 @@ export default function ({serviceItems}:ServiceList) {
                     <Col data-aos="fade-right" md={6} className={`pe-3 pe-md-5`}>
                         <p
                             data-aos="fade-right"
-                            className={`textPrimary  mb-85`}
-                        >
-                            Cosgrove offers an unmatched fusion of opulent real estate, unwavering security, and cutting-edge smart home technology, creating an unparalleled experience for our esteemed clients. Elevate your living with us, where luxury meets innovation in perfect harmony.
+                            className={`textPrimary  mb-85`}>
+                            Step into a world where your needs shape our services. Offering bespoke consultations, innovative design & automation, meticulous construction, and strategic project management, we make your journey seamless. Plus, unlock smart investment avenues for unparalleled ROI. With Cosgrove, it's more than a home—it's a lifestyle investment.
                         </p>
                         <ul className={styles.serviceList}>
                             {

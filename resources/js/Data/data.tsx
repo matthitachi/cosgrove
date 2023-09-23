@@ -130,10 +130,10 @@ export const estateFeatures = [
 export const projects: ProjectItemProp[] = [
 
     {
-        name: 'Nouveaux by Cosgrove, Maitama',
+        name: 'Nouveau by Cosgrove, Maitama',
         slug: 'cosgrove_smart_estate_maitama',
         location: 'Maitama',
-        description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the 14 six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
+        description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
         detailsImg: '/assets/images/projects/maitama/portrait.jpg',
         mainImg: '/assets/images/projects/maitama/landscape.jpg',
         distFeature: [
@@ -204,7 +204,7 @@ export const projects: ProjectItemProp[] = [
         name: 'Cosgrove Smart Estate, Wuye',
         slug: 'cosgrove_smart_estate_wuye',
         location: 'Wuye',
-        description: 'How do you redefine intelligent living in Abuja? Cosgrove Smart Estate Wuye sets the benchmark. Spanning 4.32 hectares, the estate boasts 160 units each equipped with the latest smart home tech. Cosgrove Estate Wuye boasts amenities such as AI face recognition cameras, ANRP (Automatic Number Plate Recognition), smart water treatment, a playground, and a clubhouse set within landscaped gardens, and proximity to the Central Business District, Wuse 2 and Maitamaa. Cosgrove Wuye is a testament to unparalleled sophistication.\n',
+        description: 'Redefining intelligent living in Abuja, Cosgrove Smart Estate Wuye sets the benchmark. Spanning 4.32 hectares, the estate boasts 160 units each equipped with the latest smart home tech. Cosgrove Estate Wuye offers amenities such as AI face recognition cameras, ANRP (Automatic Number Plate Recognition), smart water treatment, a playground, and a clubhouse set within landscaped gardens, and proximity to the Central Business District, Wuse 2 and Maitama. Cosgrove Wuye is a testament to unparalleled sophistication.\n',
         detailsImg: '/assets/images/projects/wuye/portrait.jpg',
         mainImg: '/assets/images/projects/wuye/landscape.jpg',
         distFeature: [
@@ -401,7 +401,7 @@ export const projects: ProjectItemProp[] = [
         name: 'Cosgrove Smart Estate, Guzape',
         slug: 'cosgrove_smart_estate_guzape',
         location: 'Guzape',
-        description: 'Three words describe Cosgrove Smart Estate Guzape: Opulence, Sophistication, and Security. Nestled amidst Guzape\'s lush hills, this estate offers a limited collection of five 7-bedroom villas and one-bedroom maid’s quarters, each with its own swimming pool and private garden. Situated minutes from iconic landmarks like the Transcorp Hilton and ECOWAS Secretariat, these villas elevate modern living. With 24/7 security, power supply, cutting-edge smart amenities, and a tranquil ambiance framed by verdant landscapes, each home is a statement.\n',
+        description: 'Three words describe Cosgrove Smart Estate Guzape: Opulence, Sophistication, and Security. Nestled amidst Guzape\'s lush hills, this estate offers a limited collection of five 7-bedroom villas and one-bedroom maid’s quarters, each with its own swimming pool or private garden. Situated minutes from iconic landmarks like the Transcorp Hilton and ECOWAS Secretariat, these villas elevate modern living. With 24/7 security, power supply, cutting-edge smart amenities, and a tranquil ambiance framed by verdant landscapes, each home is a statement.\n',
         detailsImg: '/assets/images/projects/guzape/portrait.jpg',
         mainImg: '/assets/images/projects/guzape/landscape.jpg',
         distFeature: [
@@ -459,7 +459,7 @@ export const projects: ProjectItemProp[] = [
         name: 'Tetra by Cosgrove, Wuye',
         slug: 'tetra',
         location: 'Wuye',
-        description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the 14 six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
+        description: 'Tetra by Cosgrove in Wuye stands as an elite gated enclave, curated for the discerning tech aficionado with a penchant for luxury. Every residence is an artful blend of contemporary design, expansive spaces, and impeccable finishes, all enhanced by cutting-edge smart technology. Nestled in Abuja\'s prime locale, it positions you just moments away from the city\'s iconic landmarks.\n',
         detailsImg: '/assets/images/projects/tetra/portrait.jpg',
         mainImg: '/assets/images/projects/tetra/landscape.jpg',
         distFeature: [
@@ -618,7 +618,7 @@ export const projects: ProjectItemProp[] = [
         name: 'Fourteen by Cosgrove, Wuye',
         slug: 'fourteen',
         location: 'Wuye',
-        description: 'Can a sanctuary also serve as a beacon of modern innovation?" The Fourteen by Cosgrove in Wuye, Abuja, answers this query in bricks, glass, and cutting-edge technology. This gated enclave offers 13 Pine condos and an opulent penthouse, each a haven of smart living. With state-of-the-art amenities like a swimming pool and gym, and fortified by round-the-clock security, it\'s a realm where comfort meets modernity. Proximity to schools, hospitals, and malls makes it not just a home, but the heart of convenience.\n',
+        description: 'The Fourteen by Cosgrove in Wuye, Abuja, represents a blend of modern design and practical living. This community offers 13 Pine condos and a standout penthouse, all designed with smart features for today\'s lifestyle. With amenities like a pool and gym, coupled with 24/7 security, it ensures both comfort and peace of mind. Its central location, close to schools, hospitals, and malls, makes daily life convenient and effortless.\n',
         detailsImg: '/assets/images/projects/fourteen/portrait.jpg',
         mainImg: '/assets/images/projects/fourteen/landscape.jpg',
         distFeature: [
@@ -810,7 +810,7 @@ export const houseTypes: houseTypeItemProps[] = [
         img: '/assets/images/house-types/oakville/portrait.jpg',
         name: 'Oakville',
         desc: '5-Bedroom Semi-Detached Duplex',
-        slug: 'oak',
+        slug: 'oakville',
         projectSlug: ['cosgrove_Smart_city_katampe'],
         headerImg: '//assets/images/house-types/oakville/portrait.jpg',
         detailsImg: '',
@@ -858,7 +858,7 @@ export const houseTypes: houseTypeItemProps[] = [
         img: '/assets/images/house-types/scarlet-oak/portrait.jpg',
         name: 'Scarlet Oak',
         desc: '5-Bedroom Townhouse',
-        slug: 'oak',
+        slug: 'scarlet_oak',
         projectSlug: ['cosgrove_smart_estate_wuse_2'],
         headerImg: '/assets/images/house-types/scarlet-oak/landscape.jpg',
         detailsImg: '',
@@ -938,6 +938,55 @@ export const houseTypes: houseTypeItemProps[] = [
                 image: "/assets/images/icons/bed.png",
                 title: "Bedrooms",
                 count: "3",
+            },
+            {
+                image: "/assets/images/icons/bath.png",
+                title: "Bathrooms",
+                count: "3",
+            },
+            {
+                image: "/assets/images/icons/room.png",
+                title: "Living Rooms",
+                count: "1",
+            },
+        ],
+    },
+    {
+        img: '/assets/images/house-types/maple/portrait.jpg',
+        name: 'Maple Penthouse',
+        desc: '4-Bedroom Penthouse',
+        slug: 'maple_penthouse',
+        projectSlug: ['cosgrove_smart_estate_wuye', 'cosgrove_Smart_city_katampe'],
+        headerImg: '/assets/images/house-types/maple/landscape.jpg',
+        detailsImg: '',
+        moreDesc: 'Ascend to new heights, where the world unfolds beneath you. This Penthouse has set a new benchmark for apartment living. It has four bedrooms, a large living area and an expansive corridor. The penthouse offers a large terrace measuring 113m2 and the entire apartment has a built-up area of 378m2. It has an additional multi-purpose area configurable for gym/study/home cinema, a maid’s room and designated parking for 2 cars.',
+        galleryBasePath: '/assets/images/house-types/maple/gallery/',
+        gallery: [
+            'CGV17_exterior.jpg',
+            'CGV18_exterior.jpg',
+            'CGV19_exterior.jpg',
+            'CGV24_exterior.jpg'
+        ],
+        specs: [
+            {
+                image: "/assets/images/icons/surface.png",
+                title: "Surface Area",
+                count: "378sq m",
+            },
+            {
+                image: "/assets/images/icons/spaces.png",
+                title: "Parking Spaces",
+                count: "2",
+            },
+            {
+                image: "/assets/images/icons/maid.png",
+                title: "Maid’s Quarters",
+                count: "1",
+            },
+            {
+                image: "/assets/images/icons/bed.png",
+                title: "Bedrooms",
+                count: "4",
             },
             {
                 image: "/assets/images/icons/bath.png",
@@ -1052,13 +1101,13 @@ export const houseTypes: houseTypeItemProps[] = [
     },
     {
         img: '/assets/images/house-types/the-chateau/portrait.jpg',
-        name: 'The Château',
-        desc: '8-Bedroom Luxury Mansio',
+        name: 'Château',
+        desc: '6-Bedroom Luxury Mansion',
         slug: 'chateau',
         projectSlug: ['the_chateaux'],
         headerImg: '/assets/images/house-types/the-chateau/landscape.jpg',
         detailsImg: '',
-        moreDesc: ' "An Ode to Opulence in Every Corner," the Château by Cosgrove is an 8-bedroom mansion with eight resplendent bathrooms, this palatial residence is a testament to the seamless marriage of traditional grandeur and modern technology. Beyond the bedrooms, the mansion unfolds into a series of luxurious amenities, including a home cinema and a gym, each designed to enrich resident’s daily experience.',
+        moreDesc: 'The Châteaux by Cosgrove is an 6-bedroom mansion with 6 resplendent bathrooms, this palatial residence is a testament to the seamless marriage of traditional grandeur and modern technology. Beyond the bedrooms, the mansion unfolds into a series of luxurious amenities, including a home cinema and a gym, each designed to enrich resident’s daily experience.',
         galleryBasePath: '/assets/images/house-types/the-chateau/gallery/',
         gallery: [
             '11_exterior.jpg',
@@ -1098,6 +1147,11 @@ export const houseTypes: houseTypeItemProps[] = [
                 image: "/assets/images/icons/room.png",
                 title: "Living Rooms",
                 count: "3",
+            },
+            {
+                image: "/assets/images/icons/bq.png",
+                title: "BQ",
+                count: "1",
             },
         ],
     },
@@ -1156,7 +1210,7 @@ export const houseTypes: houseTypeItemProps[] = [
         img: '/assets/images/house-types/villa/portrait.jpg',
         name: 'Villa',
         desc: '7-Bedroom Gated Villa',
-        slug: 'pent-house',
+        slug: 'villa',
         projectSlug: ['cosgrove_smart_estate_guzape', 'cosgrove_Smart_city_katampe'],
         headerImg: '/assets/images/house-types/villa/landscape.jpg',
         detailsImg: '',
@@ -1183,6 +1237,62 @@ export const houseTypes: houseTypeItemProps[] = [
                 image: "/assets/images/icons/spaces.png",
                 title: "Parking Spaces",
                 count: "3",
+            },
+            {
+                image: "/assets/images/icons/maid.png",
+                title: "Maid’s Quarters",
+                count: "1",
+            },
+            {
+                image: "/assets/images/icons/bed.png",
+                title: "Bedrooms",
+                count: "7",
+            },
+            {
+                image: "/assets/images/icons/bath.png",
+                title: "Bathrooms",
+                count: "7",
+            },
+            {
+                image: "/assets/images/icons/room.png",
+                title: "Living Rooms",
+                count: "3",
+            },
+        ],
+    },
+    {
+        img: '/assets/images/house-types/villa/portrait.jpg',
+        name: 'Nouveau Villa',
+        desc: '6-Bedroom Villa',
+        slug: 'nouveau_villa',
+        projectSlug: ['nouveau'],
+        headerImg: '/assets/images/house-types/villa/landscape.jpg',
+        detailsImg: '',
+        moreDesc: 'Where architecture becomes a canvas for personal expression, The Nouveau Villa by Cosgrove stands as a masterpiece. These 6-bedroom villas in Abuja are more than homes; they are reflections of their owners\' unique personalities. Finished to perfection, each villa is a symphony of natural light, sophisticated materials, and elegant tones. Large floor-to-ceiling windows illuminate expansive foyers, while high headrooms add an air of grandeur.\n' +
+            '\n' +
+            '<br/>The master bedroom is a sanctuary, complete with a home office and outdoor terrace. Additional spacious bedrooms, accessible walk and bicycle paths, and parking for six cars make life here effortlessly luxurious. The community\'s extra-wide roads, backyard, and mini-garden further elevate the living experience. \n',
+        galleryBasePath: '/assets/images/house-types/villa/gallery/',
+        gallery: [
+            '1-1_exterior.jpg',
+            'GZP1_exterior.jpg',
+            'GZP2_exterior.jpg',
+            'GZP3_exterior.jpg',
+            'GZP4_exterior.jpg',
+            'GZP5_exterior.jpg',
+            'GZP6_exterior.jpg',
+            'GZP7_exterior.jpg',
+            'side-view-1-scaled_exterior.jpg'
+        ],
+        specs: [
+            {
+                image: "/assets/images/icons/surface.png",
+                title: "Surface Area",
+                count: "675sq m",
+            },
+            {
+                image: "/assets/images/icons/spaces.png",
+                title: "Parking Spaces",
+                count: "6",
             },
             {
                 image: "/assets/images/icons/maid.png",

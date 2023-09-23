@@ -22,6 +22,7 @@
 
 .sliderPrevious{
     left: -100px;
+    transform: translate(0, -50%) scaleX(-1);
 }
 .sliderCtx{
     //overflow: hidden;
@@ -34,11 +35,11 @@
 
 @media screen and (max-width: 1440px) {
     .sliderNext{
-        right: -30px;
+        right: -60px;
     }
 
     .sliderPrevious{
-        left: -30px;
+        left: -60px;
     }
     .sliderNext,
     .sliderPrevious {
@@ -47,7 +48,13 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .sliderNext{
+        right: -30px;
+    }
 
+    .sliderPrevious{
+        left: -30px;
+    }
 }
 
 @media screen and (max-width: 1024px) {

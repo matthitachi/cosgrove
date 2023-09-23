@@ -112,15 +112,15 @@ export default function ({isDark = false}: navbarProp) {
                     role={"parent"}
                 >
                     <Nav className={`me-auto ${styles.Nav}  ${styles.navy}`}>
-                        <Link href="/" className={styles.navLink}>
-                            Home
-                        </Link>
+                        {/*<Link href="/" className={styles.navLink}>*/}
+                        {/*    Home*/}
+                        {/*</Link>*/}
                         <Link href="/about" className={styles.navLink}>
                             About
                         </Link>
 
                         <NavDropdown
-                            title="Our Homes"
+                            title="House Types"
                             id="homes-dropdown"
                             show={isHomesHovered}
                             onMouseEnter={handleMouseEnterHomes}

@@ -12,7 +12,7 @@ export default function () {
                 <Row style={{ marginTop: "1rem" }}>
                     <Col className={styles.brochureContainer}>
                         {/* ITEM 1 */}
-                        <a href={'/assets/brochures/general-brochure.pdf'}>
+                        <a href={'/assets/brochures/general-brochure.pdf'} target={'_blank'}>
                         <div>
                             <div
                                 className={styles.brochureItem}
@@ -35,7 +35,7 @@ export default function () {
                         </a>
 
                         {/* ITEM 2 */}
-                        <a href={'/assets/brochures/fourteen-by-cosgrove.pdf'}>
+                        <a href={'/assets/brochures/fourteen-by-cosgrove.pdf'}  target={'_blank'}>
                         <div>
                             <div
                                 className={styles.brochureItem}
@@ -58,7 +58,7 @@ export default function () {
                         </a>
 
                         {/* ITEM 3 */}
-                        <a href={'/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf'}>
+                        <a href={'/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf'}  target={'_blank'}>
                         <div>
                             <div
                                 className={styles.brochureItem}
@@ -80,7 +80,7 @@ export default function () {
                         </div>
                         </a>
                         {/* ITEM 4  */}
-                        <a href={'/assets/brochures/the-chateaux-by-cosgrove.pdf'}>
+                        <a href={'/assets/brochures/the-chateaux-by-cosgrove.pdf'}  target={'_blank'}>
                         <div>
                             <div
                                 className={styles.brochureItem}

@@ -28,7 +28,7 @@ export default function () {
                         <form className={styles.contactInTouch}>
                             <select>
                                 <option disabled selected hidden>
-                                    Select an Project
+                                    Select a Project
                                 </option>
                                 <option value="option1">Cosgrove Smart Estate, Wuye</option>
                                 <option value="option2">Cosgrove Smart Estate, Mabushi</option>
@@ -56,7 +56,7 @@ export default function () {
                                 className={styles.formItem}
                             />
                             <textarea
-                                placeholder={"Type a message..."}
+                                placeholder={"Do you have a special request?"}
                                 className={styles.formItem}
                             />
 
@@ -64,7 +64,7 @@ export default function () {
                         </form>
                     </Col>
                     <Col md={12} lg={5} className={styles.infoHomeCol}>
-                        <div className={styles.infoHomeBG}></div>
+                        <div className={styles.infoHomeBG}/>
                     </Col>
                 </Row>
             </Container>

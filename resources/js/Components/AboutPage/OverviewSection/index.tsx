@@ -100,7 +100,9 @@ export default function () {
             description: "Get started with Cosgrove by speaking to one of our experts.",
             image: "/assets/images/icons/support.png",
             buttonText: "Let’s Talk",
-            buttonAction: () => {},
+            buttonAction: () => {
+                window.location.href = '/contact';
+            },
         },
         {
             title: "Project Brochures",
@@ -108,7 +110,9 @@ export default function () {
             image: "/assets/images/icons/brochure.png",
             buttonText: "Download Brochures",
             buttonBgDark: true,
-            buttonAction: () => {},
+            buttonAction: () => {
+                window.location.href = '/project-brochure';
+            },
         },
     ];
     return (
@@ -116,55 +120,54 @@ export default function () {
             <Container>
                 <Row className={`mb-5`}>
                     <Col md={12} lg={5} data-aos="fade-right">
-                        <h4 className={"subHeader"}>Projects</h4>
+                        <h4 className={"subHeader"}>About us</h4>
                         <h2 className={"headerDark  mb-4"}>The Cosgrove Way</h2>
                     </Col>
                     <Col md={12} lg={7} data-aos="fade-left">
                         <p
                             className={`textPrimary mb-4 ${styles.topParagraph}`}
                         >
-                            Born in 2017, Cosgrove emerged with a bold
-                            vision, rewriting the rules of real estate. We dared
-                            to weave technology into our residential and
-                            commercial properties, creating Nigeria's first smart
-                            estate.
+                            Born in 2017, Cosgrove emerged with a bold vision, rewriting the rules of real estate.
+                            We dared to weave technology into our residential and commercial properties, creating
+                            Nigeria's first smart estate.
                         </p>
                     </Col>
                     <Col sm={12} data-aos="fade-up">
                         <p className={`textPrimary mb-4`}>
-                            Our <b>portfolio</b> is a curated collection for the
-                            discerning investor, high-value properties designed
-                            to appreciate over time. Strategically positioned in
-                            Abuja, Nigeria, our influence resonates beyond
-                            Africa.
+                            At the forefront of disruption in the real estate industry,
+                            Cosgrove Investment Limited is shaping new lifestyles with a focus on the integration of
+                            revolutionary technology into residential and commercial real estate using sustainable methods.
+                            Cosgrove’s leadership team is composed of the industry’s highly experienced leaders with a
+                            passion for unswerving excellence. As we continue to grow our vision of becoming the leading
+                            real estate developer in Africa, the guarantee of integrity, professionalism and reliability
+                            remains equal to the best obtainable anywhere in the world.
+
                         </p>
-                        <p  className={`textPrimary mb-4`}>
-                            Our <b>mission</b> is Simple. We're not just
-                            developing real estate in Africa, we're taking
-                            African real estate global. With our innovative
-                            developments, we're crafting a sustainable future,
-                            merging luxury, technology, and eco-conscious design
-                            into remarkable living experiences​. At Cosgrove
-                            Africa, we don't just develop properties – we
-                            envision the future. As leaders in the real estate
-                            industry in Africa, we masterfully shape residential
-                            and commercial spaces that marry unparalleled luxury
-                            with cutting-edge technology.
-                        </p>
-                        <p className={`textPrimary mb-4`}>
-                            Our commitment to sustainability breathes life into
-                            each of our projects, creating environments that are
-                            as eco-conscious as they are exquisite. Here, we
-                            design the extraordinary. Here, we set the standard.
-                        </p>
+
                         <h4
                             className={`subHeaderDark`}
                             style={{ marginBottom: "20px" }}
                         >
-                            Who we are
+                            Our Mission
                         </h4>
                         <p  className={`textPrimary mb-4`}>
-                            At the forefront of disruption in the real estate industry, Cosgrove Investment Limited is shaping new lifestyles with a focus on the integration of revolutionary technology into residential and commercial real estate using sustainable methods. Cosgrove’s leadership team is composed of the industry’s highly experienced leaders with a passion for unswerving excellence. As we continue to grow our vision of becoming the leading real estate developer in Africa, the guarantee of integrity, professionalism and reliability remains equal to the best obtainable anywhere in the world.
+                            Constantly transforms urban living in Africa, blending innovative design with advanced
+                            technology, while steadfastly prioritising quality, sustainability, and visionary real estate solutions.
+
+                        </p>
+
+                        <h4
+                            className={`subHeaderDark`}
+                            style={{ marginBottom: "20px" }}
+                        >
+                            Our Vision
+                        </h4>
+                        <p  className={`textPrimary mb-4`}>
+                            Become the gold-standard in next-generation living across Africa. We envision a future
+                            where every Cosgrove residence defines the benchmark for luxury, technology, and sustainability,
+                            offering homeowners the pinnacle of modern living.
+
+
                         </p>
                     </Col>
                 </Row>
@@ -188,13 +191,13 @@ export default function () {
                             className={`info m- mb-5 mt-5`}
                             data-aos="fade-right"
                         >
-                            <h4 className={"subHeader"}>About Us</h4>
+                            <h4 className={"subHeader"}>More from Us</h4>
                             <h2 className={"headerDark  mb-4"}>
                                 Hard Work meets Creativity
                             </h2>
                             <p className={"textPrimary mt-5"}>
                                 At the heart of Cosgrove Investment Limited is a group of
-                                trailblazers, led by our CEO, Umar Abdullahi OFR.
+                                trailblazers, led by our Chairman/CEO, Umar Abdullahi OFR.
                                 With his over two-decade long journey in real estate
                                 and finance, he has seen industries evolve,
                                 embracing game-changing technologies to keep
@@ -229,7 +232,7 @@ export default function () {
                         earned us accolades in the industry. We've been
                         recognized as the 'Real Estate Company of the Year' and
                         'Smart City Developer of the Year' at the Nigeria
-                        Housing Awards. Our Chairman and CEO, Mr. Umar
+                        Housing Awards. Our Chairman/CEO, Mr. Umar
                         Abdullahi, has been honored with the title of Officer of
                         the Order of the Federal Republic (OFR) by the Federal
                         Government, highlighting our profound contribution to

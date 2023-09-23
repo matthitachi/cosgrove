@@ -103,6 +103,7 @@ button.text, a.text {
     background: transparent;
     margin-bottom: 100px;
     text-decoration: none;
+    display: block;
 }
 .button{
     border-radius: 10px;
@@ -345,7 +346,7 @@ button.text, a.text {
     background: #121212;
     display: flex;
     left: 50% !important;
-    top: calc(100% + -330px) !important;
+    top: calc(100% + -370px) !important;
     transform: translateX(-50%);
     justify-content: space-between;
     gap: 2rem;

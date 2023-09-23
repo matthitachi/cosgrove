@@ -95,7 +95,7 @@ export default function ({project}:topSectionProp) {
                         className={styles.infoHomeInfo}
                         data-aos="fade-right"
                     >
-                        <h5 className={'subHeader'}>About Us</h5>
+                        <h5 className={'subHeader'}>Project</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
                             {project.name}
                         </h2>

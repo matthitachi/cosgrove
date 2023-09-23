@@ -18,6 +18,7 @@ import RecordList from "../../Elements/RecordList"
 import SupportList from "../../Elements/SupportList"
 // @ts-ignore
 import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
+import {Link} from "@inertiajs/inertia-react";
 
 export default function () {
     React.useEffect(() => {
@@ -50,14 +51,16 @@ export default function () {
                             as eco-conscious as they are exquisite. Here, we
                             design the extraordinary. Here, we set the standard.
                         </p>
-                        <button data-aos="fade-left" className='text'>
+                        <div style={{marginBottom: '100px'}}>
+                        <Link data-aos="fade-left" href={''} className='text'>
                             Learn More{" "}
                             <img
                                 className={styles.arrowRightSvg}
                                 src={arrowRightSvg}
                                 alt="Your SVG"
                             />
-                        </button>
+                        </Link>
+                        </div>
 
                         <RecordList recordList={ [
                         {

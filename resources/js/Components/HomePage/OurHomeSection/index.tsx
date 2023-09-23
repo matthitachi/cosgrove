@@ -21,6 +21,7 @@ import Slider from "../../Elements/Slider/index";
 import {useState} from "react";
 import HomeItem, {HomesItemProp} from "../../Elements/HomeItem";
 import {houseTypes, houseTypeItemProps} from "../../../Data/data";
+import {Link} from "@inertiajs/inertia-react";
 
 
 export default function () {
@@ -109,17 +110,14 @@ export default function () {
                     </Col>
                     <Col data-aos="fade-left" md={6}>
                         <p className={`textPrimary`}>
-                            Our projects are not just buildings; they're the
-                            embodiment of forward-thinking design and
-                            cutting-edge technology, seamlessly integrated to
-                            create next-generation smart homes. Each home is a
-                            testament to our commitment to quality, our passion
-                            for innovation, and our dedication to crafting
-                            spaces that go beyond the ordinary.
+                            Each of our homes is a marvel of modern engineering and an investment in your future.
+                            From sleek apartments and townhouses to opulent penthouses and villas, our diverse range of
+                            residences caters to every style and need.
+
                         </p>
-                        <button className={"text"}>
+                        <Link href={'/project-homes'} className={"text"}>
                             Learn More <ArrowRightSvg/>
-                        </button>
+                        </Link>
                     </Col>
                 </Row>
 

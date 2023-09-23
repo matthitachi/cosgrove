@@ -55,17 +55,25 @@ export const RecordItem = ({type = 1, ...prop}: RecordItemProp) => {
 interface RecordListPorp{
     recordList: RecordItemProp[];
     size?: number;
+    sizeMd?: number|null;
+    sizeLg?: number|null;
     type?: number;
 }
 
-export default function ({recordList,size = 6, type= 1}: RecordListPorp) {
+export default function ({recordList,size = 6, sizeLg=null, sizeMd=null, type= 1}: RecordListPorp) {
+    if (sizeMd == null){
+        sizeMd = size;
+    }
+    if (sizeLg == null){
+        sizeLg = size;
+    }
     return (
 
-        <div className={styles.records} data-aos="fade-left">
+        <div className={styles.records}  data-aos="fade-left">
             <Row className={styles.recordRow}>
                 {
                     recordList.map((item, index) =>
-                        (<Col xs={size}>
+                        (<Col xs={size} md={sizeMd} lg={sizeLg}>
                             <RecordItem image={item.image} title={item.title} count={item.count} type={type} key={index}/>
 
                         </Col>)

@@ -123,7 +123,7 @@ export default function () {
                     </Col>
                     <Col md={8} data-aos="fade-left">
                         <p className={'textPrimary'}>
-                            Our projects are not just buildings; they're the embodiment of forward-thinking
+                            Our projects are not just buildings, they're the embodiment of forward-thinking
                             design and cutting-edge technology, seamlessly integrated to create next-generation
                             smart homes. Each home is a testament to our commitment to quality, our passion for
                             innovation, and our dedication to crafting spaces that go beyond the ordinary. With
@@ -152,25 +152,25 @@ export default function () {
                     />
                 </div>
 
-                <p className={"textPrimary mb-5"} data-aos="fade-up">
-                    Our projects are not just buildings; they're the embodiment
-                    of forward-thinking design and cutting-edge technology,
-                    seamlessly integrated to create next-generation smart homes.
-                    Each home is a testament to our commitment to quality, our
-                    passion for innovation, and our dedication to crafting
-                    spaces that go beyond the ordinary. Our projects are not
-                    just buildings; they're the embodiment of forward-thinking
-                    design and cutting-edge technology, seamlessly integrated to
-                    create next-generation smart homes. Each home is a testament
-                    to our commitment to quality, our passion for innovation,
-                    and our dedication to crafting spaces that go beyond the
-                    ordinary. Our projects are not just buildings; they're the
-                    embodiment of forward-thinking design and cutting-edge
-                    technology, seamlessly integrated to create next-generation
-                    smart homes. Each home is a testament to our commitment to
-                    quality, our passion for innovation, and our dedication to
-                    crafting spaces that go beyond the ordinary.
-                </p>
+                {/*<p className={"textPrimary mb-5"} data-aos="fade-up">*/}
+                {/*    Our projects are not just buildings; they're the embodiment*/}
+                {/*    of forward-thinking design and cutting-edge technology,*/}
+                {/*    seamlessly integrated to create next-generation smart homes.*/}
+                {/*    Each home is a testament to our commitment to quality, our*/}
+                {/*    passion for innovation, and our dedication to crafting*/}
+                {/*    spaces that go beyond the ordinary. Our projects are not*/}
+                {/*    just buildings; they're the embodiment of forward-thinking*/}
+                {/*    design and cutting-edge technology, seamlessly integrated to*/}
+                {/*    create next-generation smart homes. Each home is a testament*/}
+                {/*    to our commitment to quality, our passion for innovation,*/}
+                {/*    and our dedication to crafting spaces that go beyond the*/}
+                {/*    ordinary. Our projects are not just buildings; they're the*/}
+                {/*    embodiment of forward-thinking design and cutting-edge*/}
+                {/*    technology, seamlessly integrated to create next-generation*/}
+                {/*    smart homes. Each home is a testament to our commitment to*/}
+                {/*    quality, our passion for innovation, and our dedication to*/}
+                {/*    crafting spaces that go beyond the ordinary.*/}
+                {/*</p>*/}
 
                 <h3 className={"subHeaderDark mt-5 "}>Projects</h3>
                 {

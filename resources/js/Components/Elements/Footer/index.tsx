@@ -29,12 +29,12 @@ export default function () {
     }
     const socialBasePath = "/assets/images/socials/";
     const socialItemList: SocialItemProp[] = [
-        {
-            name: "WhatsApp",
-            image: socialBasePath + "whatsapp.png",
-            link: "https://wa.me/+2349060001552",
-            alt: "",
-        },
+        // {
+        //     name: "WhatsApp",
+        //     image: socialBasePath + "whatsapp.png",
+        //     link: "https://wa.me/+2349060001552",
+        //     alt: "",
+        // },
         {
             name: "FaceBook",
             image: socialBasePath + "facebook.png",

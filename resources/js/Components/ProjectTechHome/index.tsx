@@ -27,12 +27,13 @@ export default function () {
                         className={styles.topParagraph}
                         data-aos="fade-left"
                     >
-                        <p className={`mb-4`}>
-                            Each of our homes is a marvel of modern engineering and an investment in your future.
-                            From sleek apartments and townhouses to opulent penthouses and villas, our diverse range of
-                            residences caters to every style and need. Imbued with next-gen smart technology, our homes
-                            offer unparalleled convenience and security. Experience a home that's as intelligent as it
-                            is luxurious, delivering an ROI that's as extraordinary as the life you'll live within its walls.
+                        <p>
+                            Imbued with next-gen smart technology, our homes offer unparalleled convenience and security.
+                            Every corner, every space is meticulously crafted to cater to the discerning dweller's needs.
+                            Experience a home that's as intelligent as it is opulent, equipped with AI-powered security
+                            systems and power-saving features. Spaces are designed for comfort, functionality, and
+                            elegance, ensuring that every moment spent is a testament to quality living.
+
                         </p>
                     </Col>
                     <Col
@@ -41,26 +42,12 @@ export default function () {
                         data-aos="fade-up"
                     >
                         <p className={`mb-4`}>
-                            Our projects are not just buildings; they're the
-                            embodiment of forward-thinking design and
-                            cutting-edge technology, seamlessly integrated to
-                            create next-generation smart homes. Each home is a
-                            testament to our commitment to quality, our passion
-                            for innovation, and our dedication to crafting
-                            spaces that go beyond the ordinary. Our projects are
-                            not just buildings; they're the embodiment of
-                            forward-thinking design and cutting-edge technology,
-                            seamlessly integrated to create next-generation
-                            smart homes. Each home is a testament to our
-                            commitment to quality, our passion for innovation,
-                            and our dedication to crafting spaces that go beyond
-                            the ordinary. Our projects are not just buildings;
-                            they're the embodiment of forward-thinking design
-                            and cutting-edge technology, seamlessly integrated
-                            to create next-generation smart homes. Each home is
-                            a testament to our commitment to quality, our
-                            passion for innovation, and our dedication to
-                            crafting spaces that go beyond the ordinary.
+                            Beyond the tangible, our homes promise an investment that appreciates, delivering an ROI
+                            that's as extraordinary as the life you'll live within its walls.
+
+                        </p>
+                        <p>
+                            Welcome to the Cosgrove way of life.
                         </p>
                     </Col>
                 </Row>

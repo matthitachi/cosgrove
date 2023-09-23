@@ -138,6 +138,7 @@
             }
             input {
                 min-width: 575px;
+                padding: 5px 75px;
             }
         }
     }
@@ -163,7 +164,8 @@
                 position: relative;
 
                 input {
-                    min-width: unset;
+                    min-width: 336px;
+                    padding: 6px 60px;
                     width: 100%;
                 }
             }

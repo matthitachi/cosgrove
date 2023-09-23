@@ -19,7 +19,7 @@ export default function ({settings, childrenItems}:sliderProps) {
         return (<ArrowNext {...props} className={styles.sliderNext}/>);
     };
     const SliderPrevious = ({ currentSlide, slideCount, ...props }) => {
-        return (<ArrowPrevious {...props} className={styles.sliderPrevious}/>);
+        return (<ArrowNext {...props} className={styles.sliderPrevious}/>);
     };
     // @ts-ignore
     settings['prevArrow'] = <SliderPrevious/>;

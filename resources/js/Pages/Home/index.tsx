@@ -33,7 +33,7 @@ export default function () {
             {
                 img: '/assets/images/services/discussion.png',
                 title: 'Consultation',
-                desc: 'We offer expert consultation to guide your real estate decisions. With 20 years of industry experience, we help you make informed choices for both residential and commercial projects.'
+                desc: 'We offer expert consultation to guide your real estate decisions. With over 20 years of industry experience, we help you make informed choices for both residential and commercial projects.'
             },
             {
                 img: '/assets/images/services/design.png',

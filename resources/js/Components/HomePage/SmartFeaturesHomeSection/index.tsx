@@ -113,7 +113,7 @@ export default function () {
             <div className={`curvedTop ${styles.topCurve}`} />
             <Container className={styles.featuredCtx}>
                 <h4 className={`subHeader mb-65 text-center`}>
-                    Smart Features
+                    Estate Features
                 </h4>
 
                 <div className={styles.smartFeaturesCtx}>
