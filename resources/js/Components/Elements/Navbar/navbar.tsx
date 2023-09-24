@@ -199,59 +199,37 @@ export default function ({isDark = false}: navbarProp) {
                         <Offcanvas.Body>
                             {/* Your Offcanvas content goes here */}
                             <Nav className={`me-auto ${styles.mobileLinks}`}>
-                                <Nav.Link
+                                <Link
                                     onClick={handleCloseOffcanvas}
                                     href="/"
-                                    className={styles.mobileNav}
+                                    className={`${styles.navLink} nav-link`}
                                 >
                                     Home
-                                </Nav.Link>
+                                </Link>
 
-                                <Nav.Link
+                                <Link
                                     href="/about"
-                                    className={styles.navLink}
+                                    className={`${styles.navLink} nav-link`}
                                     onClick={handleCloseOffcanvas}
                                 >
                                     About
-                                </Nav.Link>
+                                </Link>
                                 {/* First Dropdown  */}
                                 <NavDropdown
-                                    title="Our Homes"
+                                    title="House Types"
                                     id="homes-dropdown"
                                     className={`${styles.navLink}`}
                                 >
-                                    <NavDropdown.Item href="#home">
-                                        Château
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#home">
-                                        Villa
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#home">
-                                        Oak
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#home">
-                                        Oakville
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#home">
-                                        Scarlet Oak
-                                    </NavDropdown.Item>
+                                    {
+                                        houseTypes.map((item, index) =>
 
-                                    {/* DropDown Item 2 */}
-                                    <NavDropdown.Item href="#home">
-                                        Acacia
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#home">
-                                        Maple
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#home">
-                                        Penthouse
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#home">
-                                        Pine
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#home">
-                                        Olive
-                                    </NavDropdown.Item>
+                                            (
+                                                <Link href={'/houses/' + item.slug} className={`dropdown-item`}>
+                                                    {item.name}
+                                                </Link>
+                                            ))
+                                    }
+
                                 </NavDropdown>
                                 {/* Second Dropdown  */}
                                 <NavDropdown
@@ -259,34 +237,16 @@ export default function ({isDark = false}: navbarProp) {
                                     id="projects-dropdown"
                                     className={styles.navLink}
                                 >
-                                    <NavDropdown.Item href="#projects">
-                                        Neuvau
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#projects">
-                                        The Châteaux
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#projects">
-                                        Tetra
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#projects">
-                                        Fourteen
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#projects">
-                                        Smart Estate Wuye
-                                    </NavDropdown.Item>
+                                    {
+                                        projects.map((item, index) =>
 
-                                    <NavDropdown.Item href="#projects">
-                                        Smart Estate Mabushi
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#projects">
-                                        Smart City Katampe
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#projects">
-                                        Smart Estate Guzape
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item href="#projects">
-                                        Smart Estate Wuse 2
-                                    </NavDropdown.Item>
+                                            (
+                                                <Link href={'/projects/' + item.slug} className={`dropdown-item`}>
+                                                    {item.name}
+                                                </Link>
+                                            ))
+                                    }
+
                                 </NavDropdown>
                                 <Nav.Link
                                     href="/contact"
