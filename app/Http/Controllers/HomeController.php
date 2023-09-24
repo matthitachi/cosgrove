@@ -49,6 +49,10 @@ class HomeController extends Controller
     {
         return Inertia::render('Contact/index');
     }
+    public function agentRegistration()
+    {
+        return Inertia::render('Agent/index');
+    }
     public function privacy()
     {
         return Inertia::render('Privacy/index');

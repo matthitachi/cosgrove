@@ -149,13 +149,13 @@ export default function () {
                                 <li className={`textDark mb-4`}><Link href={'/'}>Blog</Link></li>
                                 <li className={`textDark mb-4`}><Link href={'/'}>Careers</Link></li>
                                 <li className={`textDark mb-4`}>
-                                    <Link href={'/'}>Agent Registration</Link>
+                                    <Link href={'/agent-registration'}>Agent Registration</Link>
                                 </li>
                                 <li className={`textDark mb-4`}>
-                                    <Link href={'/'}>Term of service</Link>
+                                    <Link href={'/privacy'}>Term of service</Link>
                                 </li>
                                 <li className={`textDark mb-4`}>
-                                    <Link href={'/'}>Privacy policy</Link>
+                                    <Link href={'/privacy'}>Privacy policy</Link>
                                 </li>
                             </ul>
                         </Col>

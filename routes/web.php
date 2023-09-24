@@ -24,5 +24,6 @@ Route::get('/project-types', [App\Http\Controllers\HomeController::class, 'proje
 Route::get('/project-homes', [App\Http\Controllers\HomeController::class, 'projectHome']);
 Route::get('/project-brochure', [App\Http\Controllers\HomeController::class, 'projectBrochure']);
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);
+Route::get('/agent-registration', [App\Http\Controllers\HomeController::class, 'agentRegistration']);
 Route::get('/privacy', [App\Http\Controllers\HomeController::class, 'privacy']);
 Route::get('/press', [App\Http\Controllers\HomeController::class, 'press']);
