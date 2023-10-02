@@ -16,6 +16,7 @@ import FeaturesItem from "../../Elements/FeaturesItem";
 import Slider from "../../Elements/Slider";
 import RecordList, { RecordItemProp } from "../../Elements/RecordList";
 import SupportList, { SupportItemProp } from "../../Elements/SupportList";
+import TeamSection from "../TeamSection";
 
 export default function () {
     React.useEffect(() => {
@@ -127,16 +128,13 @@ export default function () {
                         <p
                             className={`textPrimary mb-4 ${styles.topParagraph}`}
                         >
-                            Born in 2017, Cosgrove emerged with a bold vision, rewriting the rules of real estate.
-                            We dared to weave technology into our residential and commercial properties, creating
-                            Nigeria's first smart estate.
+                            Established in 2017, Cosgrove is at the forefront of disruption in the real estate industry,
+                            Cosgrove Investment Limited is shaping new lifestyles with a focus on the integration of
+                            revolutionary technology into residential and commercial real estate using sustainable methods.
                         </p>
                     </Col>
                     <Col sm={12} data-aos="fade-up">
                         <p className={`textPrimary mb-4`}>
-                            At the forefront of disruption in the real estate industry,
-                            Cosgrove Investment Limited is shaping new lifestyles with a focus on the integration of
-                            revolutionary technology into residential and commercial real estate using sustainable methods.
                             Cosgrove’s leadership team is composed of the industry’s highly experienced leaders with a
                             passion for unswerving excellence. As we continue to grow our vision of becoming the leading
                             real estate developer in Africa, the guarantee of integrity, professionalism and reliability
@@ -182,7 +180,38 @@ export default function () {
                 </Row>
             </Container>
 
+
+
+
+            <TeamSection />
             <Container>
+                <div data-aos="fade-up">
+                    <h4
+                        className={`subHeaderDark`}
+                        style={{ marginBottom: "20px" }}
+                    >
+                        Awards & Recognition
+                    </h4>
+                    <p className={`textPrimary`}>
+                        Over the years, our relentless pursuit of excellence has
+                        earned us accolades in the industry. We've been
+                        recognized as the 'Real Estate Company of the Year' and
+                        'Smart City Developer of the Year' at the Nigeria
+                        Housing Awards. Our Chairman/CEO, Mr. Umar
+                        Abdullahi, has been honored with the title of Officer of
+                        the Order of the Federal Republic (OFR) by the Federal
+                        Government, highlighting our profound contribution to
+                        the housing industry in Nigeria.
+                    </p>
+                    <p className={`textPrimary`}>
+                        We are also the proud recipients of the prestigious
+                        'Leadership in Smart Housing 2021' award from the
+                        Nigerian Institute of Town Planners. At Cosgrove Investment Limited,
+                        we continue to set the standard.
+                    </p>
+                </div>
+            </Container>
+            <Container className="mt-5">
                 <div className={`sidedContainer mb-5`}>
                     <Row>
                         <Col
@@ -217,33 +246,6 @@ export default function () {
                             />
                         </Col>
                     </Row>
-                </div>
-            </Container>
-            <Container>
-                <div data-aos="fade-up">
-                    <h4
-                        className={`subHeaderDark`}
-                        style={{ marginBottom: "20px" }}
-                    >
-                        Awards & Recognition
-                    </h4>
-                    <p className={`textPrimary`}>
-                        Over the years, our relentless pursuit of excellence has
-                        earned us accolades in the industry. We've been
-                        recognized as the 'Real Estate Company of the Year' and
-                        'Smart City Developer of the Year' at the Nigeria
-                        Housing Awards. Our Chairman/CEO, Mr. Umar
-                        Abdullahi, has been honored with the title of Officer of
-                        the Order of the Federal Republic (OFR) by the Federal
-                        Government, highlighting our profound contribution to
-                        the housing industry in Nigeria.
-                    </p>
-                    <p className={`textPrimary`}>
-                        We are also the proud recipients of the prestigious
-                        'Leadership in Smart Housing 2021' award from the
-                        Nigerian Institute of Town Planners. At Cosgrove Investment Limited,
-                        we continue to set the standard.
-                    </p>
                 </div>
             </Container>
         </section>

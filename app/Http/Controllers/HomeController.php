@@ -57,6 +57,14 @@ class HomeController extends Controller
     {
         return Inertia::render('Privacy/index');
     }
+    public function termsOfService()
+    {
+        return Inertia::render('Terms/index');
+    }
+    public function careers()
+    {
+        return Inertia::render('Career/index');
+    }
     public function press()
     {
         return Inertia::render('Press/index');

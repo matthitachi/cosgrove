@@ -54,7 +54,7 @@ export default function ({serviceItems}:ServiceList) {
                         <p
                             data-aos="fade-right"
                             className={`textPrimary  mb-85`}>
-                            Step into a world where your needs shape our services. Offering bespoke consultations, innovative design & automation, meticulous construction, and strategic project management, we make your journey seamless. Plus, unlock smart investment avenues for unparalleled ROI. With Cosgrove, it's more than a home—it's a lifestyle investment.
+                            Step into a world where your needs shape our services. Offering bespoke consultations, innovative design & automation, meticulous construction, and strategic project management, we make your journey seamless. Plus, unlock smart investment avenues for unparalleled ROI. With Cosgrove, it's more than a home—it's a lifetime investment.
                         </p>
                         <ul className={styles.serviceList}>
                             {

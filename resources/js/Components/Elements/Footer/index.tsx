@@ -1,4 +1,5 @@
 import {
+    Alert,
     Button,
     Col,
     Container,
@@ -11,8 +12,33 @@ import {
 import styles from "./styles.module.scss";
 import * as React from "react";
 import {Link} from "@inertiajs/inertia-react";
+import {useState} from "react";
+import cosgroveApiServices from "../../../Services/cosgroveApiServices";
+
+interface Form {
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+}
+interface Err {
+    name: string;
+    email: string;
+}
 
 export default function () {
+    const [formVal, setFormVal] = useState<Form>({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+    const [showAlert, setShowAlert] = useState<boolean>(false);
+    const [variant, setVariant] = useState<Object>({
+        type: 'successful',
+        message:'Message sent Successfully'
+    });
+    const [errors, setErrors] = useState<Partial<Err>>({});
     interface SocialItemProp {
         name: string;
         image: string;
@@ -72,6 +98,61 @@ export default function () {
             alt: "",
         },
     ];
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement | { name?: string; value: unknown }>) => {
+        const {name, value} = event.target;
+        setFormVal((prevValues: Form) => ({
+            ...prevValues,
+            [name as keyof Form]: value as string,
+        }));
+    };
+    const validateEmail = (email: string) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+    const handleSubmit = async () => {
+        const validateErr: Partial<Err> = {};
+
+        if (!formVal.name) {
+            validateErr.name = 'Name is required';
+        }
+        if (!formVal.email) {
+            validateErr.email = 'email is required';
+        }
+        if (!validateEmail(formVal.email)) {
+            validateErr.email = 'Enter a valid email';
+        }
+
+        setErrors(validateErr);
+        if (Object.keys(validateErr).length > 0) {
+            console.log('failed');
+            return;
+        }
+
+        let response = await (new cosgroveApiServices()).sendContactDetails(formVal);
+        console.log(response);
+        if(response.status == true){
+            setFormVal({
+                name: '',
+                email: '',
+                phone: '',
+                message: ''
+            });
+
+            setVariant({
+                type: "success",
+                message: 'Message Sent Successfully'
+            });
+        }else{
+
+            setVariant({
+                type: "danger",
+                message: 'Message Failed'
+            });
+        }
+        setShowAlert(true);
+        setTimeout(()=>{
+            setShowAlert(false);
+        }, 2000);
+    };
     return (
         <section className={styles.footer}>
             <Row>
@@ -80,26 +161,46 @@ export default function () {
                     <p className={"textDark mb-25"}>
                         Ready to step into the world of Cosgrove excellence? Reach out now to start your extraordinary real estate experience.
                     </p>
-                    <form>
+                    {
+                        Object.keys(errors).length > 0 &&
+                        <div className={`text-center mb-3`}>
+                            {
+                                Object.keys(errors).map((item)=> {
+                                    return (<div>{errors[item]}</div>)
+                                })
+                            }
+                    </div>}
+
+                    {
+                        showAlert &&
+                    <Alert key={variant.type} variant={variant.type}>
+                        {variant.message}
+                    </Alert>
+                    }
+                    {/*<form>*/}
                         <input
                             placeholder={"Name"}
                             className={styles.formItem}
+                            value={formVal.name} onChange={handleChange} name={'name'} onError={() => Boolean(errors.name)}
                         />
                         <input
                             placeholder={"Email"}
                             className={styles.formItem}
+                            value={formVal.email} onChange={handleChange} name={'email'} onError={() => Boolean(errors.email)}
                         />
                         <input
                             placeholder={"Phone"}
                             className={styles.formItem}
+                            value={formVal.phone} onChange={handleChange} name={'phone'}
                         />
                         <textarea
                             placeholder={"Type a message..."}
                             className={styles.formItem}
+                            value={formVal.message} onChange={handleChange} name={'message'}
                         />
 
-                        <button>Submit</button>
-                    </form>
+                        <button onClick={handleSubmit}>Submit</button>
+                    {/*</form>*/}
                 </Col>
                 <Col sm={12} md={4} className={styles.footerContactUs}>
                     <Row>
@@ -147,12 +248,12 @@ export default function () {
                         <Col xs={6}>
                             <ul>
                                 <li className={`textDark mb-4`}><Link href={'/'}>Blog</Link></li>
-                                <li className={`textDark mb-4`}><Link href={'/'}>Careers</Link></li>
+                                <li className={`textDark mb-4`}><Link href={'/careers'}>Careers</Link></li>
                                 <li className={`textDark mb-4`}>
                                     <Link href={'/agent-registration'}>Agent Registration</Link>
                                 </li>
                                 <li className={`textDark mb-4`}>
-                                    <Link href={'/privacy'}>Term of service</Link>
+                                    <Link href={'/terms-of-service'}>Term of service</Link>
                                 </li>
                                 <li className={`textDark mb-4`}>
                                     <Link href={'/privacy'}>Privacy policy</Link>

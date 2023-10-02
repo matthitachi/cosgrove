@@ -26,4 +26,6 @@ Route::get('/project-brochure', [App\Http\Controllers\HomeController::class, 'pr
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);
 Route::get('/agent-registration', [App\Http\Controllers\HomeController::class, 'agentRegistration']);
 Route::get('/privacy', [App\Http\Controllers\HomeController::class, 'privacy']);
+Route::get('/terms-of-service', [App\Http\Controllers\HomeController::class, 'termsOfService']);
+Route::get('/careers', [App\Http\Controllers\HomeController::class, 'careers']);
 Route::get('/press', [App\Http\Controllers\HomeController::class, 'press']);

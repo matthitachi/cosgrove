@@ -28,7 +28,6 @@ export default function () {
                 position={'unset'}
             />
             <OverviewSection />
-            <TeamSection />
             <Footer />
         </div>
     );

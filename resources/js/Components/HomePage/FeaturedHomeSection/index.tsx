@@ -18,6 +18,8 @@ import arrowRightSvg, { ReactComponent as ArrowRight } from "/public/assets/svg/
 // @ts-ignore
 import arrowRightSvgR from "/public/assets/svg/arrow-right.svg";
 import {Link} from "@inertiajs/react";
+import {FeaturedListItemProp, pressList} from "../../../Data/data";
+
 interface listProp{
     full?: boolean
 }
@@ -26,13 +28,12 @@ export default function ({full = true}: listProp) {
         AOS.init({ duration: 2000 });
     }, []);
 
-    interface FeaturedListItemProp{
-        date: string;
-        title: string;
-    }
-    function FeaturedListItem({date, title}:FeaturedListItemProp) {
+
+    function FeaturedListItem({date, title, link}:FeaturedListItemProp) {
         return (
+
             <li className={styles.featuredListItem}>
+                <a href={link} target={'_blank'}>
                 <div className={styles.info}>
                     {/*<div className={`textPrimary ${styles.listDate}`}>{date}</div>*/}
                     <div className={`textPrimary ${styles.listTitle}`}>
@@ -40,6 +41,8 @@ export default function ({full = true}: listProp) {
                     </div>
                 </div>
                 <ArrowRight />
+
+                </a>
             </li>
         );
     }
@@ -73,8 +76,8 @@ export default function ({full = true}: listProp) {
 
                 <ul className={styles.featuredList}>
                     {
-                        featuredList.map((item, key) =>
-                            <FeaturedListItem date={item.date} title={item.title} key={key}/>)
+                        (!full ? pressList : pressList.slice(0, 5)).map((item, key) =>
+                            <FeaturedListItem date={item.date} title={item.title} link={item.link} key={key}/>)
                     }
                 </ul>
 

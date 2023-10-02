@@ -204,7 +204,7 @@ export const projects: ProjectItemProp[] = [
         name: 'Cosgrove Smart Estate, Wuye',
         slug: 'cosgrove_smart_estate_wuye',
         location: 'Wuye',
-        description: 'Redefining intelligent living in Abuja, Cosgrove Smart Estate Wuye sets the benchmark. Spanning 4.32 hectares, the estate boasts 160 units each equipped with the latest smart home tech. Cosgrove Estate Wuye offers amenities such as AI face recognition cameras, ANRP (Automatic Number Plate Recognition), smart water treatment, a playground, and a clubhouse set within landscaped gardens, and proximity to the Central Business District, Wuse 2 and Maitama. Cosgrove Wuye is a testament to unparalleled sophistication.\n',
+        description: 'Redefining intelligent living in Abuja, Cosgrove Smart Estate Wuye sets the benchmark. Spanning 4.32 hectares, the estate features 160 units each equipped with the latest smart home technology. Cosgrove Smart Estate Wuye offers amenities such as AI face recognition cameras, ANRP (Automatic Number Plate Recognition), smart water treatment, and a playground set within landscaped gardens, and proximity to the Central Business District, Wuse 2 and Maitama. Cosgrove Wuye is a testament to unparalleled sophistication.',
         detailsImg: '/assets/images/projects/wuye/portrait.jpg',
         mainImg: '/assets/images/projects/wuye/landscape.jpg',
         distFeature: [
@@ -703,6 +703,60 @@ export const projects: ProjectItemProp[] = [
 
         ]
     },
+    {
+        name: 'NITDA Digital Enterpreneurship & Innovation Center',
+        slug: 'nitda',
+        location: 'Central Area',
+        description: 'Cosgrove is spearheading the NITDA Entrepreneurship and Digital Innovation Center, a prominent 2-tower structure in the CBD Cadastral zone. Designed as the digital hub for the National Information Technology Development Agency (NITDA), the interconnected towers span 9 levels and cover 1,500 sqm. The facility boasts offices, an auditorium, server rooms, a fabrication lab, and studio apartments. Additional amenities include parking spaces, a gym, a restaurant, and residential units. The center is equipped with five elevators and three staircases for efficient movement.\n' +
+            '\n\n' +
+            'Parking Spaces: Basement floor parking with additional 27 parking spaces\n' +
+            'Surface area: 1,500 sqm\n' +
+            'Towers: 2 interconnected towers spanning 9 levels\n' +
+            'Special Features: Auditorium, server rooms, fabrication lab, studio apartments\n' +
+            'Additional Amenities: Gym, restaurant, multi-faith area\n' +
+            'Vertical Circulation: Five elevators and three staircases\n',
+        detailsImg: '/assets/images/projects/nitda/portrait.jpg',
+        mainImg: '/assets/images/projects/nitda/landscape.jpg',
+        distFeature: [],
+        galleryBasePath: '/assets/images/projects/nitda/gallery/',
+        gallery: [
+            '9eef280c-966c-4c21-a585-d7e1f31db22c.JPG',
+            '84c8152a-d731-4736-a71c-1002863440e6.JPG',
+            '395f5ac7-36ab-4e3d-ad31-5da0923c69a5.JPG',
+            '797e6a11-997a-4e99-a647-1158afe2d997.JPG',
+            'c76b38dd-65b2-4ebc-8eeb-b32a1d5db9c1.JPG',
+            'dc836962-5448-4cf0-8121-1dedaa04d159.JPG',
+            'ec678c85-e96e-4588-91bf-fd1465a8d110.JPG',
+            'IMAGE-1.jpg',
+            'IMAGE-2.jpg',
+            'IMAGE-3.jpg',
+            'IMG-7295.jpg',
+            'IMG-7296.jpg',
+            'IMG-7297.jpg',
+            'IMG-7298.jpg',
+            'IMG-7299.jpg',
+            'IMG-7300.jpg',
+            'IMG-7301.jpg'
+        ],
+        estateFeatures: [
+            estateFeatures[0],
+            estateFeatures[1],
+            estateFeatures[2],
+            estateFeatures[3],
+            estateFeatures[4],
+            estateFeatures[5],
+            estateFeatures[6],
+            estateFeatures[7],
+            estateFeatures[8],
+            estateFeatures[9],
+            estateFeatures[10],
+            estateFeatures[11],
+            estateFeatures[12],
+            estateFeatures[12],
+            estateFeatures[14],
+
+        ]
+    },
 ];
 
 export const houseTypes: houseTypeItemProps[] = [
@@ -814,7 +868,8 @@ export const houseTypes: houseTypeItemProps[] = [
         projectSlug: ['cosgrove_Smart_city_katampe'],
         headerImg: '//assets/images/house-types/oakville/portrait.jpg',
         detailsImg: '',
-        moreDesc: 'Behold the new standard of smart living! Oakville by Cosgrove in Katampe, Abuja, is a 5-bedroom fully detached duplex that sets the bar for residential excellence. This iconic smart home boasts three distinct living areas, five en-suite bedrooms complete with walk-in closets, and a spacious kitchen. Additional luxuries include a multi-purpose area, a maid\'s room, and parking for up to five cars. Step into the future with state-of-the-art smart home features like fiber-to-the-home (FTTH), high-tech security with biometric access, and optional central air conditioning. Oakville by Cosgrove is more than a home; it\'s a technological marvel meticulously crafted for tomorrow\'s lifestyle.\n',
+        moreDesc: 'Behold the new standard of smart living! Oakville is a 5-bedroom semi-detached duplex that sets the bar for residential excellence. This iconic smart home features three distinct living areas, five en-suite bedrooms complete with walk-in closets, and a spacious kitchen. Additional luxuries include a multi-purpose area, a maid\'s room, and parking for up to five cars. \n' +
+            'Step into the future with state-of-the-art smart home features like fiber-to-the-home (FTTH), high-tech security with biometric access, and optional central air conditioning. Oakville by Cosgrove is more than a home; it\'s a technological marvel meticulously crafted for tomorrow\'s lifestyle.\n',
         galleryBasePath: '/assets/images/house-types/oakville/gallery/',
         gallery: [
             'gallery3_exterior.jpg',
@@ -862,7 +917,8 @@ export const houseTypes: houseTypeItemProps[] = [
         projectSlug: ['cosgrove_smart_estate_wuse_2'],
         headerImg: '/assets/images/house-types/scarlet-oak/landscape.jpg',
         detailsImg: '',
-        moreDesc: 'A fine blend of technology and architectural brilliance defines Scarlet Oak by Cosgrove. Nestled in the serene neighborhood of Wuse 2, Abuja, this 5-bedroom townhouse is a tribute to the scarlet oak tree, known for its stunning fall foliage. Each residence features a master bedroom, four additional spacious bedrooms, all en-suite, and high-quality bathrooms. The design extends to an exquisite courtyard and two inviting living areas, complete with a maid\'s room for added convenience.',
+        moreDesc: 'Behold the new standard of smart living! Oakville is a 5-bedroom semi-detached duplex that sets the bar for residential excellence. This iconic smart home features three distinct living areas, five en-suite bedrooms complete with walk-in closets, and a spacious kitchen. Additional luxuries include a multi-purpose area, a maid\'s room, and parking for up to five cars. \n' +
+            'Step into the future with state-of-the-art smart home features like fiber-to-the-home (FTTH), high-tech security with biometric access, and optional central air conditioning. Oakville by Cosgrove is more than a home; it\'s a technological marvel meticulously crafted for tomorrow\'s lifestyle.\n',
         galleryBasePath: '/assets/images/house-types/scarlet-oak/gallery/',
         gallery: [
             'scarlet-oak_exterior.jpg',
@@ -1107,7 +1163,7 @@ export const houseTypes: houseTypeItemProps[] = [
         projectSlug: ['the_chateaux'],
         headerImg: '/assets/images/house-types/the-chateau/landscape.jpg',
         detailsImg: '',
-        moreDesc: 'The Châteaux by Cosgrove is an 6-bedroom mansion with 6 resplendent bathrooms, this palatial residence is a testament to the seamless marriage of traditional grandeur and modern technology. Beyond the bedrooms, the mansion unfolds into a series of luxurious amenities, including a home cinema and a gym, each designed to enrich resident’s daily experience.',
+        moreDesc: 'The Château is a 6-bedroom mansion with 6 resplendent bathrooms, this palatial residence is a testament to the seamless blend of traditional grandeur and modern technology. Beyond the bedrooms, the mansion unfolds into a series of luxurious amenities, including a home cinema and a gym, with an option of a swimming pool or garden, each designed to enrich resident’s daily experience.',
         galleryBasePath: '/assets/images/house-types/the-chateau/gallery/',
         gallery: [
             '11_exterior.jpg',
@@ -1118,11 +1174,11 @@ export const houseTypes: houseTypeItemProps[] = [
             '17_exterior.jpg'
         ],
         specs: [
-            {
-                image: "/assets/images/icons/surface.png",
-                title: "Surface Area",
-                count: "0sq m",
-            },
+            // {
+            //     image: "/assets/images/icons/surface.png",
+            //     title: "Surface Area",
+            //     count: "0sq m",
+            // },
             {
                 image: "/assets/images/icons/spaces.png",
                 title: "Parking Spaces",
@@ -1268,9 +1324,11 @@ export const houseTypes: houseTypeItemProps[] = [
         projectSlug: ['nouveau'],
         headerImg: '/assets/images/house-types/maitama/landscape.jpg',
         detailsImg: '',
-        moreDesc: 'Where architecture becomes a canvas for personal expression, The Nouveau Villa by Cosgrove stands as a masterpiece. These 6-bedroom villas in Abuja are more than homes; they are reflections of their owners\' unique personalities. Finished to perfection, each villa is a symphony of natural light, sophisticated materials, and elegant tones. Large floor-to-ceiling windows illuminate expansive foyers, while high headrooms add an air of grandeur.\n' +
+        moreDesc: 'Everything you expect, and then some more. This 6-bedroom villa is more than just a home; it is a reflection of its owners\' unique personalities. Finished to perfection, each villa is a symphony of natural light, sophisticated materials, and elegant tones. Large floor-to-ceiling windows illuminate expansive foyers, while high headrooms add an air of grandeur.\n' +
             '\n' +
-            '<br/>The master bedroom is a sanctuary, complete with a home office and outdoor terrace. Additional spacious bedrooms, accessible walk and bicycle paths, and parking for six cars make life here effortlessly luxurious. The community\'s extra-wide roads, backyard, and mini-garden further elevate the living experience. \n',
+            'The master bedroom is a sanctuary, complete with a home office and outdoor terrace. Additional spacious bedrooms, accessible walk and bicycle paths, and parking for up to six cars make life here effortlessly luxurious. The community\'s extra-wide roads, backyard, and mini-garden further elevate the living experience. \n' +
+            '\n' +
+            'Residents of the Nouveau have access to world-class infrastructure, indoor and outdoor recreation and some of the most sophisticated, state-of-the-art security protocols and advanced home automation available anywhere in the world.\n',
         galleryBasePath: '/assets/images/house-types/maitama/gallery/',
         gallery: [
             '01_exterior.jpg',
@@ -1294,11 +1352,11 @@ export const houseTypes: houseTypeItemProps[] = [
             '20_exterior.jpg',
         ],
         specs: [
-            {
-                image: "/assets/images/icons/surface.png",
-                title: "Surface Area",
-                count: "675sq m",
-            },
+            // {
+            //     image: "/assets/images/icons/surface.png",
+            //     title: "Surface Area",
+            //     count: "675sq m",
+            // },
             {
                 image: "/assets/images/icons/spaces.png",
                 title: "Parking Spaces",
@@ -1312,16 +1370,21 @@ export const houseTypes: houseTypeItemProps[] = [
             {
                 image: "/assets/images/icons/bed.png",
                 title: "Bedrooms",
-                count: "7",
+                count: "6",
             },
             {
                 image: "/assets/images/icons/bath.png",
                 title: "Bathrooms",
-                count: "7",
+                count: "6.5",
             },
             {
                 image: "/assets/images/icons/room.png",
                 title: "Living Rooms",
+                count: "1",
+            },
+            {
+                image: "/assets/images/icons/clients.png",
+                title: "Lounges",
                 count: "3",
             },
         ],
@@ -1364,5 +1427,100 @@ export const brochures : brochuresItemProp[] = [
        link: '/assets/brochures/the-chateaux-by-cosgrove.pdf',
        fileType: 'PDF',
        fileTypeIcon:'/assets/images/bg/Logotype.png'
+    },
+];
+
+export interface FeaturedListItemProp{
+    date: string;
+    title: string;
+    link: string;
+}
+
+export const pressList : FeaturedListItemProp[] = [
+
+    {
+        date: '12|07|23',
+        title: 'Cosgrove boosts housing market with Abuja estate project - The Guardian',
+        link: 'https://guardian.ng/news/cosgrove-boosts-housing-market-with-abuja-estate-project/'
+    },
+    {
+        date: '12|07|23',
+        title: 'Relief as firm donates accommodation to Abuja displaced orphans - The Nation',
+        link: 'https://thenationonlineng.net/relief-as-firm-donates-accommodation-to-abuja-displaced-orphans/'
+    },
+    {
+        date: '12|07|23',
+        title: 'Cosgrove gets NITP, COREN, commendations for CSR - This Day',
+        link: 'https://thenationonlineng.net/relief-as-firm-donates-accommodation-to-abuja-displaced-orphans/'
+    },
+    {
+        date: '12|07|23',
+        title: 'AI in home security - The Business Year',
+        link: ''
+    },
+    {
+        date: '06|11|19',
+        title: 'In handling real estate competitions we see ourselves as co stakeholders - Daily Times',
+        link: 'https://dailytimes.ng/2019/11/06/in-handling-real-estate-competitions-we-see-ourselves-as-co-stakeholders/'
+    },
+    {
+        date: '17|09|19',
+        title: 'NIA honours Cosgrove founder, Umar Abdullahi - Punch',
+        link: 'https://punchng.com/nia-honours-cosgrove-founder-umar-abdullahi/'
+    },
+    {
+        date: '16|10|19',
+        title: 'Cosgrove Plants 1000 Trees To Commemorate 2019 Customer Week - Truth Ng',
+        link: 'https://www.truthng.com/photo-news-cosgrove-plants-1000-tress-commemorate-2019-customer-week/'
+    },
+    {
+        date: '15|09|19',
+        title: 'Why Cosgrove uses British Standard Steel, Ready-Mix Concrete, despite cost - Truth Ng',
+        link: 'https://www.truthng.com/cosgrove-uses-british-standard-steel-ready-mix-concrete-despite-cost-ceo/'
+    },
+    {
+        date: '24|03|19',
+        title: 'Cosgrove gets NITP, COREN commendation for constructing 1.5km access road in Maitama - Truth Ng',
+        link: 'https://www.truthng.com/cosgrove-gets-nitp-coren-commendation-constructing-1-5km-access-road-maitama/'
+    },
+    {
+        date: '22|07|19',
+        title: 'Cosgrove Gets Super Eagles Star As Patron - Daily Trust',
+        link: 'https://dailytrust.com/cosgrove-gets-super-eagles-star-as-patron/'
+    },
+    {
+        date: '23|05|19',
+        title: 'Cosgrove, 11 others, bag Smart City Award as Osinbajo tasks industry leaders on sustained economic growth - Truth Ng',
+        link: 'https://www.truthng.com/cosgrove-11-others-bag-smart-city-award-osinbajo-tasks-industry-leaders-sustained-economic-growth/'
+    },
+    {
+        date: '01|10|20',
+        title: 'Focus on Nigeria: Unravelling The Evolution And Progression Of Nigeria’s Economy On The Eve Of Its Diamond Jubilee - Forbes',
+        link: 'https://www.forbesafrica.com/brand-voice/2020/09/30/focus-on-nigeria-unravelling-the-evolution-and-progression-of-nigerias-economy-on-the-eve-of-its-diamond-jubilee/'
+    },
+    {
+        date: '08|04|22',
+        title: 'CBN Governor Emiefele, Cosgrove CEO Umar Abdullahi, others make Forbes Africa’s list - Daily Nigerian',
+        link: 'https://dailynigerian.com/cbn-governor-emiefele-cosgrove/'
+    },
+    {
+        date: '15|09|19',
+        title: 'NIA names Cosgrove CEO ‘Real Estate Developer of 2019’ - Premium Times',
+        link: 'https://www.premiumtimesng.com/promoted/352434-promoted-nia-names-cosgrove-ceo-real-estate-developer-of-2019.html?tztc=1'
+    },
+    {
+        date: '29|05|23',
+        title: 'Buhari confers Cosgrove CEO, Umar Abdullahi, with OFR National Honour - Africa Housing News',
+        link: 'https://www.africahousingnews.com/buhari-confers-cosgrove-ceo-umar-abdullahi-with-ofr-national-honour/'
+    },
+    {
+        date: '20|12|2021',
+        title: 'Cosgrove’s Wuye Smart Estate Gives Abuja Panache In Property - Daily Trust',
+        link: 'https://dailytrust.com/cosgroves-wuye-smart-estate-gives-abuja-panache-in-property/'
+    },
+    {
+        date: '20|08|2018',
+        title: 'Cosgrove Set To Boost FCT Real Estate Market - Daily Trust',
+        link: 'https://dailytrust.com/cosgrove-set-to-boost-fct-real-estate-market-266585/'
     },
 ];

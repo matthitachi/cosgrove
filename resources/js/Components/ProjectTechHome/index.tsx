@@ -42,8 +42,7 @@ export default function () {
                         data-aos="fade-up"
                     >
                         <p className={`mb-4`}>
-                            Beyond the tangible, our homes promise an investment that appreciates, delivering an ROI
-                            that's as extraordinary as the life you'll live within its walls.
+                            Beyond the tangible, our homes promise an investment that promises an unmatched  appreciation.
 
                         </p>
                         <p>

@@ -107,7 +107,7 @@ export default function ({project}:topSectionProp) {
                         className={styles.infoHomeInfo}
                         data-aos="fade-right"
                     >
-                        <p className={`textPrimary`}>
+                        <p className={`textPrimary`} style={{whiteSpace: 'pre-line'}}>
                             {project.description}
                         </p>
                         <SupportList supportList={[
