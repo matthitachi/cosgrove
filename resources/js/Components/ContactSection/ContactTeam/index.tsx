@@ -53,18 +53,18 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/contacts/raymond.jpg"
+                                                src="/assets/images/contacts/sakana.jpg"
                                                 alt=""
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Raymond Ricketts</h4>
+                                            <h4>Sakana D. Philip</h4>
                                             <h5>
-                                                Chief Information Technology
-                                                Officer
+                                                Director, Corporate
+                                                Communications & Branding
                                             </h5>
                                             <p>
-                                                raymond.rick@cosgroveafrica.com
+                                                sakana.dikko@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
@@ -107,15 +107,15 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/contacts/blesssing.jpg"
+                                                src="/assets/images/contacts/nafisa.jpg"
                                                 alt=""
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Blessing Chinedu-Uzoh</h4>
-                                            <h5>Head, health and safety environment</h5>
+                                            <h4>Nafisa Aliyu</h4>
+                                            <h5>Head, Digital Marketing</h5>
                                             <p>
-                                                chinedu.uzoh@cosgroveafrica.com
+                                                nafisa.aliyu@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
@@ -124,39 +124,23 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/contacts/sakana.jpg"
+                                                src="/assets/images/contacts/raymond.jpg"
                                                 alt=""
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Sakana D. Philip</h4>
+                                            <h4>Raymond Ricketts</h4>
                                             <h5>
-                                                Director, Corporate
-                                                Communications & Branding
+                                                Chief Information Technology
+                                                Officer
                                             </h5>
                                             <p>
-                                                sakana.dikko@cosgroveafrica.com
+                                                raymond.rick@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
                                 </Col>
-                                <Col xs={12} sm={6} lg={4}>
-                                    <li className={styles.personContainer}>
-                                        <div style={{ marginRight: "1rem" }}>
-                                            <img
-                                                src="/assets/images/contacts/generic.jpg"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Tosin Afolabi</h4>
-                                            <h5>Head of Project Monitoring Office</h5>
-                                            <p>
-                                                afolabi.tosin@cosgroveafrica.com
-                                            </p>
-                                        </div>
-                                    </li>
-                                </Col>
+
                                 <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
@@ -173,20 +157,38 @@ export default function () {
                                             </p>
                                         </div>
                                     </li>
-                                </Col>
+                                </Col><Col xs={12} sm={6} lg={4}>
+                                <li className={styles.personContainer}>
+                                    <div style={{ marginRight: "1rem" }}>
+                                        <img
+                                            src="/assets/images/contacts/blesssing.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div style={{ paddingTop: "1rem" }}>
+                                        <h4>Blessing Chinedu-Uzoh</h4>
+                                        <h5>Head, health and safety environment</h5>
+                                        <p>
+                                            chinedu.uzoh@cosgroveafrica.com
+                                        </p>
+                                    </div>
+                                </li>
+                            </Col>
+
+
                                 <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/contacts/nafisa.jpg"
+                                                src="/assets/images/contacts/generic.jpg"
                                                 alt=""
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Nafisa Aliyu</h4>
-                                            <h5>Head, Digital Marketing</h5>
+                                            <h4>Tosin Afolabi</h4>
+                                            <h5>Head of Project Monitoring Office</h5>
                                             <p>
-                                                nafisa.aliyu@cosgroveafrica.com
+                                                afolabi.tosin@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>

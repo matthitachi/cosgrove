@@ -284,7 +284,7 @@ export default function () {
                     <div
                         className={`textDark text-center text-md-end ${styles.developed}`}
                     >
-                        Designed & Developed by FolkMotion
+                        {/*Designed & Developed by FolkMotion*/}
                     </div>
                 </div>
             </div>
