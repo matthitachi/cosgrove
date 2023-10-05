@@ -24,8 +24,8 @@ export default function () {
             <NavBar isDark={true} />
             <HeaderItem
                 height={70}
-                bgImage={"/assets/images/bg/team.jpg"}
-                position={'unset'}
+                bgImage={"/assets/images/Cosgrove-2023-June-Workers-03.jpg"}
+                position={'center -100px'}
             />
             <OverviewSection />
             <Footer />
