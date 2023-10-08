@@ -28,7 +28,7 @@ export default function () {
                         <Col sm={12} className={styles.infoHomeInfo}>
                             <h5>Career</h5>
                             <h2 className={`headerDark ${styles.m65}`}>
-                                Current Openings
+                                Work With Us
                             </h2>
                         </Col>
 
@@ -53,6 +53,11 @@ export default function () {
                                 />
                                 <input
                                     placeholder={"Position"}
+                                    className={styles.formItem}
+                                />
+                                <input
+                                    type={"file"}
+                                    placeholder={"Upload CV Document"}
                                     className={styles.formItem}
                                 />
                                 <textarea
