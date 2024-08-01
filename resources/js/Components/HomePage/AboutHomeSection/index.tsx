@@ -39,7 +39,7 @@ export default function () {
                             Estate
                         </h2>
                         <p className='textPrimary' data-aos="fade-left">
-                            At Cosgrove Investment Limited, we don't just develop properties
+                            At Cosgrove, we don't just develop properties
                             – we envision the future. As leaders in the real
                             estate industry in Africa, we masterfully shape
                             residential and commercial spaces that marry

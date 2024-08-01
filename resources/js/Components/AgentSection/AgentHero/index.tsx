@@ -14,7 +14,7 @@ export default function () {
                     <Col sm={12} className={styles.infoHomeInfo}>
                         <h5>Agent Registration</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
-                            Agency/ Marketing Agreement Between an Agent and Cosgrove Investment Limited
+                            Agency/ Marketing Agreement Between an Agent and Cosgrove
                         </h2>
                     </Col>
 
@@ -47,11 +47,11 @@ export default function () {
                             </li>
                             <li> <b>MARKETING/ MANAGEMENT FEE: </b> We are not under any obligation to pay
                                 <b>THE AGENT</b> Marketing / Managerial fee. Cosgrove is responsible for managing its
-                                own organization. Cosgrove Investment Limited shall pay a <b>5%</b> commission to
+                                own organization. Cosgrove shall pay a <b>5%</b> commission to
                                 <b>THE AGENT</b> for every sale and this should cover the marketing fee (5% commission)
                                 which will be paid on every installment received by Cosgrove.
                             <br/>
-                                Cosgrove Investment Limited shall withhold payment of commission if client’s
+                                Cosgrove shall withhold payment of commission if client’s
                                 Application Form and Acknowledgement copies of offer letters are not returned.
                             </li>
                         </ol>

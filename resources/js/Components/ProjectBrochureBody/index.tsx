@@ -75,7 +75,7 @@ export default function () {
                                     <span>PDF</span>
                                 </button>
                             </div>
-                            <h4>Nouveau by Cosgrove</h4>
+                            <h4>The Nouveau by Cosgrove</h4>
                             <p>PDF</p>
                         </div>
                         </a>

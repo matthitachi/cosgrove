@@ -129,7 +129,7 @@ export default function () {
                             className={`textPrimary mb-4 ${styles.topParagraph}`}
                         >
                             Established in 2017, Cosgrove is at the forefront of disruption in the real estate industry,
-                            Cosgrove Investment Limited is shaping new lifestyles with a focus on the integration of
+                            Cosgrove is shaping new lifestyles with a focus on the integration of
                             revolutionary technology into residential and commercial real estate using sustainable methods.
                         </p>
                     </Col>
@@ -206,7 +206,7 @@ export default function () {
                     <p className={`textPrimary`}>
                         We are also the proud recipients of the prestigious
                         'Leadership in Smart Housing 2021' award from the
-                        Nigerian Institute of Town Planners. At Cosgrove Investment Limited,
+                        Nigerian Institute of Town Planners. At Cosgrove,
                         we continue to set the standard.
                     </p>
                 </div>
@@ -225,7 +225,7 @@ export default function () {
                                 Hard Work meets Creativity
                             </h2>
                             <p className={"textPrimary mt-5"}>
-                                At the heart of Cosgrove Investment Limited is a group of
+                                At the heart of Cosgrove is a group of
                                 trailblazers, led by our Chairman/CEO, Umar Abdullahi OFR.
                                 With his over two-decade long journey in real estate
                                 and finance, he has seen industries evolve,

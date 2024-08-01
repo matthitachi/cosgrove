@@ -63,7 +63,7 @@ export default function () {
     const teamArray: teamItemProp[] = [
         {
             img: '/assets/images/teams/umar.jpg',
-            name: 'Umar Abdullahi',
+            name: 'Umar Abdullahi, OFR.',
             position: 'Chairman/Chief Executive Officer',
             collapse: collapse,
             mainText: <div>
@@ -251,6 +251,55 @@ export default function () {
             img: '/assets/images/teams/adeoba.jpg',
             name: 'Barr. Adeoba Ademoyega',
             position: 'Legal Adviser',
+            collapse: false,
+            mainText: <div>
+                <p className={"textPrimary"}>
+                    Adeoba specializes in real estate development
+                    from the point of execution of Joint Venture
+                    agreements: with Joint Development Partners
+                    (where applicable) to overseeing the process of
+                    construction, sales of commercial and or housing
+                    units and unto the facility management of such
+                    estates and overseeing of all legal matters.
+                </p>
+                <p className={"textPrimary"}>
+                    As Lead Adviser to one Nigeria’s largest real
+                    estate companies in Abuja he currently
+                    supervises and is in charge of about ten (10)
+                    estates within the Federal Capital Territory
+                    comprising of over 1000 housing units. He is
+                    also Lead Adviser on the Kano Economic City
+                    project in Kano.
+                </p>
+            </div>,
+            collapsibleText: <div>
+                <p className={"textPrimary"}>
+                    He was part of the legal team engaged by the
+                    China Civil Engineering Construction Corporation
+                    (CCECC) to negotiate with the Federal Government
+                    of Nigeria in 2006 for the Railway Modernization
+                    Project valued at Eight Billion Three Hundred
+                    Million USD dollars ($8,300,000,000) as well as
+                    the 2009 Standard Gauge Modernization Railway
+                    Contract from Kaduna to Abuja valued at about
+                    One Billion Three Hundred Million USD Dollars
+                    ($1,300,000,000) commissioned recently by the
+                    Nigeria government.
+                </p>
+                <p className={"textPrimary"}>
+                    Adeoba is married to Uche and they have two
+                    lovely children. He is a graduate of Law from
+                    the Ogun State University, Ago-Iwoye and was
+                    called to the Nigerian Bar in 1999. Adeoba is a
+                    Notary Public of the Federal Republic of
+                    Nigeria.
+                </p>
+            </div>
+        },
+        {
+            img: '/assets/images/teams/IMG_5999.JPG',
+            name: 'Raymond Ricketts',
+            position: 'Chief Information Technology Officer',
             collapse: false,
             mainText: <div>
                 <p className={"textPrimary"}>

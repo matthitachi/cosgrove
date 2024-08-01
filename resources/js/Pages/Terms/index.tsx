@@ -30,7 +30,7 @@ export default function () {
             <Container>
                 <div>
                     <h5 className={'subHeader  mt-5 mb-2'}>Terms of Service</h5>
-                    <h2 className={'headerDark'}>Terms of Service for Cosgrove Investment Limited</h2>
+                    <h2 className={'headerDark'}>Terms of Service for Cosgrove</h2>
 
 
 

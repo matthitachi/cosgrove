@@ -33,7 +33,7 @@ export default function () {
                                 <option value="option1">Cosgrove Smart Estate, Wuye</option>
                                 <option value="option2">Cosgrove Smart Estate, Mabushi</option>
                                 <option value="option3">Cosgrove Smart Estate, Guzape</option>
-                                <option value="option4">Nouveaux by Cosgrove, Maitama</option>
+                                <option value="option4">The Nouveau by Cosgrove, Maitama</option>
                                 <option value="option5">Tetra by Cosgrove, Wuye</option>
                                 <option value="option6">Cosgrove Smart City, Katampe</option>
                                 <option value="option7">Châteaux by Cosgrove, Wuse 2</option>

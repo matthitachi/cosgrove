@@ -130,7 +130,7 @@ export const estateFeatures = [
 export const projects: ProjectItemProp[] = [
 
     {
-        name: 'Nouveau by Cosgrove, Maitama',
+        name: 'The Nouveau by Cosgrove, Maitama',
         slug: 'cosgrove_smart_estate_maitama',
         location: 'Maitama',
         description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
@@ -1318,7 +1318,7 @@ export const houseTypes: houseTypeItemProps[] = [
     },
     {
         img: '/assets/images/house-types/maitama/portrait.jpg',
-        name: 'Nouveau Villa',
+        name: 'The Nouveau Villa',
         desc: '6-Bedroom Villa',
         slug: 'nouveau_villa',
         projectSlug: ['nouveau'],
@@ -1328,7 +1328,7 @@ export const houseTypes: houseTypeItemProps[] = [
             '\n' +
             'The master bedroom is a sanctuary, complete with a home office and outdoor terrace. Additional spacious bedrooms, accessible walk and bicycle paths, and parking for up to six cars make life here effortlessly luxurious. The community\'s extra-wide roads, backyard, and mini-garden further elevate the living experience. \n' +
             '\n' +
-            'Residents of the Nouveau have access to world-class infrastructure, indoor and outdoor recreation and some of the most sophisticated, state-of-the-art security protocols and advanced home automation available anywhere in the world.\n',
+            'Residents of The Nouveau have access to world-class infrastructure, indoor and outdoor recreation and some of the most sophisticated, state-of-the-art security protocols and advanced home automation available anywhere in the world.\n',
         galleryBasePath: '/assets/images/house-types/maitama/gallery/',
         gallery: [
             '01_exterior.jpg',
@@ -1415,7 +1415,7 @@ export const brochures : brochuresItemProp[] = [
        fileTypeIcon:'/assets/images/bg/Logotype.png'
     },
     {
-        name:'Nouveau by Cosgrove',
+        name:'The Nouveau by Cosgrove',
         image: '/assets/images/bg/nouveau.png',
        link: '/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf',
        fileType: 'PDF',

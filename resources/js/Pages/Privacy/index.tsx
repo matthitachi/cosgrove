@@ -30,10 +30,10 @@ export default function () {
             <Container>
                 <div>
                     <h5 className={'subHeader  mt-5 mb-2'}>Privacy Policy</h5>
-                    <h2 className={'headerDark'}>Privacy Policy for Cosgrove Investment Limited</h2>
+                    <h2 className={'headerDark'}>Privacy Policy for Cosgrove</h2>
 
                     <p className={'textPrimary'}>
-                        At Cosgrove Investment Limited, we are committed to safeguarding the privacy of our visitors and users. This Privacy Policy outlines the types of information we collect and how we use it. Please read this policy carefully to understand how your personal information will be treated when you use our website, accessible at www.cosgroveafrica.com
+                        At Cosgrove, we are committed to safeguarding the privacy of our visitors and users. This Privacy Policy outlines the types of information we collect and how we use it. Please read this policy carefully to understand how your personal information will be treated when you use our website, accessible at www.cosgroveafrica.com
                     </p>
 
                     <p className={'textPrimary'}>

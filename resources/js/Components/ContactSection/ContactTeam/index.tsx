@@ -39,7 +39,7 @@ export default function () {
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Chioma Ugwu</h4>
+                                            <h4>Dr. Chioma Ugwu</h4>
                                             <h5>
                                                 Director, Business Development
                                             </h5>
@@ -73,36 +73,20 @@ export default function () {
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
-                                                src="/assets/images/teams/ibrahim.png"
+                                                src="/assets/images/contacts/lslkf.png"
                                                 alt=""
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Imam Ibrahim</h4>
-                                            <h5>Head, Procurement</h5>
+                                            <h4>QS Bridget .O. Musa (FNIQS RQS MBA)</h4>
+                                            <h5>Commercial Director</h5>
                                             <p>
-                                                imam.ibrahim@cosgroveafrica.com
+                                                bridget.musa@cosgroveafrica.com
                                             </p>
                                         </div>
                                     </li>
                                 </Col>
-                                <Col xs={12} sm={6} lg={4}>
-                                    <li className={styles.personContainer}>
-                                        <div style={{ marginRight: "1rem" }}>
-                                            <img
-                                                src="/assets/images/teams/ochua.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Ochua Umoru</h4>
-                                            <h5>Head, Marketing</h5>
-                                            <p>
-                                                ochua.umoru@cosgroveafrica.com
-                                            </p>
-                                        </div>
-                                    </li>
-                                </Col>
+
                                 <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
                                         <div style={{ marginRight: "1rem" }}>
@@ -120,26 +104,7 @@ export default function () {
                                         </div>
                                     </li>
                                 </Col>
-                                <Col xs={12} sm={6} lg={4}>
-                                    <li className={styles.personContainer}>
-                                        <div style={{ marginRight: "1rem" }}>
-                                            <img
-                                                src="/assets/images/contacts/raymond.jpg"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div style={{ paddingTop: "1rem" }}>
-                                            <h4>Raymond Ricketts</h4>
-                                            <h5>
-                                                Chief Information Technology
-                                                Officer
-                                            </h5>
-                                            <p>
-                                                raymond.rick@cosgroveafrica.com
-                                            </p>
-                                        </div>
-                                    </li>
-                                </Col>
+
 
                                 <Col xs={12} sm={6} lg={4}>
                                     <li className={styles.personContainer}>
