@@ -303,45 +303,25 @@ export default function () {
             collapse: false,
             mainText: <div>
                 <p className={"textPrimary"}>
-                    Adeoba specializes in real estate development
-                    from the point of execution of Joint Venture
-                    agreements: with Joint Development Partners
-                    (where applicable) to overseeing the process of
-                    construction, sales of commercial and or housing
-                    units and unto the facility management of such
-                    estates and overseeing of all legal matters.
+                    Engr Raymond Ricketts, Chief Information Technology Officer at Cosgrove Investment Limited,
+                    brings over 18 years of experience in the Information and Communications Technology industry.
+                    A graduate of Engineering from the Federal University of Technology Minna, he has excelled in
+                    various roles across corporate and government sectors, leading transformative projects and
+                    driving significant advancements.
                 </p>
                 <p className={"textPrimary"}>
-                    As Lead Adviser to one Nigeria’s largest real
-                    estate companies in Abuja he currently
-                    supervises and is in charge of about ten (10)
-                    estates within the Federal Capital Territory
-                    comprising of over 1000 housing units. He is
-                    also Lead Adviser on the Kano Economic City
-                    project in Kano.
+                    At Cosgrove, Engr Raymond is committed to innovation and strategic excellence, pushing
+                    the boundaries of technology and fostering continuous growth. His passion for exploring
+                    new technologies and engaging in community outreach enriches his work and inspires those around
+                    him. Raymond's leadership continues to propel Cosgrove forward in the industry.
                 </p>
             </div>,
             collapsibleText: <div>
                 <p className={"textPrimary"}>
-                    He was part of the legal team engaged by the
-                    China Civil Engineering Construction Corporation
-                    (CCECC) to negotiate with the Federal Government
-                    of Nigeria in 2006 for the Railway Modernization
-                    Project valued at Eight Billion Three Hundred
-                    Million USD dollars ($8,300,000,000) as well as
-                    the 2009 Standard Gauge Modernization Railway
-                    Contract from Kaduna to Abuja valued at about
-                    One Billion Three Hundred Million USD Dollars
-                    ($1,300,000,000) commissioned recently by the
-                    Nigeria government.
+
                 </p>
                 <p className={"textPrimary"}>
-                    Adeoba is married to Uche and they have two
-                    lovely children. He is a graduate of Law from
-                    the Ogun State University, Ago-Iwoye and was
-                    called to the Nigerian Bar in 1999. Adeoba is a
-                    Notary Public of the Federal Republic of
-                    Nigeria.
+
                 </p>
             </div>
         }
