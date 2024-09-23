@@ -69,8 +69,7 @@ export default function () {
             mainText: <div>
                 <p className={"textPrimary"}>
                     The Cosgrove founder, Umar comes with over 2
-                    decades varied experience in Real Estate
-                    Development, Investment, and Financial Services.
+                    decades varied experience in Real estate, infrastructure and technology.
                     Notably, Umar served as the pioneer Managing
                     Director of Brains & Hammers Ltd. for 8 years.
                 </p>
