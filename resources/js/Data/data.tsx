@@ -703,60 +703,60 @@ export const projects: ProjectItemProp[] = [
 
         ]
     },
-    {
-        name: 'NITDA Digital Enterpreneurship & Innovation Center',
-        slug: 'nitda',
-        location: 'Central Area',
-        description: 'Cosgrove is spearheading the NITDA Entrepreneurship and Digital Innovation Center, a prominent 2-tower structure in the CBD Cadastral zone. Designed as the digital hub for the National Information Technology Development Agency (NITDA), the interconnected towers span 9 levels and cover 1,500 sqm. The facility boasts offices, an auditorium, server rooms, a fabrication lab, and studio apartments. Additional amenities include parking spaces, a gym, a restaurant, and residential units. The center is equipped with five elevators and three staircases for efficient movement.\n' +
-            '\n\n' +
-            'Parking Spaces: Basement floor parking with additional 27 parking spaces\n' +
-            'Surface area: 1,500 sqm\n' +
-            'Towers: 2 interconnected towers spanning 9 levels\n' +
-            'Special Features: Auditorium, server rooms, fabrication lab, studio apartments\n' +
-            'Additional Amenities: Gym, restaurant, multi-faith area\n' +
-            'Vertical Circulation: Five elevators and three staircases\n',
-        detailsImg: '/assets/images/projects/nitda/portrait.jpg',
-        mainImg: '/assets/images/projects/nitda/landscape.jpg',
-        distFeature: [],
-        galleryBasePath: '/assets/images/projects/nitda/gallery/',
-        gallery: [
-            '9eef280c-966c-4c21-a585-d7e1f31db22c.JPG',
-            '84c8152a-d731-4736-a71c-1002863440e6.JPG',
-            '395f5ac7-36ab-4e3d-ad31-5da0923c69a5.JPG',
-            '797e6a11-997a-4e99-a647-1158afe2d997.JPG',
-            'c76b38dd-65b2-4ebc-8eeb-b32a1d5db9c1.JPG',
-            'dc836962-5448-4cf0-8121-1dedaa04d159.JPG',
-            'ec678c85-e96e-4588-91bf-fd1465a8d110.JPG',
-            'IMAGE-1.jpg',
-            'IMAGE-2.jpg',
-            'IMAGE-3.jpg',
-            'IMG-7295.jpg',
-            'IMG-7296.jpg',
-            'IMG-7297.jpg',
-            'IMG-7298.jpg',
-            'IMG-7299.jpg',
-            'IMG-7300.jpg',
-            'IMG-7301.jpg'
-        ],
-        estateFeatures: [
-            estateFeatures[0],
-            estateFeatures[1],
-            estateFeatures[2],
-            estateFeatures[3],
-            estateFeatures[4],
-            estateFeatures[5],
-            estateFeatures[6],
-            estateFeatures[7],
-            estateFeatures[8],
-            estateFeatures[9],
-            estateFeatures[10],
-            estateFeatures[11],
-            estateFeatures[12],
-            estateFeatures[12],
-            estateFeatures[14],
-
-        ]
-    },
+    // {
+    //     name: 'NITDA Digital Enterpreneurship & Innovation Center',
+    //     slug: 'nitda',
+    //     location: 'Central Area',
+    //     description: 'Cosgrove is spearheading the NITDA Entrepreneurship and Digital Innovation Center, a prominent 2-tower structure in the CBD Cadastral zone. Designed as the digital hub for the National Information Technology Development Agency (NITDA), the interconnected towers span 9 levels and cover 1,500 sqm. The facility boasts offices, an auditorium, server rooms, a fabrication lab, and studio apartments. Additional amenities include parking spaces, a gym, a restaurant, and residential units. The center is equipped with five elevators and three staircases for efficient movement.\n' +
+    //         '\n\n' +
+    //         'Parking Spaces: Basement floor parking with additional 27 parking spaces\n' +
+    //         'Surface area: 1,500 sqm\n' +
+    //         'Towers: 2 interconnected towers spanning 9 levels\n' +
+    //         'Special Features: Auditorium, server rooms, fabrication lab, studio apartments\n' +
+    //         'Additional Amenities: Gym, restaurant, multi-faith area\n' +
+    //         'Vertical Circulation: Five elevators and three staircases\n',
+    //     detailsImg: '/assets/images/projects/nitda/portrait.jpg',
+    //     mainImg: '/assets/images/projects/nitda/landscape.jpg',
+    //     distFeature: [],
+    //     galleryBasePath: '/assets/images/projects/nitda/gallery/',
+    //     gallery: [
+    //         '9eef280c-966c-4c21-a585-d7e1f31db22c.JPG',
+    //         '84c8152a-d731-4736-a71c-1002863440e6.JPG',
+    //         '395f5ac7-36ab-4e3d-ad31-5da0923c69a5.JPG',
+    //         '797e6a11-997a-4e99-a647-1158afe2d997.JPG',
+    //         'c76b38dd-65b2-4ebc-8eeb-b32a1d5db9c1.JPG',
+    //         'dc836962-5448-4cf0-8121-1dedaa04d159.JPG',
+    //         'ec678c85-e96e-4588-91bf-fd1465a8d110.JPG',
+    //         'IMAGE-1.jpg',
+    //         'IMAGE-2.jpg',
+    //         'IMAGE-3.jpg',
+    //         'IMG-7295.jpg',
+    //         'IMG-7296.jpg',
+    //         'IMG-7297.jpg',
+    //         'IMG-7298.jpg',
+    //         'IMG-7299.jpg',
+    //         'IMG-7300.jpg',
+    //         'IMG-7301.jpg'
+    //     ],
+    //     estateFeatures: [
+    //         estateFeatures[0],
+    //         estateFeatures[1],
+    //         estateFeatures[2],
+    //         estateFeatures[3],
+    //         estateFeatures[4],
+    //         estateFeatures[5],
+    //         estateFeatures[6],
+    //         estateFeatures[7],
+    //         estateFeatures[8],
+    //         estateFeatures[9],
+    //         estateFeatures[10],
+    //         estateFeatures[11],
+    //         estateFeatures[12],
+    //         estateFeatures[12],
+    //         estateFeatures[14],
+    //
+    //     ]
+    // },
 ];
 
 export const houseTypes: houseTypeItemProps[] = [
