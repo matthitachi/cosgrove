@@ -133,7 +133,7 @@ export const projects: ProjectItemProp[] = [
         name: 'The Nouveau by Cosgrove, Maitama',
         slug: 'cosgrove_smart_estate_maitama',
         location: 'Maitama',
-        description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development; it\'s a revelation. Forged in a Public-Private Partnership with The Nigeria Police, it\'s a citadel of impenetrable security and cutting-edge automation. Each of the six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
+        description: 'In architecture, as in life, the boldest visions yield the most transformative realities." The Nouveau by Cosgrove in Maitama, Abuja, is not just a development;  it\'s a citadel of impenetrable security and cutting-edge automation. Each of the six-bedroom villas is an oasis unto itself, complete with a private pool and garden. Situated in a district synonymous with global-caliber infrastructure, The Nouveau is more than a sanctuary—it\'s the epitome of a life less ordinary, where every square inch resonates with unparalleled sophistication\n',
         detailsImg: '/assets/images/projects/maitama/portrait.jpg',
         mainImg: '/assets/images/projects/maitama/landscape.jpg',
         distFeature: [
