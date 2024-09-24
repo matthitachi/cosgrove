@@ -1414,13 +1414,13 @@ export const brochures : brochuresItemProp[] = [
        fileType: 'PDF',
        fileTypeIcon:'/assets/images/bg/Logotype.png'
     },
-    {
-        name:'The Nouveau by Cosgrove',
-        image: '/assets/images/bg/nouveau.png',
-       link: '/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf',
-       fileType: 'PDF',
-       fileTypeIcon:'/assets/images/bg/Logotype.png'
-    },
+    // {
+    //     name:'The Nouveau by Cosgrove',
+    //     image: '/assets/images/bg/nouveau.png',
+    //    link: '/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf',
+    //    fileType: 'PDF',
+    //    fileTypeIcon:'/assets/images/bg/Logotype.png'
+    // },
     {
         name:'The Chateaux by Cosgrove',
         image: '/assets/images/bg/chateaux.png',
