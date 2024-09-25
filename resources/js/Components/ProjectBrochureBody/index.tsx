@@ -58,27 +58,27 @@ export default function () {
                         </a>
 
                         {/* ITEM 3 */}
-                        <a href={'/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf'}  target={'_blank'}>
-                        <div>
-                            <div
-                                className={styles.brochureItem}
-                                style={{
-                                    background:
-                                        'url("/assets/images/bg/nouveau.png")',
-                                }}
-                            >
-                                <button>
-                                    <img
-                                        src="/assets/images/bg/Logotype.png"
-                                        alt="pdf logo"
-                                    />
-                                    <span>PDF</span>
-                                </button>
-                            </div>
-                            <h4>The Nouveau by Cosgrove</h4>
-                            <p>PDF</p>
-                        </div>
-                        </a>
+                        {/*<a href={'/assets/brochures/nouveau-by-cosgrove-ebrochure.pdf'}  target={'_blank'}>*/}
+                        {/*<div>*/}
+                        {/*    <div*/}
+                        {/*        className={styles.brochureItem}*/}
+                        {/*        style={{*/}
+                        {/*            background:*/}
+                        {/*                'url("/assets/images/bg/nouveau.png")',*/}
+                        {/*        }}*/}
+                        {/*    >*/}
+                        {/*        <button>*/}
+                        {/*            <img*/}
+                        {/*                src="/assets/images/bg/Logotype.png"*/}
+                        {/*                alt="pdf logo"*/}
+                        {/*            />*/}
+                        {/*            <span>PDF</span>*/}
+                        {/*        </button>*/}
+                        {/*    </div>*/}
+                        {/*    <h4>The Nouveau by Cosgrove</h4>*/}
+                        {/*    <p>PDF</p>*/}
+                        {/*</div>*/}
+                        {/*</a>*/}
                         {/* ITEM 4  */}
                         <a href={'/assets/brochures/the-chateaux-by-cosgrove.pdf'}  target={'_blank'}>
                         <div>
