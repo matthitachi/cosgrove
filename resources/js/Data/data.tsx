@@ -52,7 +52,7 @@ export const estateFeatures = [
 
     {
         img: <CentralSecurityControl/>,
-        title: 'Central Security Control:',
+        title: 'Central Security Control',
         subText: 'Centralized security monitoring hub for the entire estate.',
     },
     {

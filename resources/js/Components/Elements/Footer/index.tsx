@@ -217,7 +217,7 @@ export default function () {
                             <h5 className={`headerDark`}>Write Us</h5>
                             <ul>
                                 <li className={`textDark`}>
-                                    <a href={'mail:info@cosgroveafrica.com'}>info@cosgroveafrica.com</a>
+                                    <a style={{wordBreak:'break-all'}} href={'mail:info@cosgroveafrica.com'}>info@cosgroveafrica.com</a>
                                 </li>
                             </ul>
                         </Col>

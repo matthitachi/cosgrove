@@ -12,7 +12,11 @@ import {useEffect} from "react";
 export default function () {
 
     const [loading, setLoading] = useState<boolean>(true);
+    const [position, setPosition] = useState<string>('unset');
     useEffect(()=>{
+        if(window.innerWidth < 576){
+            setPosition('bottom');
+        }
         setTimeout(()=>{
             setLoading(false);
         }, 1000)
@@ -24,6 +28,7 @@ export default function () {
             <HeaderItem
                 height={50}
                 bgImage={"/assets/images/bg/bgContact.png"}
+                position={position}
             />
             <Hero />
             <Footer />

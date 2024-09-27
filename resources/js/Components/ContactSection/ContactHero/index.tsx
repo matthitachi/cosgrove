@@ -1,11 +1,81 @@
-import { Col, Container, Row } from "react-bootstrap";
+import {Alert, Col, Container, Row} from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
 // @ts-ignore
 import { ReactComponent as Select } from "/public/assets/svg/select.svg";
+import cosgroveApiServices from "../../../Services/cosgroveApiServices";
+import {useState} from "react";
 
 export default function () {
+
+    const [formVal, setFormVal] = useState<Form>({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+    const [showAlert, setShowAlert] = useState<boolean>(false);
+    const [variant, setVariant] = useState<Object>({
+        type: 'successful',
+        message:'Message sent Successfully'
+    });
+    const [errors, setErrors] = useState<Partial<Err>>({});
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement | { name?: string; value: unknown }>) => {
+        const {name, value} = event.target;
+        setFormVal((prevValues: Form) => ({
+            ...prevValues,
+            [name as keyof Form]: value as string,
+        }));
+    };
+    const validateEmail = (email: string) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+    const handleSubmit = async () => {
+        const validateErr: Partial<Err> = {};
+
+        if (!formVal.name) {
+            validateErr.name = 'Name is required';
+        }
+        if (!formVal.email) {
+            validateErr.email = 'email is required';
+        }
+        if (!validateEmail(formVal.email)) {
+            validateErr.email = 'Enter a valid email';
+        }
+
+        setErrors(validateErr);
+        if (Object.keys(validateErr).length > 0) {
+            console.log('failed');
+            return;
+        }
+
+        let response = await (new cosgroveApiServices()).sendContactDetails(formVal);
+        console.log(response);
+        if(response.status == true){
+            setFormVal({
+                name: '',
+                email: '',
+                phone: '',
+                message: ''
+            });
+
+            setVariant({
+                type: "success",
+                message: 'Message Sent Successfully'
+            });
+        }else{
+
+            setVariant({
+                type: "danger",
+                message: 'Message Failed'
+            });
+        }
+        setShowAlert(true);
+        setTimeout(()=>{
+            setShowAlert(false);
+        }, 2000);
+    };
     return (
         <section className={styles.topSection}>
             <Container fluid>
@@ -26,19 +96,35 @@ export default function () {
                         </p>
 
                         <form className={styles.contactInTouch}>
-                            <select>
+                            {
+                                Object.keys(errors).length > 0 &&
+                                <div className={`text-center mb-3`}>
+                                    {
+                                        Object.keys(errors).map((item)=> {
+                                            return (<div>{errors[item]}</div>)
+                                        })
+                                    }
+                                </div>}
+
+                            {
+                                showAlert &&
+                                <Alert key={variant.type} variant={variant.type}>
+                                    {variant.message}
+                                </Alert>
+                            }
+                            <select value={formVal.project} onChange={handleChange} name={'project'}>
                                 <option disabled selected hidden>
                                     Select a Project
                                 </option>
-                                <option value="option1">Cosgrove Smart Estate, Wuye</option>
-                                <option value="option2">Cosgrove Smart Estate, Mabushi</option>
-                                <option value="option3">Cosgrove Smart Estate, Guzape</option>
-                                <option value="option4">The Nouveau by Cosgrove, Maitama</option>
-                                <option value="option5">Tetra by Cosgrove, Wuye</option>
-                                <option value="option6">Cosgrove Smart City, Katampe</option>
-                                <option value="option7">Châteaux by Cosgrove, Wuse 2</option>
-                                <option value="option8">Fourteen by Cosgrove, Wuye</option>
-                                <option value="option9">Cosgrove Smart Estate, Wuse 2</option>
+                                <option value="Cosgrove Smart Estate, Wuye">Cosgrove Smart Estate, Wuye</option>
+                                <option value="Cosgrove Smart Estate, Mabushi">Cosgrove Smart Estate, Mabushi</option>
+                                <option value="Cosgrove Smart Estate, Guzape">Cosgrove Smart Estate, Guzape</option>
+                                <option value="The Nouveau by Cosgrove, Maitama">The Nouveau by Cosgrove, Maitama</option>
+                                <option value="Tetra by Cosgrove, Wuye">Tetra by Cosgrove, Wuye</option>
+                                <option value="Cosgrove Smart City, Katampe">Cosgrove Smart City, Katampe</option>
+                                <option value="Châteaux by Cosgrove, Wuse 2">Châteaux by Cosgrove, Wuse 2</option>
+                                <option value="Fourteen by Cosgrove, Wuye">Fourteen by Cosgrove, Wuye</option>
+                                <option value="Cosgrove Smart Estate, Wuse 2">Cosgrove Smart Estate, Wuse 2</option>
                             </select>
                             {/*<div>*/}
                             {/*    <Select />*/}
@@ -46,21 +132,25 @@ export default function () {
                             <input
                                 placeholder={"Name"}
                                 className={styles.formItem}
+                                value={formVal.name} onChange={handleChange} name={'name'} onError={() => Boolean(errors.name)}
                             />
                             <input
                                 placeholder={"Email"}
                                 className={styles.formItem}
+                                value={formVal.email} onChange={handleChange} name={'email'} onError={() => Boolean(errors.email)}
                             />
                             <input
                                 placeholder={"Phone"}
                                 className={styles.formItem}
+                                value={formVal.phone} onChange={handleChange} name={'phone'}
                             />
                             <textarea
                                 placeholder={"Do you have a special request?"}
                                 className={styles.formItem}
+                                value={formVal.message} onChange={handleChange} name={'message'}
                             />
 
-                            <button>Submit</button>
+                            <button onClick={handleSubmit}>Submit</button>
                         </form>
                     </Col>
                     <Col md={12} lg={5} className={styles.infoHomeCol}>

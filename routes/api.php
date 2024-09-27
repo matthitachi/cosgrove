@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('/v1')->group(function (){
    Route::post('contact-details', [\App\Http\Controllers\ApiController::class, 'sendContact']);
+   Route::post('agent-details', [\App\Http\Controllers\ApiController::class, 'sendAgent']);
 });
