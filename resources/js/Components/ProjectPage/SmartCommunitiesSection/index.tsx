@@ -183,7 +183,7 @@ export default function () {
                         <img
                             className={styles.arrowRightSvg}
                             src={arrowRightSvg}
-                            alt="Your SVG"
+                            alt="Cosgrove Real Estate - Projects"
                         />
                     </button>
                 </div>

@@ -105,12 +105,12 @@ export default function ({search}: searchSectionProps) {
                         }}} />
                     <img
                         src={searchSvg}
-                        alt="Search SVG"
+                        alt=" Cosgrove Real Estate - Search SVG"
                         className={styles.searchSvg}
                     />
                     <img
                         src={closeSvg}
-                        alt="Close SVG"
+                        alt=" Cosgrove Real Estate - Close SVG"
                         className={styles.searchClose}
                         onClick={() => {
                             setSearchInput('');
@@ -162,7 +162,7 @@ export default function ({search}: searchSectionProps) {
                                 <a href={item.link} key={index}>
                                     <div>
                                         <a href="">{item.name}.pdf</a>
-                                        <span><img src={Download} alt=""/></span>
+                                        <span><img src={Download} alt=" Cosgrove Real Estate - Brochures"/></span>
                                     </div>
                                 </a>
                             ))

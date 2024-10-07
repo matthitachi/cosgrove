@@ -40,7 +40,7 @@ export default function () {
                             <img
                                 className={styles.arrowRightSvg}
                                 src={arrowRightSvg}
-                                alt="Your SVG"
+                                alt="Cosgrove Real Estate - Learn More"
                             />
                         </Link>
                     </Col>
@@ -56,7 +56,7 @@ export default function () {
                         <img
                             className={styles.arrowRightSvg}
                             src={arrowRightSvg}
-                            alt="Your SVG"
+                            alt="Cosgrove Real Estate - Projects"
                         />
                     </Link>
                 </div>

@@ -52,7 +52,7 @@ export default function () {
                     <img
                         className={styles.navBrandImg}
                         src="/assets/images/logo.png"
-                        alt={""}
+                        alt={" Cosgrove Africa Logo"}
                     />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

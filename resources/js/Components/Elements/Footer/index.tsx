@@ -65,37 +65,37 @@ export default function () {
             name: "FaceBook",
             image: socialBasePath + "facebook.png",
             link: "https://web.facebook.com/cosgroveafrica",
-            alt: "",
+            alt: " Cosgrove Real Estate - Facebook",
         },
         {
             name: "Instagram",
             image: socialBasePath + "instagram.png",
             link: "https://www.instagram.com/cosgroveafrica ",
-            alt: "",
+            alt: "  Cosgrove Real Estate - Instagram",
         },
         {
             name: "Twitter",
             image: socialBasePath + "x.png",
             link: "https://twitter.com/cosgroveafrica",
-            alt: "",
+            alt: " Cosgrove Real Estate - Twitter",
         },
         {
             name: "Threads",
             image: socialBasePath + "thread.png",
             link: "https://www.threads.net/@cosgroveafrica",
-            alt: "",
+            alt: " Cosgrove Real Estate - Threads",
         },
         {
             name: "Youtube",
             image: socialBasePath + "youtube.png",
             link: "https://www.youtube.com/@CosgroveAfrica",
-            alt: "",
+            alt: " Cosgrove Real Estate - Youtube",
         },
         {
             name: "LinkedIn",
             image: socialBasePath + "linkedin.png",
             link: "https://www.linkedin.com/company/cosgroveafrica",
-            alt: "",
+            alt: " Cosgrove Real Estate - LinkedIn",
         },
     ];
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | { name?: string; value: unknown }>) => {

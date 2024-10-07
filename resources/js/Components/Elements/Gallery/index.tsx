@@ -89,7 +89,7 @@ export default function ({
                             key={i}
                             src={image.image}
                             className={styles.display}
-                            alt={""}
+                            alt={"Cosgrove Real Estate - Gallery"}
                         />
                     ))}
                 </Masonry>

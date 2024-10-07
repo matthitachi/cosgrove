@@ -16,7 +16,7 @@ export interface SupportItemProp {
 export const SupportItem = (prop: SupportItemProp) => {
     return (
         <div>
-            <img src={prop.image} alt={''}/>
+            <img src={prop.image} alt={' Cosgrove Africa - Support'}/>
             <h5>{prop.title}</h5>
             <p className={'textDark'}>{prop.description}</p>
             <button onClick={prop.buttonAction}

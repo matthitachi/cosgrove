@@ -26,6 +26,7 @@ export default function () {
     }, []);
     return (
         <section className={styles.infoHomeSection}>
+            <p style={{ display: 'none' }}>A Real Estate Development, Property Development Company in Abuja, Nigeria</p>
             <Container fluid>
                 <Row>
                     <Col sm={12} md={6} className={styles.infoHomeCol}>
@@ -57,7 +58,7 @@ export default function () {
                             <img
                                 className={styles.arrowRightSvg}
                                 src={arrowRightSvg}
-                                alt="Your SVG"
+                                alt="Cosgrove Real Estate - Learn More"
                             />
                         </Link>
                         </div>

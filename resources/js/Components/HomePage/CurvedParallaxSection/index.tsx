@@ -15,7 +15,7 @@ export default function () {
             <div className={styles.parallaxCtx}>
                 <Parallax
                     bgImage={"assets/images/DJI_0540.JPG"}
-                    bgImageAlt="the cat"
+                    bgImageAlt="Cosgrove Real Estate - Parallax"
                     strength={200}
                     className={styles.parallaxElement}
                     contentClassName={styles.parallaxContent}

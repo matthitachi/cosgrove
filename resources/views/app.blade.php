@@ -2,7 +2,62 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+
+   <!-- Meta Title -->
+   <title> Real Estate Company in Abuja | Property Developer   - Cosgrove</title>
+
+   <!-- Meta Description -->
+   <meta name="description" content="At Cosgrove, we don't just build properties; we design the future of Africa's real estate. Combining luxury, cutting-edge technology, and sustainability, we set the standard for residential and commercial spaces in Nigeria and beyond.">
+
+   <!-- Keywords -->
+<meta name="keywords" content="Cosgrove, real estate, future of real estate, luxury homes, smart homes, sustainable living, eco-friendly properties, Abuja, Lagos, Nigeria real estate, Africa, commercial spaces, residential development, Real Estate Investment Abuja, Real Estate Investment Lagos, Real Estate Investment Nigeria, Property Investment Abuja, Property Investment Lagos, Investment Opportunities Nigeria, Infinite Acres Real Estate, Nigeria Real Estate Investment, Abuja Property Investments, Lagos Real Estate Portfolio">
+
+   <!-- Author -->
+   <meta name="author" content="Cosgrove Africa">
+
+   <!-- Open Graph Meta Tags for Social Sharing -->
+   <meta property="og:title" content="Cosgrove | Shaping the Future of Africa's Real Estate with Luxury and Innovation">
+   <meta property="og:description" content="Discover Cosgrove's visionary approach to real estate development in Africa. We combine luxury, sustainability, and cutting-edge technology to create extraordinary residential and commercial spaces.">
+   <meta property="og:image" content="https://cosgroveafrica.com/assets/images/CGV18.jpg">
+   <meta property="og:url" content="https://cosgroveafrica.com">
+   <meta property="og:type" content="website">
+   <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Real Estate Company in Abuja | Property Developer   - Cosgrove">
+    <meta name="geo.region" content="NG-FC"> <!-- For Abuja -->
+    <meta name="geo.placename" content="Abuja, Nigeria">
+    <meta name="geo.position" content="9.0765;7.3986"> <!-- Lat/Long for Abuja -->
+    <meta name="ICBM" content="9.0765, 7.3986"> <!-- Lat/Long for Abuja -->
+
+
+   <!-- Twitter Card Meta Tags -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Cosgrove | Shaping the Future of Africa's Real Estate with Luxury and Innovation">
+   <meta name="twitter:description" content="Explore Cosgrove’s world-class real estate developments in Nigeria and Africa. Leading with luxury, sustainability, and cutting-edge technology, we are building the future.">
+   <meta name="twitter:image" content="https://cosgroveafrica.com/assets/images/CGV18.jpg">
+
+   <!-- Canonical Link -->
+   <link rel="canonical" href="https://cosgroveafrica.com">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "RealEstateAgent",
+          "name": "Cosgrove Real Estate",
+          "image": "https://cosgroveafrica.com/assets/images/CGV18.jpg",
+          "url": "https://www.cosgroveafrica.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Abuja",
+            "addressRegion": "FCT",
+            "addressCountry": "Nigeria"
+          },
+          "description": "At Cosgrove, we design and develop luxury real estate properties with cutting-edge technology and sustainability at the core.",
+          "telephone": "+2349060001552"
+        }
+        </script>
+
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)

@@ -108,7 +108,7 @@ export default function () {
                     <img
                         className={styles.navBrandImg}
                         src="/assets/images/logo.png"
-                        alt={""}
+                        alt={" Cosgrove Real Estate"}
                     />
                 </Navbar.Brand>
                 <Navbar.Toggle
