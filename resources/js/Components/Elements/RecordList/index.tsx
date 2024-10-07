@@ -27,7 +27,7 @@ export const RecordItem = ({type = 1, ...prop}: RecordItemProp) => {
     }
     const [digits, nonDigits] = splitDigitsAndNonDigits(prop.count);
     return (<div className={styles.recordItem}>
-        <img src={prop.image} alt={''}/>
+        <img src={prop.image} alt={' Cosgrove Africa'}/>
         <div>
             <h3>
                 <VisibilitySensor
