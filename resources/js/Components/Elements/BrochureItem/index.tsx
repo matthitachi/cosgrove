@@ -26,7 +26,7 @@ name, image, link, fileType, fileTypeIcon
                     <button>
                         <img
                             src={fileTypeIcon}
-                            alt={`${fileType} logo`}
+                            alt={` Cosgrove Africa - ${fileType} logo`}
                         />
                         <span>{fileType}</span>
                     </button>

@@ -35,7 +35,7 @@ export default function () {
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
                                                 src="/assets/images/contacts/chioma.jpg"
-                                                alt=""
+                                                alt=" Cosgrove Real Estate - Dr. Chioma Ugwu"
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
@@ -54,7 +54,7 @@ export default function () {
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
                                                 src="/assets/images/contacts/sakana.jpg"
-                                                alt=""
+                                                alt="Cosgrove Real Estate - Sakana D. Philip"
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
@@ -74,7 +74,7 @@ export default function () {
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
                                                 src="/assets/images/contacts/lslkf.png"
-                                                alt=""
+                                                alt=" Cosgrove Real Estate - QS Bridget .O. Musa"
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
@@ -92,7 +92,7 @@ export default function () {
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
                                                 src="/assets/images/contacts/nafisa.jpg"
-                                                alt=""
+                                                alt=" Cosgrove Real Estate - Nafisa Aliyu"
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
@@ -111,7 +111,7 @@ export default function () {
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
                                                 src="/assets/images/contacts/fatima.jpg"
-                                                alt=""
+                                                alt=" Cosgrove Real Estate - Fatima Mbaka"
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>
@@ -127,7 +127,7 @@ export default function () {
                                     <div style={{ marginRight: "1rem" }}>
                                         <img
                                             src="/assets/images/contacts/blesssing.jpg"
-                                            alt=""
+                                            alt=" Cosgrove Real Estate - Blessing Chinedu-Uzoh"
                                         />
                                     </div>
                                     <div style={{ paddingTop: "1rem" }}>
@@ -146,7 +146,7 @@ export default function () {
                                         <div style={{ marginRight: "1rem" }}>
                                             <img
                                                 src="/assets/images/contacts/generic.jpg"
-                                                alt=""
+                                                alt=" Cosgrove Real Estate - Tosin Afolabi"
                                             />
                                         </div>
                                         <div style={{ paddingTop: "1rem" }}>

@@ -101,7 +101,7 @@ export default function ({isDark = false}: navbarProp) {
                     <img
                         className={styles.navBrandImg}
                         src="/assets/images/logo.png"
-                        alt={""}
+                        alt={" Cosgrove Africa Logo"}
                     />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className={styles.toggleButton}

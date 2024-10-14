@@ -99,12 +99,12 @@ export default function () {
                     <img
                         className={styles.homeSvg}
                         src={homeSvg}
-                        alt="Your SVG"
+                        alt="Cosgrove Real Estate - Home"
                     />
                     <img
                         className={styles.searchSvg}
                         src={searchSvg}
-                        alt="Your SVG"
+                        alt="Cosgrove Real Estate - Search"
                         onClick={submitSearch}
 
                     />

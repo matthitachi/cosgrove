@@ -24,7 +24,7 @@ export default function () {
                                 <button>
                                     <img
                                         src="/assets/images/bg/Logotype.png"
-                                        alt="pdf logo"
+                                        alt="Cosgrove Real Estate - Brochures"
                                     />
                                     <span>PDF</span>
                                 </button>
@@ -47,7 +47,7 @@ export default function () {
                                 <button>
                                     <img
                                         src="/assets/images/bg/Logotype.png"
-                                        alt="pdf logo"
+                                        alt="Cosgrove Real Estate - Brochures"
                                     />
                                     <span>PDF</span>
                                 </button>

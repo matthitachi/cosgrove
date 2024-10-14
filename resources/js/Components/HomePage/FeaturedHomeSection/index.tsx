@@ -87,7 +87,7 @@ export default function ({full = true}: listProp) {
                         <img
                             className={styles.arrowRightSvg}
                             src={arrowRightSvgR}
-                            alt="Your SVG"
+                            alt="Cosgrove Real Estate - See All"
                         />
                     </Link>
                 </div>}
