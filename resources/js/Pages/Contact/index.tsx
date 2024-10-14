@@ -23,7 +23,7 @@ export default function () {
             <NavBar isDark={true} />
             <HeaderItem
                 height={50}
-                bgImage={"/assets/images/contacts/AG8A3845.jpg"}
+                bgImage={"/assets/images/contacts/landscape.jpeg"}
                 position={'center -120px '}
             />
             <Hero />

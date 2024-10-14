@@ -866,7 +866,7 @@ export const houseTypes: houseTypeItemProps[] = [
         desc: '5-Bedroom Semi-Detached Duplex',
         slug: 'oakville',
         projectSlug: ['cosgrove_Smart_city_katampe'],
-        headerImg: '//assets/images/house-types/oakville/portrait.jpg',
+        headerImg: '/assets/images/house-types/oakville/landscape.jpg',
         detailsImg: '',
         moreDesc: 'Behold the new standard of smart living! Oakville is a 5-bedroom semi-detached duplex that sets the bar for residential excellence. This iconic smart home features three distinct living areas, five en-suite bedrooms complete with walk-in closets, and a spacious kitchen. Additional luxuries include a multi-purpose area, a maid\'s room, and parking for up to five cars. \n' +
             'Step into the future with state-of-the-art smart home features like fiber-to-the-home (FTTH), high-tech security with biometric access, and optional central air conditioning. Oakville by Cosgrove is more than a home; it\'s a technological marvel meticulously crafted for tomorrow\'s lifestyle.\n',
@@ -1008,7 +1008,7 @@ export const houseTypes: houseTypeItemProps[] = [
         ],
     },
     {
-        img: '/assets/images/house-types/maple/portrait.jpg',
+        img: '/assets/images/house-types/maple/penthouse_potrait.jpeg',
         name: 'Maple Penthouse',
         desc: '4-Bedroom Penthouse',
         slug: 'maple_penthouse',

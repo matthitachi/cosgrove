@@ -140,7 +140,7 @@
     "src": "public/assets/svg/smart-home.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-b04a22ae.css",
+    "file": "assets/app-f7714463.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -157,9 +157,9 @@
       "assets/slick-12459f22.svg"
     ],
     "css": [
-      "assets/app-b04a22ae.css"
+      "assets/app-f7714463.css"
     ],
-    "file": "assets/app-217cc38c.js",
+    "file": "assets/app-90646cdd.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
