@@ -162,7 +162,7 @@ export default function () {
                             />
 
                             <GoogleReCaptchaProvider reCaptchaKey="6LeGCysqAAAAAJGk5UgnBFg6ofJno9niS4zdRb2v">
-                                <GoogleReCaptcha onVerify={handleVerify} action={'cosgrove-contact-us'}/>
+                                <GoogleReCaptcha onVerify={handleVerify} action={'CosgroveContactUs'}/>
                             </GoogleReCaptchaProvider>
 
                             <button onClick={(e) => handleSubmit(e)}>Submit</button>

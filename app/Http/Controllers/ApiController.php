@@ -22,7 +22,7 @@ class ApiController extends Controller
            'token' => 'required'
         ]);
         $token = $request->token;
-        $action = "cosgrove-contact-us";
+        $action = "CosgroveContactUs";
 //        Mail::to($to)->later(now()->addHours($hours), new SendTimedMails($content, $subject));
 
         $score = $this->verifyToken($token, $action);
