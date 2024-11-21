@@ -6,6 +6,7 @@ import * as React from "react";
 import { ReactComponent as Select } from "/public/assets/svg/select.svg";
 import cosgroveApiServices from "../../../Services/cosgroveApiServices";
 import {useState} from "react";
+import {GoogleReCaptcha, GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
 
 export default function () {
 
@@ -15,6 +16,7 @@ export default function () {
         phone: '',
         message: ''
     });
+    const [token, setToken] = useState();
     const [showAlert, setShowAlert] = useState<boolean>(false);
     const [variant, setVariant] = useState<Object>({
         type: 'successful',
@@ -31,7 +33,8 @@ export default function () {
     const validateEmail = (email: string) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
-    const handleSubmit = async () => {
+    const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
         const validateErr: Partial<Err> = {};
 
         if (!formVal.name) {
@@ -42,6 +45,9 @@ export default function () {
         }
         if (!validateEmail(formVal.email)) {
             validateErr.email = 'Enter a valid email';
+        }
+        if (!token) {
+            validateErr.recaptcha = 'Complete Recaptcha';
         }
 
         setErrors(validateErr);
@@ -76,6 +82,11 @@ export default function () {
             setShowAlert(false);
         }, 2000);
     };
+
+    function handleVerify(token: any) {
+        console.log(token);
+    }
+
     return (
         <section className={styles.topSection}>
             <Container fluid>
@@ -150,7 +161,11 @@ export default function () {
                                 value={formVal.message} onChange={handleChange} name={'message'}
                             />
 
-                            <button onClick={handleSubmit}>Submit</button>
+                            <GoogleReCaptchaProvider reCaptchaKey="6LeGCysqAAAAAJGk5UgnBFg6ofJno9niS4zdRb2v">
+                                <GoogleReCaptcha onVerify={handleVerify} action={'cosgrove-contact-us'}/>
+                            </GoogleReCaptchaProvider>
+
+                            <button onClick={(e) => handleSubmit(e)}>Submit</button>
                         </form>
                     </Col>
                     <Col md={12} lg={5} className={styles.infoHomeCol}>
