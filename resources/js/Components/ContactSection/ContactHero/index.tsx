@@ -53,6 +53,8 @@ export default function () {
         setErrors(validateErr);
         if (Object.keys(validateErr).length > 0) {
             console.log('failed');
+            console.log(validateErr);
+
             return;
         }
 
@@ -85,6 +87,7 @@ export default function () {
 
     function handleVerify(token: any) {
         console.log(token);
+        setToken(token);
     }
 
     return (
