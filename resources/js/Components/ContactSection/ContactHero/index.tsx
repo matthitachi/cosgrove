@@ -14,7 +14,8 @@ export default function () {
         name: '',
         email: '',
         phone: '',
-        message: ''
+        message: '',
+        token: ''
     });
     const [token, setToken] = useState();
     const [showAlert, setShowAlert] = useState<boolean>(false);
@@ -57,7 +58,10 @@ export default function () {
 
             return;
         }
-
+        setFormVal((prevValues: Form) => ({
+            ...prevValues,
+            token: token,
+        }));
         let response = await (new cosgroveApiServices()).sendContactDetails(formVal);
         console.log(response);
         if(response.status == true){
