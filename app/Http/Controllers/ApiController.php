@@ -56,7 +56,8 @@ class ApiController extends Controller
         $content .= "<div>";
         try{
             $mailable = new NewMail('Contact Us Information', $content);
-            Mail::to('nafisa.aliyu@cosgroveafrica.com')->send($mailable);
+//            Mail::to('nafisa.aliyu@cosgroveafrica.com')->send($mailable);
+            Mail::to('matthitachi@gmail.com')->send($mailable);
         }catch (\Exception $e){
             Log::info($e->getMessage());
             Log::info($e->getTraceAsString());
