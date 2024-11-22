@@ -93,6 +93,7 @@ class ApiController extends Controller
             logger()->error('Error in reCAPTCHA verification: ' . $e->getMessage());
             return null;
         }
+    }
     public function sendAgent(Request $request){
 //        Mail::to($to)->later(now()->addHours($hours), new SendTimedMails($content, $subject));
         Log::info('enter here');
