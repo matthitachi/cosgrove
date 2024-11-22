@@ -58,11 +58,10 @@ export default function () {
 
             return;
         }
-        setFormVal((prevValues: Form) => ({
-            ...prevValues,
-            token: token,
-        }));
-        let response = await (new cosgroveApiServices()).sendContactDetails(formVal);
+
+        let formData: any = formVal;
+        formData['token'] = token;
+        let response = await (new cosgroveApiServices()).sendContactDetails(formData);
         console.log(response);
         if(response.status == true){
             setFormVal({
