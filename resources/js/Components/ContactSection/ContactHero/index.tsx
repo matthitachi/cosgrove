@@ -168,7 +168,7 @@ export default function () {
                                 value={formVal.message} onChange={handleChange} name={'message'}
                             />
 
-                            <GoogleReCaptchaProvider reCaptchaKey="6LeGCysqAAAAAJGk5UgnBFg6ofJno9niS4zdRb2v">
+                            <GoogleReCaptchaProvider reCaptchaKey="6LfaeYYqAAAAAMd-DCM2dJ9Sy0u5Dq5N0frQMLkO">
                                 <GoogleReCaptcha onVerify={handleVerify} action={'CosgroveContactUs'}/>
                             </GoogleReCaptchaProvider>
 
