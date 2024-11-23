@@ -38,9 +38,10 @@ class ApiController extends Controller
 
         if ($score === null || $score < 0.5) {
             Log::info("Check the score for this to see  here");
+            Log::info("Score failed here. '.$score");
             return response()->json([
                 'status'=> false,
-                'message' => 'Score failed here. '.$score
+                'message' => 'System was unable to verify user'.
             ]);
         }
 
@@ -64,8 +65,8 @@ class ApiController extends Controller
         $content .= "<div>";
         try{
             $mailable = new NewMail('Contact Us Information', $content);
-//            Mail::to('nafisa.aliyu@cosgroveafrica.com')->send($mailable);
-            Mail::to('matthitachi@gmail.com')->send($mailable);
+            Mail::to('nafisa.aliyu@cosgroveafrica.com')->send($mailable);
+//            Mail::to('matthitachi@gmail.com')->send($mailable);
         }catch (\Exception $e){
             Log::info($e->getMessage());
             Log::info($e->getTraceAsString());

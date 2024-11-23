@@ -153,13 +153,13 @@ export default function () {
 
 
                 toast.success("Message Sent Successfully!", {
-                    position: "bottom-left"
+                    position: "top-right"
                 });
             } else {
 
 
                 toast.error("Message Failed to send!", {
-                    position: "bottom-left"
+                    position: "top-right"
                 });
             }
         }catch (error) {
