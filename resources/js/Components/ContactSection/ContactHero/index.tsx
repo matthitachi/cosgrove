@@ -1,12 +1,12 @@
-import {Alert, Col, Container, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
 // @ts-ignore
-import { ReactComponent as Select } from "/public/assets/svg/select.svg";
 import cosgroveApiServices from "../../../Services/cosgroveApiServices";
 import {useState} from "react";
-import {GoogleReCaptcha, GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
+import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
+import {toast} from "react-toastify";
 
 export default function () {
 
@@ -17,12 +17,7 @@ export default function () {
         message: '',
         token: ''
     });
-    const [token, setToken] = useState();
-    const [showAlert, setShowAlert] = useState<boolean>(false);
-    const [variant, setVariant] = useState<Object>({
-        type: 'successful',
-        message:'Message sent Successfully'
-    });
+    const { executeRecaptcha } = useGoogleReCaptcha();
     const [errors, setErrors] = useState<Partial<Err>>({});
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | { name?: string; value: unknown }>) => {
         const {name, value} = event.target;
@@ -36,6 +31,11 @@ export default function () {
     };
     const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
+        if (!executeRecaptcha) {
+            console.error('reCAPTCHA is not available.');
+            return;
+        }
+        // CosgroveContactUs
         const validateErr: Partial<Err> = {};
 
         if (!formVal.name) {
@@ -47,51 +47,48 @@ export default function () {
         if (!validateEmail(formVal.email)) {
             validateErr.email = 'Enter a valid email';
         }
-        if (!token) {
-            validateErr.recaptcha = 'Complete Recaptcha';
-        }
 
         setErrors(validateErr);
         if (Object.keys(validateErr).length > 0) {
-            console.log('failed');
-            console.log(validateErr);
 
+            console.log('invalid request');
+            toast.info("Please fill all required fields", {
+                position: "top-right"
+            });
             return;
         }
 
-        let formData: any = formVal;
-        formData['token'] = token;
-        let response = await (new cosgroveApiServices()).sendContactDetails(formData);
-        console.log(response);
-        if(response.status == true){
-            setFormVal({
-                name: '',
-                email: '',
-                phone: '',
-                message: ''
-            });
+        try {
+            const token = await executeRecaptcha('CosgroveContactUs');
+            let formData: any = formVal;
+            formData['token'] = token;
 
-            setVariant({
-                type: "success",
-                message: 'Message Sent Successfully'
-            });
-        }else{
+            let response = await (new cosgroveApiServices()).sendContactDetails(formData);
+            console.log(response);
+            if (response.status == true) {
+                setFormVal({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: ''
+                });
 
-            setVariant({
-                type: "danger",
-                message: 'Message Failed'
-            });
+
+                toast.success("Message Sent Successfully!", {
+                    position: "bottom-left"
+                });
+            } else {
+
+
+                toast.error("Message Failed to send!", {
+                    position: "bottom-left"
+                });
+            }
+        }catch (error) {
+            console.error('Error during reCAPTCHA verification:', error);
         }
-        setShowAlert(true);
-        setTimeout(()=>{
-            setShowAlert(false);
-        }, 2000);
     };
 
-    function handleVerify(token: any) {
-        console.log(token);
-        setToken(token);
-    }
 
     return (
         <section className={styles.topSection}>
@@ -113,24 +110,23 @@ export default function () {
                         </p>
 
                         <form className={styles.contactInTouch}>
-                            {
-                                Object.keys(errors).length > 0 &&
-                                <div className={`text-center mb-3`}>
-                                    {
-                                        Object.keys(errors).map((item)=> {
-                                            return (<div>{errors[item]}</div>)
-                                        })
-                                    }
-                                </div>}
 
-                            {
-                                showAlert &&
-                                <Alert key={variant.type} variant={variant.type}>
-                                    {variant.message}
-                                </Alert>
-                            }
-                            <select value={formVal.project} onChange={handleChange} name={'project'}>
-                                <option disabled selected hidden>
+                          <div>
+                              {
+                                  Object.keys(errors).length > 0 &&
+                                  <div className={`text-center mb-3`}>
+                                      {
+                                          Object.keys(errors).map((item)=> {
+                                              return (<div>{errors[item]}</div>)
+                                          })
+                                      }
+                                  </div>}
+                          </div>
+
+
+
+                            <select value={formVal.project} defaultValue={''} onChange={handleChange} name={'project'}>
+                                <option disabled >
                                     Select a Project
                                 </option>
                                 <option value="Cosgrove Smart Estate, Wuye">Cosgrove Smart Estate, Wuye</option>
@@ -143,9 +139,12 @@ export default function () {
                                 <option value="Fourteen by Cosgrove, Wuye">Fourteen by Cosgrove, Wuye</option>
                                 <option value="Cosgrove Smart Estate, Wuse 2">Cosgrove Smart Estate, Wuse 2</option>
                             </select>
-                            {/*<div>*/}
-                            {/*    <Select />*/}
-                            {/*</div>*/}
+                            <input
+                                placeholder={"salutation"}
+                                hidden={true}
+                                className={styles.formItem}
+                                value={formVal.salutation} onChange={handleChange} name={'salutation'} onError={() => Boolean(errors.name)}
+                            />
                             <input
                                 placeholder={"Name"}
                                 className={styles.formItem}
@@ -167,9 +166,7 @@ export default function () {
                                 value={formVal.message} onChange={handleChange} name={'message'}
                             />
 
-                            <GoogleReCaptchaProvider reCaptchaKey="6LfaeYYqAAAAAMd-DCM2dJ9Sy0u5Dq5N0frQMLkO">
-                                <GoogleReCaptcha onVerify={handleVerify} action={'CosgroveContactUs'}/>
-                            </GoogleReCaptchaProvider>
+
 
                             <button onClick={(e) => handleSubmit(e)}>Submit</button>
                         </form>

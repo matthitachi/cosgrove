@@ -22,13 +22,22 @@ class ApiController extends Controller
         $request->validate([
            'token' => 'required'
         ]);
+        if($request->has('salutation')){
+            return response()->json([
+                'status'=> true,
+                'message' => 'Completed successfully'
+            ]);
+        }
         $token = $request->token;
+        Log::info("Token");
+        Log::info($token);
         $action = "CosgroveContactUs";
 //        Mail::to($to)->later(now()->addHours($hours), new SendTimedMails($content, $subject));
 
         $score = $this->verifyToken($token, $action);
 
         if ($score === null || $score < 0.5) {
+            Log::info("Check the score for this to see  here");
             return response()->json([
                 'status'=> false,
                 'message' => 'Score failed here. '.$score
@@ -79,13 +88,19 @@ class ApiController extends Controller
 
         try {
             $response = $this->client->createAssessment($projectName, $assessment);
+            Log::info($response->serializeToJsonString());
 
             if (!$response->getTokenProperties()->getValid()) {
+                Log::info('$response->getTokenProperties()->getValid()');
                 Log::info($response->getTokenProperties()->getValid());
+                $invalidReason = $response->getTokenProperties()->getInvalidReason();
+                Log::info($invalidReason);
+
                 return null; // Token is invalid
             }
 
             if ($response->getTokenProperties()->getAction() !== $action) {
+                Log::info('$response->getTokenProperties()->getAction()');
                 Log::info($response->getTokenProperties()->getAction());
                 return null; // Action mismatch
             }

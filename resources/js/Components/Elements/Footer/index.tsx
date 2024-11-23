@@ -14,12 +14,15 @@ import * as React from "react";
 import {Link} from "@inertiajs/inertia-react";
 import {useState} from "react";
 import cosgroveApiServices from "../../../Services/cosgroveApiServices";
+import {toast} from "react-toastify";
+import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
 
 interface Form {
     name: string;
     email: string;
     phone: string;
     message: string;
+    salutation?: string
 }
 interface Err {
     name: string;
@@ -31,13 +34,9 @@ export default function () {
         name: '',
         email: '',
         phone: '',
-        message: ''
+        message: '',
     });
-    const [showAlert, setShowAlert] = useState<boolean>(false);
-    const [variant, setVariant] = useState<Object>({
-        type: 'successful',
-        message:'Message sent Successfully'
-    });
+    const { executeRecaptcha } = useGoogleReCaptcha();
     const [errors, setErrors] = useState<Partial<Err>>({});
     interface SocialItemProp {
         name: string;
@@ -108,7 +107,13 @@ export default function () {
     const validateEmail = (email: string) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
-    const handleSubmit = async () => {
+    const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        if (!executeRecaptcha) {
+            console.error('reCAPTCHA is not available.');
+            return;
+        }
+        // CosgroveContactUs
         const validateErr: Partial<Err> = {};
 
         if (!formVal.name) {
@@ -123,35 +128,43 @@ export default function () {
 
         setErrors(validateErr);
         if (Object.keys(validateErr).length > 0) {
-            console.log('failed');
+
+            console.log('invalid request');
+            toast.info("Please fill all required fields", {
+                position: "top-right"
+            });
             return;
         }
 
-        let response = await (new cosgroveApiServices()).sendContactDetails(formVal);
-        console.log(response);
-        if(response.status == true){
-            setFormVal({
-                name: '',
-                email: '',
-                phone: '',
-                message: ''
-            });
+        try {
+            const token = await executeRecaptcha('CosgroveContactUs');
+            let formData: any = formVal;
+            formData['token'] = token;
 
-            setVariant({
-                type: "success",
-                message: 'Message Sent Successfully'
-            });
-        }else{
+            let response = await (new cosgroveApiServices()).sendContactDetails(formData);
+            console.log(response);
+            if (response.status == true) {
+                setFormVal({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: ''
+                });
 
-            setVariant({
-                type: "danger",
-                message: 'Message Failed'
-            });
+
+                toast.success("Message Sent Successfully!", {
+                    position: "bottom-left"
+                });
+            } else {
+
+
+                toast.error("Message Failed to send!", {
+                    position: "bottom-left"
+                });
+            }
+        }catch (error) {
+            console.error('Error during reCAPTCHA verification:', error);
         }
-        setShowAlert(true);
-        setTimeout(()=>{
-            setShowAlert(false);
-        }, 2000);
     };
     return (
         <section className={styles.footer}>
@@ -161,7 +174,8 @@ export default function () {
                     <p className={"textDark mb-25"}>
                         Ready to step into the world of Cosgrove excellence? Reach out now to start your extraordinary real estate experience.
                     </p>
-                    {
+
+                    <div>{
                         Object.keys(errors).length > 0 &&
                         <div className={`text-center mb-3`}>
                             {
@@ -170,14 +184,16 @@ export default function () {
                                 })
                             }
                     </div>}
+                    </div>
 
-                    {
-                        showAlert &&
-                    <Alert key={variant.type} variant={variant.type}>
-                        {variant.message}
-                    </Alert>
-                    }
+
                     {/*<form>*/}
+                    <input
+                        placeholder={"salutation"}
+                        hidden={true}
+                        className={styles.formItem}
+                        value={formVal.salutation} onChange={handleChange} name={'salutation'} onError={() => Boolean(errors.name)}
+                    />
                         <input
                             placeholder={"Name"}
                             className={styles.formItem}
