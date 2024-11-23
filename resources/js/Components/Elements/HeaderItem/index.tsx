@@ -13,8 +13,9 @@ interface headerItemProp {
     bgImage: string;
     isDark?: false;
     position?: string;
+    attachment?: string
 }
-export default function ({ height, bgImage, position= 'unset' }: headerItemProp) {
+export default function ({ height, bgImage, position= 'unset', attachment = 'unset' }: headerItemProp) {
     const getResponsiveCurveValue = (width) => {
         if (width < 575) return 50;
         else if (width < 767) return 70;
@@ -49,7 +50,9 @@ export default function ({ height, bgImage, position= 'unset' }: headerItemProp)
                 style={{
                     backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, ${1 - ratio}) 0%, rgba(0, 0, 0, ${1 - ratio}) 100% ),url("  ${bgImage} ")`,
                     borderRadius: `0 0 50% 50%/${responsiveCurveValue}px`,
-                    backgroundPosition: `${position}`
+                    backgroundPosition: `${position}`,
+                    backgroundAttachment: `${attachment}`,
+                    backgroundRepeat: `no-repeat`,
                 }}
             />
         </section>

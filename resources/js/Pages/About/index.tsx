@@ -25,7 +25,9 @@ export default function () {
             <HeaderItem
                 height={70}
                 bgImage={"/assets/images/Cosgrove-2023-June-Workers-03.jpg"}
-                position={'center -100px'}
+                // position={'center -100px'}
+                attachment={`fixed`}
+                position={'center'}
             />
             <OverviewSection />
             <Footer />

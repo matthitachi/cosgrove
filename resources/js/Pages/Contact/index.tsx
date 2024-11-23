@@ -22,9 +22,11 @@ export default function () {
             {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
             <NavBar isDark={true} />
             <HeaderItem
-                height={50}
+                height={70}
                 bgImage={"/assets/images/contacts/landscape.jpeg"}
-                position={'center -120px '}
+                // position={'center -120px '}
+                position={'center top'}
+                // attachment={'fixed'}
             />
             <Hero />
             <ContactTeam />
