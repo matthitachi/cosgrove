@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewMail;
+use Google\Cloud\RecaptchaEnterprise\V1\Event;
 use Google\Cloud\RecaptchaEnterprise\V1\RecaptchaEnterpriseServiceClient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -29,13 +30,11 @@ class ApiController extends Controller
 
         if ($score === null || $score < 0.5) {
             return response()->json([
-                'status'=> false
+                'status'=> false,
+                'message' => 'Score failed here. '.$score
             ]);
         }
 
-
-        Log::info('enter here');
-        Log::info(json_encode($request->all()));
         $content = "<div> <h3>Contact Us Information</h3>";
 
         if($request->has('name')){
@@ -63,7 +62,8 @@ class ApiController extends Controller
             Log::info($e->getTraceAsString());
         }
         return response()->json([
-           'status'=> true
+           'status'=> true,
+            'message' => 'Completed successfully'
         ]);
     }
     public function verifyToken($token, $action)
@@ -81,10 +81,12 @@ class ApiController extends Controller
             $response = $this->client->createAssessment($projectName, $assessment);
 
             if (!$response->getTokenProperties()->getValid()) {
+                Log::info($response->getTokenProperties()->getValid());
                 return null; // Token is invalid
             }
 
             if ($response->getTokenProperties()->getAction() !== $action) {
+                Log::info($response->getTokenProperties()->getAction());
                 return null; // Action mismatch
             }
 
