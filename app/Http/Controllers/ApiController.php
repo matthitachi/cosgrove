@@ -34,16 +34,16 @@ class ApiController extends Controller
         $action = "CosgroveContactUs";
 //        Mail::to($to)->later(now()->addHours($hours), new SendTimedMails($content, $subject));
 
-        $score = $this->verifyToken($token, $action);
-
-        if ($score === null || $score < 0.5) {
-            Log::info("Check the score for this to see  here");
-            Log::info("Score failed here. '.$score");
-            return response()->json([
-                'status'=> false,
-                'message' => 'System was unable to verify user'.
-            ]);
-        }
+//        $score = $this->verifyToken($token, $action);
+//
+//        if ($score === null || $score < 0.5) {
+//            Log::info("Check the score for this to see  here");
+//            Log::info("Score failed here. '.$score");
+//            return response()->json([
+//                'status'=> false,
+//                'message' => 'System was unable to verify user'.
+//            ]);
+//        }
 
         $content = "<div> <h3>Contact Us Information</h3>";
 
@@ -114,8 +114,8 @@ class ApiController extends Controller
     }
     public function sendAgent(Request $request){
 //        Mail::to($to)->later(now()->addHours($hours), new SendTimedMails($content, $subject));
-        Log::info('enter here');
-        Log::info(json_encode($request->all()));
+//        Log::info('enter here');
+//        Log::info(json_encode($request->all()));
         $content = "<div>";
 
         if($request->has('name')){
