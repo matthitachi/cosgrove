@@ -672,10 +672,10 @@ export const projects: ProjectItemProp[] = [
         ]
     },
     {
-        name: 'Cosgrove Smart Estate, Wuse 2',
+        name: 'Cosgrove Exclusive Estate, Wuse 2',
         slug: 'cosgrove_smart_estate_wuse_2',
         location: 'Wuse 2',
-        description: 'Nestled in the northwestern expanse of Abuja, Wuse 2 emerges as a vibrant hub, pulsating with the city’s vitality. Cosgrove Smart City, situated in Wuse 2, stands adorned with 12 units of the exquisite SCARLET OAK — an illustrious 5-bedroom townhouse with an additional maid’s quarter. Encircled by meticulously planned infrastructure, it finds itself amidst a plethora of amenities, ensuring an existence of untroubled convenience within this estate’s welcoming embrace. Living here not only guarantees comfort but also an oasis of tranquility at the center of bustling urban life.',
+        description: 'Nestled in the northwestern expanse of Abuja, Wuse 2 emerges as a vibrant hub, pulsating with the city’s vitality. Cosgrove Exclusive Estate, situated in Wuse 2, stands adorned with 12 units of the exquisite SCARLET OAK — an illustrious 5-bedroom townhouse with an additional maid’s quarter. Encircled by meticulously planned infrastructure, it finds itself amidst a plethora of amenities, ensuring an existence of untroubled convenience within this estate’s welcoming embrace. Living here not only guarantees comfort but also an oasis of tranquility at the center of bustling urban life.',
         detailsImg: '/assets/images/projects/wuse2/portrait.jpg',
         mainImg: '/assets/images/projects/wuse2/landscape.jpg',
         distFeature: [],
