@@ -106,49 +106,89 @@ export default function () {
             </div>
         },
         {
-            img: '/assets/images/teams/elizabeth.jpg',
-            name: 'Elizabeth Taylor',
-            position: 'Chief Operating Officer',
-            collapse: collapse,
+            img: '/assets/images/teams/madhur.jpg',
+            name: 'Engr. Madhur Tripathi',
+            position: 'Chief Infrastructure Officer',
+            collapse: false,
             mainText: <div>
                 <p className={"textPrimary"}>
-                    Liz, an Arch Bishop Tutu Fellow of the African
-                    Leadership Institute is a business strategist
-                    with proven strength tactically executing
-                    strategy and delivering on organizational goals.
-                    She believes in the combined role of people
-                    driven tactics and systems in delivering
-                    excellence to all stakeholders.
+                    Tripathi brings explicit knowledge and expertise
+                    to the Cosgrove team. He has worked on notable
+                    projects with notable construction firms in
+                    Nigeria; including Dantata and Sawoe and Julius
+                    Berger Nigeria Ltd executing major civil
+                    (infrastructure and building) projects within
+                    Nigeria.
                 </p>
                 <p className={"textPrimary"}>
-                    After a multidisciplinary role spanning nearly
-                    16 years, Liz knows what truly drives business
-                    process, customer engagement, and strategy. Her
-                    strengths include knowledge management, business
-                    management, people management, customer
-                    relationship management and more.
+                    Engr Tripathi has over 20 years extensive
+                    professional experience in quality control,
+                    construction & supervision of highways (both
+                    rigid and flexible pavements) and building
+                    projects.
                 </p>
             </div>,
             collapsibleText: <div>
                 <p className={"textPrimary"}>
-                    Liz is an accomplished people developer and
-                    trainer with a unique method for creating high
-                    performing teams. She is an alumnus of the Said
-                    Business School Leadership program (with African
-                    Leadership Institute) and Wharton Business
-                    School Real Estate program on Housing Finance &
-                    Securitization.
+                    He is a member of The Council of the Regulation
+                    of Engineering in Nigeria (COREN), The Institute
+                    of Engineers and a distinguished Member of
+                    Indian Road Congress (IRC).
                 </p>
                 <p className={"textPrimary"}>
-                    In addition to her extensive multidisciplinary
-                    experience, Liz is also a certified customer
-                    service strategist and coach; she is also a
-                    published author.
+                    A Civil Engineering graduate with Masters degree
+                    (ME) in Geotechnical Engineering (Soil and
+                    foundation engineering) from MBM Engineering
+                    Collage Jodhpur India.
+                </p>
+            </div>
+        },
+         {
+            img: '/assets/images/teams/IMG_7052.jpeg',
+            name: 'Babangida Mukaddas',
+            position: 'Chief Operating  Officer',
+            collapse: collapse,
+            mainText: <div>
+                <p className={"textPrimary"}>
+                    Babangida is an executive leader with over 20
+                    years of experience driving operational excellence
+                    across the telecommunications and corporate
+                    administration sectors. As the Chief Operating
+                    Officer of Cosgrove, he oversees the company's
+                    strategic operations, ensuring that the brand’s
+                    commitment to innovation, premium delivery and
+                    operational excellence remains unparalleled in
+                    the real estate and construction industry.
                 </p>
                 <p className={"textPrimary"}>
-                    Liz is a Business Administration graduate of
-                    University of Abuja, with an MSc in Knowledge
-                    Management from the Aberdeen Business School.
+                    Prior to joining Cosgrove, Babangida built a
+                    formidable career holding senior leadership
+                    positions at Nigeria’s telecommunications giants,
+                    including MTN Nigeria, Etisalat, 9mobile, and
+                    Globacom. Throughout his tenure in these
+                    environments, he became known for spearheading
+                    initiatives that drastically enhanced customer
+                    satisfaction, optimized revenue growth, and
+                    streamlined organizational processes.
+                </p>
+            </div>,
+            collapsibleText: <div>
+                <p className={"textPrimary"}>
+                    His expertise lies at the intersection of strategic
+                    business growth, Operations management, and organizational
+                     governance. Beyond his operational mandates, Babangida
+                     is a passionate advocate for people development. He is
+                     deeply committed to fostering a culture of continuous
+                     learning and mentorship, believing that organizational
+                     excellence is a direct result of empowered, high-performing teams.
+                </p>
+                <p className={"textPrimary"}>
+                    Babangida holds a Bachelor’s degree in Accounting, an
+                    MBA, and a Master’s in Information and Communication Technology
+                    from Bayero University, Kano. He is a Certified National Accountant
+                    (CNA) and a Senior Member of the Chartered Institute of Loans and
+                    Risk Management of Nigeria.
+
                 </p>
             </div>
         },
@@ -209,40 +249,49 @@ export default function () {
                 </p></div>
         },
         {
-            img: '/assets/images/teams/madhur.jpg',
-            name: 'Engr. Madhur Tripathi',
-            position: 'Chief Infrastructure Officer',
-            collapse: false,
+            img: '/assets/images/teams/elizabeth.jpg',
+            name: 'Elizabeth Taylor',
+            position: 'Chief Admin Officer',
+            collapse: collapse,
             mainText: <div>
                 <p className={"textPrimary"}>
-                    Tripathi brings explicit knowledge and expertise
-                    to the Cosgrove team. He has worked on notable
-                    projects with notable construction firms in
-                    Nigeria; including Dantata and Sawoe and Julius
-                    Berger Nigeria Ltd executing major civil
-                    (infrastructure and building) projects within
-                    Nigeria.
+                    Liz, an Arch Bishop Tutu Fellow of the African
+                    Leadership Institute is a business strategist
+                    with proven strength tactically executing
+                    strategy and delivering on organizational goals.
+                    She believes in the combined role of people
+                    driven tactics and systems in delivering
+                    excellence to all stakeholders.
                 </p>
                 <p className={"textPrimary"}>
-                    Engr Tripathi has over 20 years extensive
-                    professional experience in quality control,
-                    construction & supervision of highways (both
-                    rigid and flexible pavements) and building
-                    projects.
+                    After a multidisciplinary role spanning nearly
+                    16 years, Liz knows what truly drives business
+                    process, customer engagement, and strategy. Her
+                    strengths include knowledge management, business
+                    management, people management, customer
+                    relationship management and more.
                 </p>
             </div>,
             collapsibleText: <div>
                 <p className={"textPrimary"}>
-                    He is a member of The Council of the Regulation
-                    of Engineering in Nigeria (COREN), The Institute
-                    of Engineers and a distinguished Member of
-                    Indian Road Congress (IRC).
+                    Liz is an accomplished people developer and
+                    trainer with a unique method for creating high
+                    performing teams. She is an alumnus of the Said
+                    Business School Leadership program (with African
+                    Leadership Institute) and Wharton Business
+                    School Real Estate program on Housing Finance &
+                    Securitization.
                 </p>
                 <p className={"textPrimary"}>
-                    A Civil Engineering graduate with Masters degree
-                    (ME) in Geotechnical Engineering (Soil and
-                    foundation engineering) from MBM Engineering
-                    Collage Jodhpur India.
+                    In addition to her extensive multidisciplinary
+                    experience, Liz is also a certified customer
+                    service strategist and coach; she is also a
+                    published author.
+                </p>
+                <p className={"textPrimary"}>
+                    Liz is a Business Administration graduate of
+                    University of Abuja, with an MSc in Knowledge
+                    Management from the Aberdeen Business School.
                 </p>
             </div>
         },
