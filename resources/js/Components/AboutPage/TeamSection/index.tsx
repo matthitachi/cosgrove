@@ -142,57 +142,7 @@ export default function () {
                     Collage Jodhpur India.
                 </p>
             </div>
-        },
-         {
-            img: '/assets/images/teams/IMG_7052.jpeg',
-            name: 'Babangida Mukaddas',
-            position: 'Chief Operating  Officer',
-            collapse: collapse,
-            mainText: <div>
-                <p className={"textPrimary"}>
-                    Babangida is an executive leader with over 20
-                    years of experience driving operational excellence
-                    across the telecommunications and corporate
-                    administration sectors. As the Chief Operating
-                    Officer of Cosgrove, he oversees the company's
-                    strategic operations, ensuring that the brand’s
-                    commitment to innovation, premium delivery and
-                    operational excellence remains unparalleled in
-                    the real estate and construction industry.
-                </p>
-                <p className={"textPrimary"}>
-                    Prior to joining Cosgrove, Babangida built a
-                    formidable career holding senior leadership
-                    positions at Nigeria’s telecommunications giants,
-                    including MTN Nigeria, Etisalat, 9mobile, and
-                    Globacom. Throughout his tenure in these
-                    environments, he became known for spearheading
-                    initiatives that drastically enhanced customer
-                    satisfaction, optimized revenue growth, and
-                    streamlined organizational processes.
-                </p>
-            </div>,
-            collapsibleText: <div>
-                <p className={"textPrimary"}>
-                    His expertise lies at the intersection of strategic
-                    business growth, Operations management, and organizational
-                     governance. Beyond his operational mandates, Babangida
-                     is a passionate advocate for people development. He is
-                     deeply committed to fostering a culture of continuous
-                     learning and mentorship, believing that organizational
-                     excellence is a direct result of empowered, high-performing teams.
-                </p>
-                <p className={"textPrimary"}>
-                    Babangida holds a Bachelor’s degree in Accounting, an
-                    MBA, and a Master’s in Information and Communication Technology
-                    from Bayero University, Kano. He is a Certified National Accountant
-                    (CNA) and a Senior Member of the Chartered Institute of Loans and
-                    Risk Management of Nigeria.
-
-                </p>
-            </div>
-        },
-        {
+        },        {
             img: '/assets/images/teams/kalli.jpg',
             name: 'Engr. Baba Kalli',
             position: 'Chief Technical Officer',
@@ -247,6 +197,55 @@ export default function () {
                     quality standards – a key facet of our corporate
                     promise.
                 </p></div>
+        },
+         {
+            img: '/assets/images/teams/IMG_7052.jpeg',
+            name: 'Babangida Mukaddas',
+            position: 'Chief Operating  Officer',
+            collapse: collapse,
+            mainText: <div>
+                <p className={"textPrimary"}>
+                    Babangida is an executive leader with over 20
+                    years of experience driving operational excellence
+                    across the telecommunications and corporate
+                    administration sectors. As the Chief Operating
+                    Officer of Cosgrove, he oversees the company's
+                    strategic operations, ensuring that the brand’s
+                    commitment to innovation, premium delivery and
+                    operational excellence remains unparalleled in
+                    the real estate and construction industry.
+                </p>
+                <p className={"textPrimary"}>
+                    Prior to joining Cosgrove, Babangida built a
+                    formidable career holding senior leadership
+                    positions at Nigeria’s telecommunications giants,
+                    including MTN Nigeria, Etisalat, 9mobile, and
+                    Globacom. Throughout his tenure in these
+                    environments, he became known for spearheading
+                    initiatives that drastically enhanced customer
+                    satisfaction, optimized revenue growth, and
+                    streamlined organizational processes.
+                </p>
+            </div>,
+            collapsibleText: <div>
+                <p className={"textPrimary"}>
+                    His expertise lies at the intersection of strategic
+                    business growth, Operations management, and organizational
+                     governance. Beyond his operational mandates, Babangida
+                     is a passionate advocate for people development. He is
+                     deeply committed to fostering a culture of continuous
+                     learning and mentorship, believing that organizational
+                     excellence is a direct result of empowered, high-performing teams.
+                </p>
+                <p className={"textPrimary"}>
+                    Babangida holds a Bachelor’s degree in Accounting, an
+                    MBA, and a Master’s in Information and Communication Technology
+                    from Bayero University, Kano. He is a Certified National Accountant
+                    (CNA) and a Senior Member of the Chartered Institute of Loans and
+                    Risk Management of Nigeria.
+
+                </p>
+            </div>
         },
         {
             img: '/assets/images/teams/elizabeth.jpg',
