@@ -142,7 +142,8 @@ export default function () {
                     Collage Jodhpur India.
                 </p>
             </div>
-        },        {
+        },
+        {
             img: '/assets/images/teams/kalli.jpg',
             name: 'Engr. Baba Kalli',
             position: 'Chief Technical Officer',
@@ -248,6 +249,35 @@ export default function () {
             </div>
         },
         {
+            img: '/assets/images/teams/IMG_5999.JPG',
+            name: 'Raymond Ricketts',
+            position: 'Chief Information Technology Officer',
+            collapse: false,
+            mainText: <div>
+                <p className={"textPrimary"}>
+                    Engr Raymond Ricketts, Chief Information Technology Officer at Cosgrove Investment Limited,
+                    brings over 18 years of experience in the Information and Communications Technology industry.
+                    A graduate of Engineering from the Federal University of Technology Minna, he has excelled in
+                    various roles across corporate and government sectors, leading transformative projects and
+                    driving significant advancements.
+                </p>
+                <p className={"textPrimary"}>
+                    At Cosgrove, Engr Raymond is committed to innovation and strategic excellence, pushing
+                    the boundaries of technology and fostering continuous growth. His passion for exploring
+                    new technologies and engaging in community outreach enriches his work and inspires those around
+                    him. Raymond's leadership continues to propel Cosgrove forward in the industry.
+                </p>
+            </div>,
+            collapsibleText: <div>
+                <p className={"textPrimary"}>
+
+                </p>
+                <p className={"textPrimary"}>
+
+                </p>
+            </div>
+        },
+        {
             img: '/assets/images/teams/elizabeth.jpg',
             name: 'Elizabeth Taylor',
             position: 'Chief Admin Officer',
@@ -343,35 +373,6 @@ export default function () {
                 </p>
             </div>
         },
-        {
-            img: '/assets/images/teams/IMG_5999.JPG',
-            name: 'Raymond Ricketts',
-            position: 'Chief Information Technology Officer',
-            collapse: false,
-            mainText: <div>
-                <p className={"textPrimary"}>
-                    Engr Raymond Ricketts, Chief Information Technology Officer at Cosgrove Investment Limited,
-                    brings over 18 years of experience in the Information and Communications Technology industry.
-                    A graduate of Engineering from the Federal University of Technology Minna, he has excelled in
-                    various roles across corporate and government sectors, leading transformative projects and
-                    driving significant advancements.
-                </p>
-                <p className={"textPrimary"}>
-                    At Cosgrove, Engr Raymond is committed to innovation and strategic excellence, pushing
-                    the boundaries of technology and fostering continuous growth. His passion for exploring
-                    new technologies and engaging in community outreach enriches his work and inspires those around
-                    him. Raymond's leadership continues to propel Cosgrove forward in the industry.
-                </p>
-            </div>,
-            collapsibleText: <div>
-                <p className={"textPrimary"}>
-
-                </p>
-                <p className={"textPrimary"}>
-
-                </p>
-            </div>
-        }
     ];
 
     return (
