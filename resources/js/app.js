@@ -23,7 +23,7 @@ createInertiaApp({
         root.render(
             React.createElement(
                 GoogleReCaptchaProvider,
-                { reCaptchaKey: "6LfaeYYqAAAAAMd-DCM2dJ9Sy0u5Dq5N0frQMLkO" }, // Props for the provider
+                { reCaptchaKey: import.meta.env.VITE_RECAPTCHA_SITE_KEY }, // Props for the provider
                 React.createElement(
                     React.Fragment,
                     null,

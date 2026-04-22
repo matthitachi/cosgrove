@@ -2,7 +2,7 @@ import {Col, Container, Row} from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
-import {houseTypeItemProps} from "../../../Data/data"
+import {houseTypeItemProps} from "../../../types/cms"
 // @ts-ignore
 import {ReactComponent as Camera} from "/public/assets/svg/cctv-camera.svg";
 import HouseItem from "../../Elements/HouseItem"

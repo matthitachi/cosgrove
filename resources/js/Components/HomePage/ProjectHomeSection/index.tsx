@@ -2,18 +2,32 @@ import { Col, Container, Row } from "react-bootstrap";
 // @ts-ignore
 import styles from "./styles.module.scss";
 import * as React from "react";
-import ProjectItem  from "../../Elements/ProjectItem/index";
-// @ts-ignore
-import { ReactComponent as ArrowRight2Svg } from "/public/assets/svg/arrow-right-2.svg";
+import ProjectItem, { ProjectItemProp } from "../../Elements/ProjectItem/index";
 // @ts-ignore
 import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
-// @ts-ignore
-import { ReactComponent as MapPinSvg } from "/public/assets/svg/map-pin.svg";
-import {projects} from "../../../Data/data"
 import {Link} from "@inertiajs/inertia-react";
-export default function () {
+import { getHomeProjects, ApiProject } from "../../../Services/cosgroveApiServices";
+import { useCmsData } from "../../../Hooks/useCmsData";
 
-    const projectToDisplay = projects.filter((item) => item.showInHome == true);
+function toProjectItemProp(p: ApiProject): ProjectItemProp {
+    return {
+        name: p.name,
+        slug: p.slug,
+        location: p.location,
+        description: p.description || '',
+        mainImg: p.hero_image,
+        detailsImg: p.hero_image,
+        distFeature: [],
+        galleryBasePath: '',
+        gallery: [],
+        showInHome: p.show_in_home,
+        estateFeatures: [],
+    };
+}
+
+export default function () {
+    const { data: projects } = useCmsData(getHomeProjects);
+    const projectToDisplay: ProjectItemProp[] = (projects ?? []).map(toProjectItemProp);
     return (
         <section className={styles.projectHomeSection}>
             <Container>

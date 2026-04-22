@@ -1,11 +1,5 @@
 import {
-    Alert,
-    Button,
     Col,
-    Container,
-    Nav,
-    Navbar,
-    NavDropdown,
     Row,
 } from "react-bootstrap";
 // @ts-ignore
@@ -13,9 +7,15 @@ import styles from "./styles.module.scss";
 import * as React from "react";
 import {Link} from "@inertiajs/inertia-react";
 import {useState} from "react";
-import cosgroveApiServices from "../../../Services/cosgroveApiServices";
+import cosgroveApiServices, {
+    getContactInfo,
+    getSocialLinks,
+    ApiContactInfo,
+    ApiSocialLink,
+} from "../../../Services/cosgroveApiServices";
 import {toast} from "react-toastify";
 import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
+import { useCmsData } from "../../../Hooks/useCmsData";
 
 interface Form {
     name: string;
@@ -29,6 +29,35 @@ interface Err {
     email: string;
 }
 
+const socialBasePath = "/assets/images/socials/";
+const platformImageMap: Record<string, string> = {
+    facebook:  socialBasePath + "facebook.png",
+    instagram: socialBasePath + "instagram.png",
+    twitter:   socialBasePath + "x.png",
+    threads:   socialBasePath + "thread.png",
+    youtube:   socialBasePath + "youtube.png",
+    linkedin:  socialBasePath + "linkedin.png",
+};
+const platformAltMap: Record<string, string> = {
+    facebook:  "Cosgrove Real Estate - Facebook",
+    instagram: "Cosgrove Real Estate - Instagram",
+    twitter:   "Cosgrove Real Estate - Twitter",
+    threads:   "Cosgrove Real Estate - Threads",
+    youtube:   "Cosgrove Real Estate - YouTube",
+    linkedin:  "Cosgrove Real Estate - LinkedIn",
+};
+
+function SocialItem({ link, platform }: { link: string; platform: string }) {
+    const key   = platform.toLowerCase();
+    const image = platformImageMap[key] ?? socialBasePath + "facebook.png";
+    const alt   = platformAltMap[key]   ?? platform;
+    return (
+        <a href={link} target={"_blank"} rel="noreferrer" className={styles.socialItem}>
+            <img src={image} alt={alt} />
+        </a>
+    );
+}
+
 export default function () {
     const [formVal, setFormVal] = useState<Form>({
         name: '',
@@ -38,82 +67,32 @@ export default function () {
     });
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [errors, setErrors] = useState<Partial<Err>>({});
-    interface SocialItemProp {
-        name: string;
-        image: string;
-        link: string;
-        alt?: string;
-    }
 
-    function SocialItem({ image, link, alt }) {
-        return (
-            <a href={link} target={"_blank"} className={styles.socialItem}>
-                <img src={image} alt={alt} />
-            </a>
-        );
-    }
-    const socialBasePath = "/assets/images/socials/";
-    const socialItemList: SocialItemProp[] = [
-        // {
-        //     name: "WhatsApp",
-        //     image: socialBasePath + "whatsapp.png",
-        //     link: "https://wa.me/+2349060001552",
-        //     alt: "",
-        // },
-        {
-            name: "FaceBook",
-            image: socialBasePath + "facebook.png",
-            link: "https://web.facebook.com/cosgroveafrica",
-            alt: " Cosgrove Real Estate - Facebook",
-        },
-        {
-            name: "Instagram",
-            image: socialBasePath + "instagram.png",
-            link: "https://www.instagram.com/cosgroveafrica ",
-            alt: "  Cosgrove Real Estate - Instagram",
-        },
-        {
-            name: "Twitter",
-            image: socialBasePath + "x.png",
-            link: "https://twitter.com/cosgroveafrica",
-            alt: " Cosgrove Real Estate - Twitter",
-        },
-        {
-            name: "Threads",
-            image: socialBasePath + "thread.png",
-            link: "https://www.threads.net/@cosgroveafrica",
-            alt: " Cosgrove Real Estate - Threads",
-        },
-        {
-            name: "Youtube",
-            image: socialBasePath + "youtube.png",
-            link: "https://www.youtube.com/@CosgroveAfrica",
-            alt: " Cosgrove Real Estate - Youtube",
-        },
-        {
-            name: "LinkedIn",
-            image: socialBasePath + "linkedin.png",
-            link: "https://www.linkedin.com/company/cosgroveafrica",
-            alt: " Cosgrove Real Estate - LinkedIn",
-        },
-    ];
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement | { name?: string; value: unknown }>) => {
-        const {name, value} = event.target;
+    const { data: contactInfo } = useCmsData(getContactInfo);
+    const { data: socialLinks } = useCmsData(getSocialLinks);
+
+    const phone1   = contactInfo?.phone_1  ?? '';
+    const phone2   = contactInfo?.phone_2  ?? '';
+    const email    = contactInfo?.email    ?? '';
+    const address  = contactInfo?.address  ?? '';
+    const mapsUrl  = contactInfo?.maps_url ?? '#';
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | { name?: string; value: unknown }>) => {
+        const {name, value} = event.target as { name: string; value: string };
         setFormVal((prevValues: Form) => ({
             ...prevValues,
-            [name as keyof Form]: value as string,
+            [name as keyof Form]: value,
         }));
     };
     const validateEmail = (email: string) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
-    const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault()
+    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
         if (!executeRecaptcha) {
             console.error('reCAPTCHA is not available.');
             return;
         }
-        // CosgroveContactUs
         const validateErr: Partial<Err> = {};
 
         if (!formVal.name) {
@@ -128,11 +107,7 @@ export default function () {
 
         setErrors(validateErr);
         if (Object.keys(validateErr).length > 0) {
-
-            console.log('invalid request');
-            toast.info("Please fill all required fields", {
-                position: "top-right"
-            });
+            toast.info("Please fill all required fields", { position: "top-right" });
             return;
         }
 
@@ -142,30 +117,17 @@ export default function () {
             formData['token'] = token;
 
             let response = await (new cosgroveApiServices()).sendContactDetails(formData);
-            console.log(response);
             if (response.status == true) {
-                setFormVal({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    message: ''
-                });
-
-
-                toast.success("Message Sent Successfully!", {
-                    position: "top-right"
-                });
+                setFormVal({ name: '', email: '', phone: '', message: '' });
+                toast.success("Message Sent Successfully!", { position: "top-right" });
             } else {
-
-
-                toast.error("Message Failed to send!", {
-                    position: "top-right"
-                });
+                toast.error("Message Failed to send!", { position: "top-right" });
             }
-        }catch (error) {
+        } catch (error) {
             console.error('Error during reCAPTCHA verification:', error);
         }
     };
+
     return (
         <section className={styles.footer}>
             <Row>
@@ -178,62 +140,61 @@ export default function () {
                     <div>{
                         Object.keys(errors).length > 0 &&
                         <div className={`text-center mb-3`}>
-                            {
-                                Object.keys(errors).map((item)=> {
-                                    return (<div>{errors[item]}</div>)
-                                })
-                            }
-                    </div>}
+                            {Object.keys(errors).map((item) => (
+                                <div key={item}>{errors[item]}</div>
+                            ))}
+                        </div>}
                     </div>
 
-
-                    {/*<form>*/}
                     <input
                         placeholder={"salutation"}
                         hidden={true}
                         className={styles.formItem}
-                        value={formVal.salutation} onChange={handleChange} name={'salutation'} onError={() => Boolean(errors.name)}
+                        value={formVal.salutation} onChange={handleChange} name={'salutation'}
                     />
-                        <input
-                            placeholder={"Name"}
-                            className={styles.formItem}
-                            value={formVal.name} onChange={handleChange} name={'name'} onError={() => Boolean(errors.name)}
-                        />
-                        <input
-                            placeholder={"Email"}
-                            className={styles.formItem}
-                            value={formVal.email} onChange={handleChange} name={'email'} onError={() => Boolean(errors.email)}
-                        />
-                        <input
-                            placeholder={"Phone"}
-                            className={styles.formItem}
-                            value={formVal.phone} onChange={handleChange} name={'phone'}
-                        />
-                        <textarea
-                            placeholder={"Type a message..."}
-                            className={styles.formItem}
-                            value={formVal.message} onChange={handleChange} name={'message'}
-                        />
+                    <input
+                        placeholder={"Name"}
+                        className={styles.formItem}
+                        value={formVal.name} onChange={handleChange} name={'name'}
+                    />
+                    <input
+                        placeholder={"Email"}
+                        className={styles.formItem}
+                        value={formVal.email} onChange={handleChange} name={'email'}
+                    />
+                    <input
+                        placeholder={"Phone"}
+                        className={styles.formItem}
+                        value={formVal.phone} onChange={handleChange} name={'phone'}
+                    />
+                    <textarea
+                        placeholder={"Type a message..."}
+                        className={styles.formItem}
+                        value={formVal.message} onChange={handleChange} name={'message'}
+                    />
 
-                        <button onClick={handleSubmit}>Submit</button>
-                    {/*</form>*/}
+                    <button onClick={handleSubmit}>Submit</button>
                 </Col>
                 <Col sm={12} md={4} className={styles.footerContactUs}>
                     <Row>
                         <Col xs={6} md={12}>
                             <h5 className={`headerDark`}>Call Us</h5>
                             <ul>
-                                <li className={`textDark mb-1`}>
-                                    <a href={'tel:+2349060001552'}>+234906 000 1552</a>
-                                </li>
-                                <li className={`textDark mb-1`}>
-                                    <a href={'tel:+2349060001553'}>+234906 000 1553</a>
-                                </li>
+                                {phone1 && (
+                                    <li className={`textDark mb-1`}>
+                                        <a href={`tel:${phone1}`}>{phone1}</a>
+                                    </li>
+                                )}
+                                {phone2 && (
+                                    <li className={`textDark mb-1`}>
+                                        <a href={`tel:${phone2}`}>{phone2}</a>
+                                    </li>
+                                )}
                             </ul>
                             <h5 className={`headerDark`}>Write Us</h5>
                             <ul>
                                 <li className={`textDark`}>
-                                    <a style={{wordBreak:'break-all'}} href={'mail:info@cosgroveafrica.com'}>info@cosgroveafrica.com</a>
+                                    <a style={{wordBreak:'break-all'}} href={`mailto:${email}`}>{email}</a>
                                 </li>
                             </ul>
                         </Col>
@@ -241,9 +202,7 @@ export default function () {
                             <h5 className={`headerDark`}>Visit Us</h5>
                             <ul>
                                 <li className={`textDark`}>
-                                    <a href={'https://goo.gl/maps/TPhMKJvJRiVSMSRD9'}>4th Floor, Mukhtar El Yakub Building
-                                    Zakariyya Maimalari Street, Central Business
-                                        District Abuja. FCT 900211 Nigeria</a>
+                                    <a href={mapsUrl}>{address}</a>
                                 </li>
                             </ul>
                         </Col>
@@ -254,7 +213,7 @@ export default function () {
                     <Row>
                         <Col xs={6}>
                             <ul>
-                                <li className={`textDark mb-4`}> <Link href={'/'}>Home</Link></li>
+                                <li className={`textDark mb-4`}><Link href={'/'}>Home</Link></li>
                                 <li className={`textDark mb-4`}><Link href={'/about'}>About</Link></li>
                                 <li className={`textDark mb-4`}><Link href={'/project-homes'}>Our Homes</Link></li>
                                 <li className={`textDark mb-4`}><Link href={'/projects'}>Projects</Link></li>
@@ -281,13 +240,8 @@ export default function () {
             </Row>
             <div className={styles.footerBottom}>
                 <div className={styles.footerSocials}>
-                    {socialItemList.map((item, index) => (
-                        <SocialItem
-                            key={index}
-                            image={item.image}
-                            alt={item.alt}
-                            link={item.link}
-                        />
+                    {(socialLinks ?? []).map((item: ApiSocialLink) => (
+                        <SocialItem key={item.id} link={item.url} platform={item.platform} />
                     ))}
                 </div>
 
@@ -297,9 +251,7 @@ export default function () {
                     <div className={"textDark text-center text-md-start"}>
                         ©2024 Cosgrove. All rights reserved.
                     </div>
-                    <div
-                        className={`textDark text-center text-md-end ${styles.developed}`}
-                    >
+                    <div className={`textDark text-center text-md-end ${styles.developed}`}>
                         {/*Designed & Developed by FolkMotion*/}
                     </div>
                 </div>

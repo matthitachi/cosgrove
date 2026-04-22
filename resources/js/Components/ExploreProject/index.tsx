@@ -22,7 +22,7 @@ import { ReactComponent as ArrowPrevious } from "/public/assets/svg/prev.svg";
 import Slider from "../Elements/Slider/index";
 import { useState } from "react";
 import HomeItem, {HomesItemProp} from "../.../../Elements/HomeItem";
-import {houseTypeItemProps} from "../../Data/data";
+import {houseTypeItemProps} from "../../types/cms";
 
 interface ExploreProjectProps {
     homeList: houseTypeItemProps[]

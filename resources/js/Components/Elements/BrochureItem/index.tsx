@@ -4,7 +4,7 @@ import * as React from "react";
 // @ts-ignore
 import { ReactComponent as Camera } from "/public/assets/svg/cctv-camera.svg";
 import {ReactNode} from "react";
-import {brochuresItemProp} from "../../../Data/data";
+import {brochuresItemProp} from "../../../types/cms";
 import {Col} from "react-bootstrap";
 
 

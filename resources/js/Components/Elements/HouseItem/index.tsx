@@ -5,7 +5,7 @@ import * as React from "react";
 import { ReactComponent as Camera } from "/public/assets/svg/cctv-camera.svg";
 import {ReactNode} from "react";
 import {Col} from "react-bootstrap";
-import {houseTypeItemProps} from "../../../Data/data";
+import {houseTypeItemProps} from "../../../types/cms";
 
 
 export default function (prop: houseTypeItemProps) {

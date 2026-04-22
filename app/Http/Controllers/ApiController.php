@@ -3,149 +3,109 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewMail;
-use Google\Cloud\RecaptchaEnterprise\V1\Event;
-use Google\Cloud\RecaptchaEnterprise\V1\RecaptchaEnterpriseServiceClient;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class ApiController extends Controller
 {
-    //
-    protected $client;
-    public function __construct()
+    public function sendContact(Request $request): JsonResponse
     {
-//        $this->client = new RecaptchaEnterpriseServiceClient();
-    }
-
-    public function sendContact(Request $request){
         $request->validate([
-           'token' => 'required'
+            'name'  => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'token' => 'required|string',
         ]);
-        if($request->has('salutation')){
-            return response()->json([
-                'status'=> true,
-                'message' => 'Completed successfully'
-            ]);
-        }
-        $token = $request->token;
-        Log::info("Token");
-        Log::info($token);
-        $action = "CosgroveContactUs";
-//        Mail::to($to)->later(now()->addHours($hours), new SendTimedMails($content, $subject));
 
-//        $score = $this->verifyToken($token, $action);
-//
-//        if ($score === null || $score < 0.5) {
-//            Log::info("Check the score for this to see  here");
-//            Log::info("Score failed here. '.$score");
-//            return response()->json([
-//                'status'=> false,
-//                'message' => 'System was unable to verify user'.
-//            ]);
-//        }
+        // Honeypot — bots fill hidden salutation field
+        if ($request->filled('salutation')) {
+            return response()->json(['status' => true, 'message' => 'Completed successfully']);
+        }
 
-        $content = "<div> <h3>Contact Us Information</h3>";
+        if (! $this->verifyRecaptcha($request->token)) {
+            return response()->json(['status' => false, 'message' => 'reCAPTCHA verification failed.'], 422);
+        }
 
-        if($request->has('name')){
-            $content.= "<div><b>Name:</b> {$request->name}</div>";
-        }
-        if($request->has('email')){
-            $content.= "<div><b>Email:</b> {$request->email}</div>";
-        }
-        if($request->has('project')){
-            $content.= "<div><b>Project:</b> {$request->project}</div>";
-        }
-        if($request->has('phone')){
-            $content.= "<div><b>Phone:</b> {$request->phone}</div>";
-        }
-        if($request->has('message')){
-            $content.= "<div><b>Message:</b> {$request->message}</div>";
-        }
-        $content .= "<div>";
-        try{
-            $mailable = new NewMail('Contact Us Information', $content);
-            if(config('app.env') == 'production'){
-                Mail::to('nafisa.aliyu@cosgroveafrica.com')->send($mailable);
-            }else{
-                Mail::to('matthitachi@gmail.com')->send($mailable);
+        $content = '<div><h3>Contact Us Information</h3>';
+        foreach (['name', 'email', 'project', 'phone', 'message'] as $field) {
+            if ($request->filled($field)) {
+                $label   = ucfirst($field);
+                $content .= "<div><b>{$label}:</b> " . e($request->input($field)) . '</div>';
             }
-        }catch (\Exception $e){
-            Log::info($e->getMessage());
-            Log::info($e->getTraceAsString());
         }
-        return response()->json([
-           'status'=> true,
-            'message' => 'Completed successfully'
-        ]);
-    }
-    public function verifyToken($token, $action)
-    {
-        $projectName = $this->client->projectName(env('GOOGLE_CLOUD_PROJECT'));
-
-        $event = (new Event())
-            ->setSiteKey(env('RECAPTCHA_ENTERPRISE_SITE_KEY'))
-            ->setToken($token);
-
-        $assessment = (new \Google\Cloud\RecaptchaEnterprise\V1\Assessment())
-            ->setEvent($event);
+        $content .= '</div>';
 
         try {
-            $response = $this->client->createAssessment($projectName, $assessment);
-            Log::info($response->serializeToJsonString());
-
-            if (!$response->getTokenProperties()->getValid()) {
-                Log::info('$response->getTokenProperties()->getValid()');
-                Log::info($response->getTokenProperties()->getValid());
-                $invalidReason = $response->getTokenProperties()->getInvalidReason();
-                Log::info($invalidReason);
-
-                return null; // Token is invalid
-            }
-
-            if ($response->getTokenProperties()->getAction() !== $action) {
-                Log::info('$response->getTokenProperties()->getAction()');
-                Log::info($response->getTokenProperties()->getAction());
-                return null; // Action mismatch
-            }
-
-            return $response->getRiskAnalysis()->getScore();
+            $mailable = new NewMail('Contact Us Information', $content);
+            $to = config('app.env') === 'production'
+                ? 'nafisa.aliyu@cosgroveafrica.com'
+                : 'matthitachi@gmail.com';
+            Mail::to($to)->send($mailable);
         } catch (\Exception $e) {
-            logger()->error('Error in reCAPTCHA verification: ' . $e->getMessage());
-            return null;
+            Log::error('sendContact mail failed: ' . $e->getMessage());
         }
-    }
-    public function sendAgent(Request $request){
-//        Mail::to($to)->later(now()->addHours($hours), new SendTimedMails($content, $subject));
-//        Log::info('enter here');
-//        Log::info(json_encode($request->all()));
-        $content = "<div>";
 
-        if($request->has('name')){
-            $content.= "<div><b>Name:</b> {$request->name}</div>";
-        }
-        if($request->has('email')){
-            $content.= "<div><b>Email:</b> {$request->email}</div>";
-        }
-        if($request->has('project')){
-            $content.= "<div><b>Project:</b> {$request->project}</div>";
-        }
-        if($request->has('phone')){
-            $content.= "<div><b>Phone:</b> {$request->phone}</div>";
-        }
-        if($request->has('message')){
-            $content.= "<div><b>Message:</b> {$request->message}</div>";
-        }
-        $content .= "<div>";
-        try{
-            $mailable = new NewMail('Contact Information', $content);
-            Mail::to('careers@cosgroveafrica.com')->send($mailable);
-        }catch (\Exception $e){
-            Log::info($e->getMessage());
-            Log::info($e->getTraceAsString());
-        }
-        return response()->json([
-           'status'=> true
+        return response()->json(['status' => true, 'message' => 'Completed successfully']);
+    }
+
+    public function sendAgent(Request $request): JsonResponse
+    {
+        $request->validate([
+            'name'    => 'required|string|max:255',
+            'email'   => 'required|email|max:255',
+            'phone'   => 'required|string|max:50',
+            'token'   => 'required|string',
+            'company' => 'nullable|string|max:255',
         ]);
+
+        if (! $this->verifyRecaptcha($request->token)) {
+            return response()->json(['status' => false, 'message' => 'reCAPTCHA verification failed.'], 422);
+        }
+
+        $content = '<div>';
+        foreach (['name', 'email', 'project', 'phone', 'company', 'message'] as $field) {
+            if ($request->filled($field)) {
+                $label   = ucfirst($field);
+                $content .= "<div><b>{$label}:</b> " . e($request->input($field)) . '</div>';
+            }
+        }
+        $content .= '</div>';
+
+        try {
+            $mailable = new NewMail('Agent Registration', $content);
+            Mail::to('careers@cosgroveafrica.com')->send($mailable);
+        } catch (\Exception $e) {
+            Log::error('sendAgent mail failed: ' . $e->getMessage());
+        }
+
+        return response()->json(['status' => true]);
+    }
+
+    private function verifyRecaptcha(string $token): bool
+    {
+        $secret = config('services.recaptcha.secret_key');
+        if (empty($secret)) {
+            Log::warning('RECAPTCHA_SECRET_KEY not configured — skipping verification');
+            return true;
+        }
+
+        try {
+            $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret'   => $secret,
+                'response' => $token,
+            ]);
+
+            $success = $response->json('success', false);
+            $score   = $response->json('score', 0);
+
+            Log::info('reCAPTCHA result', ['success' => $success, 'score' => $score]);
+
+            return $success && $score >= 0.5;
+        } catch (\Exception $e) {
+            Log::error('reCAPTCHA request failed: ' . $e->getMessage());
+            return false;
+        }
     }
 }

@@ -9,7 +9,6 @@ import OtherProjectTypes from "../../Components/ProjectDetailsPage/OtherProjectT
 import GallerySection from "../../Components/ProjectDetailsPage/GallerySection/index";
 import Explore from "../../Components/ExploreProject";
 import Footer from "../../Components/Elements/Footer";
-import {projects, houseTypes} from "../../Data/data";
 import {Container} from "react-bootstrap";
 import {useState} from "react";
 import {useEffect} from "react";

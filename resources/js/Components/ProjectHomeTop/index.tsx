@@ -6,7 +6,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
-import {houseTypeItemProps} from "../../Data/data";
+import {houseTypeItemProps} from "../../types/cms";
 import RecordList from "../Elements/RecordList";
 // @ts-ignore
 

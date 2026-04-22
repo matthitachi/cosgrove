@@ -1,0 +1,116 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+/* ─── Cosgrove brand overrides ─── */
+
+/* ── Light mode sidebar — Filament default, no overrides needed ── */
+.fi-sidebar-header .fi-brand-name {
+    color: #FBBD00 !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+.fi-sidebar-item-button:hover {
+    background-color: rgba(251, 189, 0, 0.10) !important;
+    color: #854F0B !important;
+}
+
+.fi-sidebar-item-button.fi-active,
+.fi-sidebar-item-button[aria-current="page"] {
+    background-color: rgba(251, 189, 0, 0.15) !important;
+    color: #854F0B !important;
+    font-weight: 600;
+}
+
+/* Sidebar icons — inherit text colour */
+.fi-sidebar-item-button svg {
+    color: inherit !important;
+}
+
+/* ── Dark mode sidebar — full dark treatment ── */
+.dark .fi-sidebar {
+    background-color: #121212 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .fi-sidebar-header {
+    background-color: #121212 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .fi-sidebar-item-button {
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-radius: 0.5rem;
+    transition: background 0.15s, color 0.15s;
+}
+
+.dark .fi-sidebar-item-button:hover {
+    background-color: rgba(251, 189, 0, 0.12) !important;
+    color: #FBBD00 !important;
+}
+
+.dark .fi-sidebar-item-button.fi-active,
+.dark .fi-sidebar-item-button[aria-current="page"] {
+    background-color: rgba(251, 189, 0, 0.18) !important;
+    color: #FBBD00 !important;
+    font-weight: 600;
+}
+
+.dark .fi-sidebar-group-label {
+    color: rgba(255, 255, 255, 0.35) !important;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.dark .fi-sidebar-header .fi-brand-name {
+    color: #FBBD00 !important;
+}
+
+/* Topbar */
+.fi-topbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Primary buttons — Cosgrove gold */
+.fi-btn-color-primary {
+    --tw-bg-opacity: 1;
+    background-color: #fbbd00 !important;
+    color: #121212 !important;
+    border: none;
+}
+
+.fi-btn-color-primary:hover {
+    background-color: #e0a800 !important;
+}
+
+/* Focus ring */
+.fi-input:focus,
+[data-focus]:focus {
+    --tw-ring-color: #fbbd00;
+}
+
+/* Stats overview icon accent */
+.fi-wi-stats-overview-stat-icon {
+    color: #fbbd00;
+}
+
+/* Table zebra rows */
+.fi-ta-row:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.015);
+}
+
+/* Section heading */
+.fi-section-header-heading {
+    font-weight: 600;
+    color: #121212;
+}
+
+/* Tabs — active tab gold underline */
+.fi-tabs-tab[aria-selected="true"] {
+    border-bottom-color: #fbbd00 !important;
+    color: #121212 !important;
+}

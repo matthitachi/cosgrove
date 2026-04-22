@@ -3,7 +3,6 @@ import {Col, Container, Row} from "react-bootstrap";
 import styles from "./styles.module.scss";
 import * as React from "react";
 import OtherProjectItem from "../../Elements/OtherProjectItem"
-import {houseTypes} from "../../../Data/data"
 import {ProjectItemProp} from "../../Elements/ProjectItem";
 interface HouseTypesProps {
     headerContent: string;

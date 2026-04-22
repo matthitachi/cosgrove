@@ -7,9 +7,6 @@ export default defineConfig({
     build: {
         manifest: true,
         outDir: "public/build",
-        rollupOptions: {
-            input: "resources/js/app.js",
-        },
     },
     optimizeDeps: {
         exclude: ["js-big-decimal"],
@@ -38,7 +35,11 @@ export default defineConfig({
             exclude: "",
         }),
         laravel({
-            input: ["resources/css/app.css", "resources/js/app.js"],
+            input: [
+                "resources/css/app.css",
+                "resources/js/app.js",
+                "resources/css/filament/admin/theme.css",
+            ],
             refresh: true,
         }),
     ],

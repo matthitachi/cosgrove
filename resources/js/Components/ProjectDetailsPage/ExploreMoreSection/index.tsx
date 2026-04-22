@@ -5,7 +5,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import * as React from "react";
 import ProjectItem, {ProjectItemProp} from "../../Elements/ProjectItem/index";
-import {projects} from "../../../Data/data"
 interface exploreProp {
     otherProjects: ProjectItemProp[]
 }
