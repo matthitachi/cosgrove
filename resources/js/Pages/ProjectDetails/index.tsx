@@ -18,7 +18,7 @@ function toProjectItemProp(p: ApiProject): ProjectItemProp {
         slug: p.slug,
         location: p.location,
         description: p.description || '',
-        mainImg: p.hero_image,
+        mainImg: p.thumbnail,
         detailsImg: p.hero_image,
         distFeature: [],
         galleryBasePath: '',
@@ -28,25 +28,34 @@ function toProjectItemProp(p: ApiProject): ProjectItemProp {
     };
 }
 
+function buildSpecs(h: ApiHouseType) {
+    const specs = [];
+    if (h.surface_area)   specs.push({ image: '/assets/images/icons/surface.png', title: 'Surface Area',    count: h.surface_area });
+    if (h.parking_spaces) specs.push({ image: '/assets/images/icons/spaces.png',  title: 'Parking Spaces', count: String(h.parking_spaces) });
+    if (h.maids_quarters) specs.push({ image: '/assets/images/icons/maid.png',    title: "Maid's Quarters", count: String(h.maids_quarters) });
+    if (h.beds)           specs.push({ image: '/assets/images/icons/bed.png',     title: 'Bedrooms',       count: String(h.beds) });
+    if (h.baths)          specs.push({ image: '/assets/images/icons/bath.png',    title: 'Bathrooms',      count: String(h.baths) });
+    if (h.living_rooms)   specs.push({ image: '/assets/images/icons/room.png',    title: 'Living Rooms',   count: String(h.living_rooms) });
+    return specs;
+}
+
 function toHouseTypeItemProps(h: ApiHouseType): houseTypeItemProps {
-    const thumbImg = h.images?.[0]?.thumb || h.images?.[0]?.url || '';
-    const fullImg  = h.images?.[0]?.url || '';
     const parts: string[] = [];
     if (h.beds)  parts.push(`${h.beds} bed${h.beds !== 1 ? 's' : ''}`);
     if (h.baths) parts.push(`${h.baths} bath${h.baths !== 1 ? 's' : ''}`);
     if (h.area)  parts.push(h.area);
     return {
-        img: thumbImg,
+        img: h.thumbnail,
         name: h.name,
         desc: parts.join(' · ') || h.name,
         slug: h.slug,
         projectSlug: [],
-        headerImg: fullImg,
-        detailsImg: fullImg,
-        moreDesc: '',
+        headerImg: h.hero_image,
+        detailsImg: h.hero_image,
+        moreDesc: h.description || '',
         galleryBasePath: '',
-        gallery: h.images.map(i => i.url),
-        specs: [],
+        gallery: (h.gallery ?? []).map(g => g.url),
+        specs: buildSpecs(h),
     };
 }
 

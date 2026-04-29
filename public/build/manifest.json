@@ -19,6 +19,66 @@
     "file": "assets/slick-26726bac.woff",
     "src": "node_modules/slick-carousel/slick/fonts/slick.woff"
   },
+  "public/assets/images/features/automatic-numberplate-recognition.svg": {
+    "file": "assets/automatic-numberplate-recognition-70ce0556.svg",
+    "src": "public/assets/images/features/automatic-numberplate-recognition.svg"
+  },
+  "public/assets/images/features/central-security-control.svg": {
+    "file": "assets/central-security-control-43abdcc2.svg",
+    "src": "public/assets/images/features/central-security-control.svg"
+  },
+  "public/assets/images/features/commercial-hub.svg": {
+    "file": "assets/commercial-hub-94294f6d.svg",
+    "src": "public/assets/images/features/commercial-hub.svg"
+  },
+  "public/assets/images/features/facial-recognition.svg": {
+    "file": "assets/facial-recognition-f1da3a4e.svg",
+    "src": "public/assets/images/features/facial-recognition.svg"
+  },
+  "public/assets/images/features/facility-management-services.svg": {
+    "file": "assets/facility-management-services-92355f27.svg",
+    "src": "public/assets/images/features/facility-management-services.svg"
+  },
+  "public/assets/images/features/fiber-to-the-home.svg": {
+    "file": "assets/fiber-to-the-home-a7c702e7.svg",
+    "src": "public/assets/images/features/fiber-to-the-home.svg"
+  },
+  "public/assets/images/features/full-fiber-optics-cabling.svg": {
+    "file": "assets/full-fiber-optics-cabling-995980ab.svg",
+    "src": "public/assets/images/features/full-fiber-optics-cabling.svg"
+  },
+  "public/assets/images/features/motion-sensors.svg": {
+    "file": "assets/motion-sensors-7484ada5.svg",
+    "src": "public/assets/images/features/motion-sensors.svg"
+  },
+  "public/assets/images/features/pedestrian-biometric-access-control.svg": {
+    "file": "assets/pedestrian-biometric-access-control-5f971b46.svg",
+    "src": "public/assets/images/features/pedestrian-biometric-access-control.svg"
+  },
+  "public/assets/images/features/playground-and-greenery.svg": {
+    "file": "assets/playground-and-greenery-3f19e593.svg",
+    "src": "public/assets/images/features/playground-and-greenery.svg"
+  },
+  "public/assets/images/features/security-alarm.svg": {
+    "file": "assets/security-alarm-6af615bf.svg",
+    "src": "public/assets/images/features/security-alarm.svg"
+  },
+  "public/assets/images/features/smart-street-lights.svg": {
+    "file": "assets/smart-street-lights-d45f1f66.svg",
+    "src": "public/assets/images/features/smart-street-lights.svg"
+  },
+  "public/assets/images/features/swimming-pool-and-gym.svg": {
+    "file": "assets/swimming-pool-and-gym-a53db5de.svg",
+    "src": "public/assets/images/features/swimming-pool-and-gym.svg"
+  },
+  "public/assets/images/features/uninterrupted-power-supply.svg": {
+    "file": "assets/uninterrupted-power-supply-684eb52b.svg",
+    "src": "public/assets/images/features/uninterrupted-power-supply.svg"
+  },
+  "public/assets/images/features/uninterrupted-treated-water-supply.svg": {
+    "file": "assets/uninterrupted-treated-water-supply-459f05bb.svg",
+    "src": "public/assets/images/features/uninterrupted-treated-water-supply.svg"
+  },
   "public/assets/images/icons/downloadnew.png": {
     "file": "assets/downloadnew-98b9f0ff.png",
     "src": "public/assets/images/icons/downloadnew.png"
@@ -65,7 +125,7 @@
     "src": "resources/css/app.css"
   },
   "resources/css/filament/admin/theme.css": {
-    "file": "assets/theme-db250b93.css",
+    "file": "assets/theme-57e89a9c.css",
     "isEntry": true,
     "src": "resources/css/filament/admin/theme.css"
   },
@@ -89,7 +149,7 @@
     "css": [
       "assets/app-e65961eb.css"
     ],
-    "file": "assets/app-40f65d1a.js",
+    "file": "assets/app-72e70564.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

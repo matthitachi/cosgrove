@@ -25,7 +25,7 @@ export interface ApiProject {
     show_in_home: boolean;
     sort_order: number;
     hero_image: string;
-    hero_thumb: string;
+    thumbnail: string;
     description: string | null;
     meta_title: string;
     meta_description: string | null;
@@ -34,7 +34,6 @@ export interface ApiProject {
 
 export interface ApiGalleryItem {
     url: string;
-    thumb: string;
     name: string;
 }
 
@@ -47,7 +46,14 @@ export interface ApiHouseType {
     area: string | null;
     price: string | null;
     sort_order: number;
-    images: ApiGalleryItem[];
+    description: string | null;
+    surface_area: string | null;
+    parking_spaces: number | null;
+    maids_quarters: number | null;
+    living_rooms: number | null;
+    hero_image: string;
+    thumbnail: string;
+    gallery: ApiGalleryItem[];
     floorplan_url: string;
 }
 
@@ -80,8 +86,8 @@ export interface ApiProjectDetail extends ApiProject {
 export interface ApiSmartFeature {
     id: number;
     name: string;
+    icon_key: string | null;
     description: string;
-    icon_svg: string | null;
     sort_order: number;
 }
 

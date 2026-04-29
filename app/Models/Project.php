@@ -5,10 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
@@ -43,23 +41,16 @@ class Project extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('gallery')
-            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
-
         $this->addMediaCollection('hero')
             ->singleFile()
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
-    }
 
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion('thumb')
-            ->fit(Fit::Crop, 400, 300)
-            ->performOnCollections('gallery', 'hero');
+        $this->addMediaCollection('thumbnail')
+            ->singleFile()
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
 
-        $this->addMediaConversion('card')
-            ->fit(Fit::Crop, 800, 600)
-            ->performOnCollections('gallery', 'hero');
+        $this->addMediaCollection('gallery')
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
     }
 
     public function houseTypes(): HasMany

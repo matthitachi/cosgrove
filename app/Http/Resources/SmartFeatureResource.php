@@ -12,8 +12,8 @@ class SmartFeatureResource extends JsonResource
         return [
             'id'          => $this->id,
             'name'        => $this->name,
+            'icon_key'    => $this->icon_key,
             'description' => $this->description,
-            'icon_svg'    => $this->icon_svg,
             'sort_order'  => $this->sort_order,
         ];
     }

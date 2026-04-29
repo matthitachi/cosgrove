@@ -95,23 +95,34 @@ class ProjectResource extends Resource
                                         ->columnSpanFull(),
                                 ]),
 
-                            Forms\Components\Section::make('Gallery')
+                            Forms\Components\Section::make('Images')
                                 ->schema([
                                     SpatieMediaLibraryFileUpload::make('hero')
-                                        ->label('Hero image')
+                                        ->label('Hero image (landscape)')
                                         ->collection('hero')
                                         ->image()
                                         ->imageEditor()
                                         ->maxFiles(1)
+                                        ->helperText('Full-width image. Use landscape orientation.')
+                                        ->columnSpanFull(),
+
+                                    SpatieMediaLibraryFileUpload::make('thumbnail')
+                                        ->label('Thumbnail (portrait)')
+                                        ->collection('thumbnail')
+                                        ->image()
+                                        ->imageEditor()
+                                        ->maxFiles(1)
+                                        ->helperText('Used on listing cards. Use portrait orientation.')
                                         ->columnSpanFull(),
 
                                     SpatieMediaLibraryFileUpload::make('gallery')
                                         ->label('Gallery images')
                                         ->collection('gallery')
-                                        ->multiple()
                                         ->image()
                                         ->imageEditor()
+                                        ->multiple()
                                         ->reorderable()
+                                        ->maxFiles(30)
                                         ->columnSpanFull(),
                                 ]),
                         ]),
@@ -146,7 +157,6 @@ class ProjectResource extends Resource
                 SpatieMediaLibraryImageColumn::make('hero')
                     ->label('')
                     ->collection('hero')
-                    ->conversion('thumb')
                     ->width(60)
                     ->height(45),
 

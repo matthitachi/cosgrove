@@ -32,7 +32,7 @@ function toProjectItemProp(p: ApiProjectDetail): ProjectItemProp {
         slug: p.slug,
         location: p.location,
         description: p.description || '',
-        mainImg: p.hero_image,
+        mainImg: p.thumbnail,
         detailsImg: p.hero_image,
         distFeature: [],
         galleryBasePath: '',
@@ -43,22 +43,21 @@ function toProjectItemProp(p: ApiProjectDetail): ProjectItemProp {
 }
 
 function toHouseTypeItemProps(h: ApiHouseType): houseTypeItemProps {
-    const thumb = h.images?.[0]?.thumb || h.images?.[0]?.url || '';
     const parts: string[] = [];
     if (h.beds)  parts.push(`${h.beds} Bed${h.beds !== 1 ? 's' : ''}`);
     if (h.baths) parts.push(`${h.baths} Bath${h.baths !== 1 ? 's' : ''}`);
     if (h.area)  parts.push(h.area);
     return {
-        img: thumb,
+        img: h.thumbnail,
         name: h.name,
         desc: parts.join(' · ') || h.name,
         slug: h.slug,
         projectSlug: [],
-        headerImg: h.images?.[0]?.url || '',
-        detailsImg: h.images?.[0]?.url || '',
+        headerImg: h.hero_image,
+        detailsImg: h.hero_image,
         moreDesc: '',
         galleryBasePath: '',
-        gallery: (h.images ?? []).map(i => i.url),
+        gallery: (h.gallery ?? []).map(g => g.url),
         specs: [],
     };
 }

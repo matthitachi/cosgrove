@@ -19,7 +19,7 @@ export default function () {
 
     const homeListItems = (allDetails ?? []).flatMap(p =>
         (p.house_types ?? []).map((h, idx) => {
-            const thumb = h.images?.[0]?.thumb || h.images?.[0]?.url || '';
+            const thumb = h.thumbnail;
             const parts: string[] = [];
             if (h.beds)  parts.push(`${h.beds} Bed${h.beds !== 1 ? 's' : ''}`);
             if (h.baths) parts.push(`${h.baths} Bath${h.baths !== 1 ? 's' : ''}`);

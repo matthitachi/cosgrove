@@ -11,8 +11,8 @@ class SmartFeature extends Model
 
     protected $fillable = [
         'name',
+        'icon_key',
         'description',
-        'icon_svg',
         'sort_order',
         'is_active',
     ];

@@ -13,35 +13,24 @@ class ImportExistingMedia extends Command
 
     public function handle(): int
     {
-        $dryRun = $this->option('dry-run');
-
-        // hero = landscape.jpg (main display), gallery = gallery/ subdir
-        $projectMap = [
-            'cosgrove_smart_estate_maitama' => 'maitama',
-            'cosgrove_smart_estate_wuye'    => 'wuye',
-            'cosgrove_smart_estate_mabushi' => 'mabushi',
-            'cosgrove_smart_estate_guzape'  => 'guzape',
-            'tetra'                         => 'tetra',
-            'cosgrove_Smart_city_katampe'   => 'katampe',
-            'the_chateaux'                  => 'chateaux',
-            'fourteen'                      => 'fourteen',
-            'cosgrove_smart_estate_wuse_2'  => 'wuse2',
-        ];
-
-        $teamMap = [
-            'Umar Abdullahi, OFR.'    => 'assets/images/teams/umar.jpg',
-            'Engr. Madhur Tripathi'   => 'assets/images/teams/madhur.jpg',
-            'Engr. Baba Kalli'        => 'assets/images/teams/kalli.jpg',
-            'Babangida Mukaddas'      => 'assets/images/teams/IMG_7052.jpeg',
-            'Raymond Ricketts'        => 'assets/images/teams/IMG_5999.JPG',
-            'Elizabeth Taylor'        => 'assets/images/teams/elizabeth.jpg',
-            'Barr. Adeoba Ademoyega'  => 'assets/images/teams/adeoba.jpg',
-        ];
-
+        $dryRun   = $this->option('dry-run');
         $imported = 0;
         $skipped  = 0;
 
-        // ── Projects ─────────────────────────────────────────────────────────
+        // ── Projects ──────────────────────────────────────────────────────────
+        // Convention: landscape.jpg → hero | portrait.jpg → thumbnail | gallery/ → gallery
+        $projectMap = [
+            'cosgrove_smart_estate_maitama' => 'assets/images/projects/maitama',
+            'cosgrove_smart_estate_wuye'    => 'assets/images/projects/wuye',
+            'cosgrove_smart_estate_mabushi' => 'assets/images/projects/mabushi',
+            'cosgrove_smart_estate_guzape'  => 'assets/images/projects/guzape',
+            'tetra'                         => 'assets/images/projects/tetra',
+            'cosgrove_Smart_city_katampe'   => 'assets/images/projects/katampe',
+            'the_chateaux'                  => 'assets/images/projects/chateaux',
+            'fourteen'                      => 'assets/images/projects/fourteen',
+            'cosgrove_smart_estate_wuse_2'  => 'assets/images/projects/wuse2',
+        ];
+
         foreach ($projectMap as $slug => $folder) {
             $project = Project::where('slug', $slug)->first();
             if (! $project) {
@@ -50,50 +39,30 @@ class ImportExistingMedia extends Command
                 continue;
             }
 
-            $base = public_path("assets/images/projects/{$folder}");
-
-            // Hero — skip if already has media
-            $heroPath = "{$base}/landscape.jpg";
-            if (file_exists($heroPath)) {
-                if ($dryRun) {
-                    $this->line("  [hero]    {$slug} ← assets/images/projects/{$folder}/landscape.jpg");
-                } elseif ($project->getFirstMedia('hero') === null) {
-                    $project->addMedia($heroPath)->preservingOriginal()->toMediaCollection('hero');
-                    $imported++;
-                } else {
-                    $this->line("  [skip]    {$slug} hero already attached");
-                    $skipped++;
-                }
-            } else {
-                $this->warn("  [missing] {$heroPath}");
+            if (! $dryRun) {
+                $project->clearMediaCollection('hero');
+                $project->clearMediaCollection('thumbnail');
+                $project->clearMediaCollection('gallery');
             }
 
-            // Gallery
-            $galleryFiles = collect(glob("{$base}/gallery/*.{jpg,jpeg,png,webp}", GLOB_BRACE))
-                ->sort()
-                ->values();
+            $basePath = public_path($folder);
 
-            $existingGalleryCount = $project->getMedia('gallery')->count();
-
-            if ($galleryFiles->isEmpty()) {
-                $this->line("  [skip]    {$slug} — no gallery files found");
-            } elseif (! $dryRun && $existingGalleryCount > 0) {
-                $this->line("  [skip]    {$slug} gallery ({$existingGalleryCount} already attached)");
-                $skipped += $existingGalleryCount;
-            } else {
-                foreach ($galleryFiles as $galleryPath) {
-                    $rel = 'assets/images/projects/' . $folder . '/gallery/' . basename($galleryPath);
-                    if ($dryRun) {
-                        $this->line("  [gallery] {$slug} ← {$rel}");
-                    } else {
-                        $project->addMedia($galleryPath)->preservingOriginal()->toMediaCollection('gallery');
-                        $imported++;
-                    }
-                }
-            }
+            $this->importSingle($project, 'hero',      $basePath . '/landscape.jpg', "{$folder}/landscape.jpg", $slug, $dryRun, $imported);
+            $this->importSingle($project, 'thumbnail', $basePath . '/portrait.jpg',  "{$folder}/portrait.jpg",  $slug, $dryRun, $imported);
+            $this->importGallery($project, $basePath . '/gallery', $slug, $dryRun, $imported);
         }
 
-        // ── Team Members ─────────────────────────────────────────────────────
+        // ── Team Members ──────────────────────────────────────────────────────
+        $teamMap = [
+            'Umar Abdullahi, OFR.'   => 'assets/images/teams/umar.jpg',
+            'Engr. Madhur Tripathi'  => 'assets/images/teams/madhur.jpg',
+            'Engr. Baba Kalli'       => 'assets/images/teams/kalli.jpg',
+            'Babangida Mukaddas'     => 'assets/images/teams/IMG_7052.jpeg',
+            'Raymond Ricketts'       => 'assets/images/teams/IMG_5999.JPG',
+            'Elizabeth Taylor'       => 'assets/images/teams/elizabeth.jpg',
+            'Barr. Adeoba Ademoyega' => 'assets/images/teams/adeoba.jpg',
+        ];
+
         foreach ($teamMap as $name => $assetPath) {
             $member = TeamMember::where('name', $name)->first();
             if (! $member) {
@@ -120,6 +89,65 @@ class ImportExistingMedia extends Command
             }
         }
 
+        // ── House Types ───────────────────────────────────────────────────────
+        // Convention: landscape.jpg → hero | portrait.jpg → thumbnail | gallery/ → gallery
+        // Map value is either a folder string or array with 'folder' + optional 'portrait' override.
+        $houseTypeMap = [
+            'acacia'          => 'assets/images/house-types/acacia',
+            'oak'             => 'assets/images/house-types/oak',
+            'oakville'        => 'assets/images/house-types/oakville',
+            'scarlet_oak'     => 'assets/images/house-types/scarlet-oak',
+            'maple'           => 'assets/images/house-types/maple',
+            'maple_penthouse' => [
+                'folder'   => 'assets/images/house-types/maple',
+                'portrait' => 'penthouse_potrait.jpeg',
+            ],
+            'pine'            => 'assets/images/house-types/pine',
+            'pine-pent-house' => 'assets/images/house-types/pine-penthouse',
+            'chateau'         => 'assets/images/house-types/the-chateau',
+            'olive'           => 'assets/images/house-types/olive',
+            'villa'           => 'assets/images/house-types/villa',
+            'nouveau_villa'   => 'assets/images/house-types/maitama',
+        ];
+
+        foreach ($houseTypeMap as $slug => $entry) {
+            $houseType = \App\Models\HouseType::where('slug', $slug)->first();
+            if (! $houseType) {
+                $this->warn("House type not found: {$slug}");
+                $skipped++;
+                continue;
+            }
+
+            $folder        = is_array($entry) ? $entry['folder']   : $entry;
+            $portraitFile  = is_array($entry) ? $entry['portrait'] : 'portrait.jpg';
+
+            if (! $dryRun) {
+                $houseType->clearMediaCollection('hero');
+                $houseType->clearMediaCollection('thumbnail');
+                $houseType->clearMediaCollection('gallery');
+                $houseType->clearMediaCollection('floorplan');
+            }
+
+            $basePath = public_path($folder);
+
+            $this->importSingle($houseType, 'hero',      $basePath . '/landscape.jpg',   "{$folder}/landscape.jpg",  $slug, $dryRun, $imported);
+            $this->importSingle($houseType, 'thumbnail', $basePath . '/' . $portraitFile, "{$folder}/{$portraitFile}", $slug, $dryRun, $imported);
+            $this->importGallery($houseType, $basePath . '/gallery', $slug, $dryRun, $imported);
+
+            // Floorplan — any file named floorplan.*
+            $floorplanFiles = glob($basePath . '/floorplan.*') ?: [];
+            if (! empty($floorplanFiles)) {
+                $fp  = $floorplanFiles[0];
+                $rel = $folder . '/' . basename($fp);
+                if ($dryRun) {
+                    $this->line("  [floorplan] {$slug} ← {$rel}");
+                } else {
+                    $houseType->addMedia($fp)->preservingOriginal()->toMediaCollection('floorplan');
+                    $imported++;
+                }
+            }
+        }
+
         if ($dryRun) {
             $this->info('Dry run complete — no changes made.');
         } else {
@@ -127,5 +155,41 @@ class ImportExistingMedia extends Command
         }
 
         return self::SUCCESS;
+    }
+
+    private function importSingle($model, string $collection, string $path, string $rel, string $slug, bool $dryRun, int &$imported): void
+    {
+        if (! file_exists($path)) {
+            $this->warn("  [missing] {$slug} {$collection} ← {$rel}");
+            return;
+        }
+        if ($dryRun) {
+            $this->line("  [{$collection}] {$slug} ← {$rel}");
+        } else {
+            $model->addMedia($path)->preservingOriginal()->toMediaCollection($collection);
+            $imported++;
+        }
+    }
+
+    private function importGallery($model, string $galleryDir, string $slug, bool $dryRun, int &$imported): void
+    {
+        if (! is_dir($galleryDir)) {
+            return;
+        }
+        $files = collect(scandir($galleryDir))
+            ->filter(fn ($f) => ! in_array($f, ['.', '..']))
+            ->filter(fn ($f) => preg_match('/\.(jpg|jpeg|png|webp)$/i', $f))
+            ->sort()
+            ->values();
+
+        foreach ($files as $file) {
+            $fullPath = $galleryDir . '/' . $file;
+            if ($dryRun) {
+                $this->line("  [gallery]  {$slug} ← gallery/{$file}");
+            } else {
+                $model->addMedia($fullPath)->preservingOriginal()->toMediaCollection('gallery');
+                $imported++;
+            }
+        }
     }
 }

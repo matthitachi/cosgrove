@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Forms\Components\IconPickerField;
 use App\Filament\Resources\SmartFeatureResource\Pages;
 use App\Models\SmartFeature;
 use Filament\Forms;
@@ -49,13 +50,11 @@ class SmartFeatureResource extends Resource
                 ]),
 
             Forms\Components\Section::make('Icon')
-                ->collapsible()
                 ->schema([
-                    Forms\Components\Textarea::make('icon_svg')
-                        ->label('SVG icon code')
-                        ->rows(6)
-                        ->helperText('Paste raw <svg>...</svg> markup. Used directly in frontend.')
-                        ->extraAttributes(['class' => 'font-mono'])
+                    IconPickerField::make('icon_key')
+                        ->label('Icon')
+                        ->iconOptions(static::getIconOptions())
+                        ->helperText('Select an icon. Renaming the feature will not change this.')
                         ->columnSpanFull(),
                 ]),
         ]);
@@ -100,5 +99,23 @@ class SmartFeatureResource extends Resource
             'create' => Pages\CreateSmartFeature::route('/create'),
             'edit'   => Pages\EditSmartFeature::route('/{record}/edit'),
         ];
+    }
+
+    private static function getIconOptions(): array
+    {
+        $path = public_path('assets/images/features');
+        if (! is_dir($path)) {
+            return [];
+        }
+
+        return collect(scandir($path))
+            ->filter(fn ($f) => str_ends_with($f, '.svg'))
+            ->map(fn ($f) => [
+                'key'   => str_replace('.svg', '', $f),
+                'label' => ucfirst(str_replace('-', ' ', str_replace('.svg', '', $f))),
+            ])
+            ->sortBy('label')
+            ->values()
+            ->toArray();
     }
 }

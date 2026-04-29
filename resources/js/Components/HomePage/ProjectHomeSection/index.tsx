@@ -15,7 +15,7 @@ function toProjectItemProp(p: ApiProject): ProjectItemProp {
         slug: p.slug,
         location: p.location,
         description: p.description || '',
-        mainImg: p.hero_image,
+        mainImg: p.thumbnail,
         detailsImg: p.hero_image,
         distFeature: [],
         galleryBasePath: '',

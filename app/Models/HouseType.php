@@ -5,10 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
@@ -25,13 +23,21 @@ class HouseType extends Model implements HasMedia
         'area',
         'price',
         'sort_order',
+        'description',
+        'surface_area',
+        'parking_spaces',
+        'maids_quarters',
+        'living_rooms',
     ];
 
     protected $casts = [
-        'project_id' => 'integer',
-        'beds'       => 'integer',
-        'baths'      => 'integer',
-        'sort_order' => 'integer',
+        'project_id'     => 'integer',
+        'beds'           => 'integer',
+        'baths'          => 'integer',
+        'sort_order'     => 'integer',
+        'parking_spaces' => 'integer',
+        'maids_quarters' => 'integer',
+        'living_rooms'   => 'integer',
     ];
 
     public function getSlugOptions(): SlugOptions
@@ -44,23 +50,20 @@ class HouseType extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('images')
+        $this->addMediaCollection('hero')
+            ->singleFile()
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
+
+        $this->addMediaCollection('thumbnail')
+            ->singleFile()
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
+
+        $this->addMediaCollection('gallery')
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/webp']);
 
         $this->addMediaCollection('floorplan')
             ->singleFile()
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf']);
-    }
-
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion('thumb')
-            ->fit(Fit::Crop, 400, 300)
-            ->performOnCollections('images');
-
-        $this->addMediaConversion('card')
-            ->fit(Fit::Crop, 800, 600)
-            ->performOnCollections('images');
     }
 
     public function project(): BelongsTo

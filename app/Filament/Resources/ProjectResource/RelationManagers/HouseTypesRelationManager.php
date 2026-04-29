@@ -66,17 +66,62 @@ class HouseTypesRelationManager extends RelationManager
                         ->label('Display order')
                         ->numeric()
                         ->default(0),
+
+                    Forms\Components\TextInput::make('surface_area')
+                        ->label('Surface Area')
+                        ->maxLength(100)
+                        ->placeholder('e.g. 284sq m'),
+
+                    Forms\Components\TextInput::make('parking_spaces')
+                        ->label('Parking Spaces')
+                        ->numeric()
+                        ->minValue(0),
+
+                    Forms\Components\TextInput::make('maids_quarters')
+                        ->label("Maid's Quarters")
+                        ->numeric()
+                        ->minValue(0),
+
+                    Forms\Components\TextInput::make('living_rooms')
+                        ->label('Living Rooms')
+                        ->numeric()
+                        ->minValue(0),
                 ]),
 
-            Forms\Components\Section::make('Media')
+            Forms\Components\Section::make('Description')
                 ->schema([
-                    SpatieMediaLibraryFileUpload::make('images')
-                        ->label('Images')
-                        ->collection('images')
-                        ->multiple()
+                    Forms\Components\Textarea::make('description')
+                        ->label('Description')
+                        ->rows(5)
+                        ->columnSpanFull(),
+                ]),
+
+            Forms\Components\Section::make('Images')
+                ->schema([
+                    SpatieMediaLibraryFileUpload::make('hero')
+                        ->label('Hero image (landscape)')
+                        ->collection('hero')
                         ->image()
                         ->imageEditor()
+                        ->maxFiles(1)
+                        ->helperText('Full-width display image.'),
+
+                    SpatieMediaLibraryFileUpload::make('thumbnail')
+                        ->label('Thumbnail (portrait)')
+                        ->collection('thumbnail')
+                        ->image()
+                        ->imageEditor()
+                        ->maxFiles(1)
+                        ->helperText('Used on listing cards.'),
+
+                    SpatieMediaLibraryFileUpload::make('gallery')
+                        ->label('Gallery images')
+                        ->collection('gallery')
+                        ->image()
+                        ->imageEditor()
+                        ->multiple()
                         ->reorderable()
+                        ->maxFiles(20)
                         ->columnSpanFull(),
 
                     SpatieMediaLibraryFileUpload::make('floorplan')
@@ -94,10 +139,9 @@ class HouseTypesRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('name')
             ->columns([
-                SpatieMediaLibraryImageColumn::make('images')
+                SpatieMediaLibraryImageColumn::make('hero')
                     ->label('')
-                    ->collection('images')
-                    ->conversion('thumb')
+                    ->collection('hero')
                     ->width(60)
                     ->height(45),
 
@@ -116,6 +160,10 @@ class HouseTypesRelationManager extends RelationManager
                     ->sortable(),
 
                 Tables\Columns\TextColumn::make('area')
+                    ->toggleable(),
+
+                Tables\Columns\TextColumn::make('surface_area')
+                    ->label('Surface Area')
                     ->toggleable(),
 
                 Tables\Columns\TextColumn::make('price')

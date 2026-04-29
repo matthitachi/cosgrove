@@ -8,6 +8,7 @@ import FeaturesItem from "../../Elements/FeaturesItem";
 import Slider from "../../Elements/Slider/index";
 import { getSmartFeatures } from "../../../Services/cosgroveApiServices";
 import { useCmsData } from "../../../Hooks/useCmsData";
+import { featureIconMap } from "../../../Data/featureIcons";
 
 export default function () {
     React.useEffect(() => {
@@ -60,15 +61,24 @@ export default function () {
                     <Slider
                         settings={settings}
                         childrenItems={[
-                            ((features ?? []).map((item, key) => (
-                                <FeaturesItem title={item.name} description={item.description} icon={null} key={key} />
-                            )))
+                            ((features ?? []).map((item, key) => {
+                                const IconComponent = item.icon_key ? featureIconMap[item.icon_key] : undefined;
+                                return (
+                                    <FeaturesItem
+                                        title={item.name}
+                                        description={item.description}
+                                        icon={IconComponent ? <IconComponent /> : null}
+                                        svgColor="#000000"
+                                        key={key}
+                                    />
+                                );
+                            }))
                         ]}
                     />
                 </div>
                 <div className={styles.featuresQuote}>
                     <h4 className={`headerWhite`}>
-                        “We will never stop delivering the highest quality.”
+                        "We will never stop delivering the highest quality."
                     </h4>
                     <h2>-The Cosgrove Team.</h2>
                 </div>

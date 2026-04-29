@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -37,12 +36,14 @@ class TeamMember extends Model implements HasMedia
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')
-            ->fit(Fit::Crop, 300, 300)
-            ->performOnCollections('photo');
+            ->crop(400, 400)
+            ->performOnCollections('photo')
+            ->nonQueued();
 
         $this->addMediaConversion('profile')
-            ->fit(Fit::Crop, 600, 600)
-            ->performOnCollections('photo');
+            ->crop(800, 800)
+            ->performOnCollections('photo')
+            ->nonQueued();
     }
 
     public function scopeOrdered($query)
