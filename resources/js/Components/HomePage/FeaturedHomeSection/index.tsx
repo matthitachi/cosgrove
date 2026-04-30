@@ -11,6 +11,7 @@ import arrowRightSvgR from "/public/assets/svg/arrow-right.svg";
 import {Link} from "@inertiajs/react";
 import { getPressArticles, ApiPressArticle } from "../../../Services/cosgroveApiServices";
 import { useCmsData } from "../../../Hooks/useCmsData";
+import { ApiPageSection } from "../../../types/cms";
 
 interface FeaturedListItemProp {
     date: string;
@@ -27,9 +28,10 @@ function toFeaturedItem(p: ApiPressArticle): FeaturedListItemProp {
 }
 
 interface listProp{
-    full?: boolean
+    full?: boolean;
+    cmsSection?: ApiPageSection;
 }
-export default function ({full = true}: listProp) {
+export default function ({full = true, cmsSection}: listProp) {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
@@ -57,7 +59,7 @@ export default function ({full = true}: listProp) {
             <div className={`curvedTop ${styles.topCurve}`} />
             <Container className={styles.featuredCtx}>
                 <h4 className={`subHeader mb-25`}>Press</h4>
-                <h2 className={`headerDark`}>Featured</h2>
+                <h2 className={`headerDark`}>{(cmsSection?.data?.heading as string) ?? 'Featured'}</h2>
 
                 <ul className={styles.featuredList}>
                     {

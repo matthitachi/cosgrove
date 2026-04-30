@@ -27,3 +27,23 @@ export interface FeaturedListItemProp {
     title: string;
     link: string;
 }
+
+export interface ApiPageSection {
+    id: number;
+    type: string;
+    label: string;
+    sort_order: number;
+    is_active: boolean;
+    data: Record<string, unknown>;
+}
+
+export interface ApiPage {
+    id: number;
+    title: string;
+    slug: string;
+    template: string;
+    status: string;
+    meta_title: string | null;
+    meta_description: string | null;
+    sections: ApiPageSection[];
+}

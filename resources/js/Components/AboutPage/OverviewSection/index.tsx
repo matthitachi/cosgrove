@@ -17,8 +17,11 @@ import Slider from "../../Elements/Slider";
 import RecordList, { RecordItemProp } from "../../Elements/RecordList";
 import SupportList, { SupportItemProp } from "../../Elements/SupportList";
 import TeamSection from "../TeamSection";
+import { ApiPageSection } from "../../../types/cms";
 
-export default function () {
+interface Props { cmsSection?: ApiPageSection; }
+
+export default function ({ cmsSection }: Props) {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
@@ -122,7 +125,7 @@ export default function () {
                 <Row className={`mb-5`}>
                     <Col md={12} lg={5} data-aos="fade-right">
                         <h4 className={"subHeader"}>About us</h4>
-                        <h2 className={"headerDark  mb-4"}>The Cosgrove Way</h2>
+                        <h2 className={"headerDark  mb-4"}>{(cmsSection?.data?.heading as string) ?? 'The Cosgrove Way'}</h2>
                     </Col>
                     <Col md={12} lg={7} data-aos="fade-left">
                         <p

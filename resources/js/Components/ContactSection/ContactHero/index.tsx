@@ -7,8 +7,11 @@ import cosgroveApiServices from "../../../Services/cosgroveApiServices";
 import {useState} from "react";
 import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
 import {toast} from "react-toastify";
+import { ApiPageSection } from "../../../types/cms";
 
-export default function () {
+interface Props { cmsSection?: ApiPageSection; }
+
+export default function ({ cmsSection }: Props) {
 
     const [formVal, setFormVal] = useState<Form>({
         name: '',
@@ -97,16 +100,13 @@ export default function () {
                     <Col sm={12} className={styles.infoHomeInfo}>
                         <h5>Booking a Tour</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
-                            See it with your eyes.
+                            {(cmsSection?.data?.heading as string) ?? 'See it with your eyes.'}
                         </h2>
                     </Col>
 
                     <Col md={12} lg={7} className={styles.infoHomeInfo}>
                         <p className={`textPrimary`}>
-                            Visit a Cosgrove home and experience opulence merged
-                            with modern technology first-hand. Fill in the
-                             form below and one of our team members will
-                            be in touch.
+                            {(cmsSection?.data?.subheading as string) ?? 'Visit a Cosgrove home and experience opulence merged with modern technology first-hand. Fill in the form below and one of our team members will be in touch.'}
                         </p>
 
                         <form className={styles.contactInTouch}>

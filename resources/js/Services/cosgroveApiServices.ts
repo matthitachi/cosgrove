@@ -158,3 +158,4 @@ export const getContactInfo    = (): Promise<ApiContactInfo>      => api.get('/v
 export const getSocialLinks    = (): Promise<ApiSocialLink[]>     => api.get('/v1/homepage/social').then(r => r.data.data);
 export const getSmartFeatures  = (): Promise<ApiSmartFeature[]>   => api.get('/v1/homepage/features').then(r => r.data.data);
 export const getJobListings    = (): Promise<ApiJobListing[]>     => api.get('/v1/jobs').then(r => r.data.data);
+export const getPage           = (slug: string): Promise<import('../types/cms').ApiPage> => api.get(`/v1/pages/${slug}`).then(r => r.data.data);

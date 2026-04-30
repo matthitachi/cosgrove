@@ -13,6 +13,10 @@ import {Container} from "react-bootstrap";
 import {useState} from "react";
 import {useEffect} from "react";
 import {Cube} from 'react-preloaders';
+import { useCmsData } from "../../Hooks/useCmsData";
+import { getPage } from "../../Services/cosgroveApiServices";
+import { ApiPage } from "../../types/cms";
+
 export default function () {
 
     const [loading, setLoading] = useState<boolean>(true);
@@ -21,6 +25,9 @@ export default function () {
             setLoading(false);
         }, 1000)
     }, []);
+
+    const { data: privacyPage } = useCmsData<ApiPage>(() => getPage('privacy'));
+    const textSection = privacyPage?.sections.find(s => s.type === 'text' && s.is_active);
     return (
         <div>
             {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
@@ -29,7 +36,7 @@ export default function () {
             <Container>
                 <div>
                     <h5 className={'subHeader  mt-5 mb-2'}>Privacy Policy</h5>
-                    <h2 className={'headerDark'}>Privacy Policy for Cosgrove</h2>
+                    <h2 className={'headerDark'}>{(textSection?.data?.heading as string) ?? 'Privacy Policy for Cosgrove'}</h2>
 
                     <p className={'textPrimary'}>
                         At Cosgrove, we are committed to safeguarding the privacy of our visitors and users. This Privacy Policy outlines the types of information we collect and how we use it. Please read this policy carefully to understand how your personal information will be treated when you use our website, accessible at www.cosgroveafrica.com

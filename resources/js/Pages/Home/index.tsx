@@ -12,7 +12,13 @@ import SmartFeaturesHomeSection from "../../Components/HomePage/SmartFeaturesHom
 import Footer from "../../Components/Elements/Footer/index";
 import {Cube} from 'react-preloaders';
 import {useEffect, useState} from "react";
+import { useCmsData } from "../../Hooks/useCmsData";
+import { getPage } from "../../Services/cosgroveApiServices";
+import { ApiPage } from "../../types/cms";
 
+function sectionByType(page: ApiPage | null, type: string) {
+    return page?.sections.find(s => s.type === type && s.is_active);
+}
 
 export default function () {
     const [loading, setLoading] = useState<boolean>(true);
@@ -21,6 +27,9 @@ export default function () {
             setLoading(false);
         }, 1000)
     }, []);
+
+    const { data: homePage } = useCmsData<ApiPage>(() => getPage('home'));
+
     return (<div>
         {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
         <NavBar/>
@@ -28,7 +37,7 @@ export default function () {
         <WelcomeSection/>
         <AboutHomeSection/>
         <CurvedParallaxSection/>
-        <ProjectHomeSection/>
+        <ProjectHomeSection cmsSection={sectionByType(homePage, 'projects')}/>
         <ServiceHomeSection serviceItems={[
             {
                 img: '/assets/images/services/discussion.png',
@@ -57,9 +66,9 @@ export default function () {
             },
 
         ]}/>
-        <OurHomeSection/>
-        <FeaturedHomeSection/>
-        <SmartFeaturesHomeSection/>
+        <OurHomeSection cmsSection={sectionByType(homePage, 'stats')}/>
+        <FeaturedHomeSection cmsSection={sectionByType(homePage, 'press')}/>
+        <SmartFeaturesHomeSection cmsSection={sectionByType(homePage, 'features')}/>
         <Footer/>
     </div>);
 }

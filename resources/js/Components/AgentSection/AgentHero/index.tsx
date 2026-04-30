@@ -7,8 +7,11 @@ import { ReactComponent as Select } from "/public/assets/svg/select.svg";
 import {Link} from "@inertiajs/inertia-react";
 import {useState} from "react";
 import cosgroveApiServices from "../../../Services/cosgroveApiServices";
+import { ApiPageSection } from "../../../types/cms";
 
-export default function () {
+interface Props { cmsSection?: ApiPageSection; }
+
+export default function ({ cmsSection }: Props) {
     const [formVal, setFormVal] = useState<Form>({
         name: '',
         email: '',
@@ -81,9 +84,9 @@ export default function () {
             <Container fluid>
                 <Row>
                     <Col sm={12} className={styles.infoHomeInfo}>
-                        <h5>Agent Registration</h5>
+                        <h5>{(cmsSection?.data?.subheading as string) ?? 'Agent Registration'}</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
-                            Agency/ Marketing Agreement Between an Agent and Cosgrove
+                            {(cmsSection?.data?.heading as string) ?? 'Agency/ Marketing Agreement Between an Agent and Cosgrove'}
                         </h2>
                     </Col>
 

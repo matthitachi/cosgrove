@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { ApiPage, ApiPageSection } from '../types/cms';
+import { getPage } from '../Services/cosgroveApiServices';
 
 export function useCmsData<T>(fetcher: () => Promise<T>, deps: unknown[] = []) {
     const [data, setData] = useState<T | null>(null);
@@ -16,4 +18,9 @@ export function useCmsData<T>(fetcher: () => Promise<T>, deps: unknown[] = []) {
     }, deps);
 
     return { data, loading, error };
+}
+
+export function usePageSection(slug: string, type: string): ApiPageSection | undefined {
+    const { data } = useCmsData<ApiPage>(() => getPage(slug), [slug]);
+    return data?.sections.find(s => s.type === type && s.is_active);
 }

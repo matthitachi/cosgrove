@@ -13,6 +13,10 @@ import {Container} from "react-bootstrap";
 import {useState} from "react";
 import {useEffect} from "react";
 import {Cube} from 'react-preloaders';
+import { useCmsData } from "../../Hooks/useCmsData";
+import { getPage } from "../../Services/cosgroveApiServices";
+import { ApiPage } from "../../types/cms";
+
 export default function () {
 
     const [loading, setLoading] = useState<boolean>(true);
@@ -21,6 +25,9 @@ export default function () {
             setLoading(false);
         }, 1000)
     }, []);
+
+    const { data: termsPage } = useCmsData<ApiPage>(() => getPage('terms-of-service'));
+    const textSection = termsPage?.sections.find(s => s.type === 'text' && s.is_active);
     return (
         <div>
             {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
@@ -29,7 +36,7 @@ export default function () {
             <Container>
                 <div>
                     <h5 className={'subHeader  mt-5 mb-2'}>Terms of Service</h5>
-                    <h2 className={'headerDark'}>Terms of Service for Cosgrove</h2>
+                    <h2 className={'headerDark'}>{(textSection?.data?.heading as string) ?? 'Terms of Service for Cosgrove'}</h2>
 
 
 

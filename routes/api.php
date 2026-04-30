@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\HomepageApiController;
 use App\Http\Controllers\Api\JobApiController;
+use App\Http\Controllers\Api\PageApiController;
 use App\Http\Controllers\Api\PressApiController;
 use App\Http\Controllers\Api\ProjectApiController;
 use App\Http\Controllers\Api\TeamApiController;
@@ -50,4 +51,8 @@ Route::prefix('v1')->middleware(['throttle:120,1'])->group(function () {
 
     // Jobs
     Route::get('/jobs',              [JobApiController::class, 'index']);
+
+    // Pages
+    Route::get('/pages',             [PageApiController::class, 'index']);
+    Route::get('/pages/{slug}',      [PageApiController::class, 'show']);
 });

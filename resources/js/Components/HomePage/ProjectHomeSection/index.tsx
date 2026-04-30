@@ -8,6 +8,7 @@ import arrowRightSvg from "/public/assets/svg/arrow-right.svg";
 import {Link} from "@inertiajs/inertia-react";
 import { getHomeProjects, ApiProject } from "../../../Services/cosgroveApiServices";
 import { useCmsData } from "../../../Hooks/useCmsData";
+import { ApiPageSection } from "../../../types/cms";
 
 function toProjectItemProp(p: ApiProject): ProjectItemProp {
     return {
@@ -25,7 +26,9 @@ function toProjectItemProp(p: ApiProject): ProjectItemProp {
     };
 }
 
-export default function () {
+interface Props { cmsSection?: ApiPageSection; }
+
+export default function ({ cmsSection }: Props) {
     const { data: projects } = useCmsData(getHomeProjects);
     const projectToDisplay: ProjectItemProp[] = (projects ?? []).map(toProjectItemProp);
     return (
@@ -43,11 +46,7 @@ export default function () {
                     </Col>
                     <Col md={6} data-aos="fade-left">
                         <p className={'textPrimary'}>
-                            Our projects are not just buildings; they're the embodiment of forward-thinking design and
-                            cutting-edge technology, seamlessly integrated to create next-generation smart homes.
-                            Each home is a testament of our commitment to quality, our passion for innovation, and
-                            our dedication to crafting spaces that go beyond the ordinary.
-
+                            {(cmsSection?.data?.subheading as string) ?? "Our projects are not just buildings; they're the embodiment of forward-thinking design and cutting-edge technology, seamlessly integrated to create next-generation smart homes. Each home is a testament of our commitment to quality, our passion for innovation, and our dedication to crafting spaces that go beyond the ordinary."}
                         </p>
                         <Link href={'/projects'} className={"text"}>
                             Learn More{" "}

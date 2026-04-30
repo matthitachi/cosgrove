@@ -9,8 +9,11 @@ import Slider from "../../Elements/Slider/index";
 import { getSmartFeatures } from "../../../Services/cosgroveApiServices";
 import { useCmsData } from "../../../Hooks/useCmsData";
 import { featureIconMap } from "../../../Data/featureIcons";
+import { ApiPageSection } from "../../../types/cms";
 
-export default function () {
+interface Props { cmsSection?: ApiPageSection; }
+
+export default function ({ cmsSection }: Props) {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
@@ -54,7 +57,7 @@ export default function () {
             <div className={`curvedTop ${styles.topCurve}`} />
             <Container className={styles.featuredCtx}>
                 <h4 className={`subHeader mb-65 text-center`}>
-                    Estate Features
+                    {(cmsSection?.data?.heading as string) ?? 'Estate Features'}
                 </h4>
 
                 <div className={styles.smartFeaturesCtx}>

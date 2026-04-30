@@ -9,6 +9,10 @@ import Footer from "../../Components/Elements/Footer";
 import {Cube} from 'react-preloaders';
 import {useState} from "react";
 import {useEffect} from "react";
+import { useCmsData } from "../../Hooks/useCmsData";
+import { getPage } from "../../Services/cosgroveApiServices";
+import { ApiPage } from "../../types/cms";
+
 export default function () {
 
     const [loading, setLoading] = useState<boolean>(true);
@@ -17,6 +21,10 @@ export default function () {
             setLoading(false);
         }, 1000)
     }, []);
+
+    const { data: contactPage } = useCmsData<ApiPage>(() => getPage('contact'));
+    const contactSection = contactPage?.sections.find(s => s.type === 'contact_form' && s.is_active);
+
     return (
         <div>
             {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
@@ -28,7 +36,7 @@ export default function () {
                 position={'center top'}
                 // attachment={'fixed'}
             />
-            <Hero />
+            <Hero cmsSection={contactSection} />
             <ContactTeam />
             <Footer />
         </div>

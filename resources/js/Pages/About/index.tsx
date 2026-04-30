@@ -8,6 +8,9 @@ import Navy from "../../../Navbar-2/navbar-2";
 import {Cube} from 'react-preloaders';
 import {useState} from "react";
 import {useEffect} from "react";
+import { useCmsData } from "../../Hooks/useCmsData";
+import { getPage } from "../../Services/cosgroveApiServices";
+import { ApiPage } from "../../types/cms";
 
 export default function () {
 
@@ -17,6 +20,10 @@ export default function () {
             setLoading(false);
         }, 1000)
     }, []);
+
+    const { data: aboutPage } = useCmsData<ApiPage>(() => getPage('about'));
+    const textSection = aboutPage?.sections.find(s => s.type === 'text' && s.is_active);
+
     return (
         <div>
             {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
@@ -29,7 +36,7 @@ export default function () {
                 attachment={`fixed`}
                 position={'center'}
             />
-            <OverviewSection />
+            <OverviewSection cmsSection={textSection} />
             <Footer />
         </div>
     );

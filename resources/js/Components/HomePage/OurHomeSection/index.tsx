@@ -11,8 +11,11 @@ import HomeItem from "../../Elements/HomeItem";
 import {Link} from "@inertiajs/inertia-react";
 import { getAllProjectDetails } from "../../../Services/cosgroveApiServices";
 import { useCmsData } from "../../../Hooks/useCmsData";
+import { ApiPageSection } from "../../../types/cms";
 
-export default function () {
+interface Props { cmsSection?: ApiPageSection; }
+
+export default function ({ cmsSection }: Props) {
     React.useEffect(() => { AOS.init({duration: 2000}); }, []);
 
     const { data: allDetails } = useCmsData(getAllProjectDetails);
@@ -64,9 +67,7 @@ export default function () {
                     </Col>
                     <Col data-aos="fade-left" md={6}>
                         <p className={`textPrimary`}>
-                            Each of our homes is a marvel of modern engineering and an investment in your future.
-                            From sleek apartments and townhouses to opulent penthouses and villas, our diverse range of
-                            residences caters to every style and need.
+                            {(cmsSection?.data?.subheading as string) ?? "Each of our homes is a marvel of modern engineering and an investment in your future. From sleek apartments and townhouses to opulent penthouses and villas, our diverse range of residences caters to every style and need."}
                         </p>
                         <Link href={'/project-homes'} className={"text"}>
                             Learn More <ArrowRightSvg/>

@@ -48,6 +48,7 @@ class AdminPanelProvider extends PanelProvider
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->navigationGroups([
                 NavigationGroup::make('Content'),
+                NavigationGroup::make('Leads'),
                 NavigationGroup::make('Settings'),
             ])
             ->middleware([

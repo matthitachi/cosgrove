@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewMail;
+use App\Models\AgentSubmission;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -63,6 +64,17 @@ class ApiController extends Controller
         if (! $this->verifyRecaptcha($request->token)) {
             return response()->json(['status' => false, 'message' => 'reCAPTCHA verification failed.'], 422);
         }
+
+        $nameParts = explode(' ', trim($request->name), 2);
+        AgentSubmission::create([
+            'first_name'   => $nameParts[0],
+            'last_name'    => $nameParts[1] ?? '',
+            'email'        => $request->email,
+            'phone'        => $request->phone,
+            'company'      => $request->company ?? null,
+            'status'       => AgentSubmission::STATUS_NEW,
+            'submitted_at' => now(),
+        ]);
 
         $content = '<div>';
         foreach (['name', 'email', 'project', 'phone', 'company', 'message'] as $field) {
