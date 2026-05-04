@@ -44,4 +44,9 @@ class User extends Authenticatable
         'password'          => 'hashed',
         'is_admin'          => 'boolean',
     ];
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return $this->is_admin === true;
+    }
 }
