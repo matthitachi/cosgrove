@@ -59,7 +59,7 @@ export default function ({ cmsSection }: Props) {
     return (
         <section className={`${styles.ourHomeSection} mt-150`}>
             <Container>
-                <h4 data-aos="fade-right" className={`subHeader mb-25`}>Our Homes</h4>
+                <h4 data-aos="fade-right" className={`subHeader mb-25`}>{(cmsSection?.data?.label as string) ?? "Our Homes"}</h4>
                 <Row className={styles.ourHomeIntro}>
                     <Col data-aos="fade-right" md={6} className={styles.ourHomeIntroHeader}>
                         <h2 className={`headerDark`}>Tech-Embedded</h2>
@@ -69,8 +69,8 @@ export default function ({ cmsSection }: Props) {
                         <p className={`textPrimary`}>
                             {(cmsSection?.data?.subheading as string) ?? "Each of our homes is a marvel of modern engineering and an investment in your future. From sleek apartments and townhouses to opulent penthouses and villas, our diverse range of residences caters to every style and need."}
                         </p>
-                        <Link href={'/project-homes'} className={"text"}>
-                            Learn More <ArrowRightSvg/>
+                        <Link href={(cmsSection?.data?.learn_more_url as string) ?? "/project-homes"} className={"text"}>
+                            {(cmsSection?.data?.learn_more_label as string) ?? "Learn More"} <ArrowRightSvg/>
                         </Link>
                     </Col>
                 </Row>

@@ -71,7 +71,12 @@ function toTeamItemProp(m: ApiTeamMember): teamItemProp {
     };
 }
 
-export default function () {
+interface Props {
+    heading?: string;
+    subheading?: string;
+}
+
+export default function ({ heading, subheading }: Props) {
     React.useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
@@ -82,9 +87,9 @@ export default function () {
         <section className={styles.teamSection}>
             <Container>
                 <div className={styles.teamHead} data-aos="fade-up">
-                    <h4 className={"subHeader"}>The Core Team</h4>
+                    <h4 className={"subHeader"}>{subheading ?? "The Core Team"}</h4>
                     <h2 className={"headerDark  mb-4"}>
-                        Meet the Minds Behind Cosgrove
+                        {heading ?? "Meet the Minds Behind Cosgrove"}
                     </h2>
                 </div>
 

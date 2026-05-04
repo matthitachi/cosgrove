@@ -35,6 +35,7 @@ export interface ApiPageSection {
     sort_order: number;
     is_active: boolean;
     data: Record<string, unknown>;
+    image_url: string;
 }
 
 export interface ApiPage {

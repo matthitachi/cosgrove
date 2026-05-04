@@ -49,39 +49,89 @@ class PageSeeder extends Seeder
         );
 
         $this->section($page->id, 'hero', 'Hero section', [
-            'heading'    => 'Welcome to a New Era of Smart Living.',
-            'subheading' => 'Step into a realm of unparalleled grandeur, where the future of luxury is elegantly crafted today',
-            'cta_label'  => null,
-            'cta_url'    => null,
-            'video_url'  => null,
+            'heading'            => 'Welcome to a New Era of Smart Living.',
+            'subheading'         => 'Step into a realm of unparalleled grandeur, where the future of luxury is elegantly crafted today',
+            'search_placeholder' => 'Explore Cosgrove homes',
+            'cta_label'          => null,
+            'cta_url'            => null,
+            'video_url'          => null,
         ], 1);
 
-        $this->section($page->id, 'projects', 'Projects section', [
-            'heading'    => 'Smart Communities',
-            'subheading' => "Our projects are not just buildings; they're the embodiment of forward-thinking design and cutting-edge technology, seamlessly integrated to create next-generation smart homes. Each home is a testament of our commitment to quality, our passion for innovation, and our dedication to crafting spaces that go beyond the ordinary.",
+        $this->section($page->id, 'about_snippet', 'About snippet', [
+            'label'        => 'About Us',
+            'heading'      => "We are Building the Future of Africa's Real Estate",
+            'body'         => "At Cosgrove, we don't just develop properties – we envision the future. As leaders in the real estate industry in Africa, we masterfully shape residential and commercial spaces that marry unparalleled luxury with cutting-edge technology.\n\nOur commitment to sustainability breathes life into each of our projects, creating environments that are as eco-conscious as they are exquisite. Here, we design the extraordinary. Here, we set the standard.",
+            'stat_1_value' => '1000+',
+            'stat_1_label' => 'Homes Built',
+            'stat_2_value' => '10+',
+            'stat_2_label' => 'Projects',
+            'stat_3_value' => '30+',
+            'stat_3_label' => 'Awards',
+            'stat_4_value' => '1000+',
+            'stat_4_label' => 'Global Clients',
+            'cta_1_label'  => 'Talk To Us',
+            'cta_1_url'    => '/contact',
+            'cta_1_desc'   => 'Get started with Cosgrove by speaking to one of our experts.',
+            'cta_1_button' => "Let's Talk",
+            'cta_2_label'  => 'Project Brochures',
+            'cta_2_url'    => '/project-brochure',
+            'cta_2_desc'   => 'Explore our catalog through our collection of brochures.',
+            'cta_2_button' => 'Download Brochures',
         ], 2);
 
-        $this->section($page->id, 'stats', 'Stats section', [
-            'heading'    => 'Tech-Embedded Buildings',
-            'subheading' => "Each of our homes is a marvel of modern engineering and an investment in your future. From sleek apartments and townhouses to opulent penthouses and villas, our diverse range of residences caters to every style and need.",
+        $this->section($page->id, 'projects', 'Projects section', [
+            'label'      => 'Projects',
+            'heading'    => 'Smart Communities',
+            'subheading' => "Our projects are not just buildings; they're the embodiment of forward-thinking design and cutting-edge technology, seamlessly integrated to create next-generation smart homes. Each home is a testament of our commitment to quality, our passion for innovation, and our dedication to crafting spaces that go beyond the ordinary.",
         ], 3);
 
-        $this->section($page->id, 'features', 'Smart features section', [
-            'heading'    => 'Estate Features',
-            'subheading' => null,
+        $this->section($page->id, 'services', 'Services section', [
+            'label'      => 'Our Services',
+            'heading'    => 'What we offer our clients',
+            'subheading' => "Step into a world where your needs shape our services. Offering bespoke consultations, innovative design & automation, meticulous construction, and strategic project management, we make your journey seamless. Plus, unlock smart investment avenues for unparalleled ROI. With Cosgrove, it's more than a home—it's a lifetime investment.",
+            'items'      => [
+                ['title' => 'Consultation',        'description' => 'We offer expert consultation to guide your real estate decisions. With over 20 years of industry experience, we help you make informed choices for both residential and commercial projects.',    'img' => '/assets/images/services/discussion.png'],
+                ['title' => 'Design & Automation', 'description' => "Our design service creates smart, sustainable homes tailored to your needs. We anticipate the future, integrating modern lifestyle features with tomorrow's technology.",                    'img' => '/assets/images/services/design.png'],
+                ['title' => 'Construction',        'description' => 'We construct your dream spaces with precision and care. Our team transforms designs into smart homes and functional commercial spaces, aligning with your vision.',                               'img' => '/assets/images/services/construction.png'],
+                ['title' => 'Project Management',  'description' => 'We manage your projects from start to finish. Our approach ensures quality, timeliness, and sustainability at every stage of the process.',                                                     'img' => '/assets/images/services/project.png'],
+                ['title' => 'Smart Investment',    'description' => 'Investing in a Cosgrove home promises not just a residence, but a secure and lucrative asset, ensuring a robust return on your investment.',                                                    'img' => '/assets/images/services/investment.png'],
+            ],
         ], 4);
 
-        $this->section($page->id, 'press', 'Press section', [
-            'heading'    => 'Featured',
-            'subheading' => null,
+        $this->section($page->id, 'stats', 'Stats section', [
+            'label'            => 'Our Homes',
+            'heading'          => 'Tech-Embedded Buildings',
+            'subheading'       => "Each of our homes is a marvel of modern engineering and an investment in your future. From sleek apartments and townhouses to opulent penthouses and villas, our diverse range of residences caters to every style and need.",
+            'learn_more_label' => 'Learn More',
+            'learn_more_url'   => '/project-homes',
         ], 5);
+
+        $this->section($page->id, 'quote', 'Quote banner', [
+            'heading'     => 'The Industry Leader in Smart Home Innovation in Africa',
+            'attribution' => '-The Sunday Times',
+        ], 6);
+
+        $this->section($page->id, 'features', 'Smart features section', [
+            'heading'           => 'Estate Features',
+            'subheading'        => null,
+            'quote_text'        => '"We will never stop delivering the highest quality."',
+            'quote_attribution' => '-The Cosgrove Team.',
+        ], 7);
+
+        $this->section($page->id, 'press', 'Press section', [
+            'label'         => 'Press',
+            'heading'       => 'Featured',
+            'subheading'    => null,
+            'see_all_label' => 'See all',
+            'see_all_url'   => '/press',
+        ], 8);
 
         $this->section($page->id, 'cta', 'Bottom CTA', [
             'heading'      => 'Talk To Us',
             'subheading'   => 'Get started with Cosgrove by speaking to one of our experts.',
             'button_label' => "Let's Talk",
             'button_url'   => '/contact',
-        ], 6);
+        ], 9);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -101,35 +151,77 @@ class PageSeeder extends Seeder
             ]
         );
 
+        // Remove old monolithic text section — replaced by granular sections below
+        $page->sections()->where('type', 'text')->where('label', 'Company overview')->delete();
+
         // About page HeaderItem renders only a background image — no heading text
         $this->section($page->id, 'hero', 'Hero section', [
             'heading'    => null,
             'subheading' => null,
         ], 1);
 
-        $this->section($page->id, 'text', 'Company overview', [
+        $this->section($page->id, 'about_intro', 'About intro', [
+            'label'   => 'About us',
             'heading' => 'The Cosgrove Way',
-            'body'    => implode("\n\n", [
-                'Established in 2017, Cosgrove is at the forefront of disruption in the real estate industry, Cosgrove is shaping new lifestyles with a focus on the integration of revolutionary technology into residential and commercial real estate using sustainable methods.',
-                "Cosgrove's leadership team is composed of the industry's highly experienced leaders with a passion for unswerving excellence. As we continue to grow our vision of becoming the leading real estate developer in Africa, the guarantee of integrity, professionalism and reliability remains equal to the best obtainable anywhere in the world.",
-                'Our Mission: Constantly transforms urban living in Africa, blending innovative design with advanced technology, while steadfastly prioritising quality, sustainability, and visionary real estate solutions.',
-                'Our Vision: Become the gold-standard in next-generation living across Africa. We envision a future where every Cosgrove residence defines the benchmark for luxury, technology, and sustainability, offering homeowners the pinnacle of modern living.',
-                "Awards & Recognition: Over the years, our relentless pursuit of excellence has earned us accolades in the industry. We've been recognized as the 'Real Estate Company of the Year' and 'Smart City Developer of the Year' at the Nigeria Housing Awards. Our Chairman/CEO, Mr. Umar Abdullahi, has been honored with the title of Officer of the Order of the Federal Republic (OFR) by the Federal Government, highlighting our profound contribution to the housing industry in Nigeria.",
-                "We are also the proud recipients of the prestigious 'Leadership in Smart Housing 2021' award from the Nigerian Institute of Town Planners. At Cosgrove, we continue to set the standard.",
-            ]),
+            'body'    => 'Established in 2017, Cosgrove is at the forefront of disruption in the real estate industry, Cosgrove is shaping new lifestyles with a focus on the integration of revolutionary technology into residential and commercial real estate using sustainable methods.',
         ], 2);
+
+        $this->section($page->id, 'about_body', 'About body', [
+            'body' => "Cosgrove's leadership team is composed of the industry's highly experienced leaders with a passion for unswerving excellence. As we continue to grow our vision of becoming the leading real estate developer in Africa, the guarantee of integrity, professionalism and reliability remains equal to the best obtainable anywhere in the world.",
+        ], 3);
+
+        $this->section($page->id, 'about_mission', 'Our Mission', [
+            'heading' => 'Our Mission',
+            'body'    => 'Constantly transforms urban living in Africa, blending innovative design with advanced technology, while steadfastly prioritising quality, sustainability, and visionary real estate solutions.',
+        ], 4);
+
+        $this->section($page->id, 'about_vision', 'Our Vision', [
+            'heading' => 'Our Vision',
+            'body'    => 'Become the gold-standard in next-generation living across Africa. We envision a future where every Cosgrove residence defines the benchmark for luxury, technology, and sustainability, offering homeowners the pinnacle of modern living.',
+        ], 5);
+
+        $this->section($page->id, 'about_awards', 'Awards & Recognition', [
+            'heading'     => 'Awards & Recognition',
+            'paragraph_1' => "Over the years, our relentless pursuit of excellence has earned us accolades in the industry. We've been recognized as the 'Real Estate Company of the Year' and 'Smart City Developer of the Year' at the Nigeria Housing Awards. Our Chairman/CEO, Mr. Umar Abdullahi, has been honored with the title of Officer of the Order of the Federal Republic (OFR) by the Federal Government, highlighting our profound contribution to the housing industry in Nigeria.",
+            'paragraph_2' => "We are also the proud recipients of the prestigious 'Leadership in Smart Housing 2021' award from the Nigerian Institute of Town Planners. At Cosgrove, we continue to set the standard.",
+        ], 6);
+
+        $this->section($page->id, 'about_creativity', 'Hard Work meets Creativity', [
+            'label'   => 'More from Us',
+            'heading' => 'Hard Work meets Creativity',
+            'body'    => "At the heart of Cosgrove is a group of trailblazers, led by our Chairman/CEO, Umar Abdullahi OFR. With his over two-decade long journey in real estate and finance, he has seen industries evolve, embracing game-changing technologies to keep Cosgrove at the forefront\u{200B}. Our team is a powerhouse of growth, with a combined experience of over 120 years. Each member contributes their expertise in a culture that fosters collaboration and innovation. At Cosgrove Africa, we're not just builders, we're visionaries, reshaping the landscape of the real estate market\u{200B}.",
+        ], 7);
+
+        $this->section($page->id, 'about_stats', 'Stats & Support', [
+            'stat_1_count' => '1000+',
+            'stat_1_title' => 'Homes Built',
+            'stat_2_count' => '10+',
+            'stat_2_title' => 'Projects',
+            'stat_3_count' => '30+',
+            'stat_3_title' => 'Awards',
+            'stat_4_count' => '1000+',
+            'stat_4_title' => 'Global Clients',
+            'support_1_title'  => 'Talk To Us',
+            'support_1_desc'   => 'Get started with Cosgrove by speaking to one of our experts.',
+            'support_1_button' => "Let's Talk",
+            'support_1_url'    => '/contact',
+            'support_2_title'  => 'Project Brochures',
+            'support_2_desc'   => 'Explore our catalog through our collection of brochures.',
+            'support_2_button' => 'Download Brochures',
+            'support_2_url'    => '/project-brochure',
+        ], 8);
 
         $this->section($page->id, 'team', 'Team section', [
             'heading'    => 'Meet the Minds Behind Cosgrove',
             'subheading' => 'The Core Team',
-        ], 3);
+        ], 9);
 
         $this->section($page->id, 'cta', 'Bottom CTA', [
             'heading'      => 'Talk To Us',
             'subheading'   => 'Get started with Cosgrove by speaking to one of our experts.',
             'button_label' => "Let's Talk",
             'button_url'   => '/contact',
-        ], 4);
+        ], 10);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -150,11 +242,18 @@ class PageSeeder extends Seeder
         );
 
         $this->section($page->id, 'contact_form', 'Contact section', [
+            'label'      => 'Booking a Tour',
             'heading'    => 'See it with your eyes.',
             'subheading' => 'Visit a Cosgrove home and experience opulence merged with modern technology first-hand. Fill in the form below and one of our team members will be in touch.',
             'address'    => null,
             'show_map'   => true,
         ], 1);
+
+        $this->section($page->id, 'contact_team', 'Team contact section', [
+            'label'      => 'Contact Us',
+            'heading'    => 'Speak to an expert from the team.',
+            'subheading' => "When it comes to finding your ideal home, engaging with Cosgrove's expert advisors is your key to making the perfect choice. Our seasoned professionals understand that a home is more than just a space; it's a reflection of your lifestyle and aspirations. With a deep knowledge of our diverse range of properties and an attentive ear to your preferences, they are dedicated to guiding you towards a residence that resonates with you on every level. Let us navigate the journey together, ensuring that your new home aligns seamlessly with your dreams.",
+        ], 2);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -269,6 +368,7 @@ HTML;
 HTML;
 
         $this->section($page->id, 'text', 'Privacy policy content', [
+            'label'   => 'Privacy Policy',
             'heading' => 'Privacy Policy for Cosgrove',
             'body'    => $body,
         ], 1);
@@ -335,6 +435,7 @@ HTML;
 HTML;
 
         $this->section($page->id, 'text', 'Terms content', [
+            'label'   => 'Terms of Service',
             'heading' => 'Terms of Service for Cosgrove',
             'body'    => $body,
         ], 1);

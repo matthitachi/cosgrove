@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             JobListingSeeder::class,
             ProjectSeeder::class,
             HouseTypeSeeder::class,
+            ContactPersonSeeder::class,
+            BrochureSeeder::class,
         ]);
     }
 }

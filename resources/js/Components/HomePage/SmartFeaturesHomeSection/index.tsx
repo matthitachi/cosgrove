@@ -81,9 +81,9 @@ export default function ({ cmsSection }: Props) {
                 </div>
                 <div className={styles.featuresQuote}>
                     <h4 className={`headerWhite`}>
-                        "We will never stop delivering the highest quality."
+                        {(cmsSection?.data?.quote_text as string) ?? '"We will never stop delivering the highest quality."'}
                     </h4>
-                    <h2>-The Cosgrove Team.</h2>
+                    <h2>{(cmsSection?.data?.quote_attribution as string) ?? "-The Cosgrove Team."}</h2>
                 </div>
             </Container>
         </section>

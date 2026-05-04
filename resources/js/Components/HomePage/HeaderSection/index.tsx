@@ -8,8 +8,11 @@ import homeSvg from "/public/assets/svg/home.svg";
 import searchSvg from "/public/assets/svg/search.svg";
 import {useState} from "react";
 import {useEffect} from "react";
+import { ApiPageSection } from "../../../types/cms";
 
-export default function () {
+interface Props { cmsSection?: ApiPageSection; }
+
+export default function ({ cmsSection }: Props) {
     const getResponsiveCurveValue = (width) => {
         if (width < 575) return 50;
         else if (width < 767) return 70;
@@ -72,22 +75,22 @@ export default function () {
             </div>
             <div className={styles.overlay} />
             <div className={styles.headerInfo}>
-                <h3>
-                    Welcome to a New <br />
-                    Era of <b>Smart Living</b>.
-                </h3>
+                <h3
+                    dangerouslySetInnerHTML={{
+                        __html: (cmsSection?.data?.heading as string) ?? 'Welcome to a New <br>Era of <b>Smart Living</b>.'
+                    }}
+                />
 
                 <p className={'textWhite'}>
-                    {" "}
-                    Step into a realm of unparalleled grandeur, <br/>where the future of luxury is elegantly crafted today
-                    <br />
-
-
+                    {cmsSection?.data?.subheading
+                        ? (cmsSection.data.subheading as string)
+                        : <>{" "}Step into a realm of unparalleled grandeur, <br/>where the future of luxury is elegantly crafted today<br /></>
+                    }
                 </p>
 
                 <form action={'/search'} method={'get'}>
                 <div className={styles.inputContainer}>
-                    <input placeholder={"Explore Cosgrove homes"} onChange={(event)=>{
+                    <input placeholder={(cmsSection?.data?.search_placeholder as string) ?? "Explore Cosgrove homes"} onChange={(event)=>{
                         setSearch(event.target.value);
                     }}  onKeyDown={(evt) =>{
 

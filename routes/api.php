@@ -19,6 +19,7 @@ use App\Http\Controllers\Api\JobApiController;
 use App\Http\Controllers\Api\PageApiController;
 use App\Http\Controllers\Api\PressApiController;
 use App\Http\Controllers\Api\ProjectApiController;
+use App\Http\Controllers\Api\ContactPersonApiController;
 use App\Http\Controllers\Api\TeamApiController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -39,6 +40,9 @@ Route::prefix('v1')->middleware(['throttle:120,1'])->group(function () {
 
     // Team
     Route::get('/team',              [TeamApiController::class, 'index']);
+
+    // Contact persons
+    Route::get('/contact-persons',   [ContactPersonApiController::class, 'index']);
 
     // Press
     Route::get('/press',             [PressApiController::class, 'index']);

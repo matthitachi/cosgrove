@@ -28,6 +28,7 @@ export default function () {
 
     const { data: agentPage } = useCmsData<ApiPage>(() => getPage('agent-registration'));
     const heroSection = agentPage?.sections.find(s => s.type === 'hero' && s.is_active);
+    const formSection = agentPage?.sections.find(s => s.type === 'agent_form' && s.is_active);
 
     return (
         <div>
@@ -38,7 +39,7 @@ export default function () {
                 bgImage={"/assets/images/bg/bgContact.png"}
                 position={position}
             />
-            <Hero cmsSection={heroSection} />
+            <Hero cmsSection={heroSection} formSection={formSection} />
             <Footer />
         </div>
     );

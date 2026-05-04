@@ -33,12 +33,12 @@ export default function () {
     return (<div>
         {/*<Cube color={'#f7f7f7'} background={"#fbbd00"} customLoading={loading}/>*/}
         <NavBar/>
-        <HeaderSection/>
+        <HeaderSection cmsSection={sectionByType(homePage, 'hero')}/>
         <WelcomeSection/>
-        <AboutHomeSection/>
-        <CurvedParallaxSection/>
+        <AboutHomeSection cmsSection={sectionByType(homePage, 'about_snippet')}/>
+        <CurvedParallaxSection cmsSection={sectionByType(homePage, 'quote')}/>
         <ProjectHomeSection cmsSection={sectionByType(homePage, 'projects')}/>
-        <ServiceHomeSection serviceItems={[
+        <ServiceHomeSection cmsSection={sectionByType(homePage, 'services')} serviceItems={[
             {
                 img: '/assets/images/services/discussion.png',
                 title: 'Consultation',

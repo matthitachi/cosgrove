@@ -29,3 +29,7 @@ Route::get('/privacy', [App\Http\Controllers\HomeController::class, 'privacy']);
 Route::get('/terms-of-service', [App\Http\Controllers\HomeController::class, 'termsOfService']);
 Route::get('/careers', [App\Http\Controllers\HomeController::class, 'careers']);
 Route::get('/press', [App\Http\Controllers\HomeController::class, 'press']);
+
+Route::get('/{slug}', function (string $slug) {
+    return Inertia\Inertia::render('CmsPage/index', ['slug' => $slug]);
+})->where('slug', '^(?!admin|api|storage|assets|build).*$');

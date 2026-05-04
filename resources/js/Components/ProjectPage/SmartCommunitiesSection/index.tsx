@@ -11,6 +11,7 @@ import Slider from "../../Elements/Slider";
 import ProjectItem, { ProjectItemProp } from "../../Elements/ProjectItem/index";
 import { getProjects, getSmartFeatures, ApiProject } from "../../../Services/cosgroveApiServices";
 import { useCmsData } from "../../../Hooks/useCmsData";
+import { featureIconMap } from "../../../Data/featureIcons";
 
 function toProjectItemProp(p: ApiProject): ProjectItemProp {
     return {
@@ -73,9 +74,18 @@ export default function () {
                     <Slider
                         settings={settings}
                         childrenItems={[
-                            ((features ?? []).map((item, key) =>
-                                <FeaturesItem title={item.name} color={"#000"} description={item.description} key={key} />
-                            )),
+                            ((features ?? []).map((item, key) => {
+                                const IconComponent = item.icon_key ? featureIconMap[item.icon_key] : undefined;
+                                return (
+                                    <FeaturesItem
+                                        title={item.name}
+                                        color={"#000"}
+                                        description={item.description}
+                                        icon={IconComponent ? <IconComponent /> : null}
+                                        key={key}
+                                    />
+                                );
+                            })),
                         ]}
                     />
                 </div>

@@ -11,6 +11,7 @@ use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -91,16 +92,27 @@ class PageResource extends Resource
                                                     ->native(false)
                                                     ->label('Section type')
                                                     ->options([
-                                                        'hero'         => 'Hero',
-                                                        'text'         => 'Text / Rich text',
-                                                        'stats'        => 'Stats',
-                                                        'team'         => 'Team',
-                                                        'projects'     => 'Projects',
-                                                        'press'        => 'Press',
-                                                        'features'     => 'Smart features',
-                                                        'cta'          => 'Call to action',
-                                                        'contact_form' => 'Contact form',
-                                                        'agent_form'   => 'Agent registration form',
+                                                        'hero'             => 'Hero',
+                                                        'about_snippet'    => 'About snippet',
+                                                        'about_intro'      => 'About — Intro',
+                                                        'about_body'       => 'About — Body',
+                                                        'about_mission'    => 'About — Mission',
+                                                        'about_vision'     => 'About — Vision',
+                                                        'about_awards'     => 'About — Awards',
+                                                        'about_creativity' => 'About — Creativity',
+                                                        'about_stats'      => 'About — Stats & Support',
+                                                        'quote'            => 'Quote banner',
+                                                        'text'             => 'Text / Rich text',
+                                                        'stats'            => 'Stats',
+                                                        'team'             => 'Team',
+                                                        'projects'         => 'Projects',
+                                                        'services'         => 'Services',
+                                                        'press'            => 'Press',
+                                                        'features'         => 'Smart features',
+                                                        'cta'              => 'Call to action',
+                                                        'contact_form'     => 'Contact form',
+                                                        'contact_team'     => 'Contact team',
+                                                        'agent_form'       => 'Agent registration form',
                                                     ])
                                                     ->live(),
 
@@ -115,14 +127,76 @@ class PageResource extends Resource
 
                                                     'hero' => [
                                                         TextInput::make('data.heading')
-                                                            ->label('Heading'),
+                                                            ->label('Heading')
+                                                            ->helperText('Supports HTML: use <br> for line breaks, <b>text</b> for bold. e.g. Welcome to a New <br>Era of <b>Smart Living</b>.'),
                                                         TextInput::make('data.subheading')
                                                             ->label('Subheading'),
+                                                        TextInput::make('data.search_placeholder')
+                                                            ->label('Search input placeholder')
+                                                            ->nullable(),
                                                         TextInput::make('data.cta_label')
                                                             ->label('Button label'),
                                                         TextInput::make('data.cta_url')
                                                             ->label('Button URL')
                                                             ->url(),
+                                                        SpatieMediaLibraryFileUpload::make('hero_bg_image')
+                                                            ->collection('section-hero-section')
+                                                            ->label('Background image')
+                                                            ->image()
+                                                            ->imageEditor()
+                                                            ->maxFiles(1)
+                                                            ->columnSpanFull()
+                                                            ->helperText('Save the page first before uploading.'),
+                                                    ],
+
+                                                    'about_snippet' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. About Us)'),
+                                                        TextInput::make('data.heading')
+                                                            ->label('Heading'),
+                                                        Textarea::make('data.body')
+                                                            ->label('Body text')
+                                                            ->rows(4)
+                                                            ->columnSpanFull(),
+                                                        TextInput::make('data.stat_1_value')->label('Stat 1 value'),
+                                                        TextInput::make('data.stat_1_label')->label('Stat 1 label'),
+                                                        TextInput::make('data.stat_2_value')->label('Stat 2 value'),
+                                                        TextInput::make('data.stat_2_label')->label('Stat 2 label'),
+                                                        TextInput::make('data.stat_3_value')->label('Stat 3 value'),
+                                                        TextInput::make('data.stat_3_label')->label('Stat 3 label'),
+                                                        TextInput::make('data.stat_4_value')->label('Stat 4 value'),
+                                                        TextInput::make('data.stat_4_label')->label('Stat 4 label'),
+                                                        TextInput::make('data.cta_1_label')->label('CTA 1 label'),
+                                                        TextInput::make('data.cta_1_url')->label('CTA 1 URL'),
+                                                        TextInput::make('data.cta_1_desc')->label('CTA 1 description')->nullable(),
+                                                        TextInput::make('data.cta_1_button')->label('CTA 1 button text')->nullable(),
+                                                        TextInput::make('data.cta_2_label')->label('CTA 2 label'),
+                                                        TextInput::make('data.cta_2_url')->label('CTA 2 URL'),
+                                                        TextInput::make('data.cta_2_desc')->label('CTA 2 description')->nullable(),
+                                                        TextInput::make('data.cta_2_button')->label('CTA 2 button text')->nullable(),
+                                                        SpatieMediaLibraryFileUpload::make('about_snippet_image')
+                                                            ->collection('section-about-snippet')
+                                                            ->label('Section image')
+                                                            ->image()
+                                                            ->imageEditor()
+                                                            ->maxFiles(1)
+                                                            ->columnSpanFull()
+                                                            ->helperText('Save the page first before uploading.'),
+                                                    ],
+
+                                                    'quote' => [
+                                                        TextInput::make('data.heading')
+                                                            ->label('Quote text'),
+                                                        TextInput::make('data.attribution')
+                                                            ->label('Attribution'),
+                                                        SpatieMediaLibraryFileUpload::make('quote_bg_image')
+                                                            ->collection('section-quote-banner')
+                                                            ->label('Background image')
+                                                            ->image()
+                                                            ->imageEditor()
+                                                            ->maxFiles(1)
+                                                            ->columnSpanFull()
+                                                            ->helperText('Save the page first before uploading.'),
                                                     ],
 
                                                     'text' => [
@@ -135,10 +209,16 @@ class PageResource extends Resource
                                                     ],
 
                                                     'stats' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. Our Homes)')->nullable(),
                                                         TextInput::make('data.heading')
                                                             ->label('Section heading'),
                                                         TextInput::make('data.subheading')
                                                             ->label('Subheading'),
+                                                        TextInput::make('data.learn_more_label')
+                                                            ->label('Learn more label')->nullable(),
+                                                        TextInput::make('data.learn_more_url')
+                                                            ->label('Learn more URL')->nullable(),
                                                     ],
 
                                                     'team' => [
@@ -149,17 +229,44 @@ class PageResource extends Resource
                                                     ],
 
                                                     'projects' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. Projects)')->nullable(),
                                                         TextInput::make('data.heading')
                                                             ->label('Section heading'),
                                                         TextInput::make('data.subheading')
                                                             ->label('Subheading'),
                                                     ],
 
+                                                    'services' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. Our Services)'),
+                                                        TextInput::make('data.heading')
+                                                            ->label('Section heading'),
+                                                        Textarea::make('data.subheading')
+                                                            ->label('Subheading')
+                                                            ->rows(3)
+                                                            ->columnSpanFull(),
+                                                        SpatieMediaLibraryFileUpload::make('services_image')
+                                                            ->collection('section-services-section')
+                                                            ->label('Background image')
+                                                            ->image()
+                                                            ->imageEditor()
+                                                            ->maxFiles(1)
+                                                            ->columnSpanFull()
+                                                            ->helperText('Save the page first before uploading.'),
+                                                    ],
+
                                                     'press' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. Press)')->nullable(),
                                                         TextInput::make('data.heading')
                                                             ->label('Section heading'),
                                                         TextInput::make('data.subheading')
                                                             ->label('Subheading'),
+                                                        TextInput::make('data.see_all_label')
+                                                            ->label('See all label')->nullable(),
+                                                        TextInput::make('data.see_all_url')
+                                                            ->label('See all URL')->nullable(),
                                                     ],
 
                                                     'features' => [
@@ -167,6 +274,10 @@ class PageResource extends Resource
                                                             ->label('Section heading'),
                                                         TextInput::make('data.subheading')
                                                             ->label('Subheading'),
+                                                        TextInput::make('data.quote_text')
+                                                            ->label('Quote text')->nullable()->columnSpanFull(),
+                                                        TextInput::make('data.quote_attribution')
+                                                            ->label('Quote attribution')->nullable(),
                                                     ],
 
                                                     'cta' => [
@@ -181,6 +292,8 @@ class PageResource extends Resource
                                                     ],
 
                                                     'contact_form' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. Booking a Tour)')->nullable(),
                                                         TextInput::make('data.heading')
                                                             ->label('Heading'),
                                                         TextInput::make('data.subheading')
@@ -188,6 +301,25 @@ class PageResource extends Resource
                                                         Toggle::make('data.show_map')
                                                             ->label('Show map')
                                                             ->default(true),
+                                                        SpatieMediaLibraryFileUpload::make('contact_form_image')
+                                                            ->collection('section-contact-section')
+                                                            ->label('Section image')
+                                                            ->image()
+                                                            ->imageEditor()
+                                                            ->maxFiles(1)
+                                                            ->columnSpanFull()
+                                                            ->helperText('Save the page first before uploading.'),
+                                                    ],
+
+                                                    'contact_team' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. Contact Us)'),
+                                                        TextInput::make('data.heading')
+                                                            ->label('Heading'),
+                                                        Textarea::make('data.subheading')
+                                                            ->label('Subheading')
+                                                            ->rows(3)
+                                                            ->columnSpanFull(),
                                                     ],
 
                                                     'agent_form' => [
@@ -201,6 +333,75 @@ class PageResource extends Resource
                                                             ->columnSpanFull(),
                                                         TextInput::make('data.form_label')
                                                             ->label('Form heading'),
+                                                    ],
+
+                                                    'about_intro' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. About us)')->nullable(),
+                                                        TextInput::make('data.heading')
+                                                            ->label('Heading')->nullable(),
+                                                        Textarea::make('data.body')
+                                                            ->label('Body (intro paragraph)')->rows(4)->nullable()->columnSpanFull(),
+                                                    ],
+
+                                                    'about_body' => [
+                                                        Textarea::make('data.body')
+                                                            ->label('Body (second paragraph)')->rows(4)->nullable()->columnSpanFull(),
+                                                    ],
+
+                                                    'about_mission' => [
+                                                        TextInput::make('data.heading')
+                                                            ->label('Heading')->nullable(),
+                                                        Textarea::make('data.body')
+                                                            ->label('Body')->rows(4)->nullable()->columnSpanFull(),
+                                                    ],
+
+                                                    'about_vision' => [
+                                                        TextInput::make('data.heading')
+                                                            ->label('Heading')->nullable(),
+                                                        Textarea::make('data.body')
+                                                            ->label('Body')->rows(4)->nullable()->columnSpanFull(),
+                                                    ],
+
+                                                    'about_awards' => [
+                                                        TextInput::make('data.heading')
+                                                            ->label('Heading')->nullable(),
+                                                        Textarea::make('data.paragraph_1')
+                                                            ->label('Paragraph 1')->rows(4)->nullable()->columnSpanFull(),
+                                                        Textarea::make('data.paragraph_2')
+                                                            ->label('Paragraph 2')->rows(4)->nullable()->columnSpanFull(),
+                                                    ],
+
+                                                    'about_creativity' => [
+                                                        TextInput::make('data.label')
+                                                            ->label('Label (e.g. More from Us)')->nullable(),
+                                                        TextInput::make('data.heading')
+                                                            ->label('Heading')->nullable(),
+                                                        Textarea::make('data.body')
+                                                            ->label('Body')->rows(5)->nullable()->columnSpanFull(),
+                                                    ],
+
+                                                    'about_stats' => [
+                                                        Grid::make(4)->schema([
+                                                            TextInput::make('data.stat_1_count')->label('Stat 1 count'),
+                                                            TextInput::make('data.stat_1_title')->label('Stat 1 label'),
+                                                            TextInput::make('data.stat_2_count')->label('Stat 2 count'),
+                                                            TextInput::make('data.stat_2_title')->label('Stat 2 label'),
+                                                            TextInput::make('data.stat_3_count')->label('Stat 3 count'),
+                                                            TextInput::make('data.stat_3_title')->label('Stat 3 label'),
+                                                            TextInput::make('data.stat_4_count')->label('Stat 4 count'),
+                                                            TextInput::make('data.stat_4_title')->label('Stat 4 label'),
+                                                        ]),
+                                                        Grid::make(2)->schema([
+                                                            TextInput::make('data.support_1_title')->label('Support 1 title'),
+                                                            TextInput::make('data.support_1_desc')->label('Support 1 description'),
+                                                            TextInput::make('data.support_1_button')->label('Support 1 button'),
+                                                            TextInput::make('data.support_1_url')->label('Support 1 URL'),
+                                                            TextInput::make('data.support_2_title')->label('Support 2 title'),
+                                                            TextInput::make('data.support_2_desc')->label('Support 2 description'),
+                                                            TextInput::make('data.support_2_button')->label('Support 2 button'),
+                                                            TextInput::make('data.support_2_url')->label('Support 2 URL'),
+                                                        ]),
                                                     ],
 
                                                     default => [

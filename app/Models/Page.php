@@ -5,12 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
-class Page extends Model
+class Page extends Model implements HasMedia
 {
-    use SoftDeletes, HasSlug;
+    use SoftDeletes, HasSlug, InteractsWithMedia;
 
     protected $fillable = [
         'title',
@@ -35,6 +38,17 @@ class Page extends Model
             ->saveSlugsTo('slug')
             ->doNotGenerateSlugsOnUpdate()
             ->slugsShouldBeNoLongerThan(100);
+    }
+
+    public function registerMediaCollections(): void
+    {
+        // Collections are created on-demand per section label; no fixed registration needed
+    }
+
+    public function getSectionImageUrl(string $sectionLabel): string
+    {
+        $collection = 'section-' . Str::slug($sectionLabel);
+        return $this->getFirstMediaUrl($collection) ?: '';
     }
 
     public function sections(): HasMany

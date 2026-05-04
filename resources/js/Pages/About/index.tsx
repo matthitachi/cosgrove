@@ -22,7 +22,7 @@ export default function () {
     }, []);
 
     const { data: aboutPage } = useCmsData<ApiPage>(() => getPage('about'));
-    const textSection = aboutPage?.sections.find(s => s.type === 'text' && s.is_active);
+    const find = (type: string) => aboutPage?.sections.find(s => s.type === type && s.is_active);
 
     return (
         <div>
@@ -36,7 +36,16 @@ export default function () {
                 attachment={`fixed`}
                 position={'center'}
             />
-            <OverviewSection cmsSection={textSection} />
+            <OverviewSection
+                introSection={find('about_intro')}
+                bodySection={find('about_body')}
+                missionSection={find('about_mission')}
+                visionSection={find('about_vision')}
+                awardsSection={find('about_awards')}
+                creativitySection={find('about_creativity')}
+                statsSection={find('about_stats')}
+                teamSection={find('team')}
+            />
             <Footer />
         </div>
     );

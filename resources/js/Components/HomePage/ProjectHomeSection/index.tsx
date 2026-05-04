@@ -34,7 +34,7 @@ export default function ({ cmsSection }: Props) {
     return (
         <section className={styles.projectHomeSection}>
             <Container>
-                <h4 className={'subHeader'} data-aos="fade-right">Projects</h4>
+                <h4 className={'subHeader'} data-aos="fade-right">{(cmsSection?.data?.label as string) ?? "Projects"}</h4>
                 <Row className={styles.projectIntro}>
                     <Col
                         md={6}

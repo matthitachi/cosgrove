@@ -18,8 +18,16 @@ class PageDetailResource extends JsonResource
             'sort_order'       => $this->sort_order,
             'meta_title'       => $this->meta_title ?? $this->title,
             'meta_description' => $this->meta_description,
-            'sections'         => PageSectionResource::collection(
-                                      $this->whenLoaded('sections')
+            'sections'         => $this->whenLoaded('sections',
+                                      fn () => $this->sections->map(fn ($section) => [
+                                          'id'         => $section->id,
+                                          'type'       => $section->type,
+                                          'label'      => $section->label,
+                                          'data'       => $section->data ?? [],
+                                          'sort_order' => $section->sort_order,
+                                          'is_active'  => $section->is_active,
+                                          'image_url'  => $this->getSectionImageUrl($section->label),
+                                      ])
                                   ),
         ];
     }

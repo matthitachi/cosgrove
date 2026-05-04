@@ -24,6 +24,7 @@ export default function () {
 
     const { data: contactPage } = useCmsData<ApiPage>(() => getPage('contact'));
     const contactSection = contactPage?.sections.find(s => s.type === 'contact_form' && s.is_active);
+    const teamContactSection = contactPage?.sections.find(s => s.type === 'contact_team' && s.is_active);
 
     return (
         <div>
@@ -37,7 +38,11 @@ export default function () {
                 // attachment={'fixed'}
             />
             <Hero cmsSection={contactSection} />
-            <ContactTeam />
+            <ContactTeam
+                label={teamContactSection?.data?.label as string | undefined}
+                heading={teamContactSection?.data?.heading as string | undefined}
+                subheading={teamContactSection?.data?.subheading as string | undefined}
+            />
             <Footer />
         </div>
     );

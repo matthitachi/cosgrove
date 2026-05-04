@@ -155,6 +155,17 @@ export interface ApiContactInfo {
 }
 
 export const getContactInfo    = (): Promise<ApiContactInfo>      => api.get('/v1/homepage/contact').then(r => r.data.data);
+
+export interface ApiContactPerson {
+    id: number;
+    name: string;
+    title: string;
+    email: string | null;
+    sort_order: number;
+    photo_url: string | null;
+}
+
+export const getContactPersons = (): Promise<ApiContactPerson[]>  => api.get('/v1/contact-persons').then(r => r.data.data);
 export const getSocialLinks    = (): Promise<ApiSocialLink[]>     => api.get('/v1/homepage/social').then(r => r.data.data);
 export const getSmartFeatures  = (): Promise<ApiSmartFeature[]>   => api.get('/v1/homepage/features').then(r => r.data.data);
 export const getJobListings    = (): Promise<ApiJobListing[]>     => api.get('/v1/jobs').then(r => r.data.data);

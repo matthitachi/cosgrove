@@ -2,7 +2,9 @@
 
 namespace App\Filament\Widgets;
 
+use App\Filament\Resources\ContactSubmissionResource;
 use App\Filament\Resources\ProjectResource;
+use App\Models\ContactSubmission;
 use App\Models\HouseType;
 use App\Models\JobListing;
 use App\Models\PressArticle;
@@ -51,6 +53,12 @@ class ContentSummaryWidget extends StatsOverviewWidget
                 ->description('Images & documents')
                 ->descriptionIcon('heroicon-m-photo')
                 ->color('gray'),
+
+            Stat::make('Contact submissions', ContactSubmission::count())
+                ->description(ContactSubmission::new()->count() . ' new')
+                ->descriptionIcon('heroicon-m-envelope')
+                ->color('warning')
+                ->url(ContactSubmissionResource::getUrl('index')),
         ];
     }
 }

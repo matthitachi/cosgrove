@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\NewMail;
 use App\Models\AgentSubmission;
+use App\Models\ContactSubmission;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -27,6 +28,25 @@ class ApiController extends Controller
 
         if (! $this->verifyRecaptcha($request->token)) {
             return response()->json(['status' => false, 'message' => 'reCAPTCHA verification failed.'], 422);
+        }
+
+        $source = ($request->filled('project'))
+            ? ContactSubmission::SOURCE_CONTACT
+            : ContactSubmission::SOURCE_FOOTER;
+
+        try {
+            ContactSubmission::create([
+                'name'         => $request->name,
+                'email'        => $request->email,
+                'phone'        => $request->phone ?? null,
+                'project'      => $request->project ?? null,
+                'message'      => $request->message ?? null,
+                'source'       => $source,
+                'status'       => ContactSubmission::STATUS_NEW,
+                'submitted_at' => now(),
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Contact submission DB save failed: ' . $e->getMessage());
         }
 
         $content = '<div><h3>Contact Us Information</h3>';

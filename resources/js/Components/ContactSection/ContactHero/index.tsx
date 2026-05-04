@@ -3,11 +3,12 @@ import {Col, Container, Row} from "react-bootstrap";
 import styles from "./styles.module.scss";
 import * as React from "react";
 // @ts-ignore
-import cosgroveApiServices from "../../../Services/cosgroveApiServices";
+import cosgroveApiServices, { getProjects, ApiProject } from "../../../Services/cosgroveApiServices";
 import {useState} from "react";
 import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
 import {toast} from "react-toastify";
 import { ApiPageSection } from "../../../types/cms";
+import { useCmsData } from "../../../Hooks/useCmsData";
 
 interface Props { cmsSection?: ApiPageSection; }
 
@@ -21,6 +22,7 @@ export default function ({ cmsSection }: Props) {
         token: ''
     });
     const { executeRecaptcha } = useGoogleReCaptcha();
+    const { data: projects } = useCmsData<ApiProject[]>(getProjects);
     const [errors, setErrors] = useState<Partial<Err>>({});
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | { name?: string; value: unknown }>) => {
         const {name, value} = event.target;
@@ -98,7 +100,7 @@ export default function ({ cmsSection }: Props) {
             <Container fluid>
                 <Row>
                     <Col sm={12} className={styles.infoHomeInfo}>
-                        <h5>Booking a Tour</h5>
+                        <h5>{(cmsSection?.data?.label as string) ?? "Booking a Tour"}</h5>
                         <h2 className={`headerDark ${styles.m65}`}>
                             {(cmsSection?.data?.heading as string) ?? 'See it with your eyes.'}
                         </h2>
@@ -126,18 +128,10 @@ export default function ({ cmsSection }: Props) {
 
 
                             <select value={formVal.project} defaultValue={''} onChange={handleChange} name={'project'}>
-                                <option disabled >
-                                    Select a Project
-                                </option>
-                                <option value="Cosgrove Smart Estate, Wuye">Cosgrove Smart Estate, Wuye</option>
-                                <option value="Cosgrove Smart Estate, Mabushi">Cosgrove Smart Estate, Mabushi</option>
-                                <option value="Cosgrove Smart Estate, Guzape">Cosgrove Smart Estate, Guzape</option>
-                                <option value="The Nouveau by Cosgrove, Maitama">The Nouveau by Cosgrove, Maitama</option>
-                                <option value="Tetra by Cosgrove, Wuye">Tetra by Cosgrove, Wuye</option>
-                                <option value="Cosgrove Smart City, Katampe">Cosgrove Smart City, Katampe</option>
-                                <option value="Châteaux by Cosgrove, Wuse 2">Châteaux by Cosgrove, Wuse 2</option>
-                                <option value="Fourteen by Cosgrove, Wuye">Fourteen by Cosgrove, Wuye</option>
-                                <option value="Cosgrove Smart Estate, Wuse 2">Cosgrove Smart Estate, Wuse 2</option>
+                                <option disabled value="">Select a Project</option>
+                                {(projects ?? []).map((p: ApiProject) => (
+                                    <option key={p.id} value={p.name}>{p.name}</option>
+                                ))}
                             </select>
                             <input
                                 placeholder={"salutation"}

@@ -58,8 +58,8 @@ export default function ({full = true, cmsSection}: listProp) {
         <section className={styles.FeaturedHomeSection} data-aos="fade-up">
             <div className={`curvedTop ${styles.topCurve}`} />
             <Container className={styles.featuredCtx}>
-                <h4 className={`subHeader mb-25`}>Press</h4>
-                <h2 className={`headerDark`}>{(cmsSection?.data?.heading as string) ?? 'Featured'}</h2>
+                <h4 className={`subHeader mb-25`}>{(cmsSection?.data?.label as string) ?? "Press"}</h4>
+                <h2 className={`headerDark`}>{(cmsSection?.data?.heading as string) ?? "Featured"}</h2>
 
                 <ul className={styles.featuredList}>
                     {
@@ -69,8 +69,8 @@ export default function ({full = true, cmsSection}: listProp) {
                 </ul>
 
                 {full && <div className={`text-center ${styles.seeAll} mb-3`} >
-                    <Link className={"text"} href={'/press'}>
-                        See all
+                    <Link className={"text"} href={(cmsSection?.data?.see_all_url as string) ?? "/press"}>
+                        {(cmsSection?.data?.see_all_label as string) ?? "See all"}
                         <img
                             className={styles.arrowRightSvg}
                             src={arrowRightSvgR}
