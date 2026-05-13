@@ -18,7 +18,7 @@ class ApiController extends Controller
         $request->validate([
             'name'  => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'token' => 'required|string',
+            'token' => 'nullable|string',
         ]);
 
         // Honeypot — bots fill hidden salutation field
@@ -77,7 +77,7 @@ class ApiController extends Controller
             'name'    => 'required|string|max:255',
             'email'   => 'required|email|max:255',
             'phone'   => 'required|string|max:50',
-            'token'   => 'required|string',
+            'token'   => 'nullable|string',
             'company' => 'nullable|string|max:255',
         ]);
 
@@ -115,8 +115,13 @@ class ApiController extends Controller
         return response()->json(['status' => true]);
     }
 
-    private function verifyRecaptcha(string $token): bool
+    private function verifyRecaptcha(?string $token): bool
     {
+        if (empty($token)) {
+            Log::warning('No reCAPTCHA token provided — skipping verification');
+            return true;
+        }
+
         $secret = config('services.recaptcha.secret_key');
         if (empty($secret)) {
             Log::warning('RECAPTCHA_SECRET_KEY not configured — skipping verification');
