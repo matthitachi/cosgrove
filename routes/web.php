@@ -30,6 +30,10 @@ Route::get('/terms-of-service', [App\Http\Controllers\HomeController::class, 'te
 Route::get('/careers', [App\Http\Controllers\HomeController::class, 'careers']);
 Route::get('/press', [App\Http\Controllers\HomeController::class, 'press']);
 
+Route::get('/careers/{id}', function (int $id) {
+    return Inertia\Inertia::render('CareerDetail/index', ['id' => $id]);
+});
+
 Route::get('/{slug}', function (string $slug) {
     return Inertia\Inertia::render('CmsPage/index', ['slug' => $slug]);
 })->where('slug', '^(?!admin|api|storage|assets|build).*$');

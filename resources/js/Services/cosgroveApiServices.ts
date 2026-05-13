@@ -116,12 +116,14 @@ export interface ApiHomepageStat {
 }
 
 export interface ApiJobListing {
-    id: number;
-    title: string;
-    department: string | null;
-    location: string | null;
-    description: string | null;
-    sort_order: number;
+    id:          number;
+    slug:        number;
+    title:       string;
+    department:  string | null;
+    location:    string | null;
+    description: any;
+    is_active:   boolean;
+    sort_order:  number;
 }
 
 // ── Named API functions ───────────────────────────────────────────────────────

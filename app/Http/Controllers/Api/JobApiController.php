@@ -15,4 +15,11 @@ class JobApiController extends Controller
 
         return JobListingResource::collection($jobs);
     }
+
+    public function show(int $id): JobListingResource
+    {
+        $job = JobListing::active()->findOrFail($id);
+
+        return new JobListingResource($job);
+    }
 }

@@ -11,10 +11,12 @@ class JobListingResource extends JsonResource
     {
         return [
             'id'          => $this->id,
+            'slug'        => $this->id,
             'title'       => $this->title,
             'department'  => $this->department,
             'location'    => $this->location,
             'description' => $this->description,
+            'is_active'   => $this->is_active,
             'sort_order'  => $this->sort_order,
         ];
     }

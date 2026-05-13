@@ -55,6 +55,7 @@ Route::prefix('v1')->middleware(['throttle:120,1'])->group(function () {
 
     // Jobs
     Route::get('/jobs',              [JobApiController::class, 'index']);
+    Route::get('/jobs/{id}',         [JobApiController::class, 'show']);
 
     // Pages
     Route::get('/pages',             [PageApiController::class, 'index']);
