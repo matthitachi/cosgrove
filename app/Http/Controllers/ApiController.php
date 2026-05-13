@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\NewMail;
 use App\Models\AgentSubmission;
 use App\Models\ContactSubmission;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 
 class ApiController extends Controller
 {
@@ -49,25 +47,6 @@ class ApiController extends Controller
             Log::error('Contact submission DB save failed: ' . $e->getMessage());
         }
 
-        $content = '<div><h3>Contact Us Information</h3>';
-        foreach (['name', 'email', 'project', 'phone', 'message'] as $field) {
-            if ($request->filled($field)) {
-                $label   = ucfirst($field);
-                $content .= "<div><b>{$label}:</b> " . e($request->input($field)) . '</div>';
-            }
-        }
-        $content .= '</div>';
-
-        try {
-            $mailable = new NewMail('Contact Us Information', $content);
-            $to = config('app.env') === 'production'
-                ? 'nafisa.aliyu@cosgroveafrica.com'
-                : 'matthitachi@gmail.com';
-            Mail::to($to)->send($mailable);
-        } catch (\Exception $e) {
-            Log::error('sendContact mail failed: ' . $e->getMessage());
-        }
-
         return response()->json(['status' => true, 'message' => 'Completed successfully']);
     }
 
@@ -95,22 +74,6 @@ class ApiController extends Controller
             'status'       => AgentSubmission::STATUS_NEW,
             'submitted_at' => now(),
         ]);
-
-        $content = '<div>';
-        foreach (['name', 'email', 'project', 'phone', 'company', 'message'] as $field) {
-            if ($request->filled($field)) {
-                $label   = ucfirst($field);
-                $content .= "<div><b>{$label}:</b> " . e($request->input($field)) . '</div>';
-            }
-        }
-        $content .= '</div>';
-
-        try {
-            $mailable = new NewMail('Agent Registration', $content);
-            Mail::to('careers@cosgroveafrica.com')->send($mailable);
-        } catch (\Exception $e) {
-            Log::error('sendAgent mail failed: ' . $e->getMessage());
-        }
 
         return response()->json(['status' => true]);
     }
